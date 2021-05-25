@@ -1,12 +1,12 @@
-import { ThemeProvider } from "theme-ui";
-import { theme } from "./theme";
+import { ThemeProvider } from 'theme-ui'
+import { theme } from './theme'
 
-const App = () => {
+const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <h1>Givelist</h1>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
