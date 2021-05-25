@@ -1,10 +1,74 @@
 import { ThemeProvider } from 'theme-ui'
 import { theme } from './theme'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  useParams
+} from 'react-router-dom'
+import { Campaign } from './modules/campaign'
+import { Thanks } from './modules/thanks'
+import { useEffect, useState } from 'react'
+import { getCampaignInfo } from './api/getCampaignInfo'
+import { CampaignInfo } from './types/CampaignInfo'
+import { CampaignInfoContext } from './contexts/CampaignInfoContext'
+
+const Givelist = (): JSX.Element => {
+  const { campaignSlug } = useParams<{ campaignSlug: string }>()
+  const [campaignTheme, setCampaignTheme] = useState(theme)
+  const [campaignInfo, setCampaignInfo] = useState<CampaignInfo>(
+    {} as CampaignInfo
+  )
+
+  useEffect(() => {
+    const fetchCampaignInfo = async () => {
+      const campaignInfo = await getCampaignInfo(campaignSlug)
+      const newTheme = {
+        ...theme,
+        colors: {
+          ...theme.colors,
+          primary: campaignInfo.primaryColor
+        }
+      }
+      setCampaignTheme(newTheme)
+      setCampaignInfo(campaignInfo)
+    }
+
+    fetchCampaignInfo()
+  }, [campaignSlug])
+
+  return (
+    <ThemeProvider theme={campaignTheme}>
+      <CampaignInfoContext.Provider value={campaignInfo}>
+        <Router>
+          <Switch>
+            <Route path="/:campaignSlug">
+              <Campaign />
+            </Route>
+            <Route path="/:campaignSlug/thanks">
+              <Thanks />
+            </Route>
+          </Switch>
+        </Router>
+      </CampaignInfoContext.Provider>
+    </ThemeProvider>
+  )
+}
 
 const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
-      <h1>Givelist</h1>
+      <Router>
+        <Switch>
+          <Route exact path="/:campaignSlug">
+            <Givelist />
+          </Route>
+          <Route path="*">
+            <Redirect to="/test" />
+          </Route>
+        </Switch>
+      </Router>
     </ThemeProvider>
   )
 }
