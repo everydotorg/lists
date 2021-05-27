@@ -3,7 +3,7 @@ export const theme = {
   breakpoints: ['40em', '52em', '64em'],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    body: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    body: '"Basis Grotesque Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: 'inherit',
     monospace: 'Menlo, monospace'
   },
@@ -21,6 +21,8 @@ export const theme = {
     text: '#000',
     textGray: '#868A8A',
     background: '#fff',
+    divider: '#EEEEEE',
+    backgroundGray: '#EAEDED',
     primary: '#07c',
     secondary: '#30c',
     muted: '#f6f6f6'

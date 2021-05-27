@@ -1,5 +1,7 @@
 import { Flex, Text } from '@theme-ui/components'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
+import { Goal } from './Goal'
+import { Divider } from '../shared/Divider'
 import { Logo } from './Logo'
 import { styles } from './styles'
 
@@ -13,6 +15,8 @@ export const Campaign = (): JSX.Element => {
           {name}
         </Text>
         <Text variant="small">{about}</Text>
+        <Divider space={3} />
+        <Goal />
       </Flex>
     </Flex>
   )

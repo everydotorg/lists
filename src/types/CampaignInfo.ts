@@ -4,4 +4,7 @@ export type CampaignInfo = {
   backgroundImageUrl: string
   logoUrl: string
   about: string
+  goal: number
+  donated: number
+  givers: number
 }
