@@ -1,4 +1,35 @@
 {
-  "name": "Lil bulb",
-  "primaryColor": "#D55684"
+  "name": "Lil BUB’s 10th Birthday",
+  "primaryColor": "#D55684",
+  "about": "To celebrate Lil BUB’s 10th birthday, her friends have come together to raise awareness and money for earth animals in need.",
+  "nonprofits": [
+    {
+      "slug": "iamlilbub",
+      "name": "Lil BUB's Big Fund",
+      "location": "Bloomington, IN",
+      "about": "Lil BUB is a one of a kind space cat. Since landing on Earth, she's raised over $500,000 for homeless pets.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/revm53vimmnuio5foiqi"
+    },
+    {
+      "id": "Feral-Change",
+      "name": "Feral Change",
+      "location": "Oakland, CA",
+      "about": "Registered 501(c)(3) dedicated to helping Oakland control and manage its feral and homeless cat population.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/faja_profile/o0tj01l0cdwimlqzcffc"
+    },
+    {
+      "id": "Waggle-Crowdfunding-for-Pets",
+      "name": "Waggle Crowdfunding for Pets",
+      "location": "Essex, CT",
+      "about": "First-of-its kind life-saving platform to help pet guardians and veterinary professionals raise funds for pets in crisis.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/faja_profile/kspp8zzfhgdczam7svd7"
+    },
+    {
+      "id": "Orphan-Kitten-Club",
+      "name": "Orphan Kitten Club",
+      "location": "Spring Valley, CA",
+      "about": "Dedicated to saving the lives of the tiniest felines.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/getd3etc0bbbewctfpmy"
+    }
+  ]
 }
