@@ -4,6 +4,9 @@
   "backgroundImageUrl": "assets/background.jpeg",
   "logoUrl": "assets/logo.png",
   "about": "To celebrate Lil BUB’s 10th birthday, her friends have come together to raise awareness and money for earth animals in need.",
+  "goal": 100000,
+  "donated": 76398,
+  "givers": 95,
   "nonprofits": [
     {
       "slug": "iamlilbub",
