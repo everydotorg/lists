@@ -1,11 +1,10 @@
 // example base theme from @theme-ui/presets
 export const theme = {
-  breakpoints: ['40em', '52em', '64em'],
-  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  breakpoints: ['56.25em', '112.5em'],
+  space: [0, 4, 8, 16, 20, 24, 32, 64, 128, 256, 512],
   fonts: {
     body: '"Basis Grotesque Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
-    heading: 'inherit',
-    monospace: 'Menlo, monospace'
+    heading: 'inherit'
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
   fontWeights: {
@@ -14,6 +13,7 @@ export const theme = {
     bold: 700
   },
   lineHeights: {
+    base: 1,
     body: 1.5,
     heading: 1.2
   },
@@ -26,6 +26,34 @@ export const theme = {
     primary: '#07c',
     secondary: '#30c',
     muted: '#f6f6f6'
+  },
+  buttons: {
+    primary: {
+      cursor: 'pointer',
+      borderRadius: '100px',
+      py: 4,
+      fontSize: 2,
+      lineHeight: 'base',
+      letterSpacing: '-0.01em',
+      fontFamily: 'body',
+      fontWeight: 'heading',
+      color: 'white',
+      '&:hover': {
+        opacity: '0.85'
+      },
+      '&:active': {
+        outline: 'none',
+        opacity: '0.9'
+      },
+      '&:focus': {
+        outline: 'none'
+      }
+    },
+    primaryInverted: {
+      variant: 'buttons.primary',
+      color: 'primary',
+      background: 'white'
+    }
   },
   text: {
     title: {

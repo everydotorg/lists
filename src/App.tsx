@@ -43,7 +43,7 @@ const Givelist = (): JSX.Element => {
       <CampaignInfoContext.Provider value={campaignInfo}>
         <Box
           sx={{
-            width: '50vh',
+            width: ['100%', '40vw'],
             margin: '0 auto',
             background: 'white',
             height: '100vh'
