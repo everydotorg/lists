@@ -15,16 +15,32 @@ export const theme = {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.125
+    heading: 1.2
   },
   colors: {
     text: '#000',
+    textGray: '#868A8A',
     background: '#fff',
     primary: '#07c',
     secondary: '#30c',
     muted: '#f6f6f6'
   },
   text: {
+    title: {
+      fontFamily: 'body',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 3,
+      letterSpacing: '-0.01em'
+    },
+    small: {
+      fontFamily: 'body',
+      fontWeight: 'body',
+      fontSize: 1,
+      lineHeight: 'body',
+      letterSpacing: '-0.05em',
+      color: 'textGray'
+    },
     heading: {
       fontFamily: 'heading',
       lineHeight: 'heading',

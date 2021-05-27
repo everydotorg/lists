@@ -1,4 +1,4 @@
-import { ThemeProvider } from 'theme-ui'
+import { Box, ThemeProvider } from 'theme-ui'
 import { theme } from './theme'
 import {
   BrowserRouter as Router,
@@ -41,16 +41,25 @@ const Givelist = (): JSX.Element => {
   return (
     <ThemeProvider theme={campaignTheme}>
       <CampaignInfoContext.Provider value={campaignInfo}>
-        <Router>
-          <Switch>
-            <Route path="/:campaignSlug">
-              <Campaign />
-            </Route>
-            <Route path="/:campaignSlug/thanks">
-              <Thanks />
-            </Route>
-          </Switch>
-        </Router>
+        <Box
+          sx={{
+            width: '50vh',
+            margin: '0 auto',
+            background: 'white',
+            height: '100vh'
+          }}
+        >
+          <Router>
+            <Switch>
+              <Route path="/:campaignSlug">
+                <Campaign />
+              </Route>
+              <Route path="/:campaignSlug/thanks">
+                <Thanks />
+              </Route>
+            </Switch>
+          </Router>
+        </Box>
       </CampaignInfoContext.Provider>
     </ThemeProvider>
   )
