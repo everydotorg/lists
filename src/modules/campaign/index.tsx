@@ -4,9 +4,11 @@ import { Goal } from './Goal'
 import { Divider } from '../shared/Divider'
 import { Logo } from './Logo'
 import { styles } from './styles'
+import { NonProfit } from './NonProfit'
+import { Cause } from './Cause'
 
 export const Campaign = (): JSX.Element => {
-  const { name, about } = useCampaignInfoContext()
+  const { name, about, nonprofits } = useCampaignInfoContext()
   return (
     <Box as="main" sx={styles.page}>
       <Flex sx={styles.container}>
@@ -19,10 +21,19 @@ export const Campaign = (): JSX.Element => {
           <Divider space={3} />
           <Goal />
         </Flex>
+        <Cause />
+        <Box sx={styles.nonprofitsContainer}>
+          {nonprofits &&
+            nonprofits.map((nonprofit) => (
+              <NonProfit key={nonprofit.slug} nonprofit={nonprofit} />
+            ))}
+        </Box>
       </Flex>
-      <Button sx={styles.submitButton} onClick={console.log} type="button">
-        Donate to List
-      </Button>
+      <Box sx={styles.buttonContainer}>
+        <Button sx={styles.submitButton} onClick={console.log} type="button">
+          Donate to List
+        </Button>
+      </Box>
     </Box>
   )
 }

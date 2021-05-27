@@ -1,3 +1,5 @@
+import { NonProfit } from './NonProfit'
+
 export type CampaignInfo = {
   name: string
   primaryColor: string
@@ -7,4 +9,6 @@ export type CampaignInfo = {
   goal: number
   donated: number
   givers: number
+  cause: string
+  nonprofits: NonProfit[]
 }

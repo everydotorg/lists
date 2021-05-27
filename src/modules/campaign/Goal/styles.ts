@@ -5,7 +5,7 @@ export const styles: Style = {
     pt: 3
   },
   progressBar: {
-    backgroundColor: 'backgroundGray'
+    backgroundColor: 'progressBg'
   },
   legend: {
     flexDirection: 'column',

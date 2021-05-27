@@ -19,8 +19,16 @@ export const styles: Style = {
   campaignTitle: {
     mb: 3
   },
-  submitButton: {
+  buttonContainer: {
+    bg: 'backgroundGray',
     gridRow: '2/3',
-    m: 1
+    p: 1
+  },
+  submitButton: {
+    width: '100%'
+  },
+  nonprofitsContainer: {
+    backgroundColor: 'backgroundGray',
+    px: 3
   }
 }

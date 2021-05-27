@@ -7,6 +7,7 @@
   "goal": 100000,
   "donated": 76398,
   "givers": 95,
+  "cause": "animals",
   "nonprofits": [
     {
       "slug": "iamlilbub",
@@ -16,21 +17,21 @@
       "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/revm53vimmnuio5foiqi"
     },
     {
-      "id": "Feral-Change",
+      "slug": "Feral-Change",
       "name": "Feral Change",
       "location": "Oakland, CA",
       "about": "Registered 501(c)(3) dedicated to helping Oakland control and manage its feral and homeless cat population.",
       "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/faja_profile/o0tj01l0cdwimlqzcffc"
     },
     {
-      "id": "Waggle-Crowdfunding-for-Pets",
+      "slug": "Waggle-Crowdfunding-for-Pets",
       "name": "Waggle Crowdfunding for Pets",
       "location": "Essex, CT",
       "about": "First-of-its kind life-saving platform to help pet guardians and veterinary professionals raise funds for pets in crisis.",
       "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/faja_profile/kspp8zzfhgdczam7svd7"
     },
     {
-      "id": "Orphan-Kitten-Club",
+      "slug": "Orphan-Kitten-Club",
       "name": "Orphan Kitten Club",
       "location": "Spring Valley, CA",
       "about": "Dedicated to saving the lives of the tiniest felines.",

@@ -46,7 +46,7 @@ const Givelist = (): JSX.Element => {
             width: ['100%', '40vw'],
             margin: '0 auto',
             background: 'white',
-            height: '100vh'
+            minHeight: '100vh'
           }}
         >
           <Router>
@@ -67,18 +67,16 @@ const Givelist = (): JSX.Element => {
 
 const App = (): JSX.Element => {
   return (
-    <ThemeProvider theme={theme}>
-      <Router>
-        <Switch>
-          <Route exact path="/:campaignSlug">
-            <Givelist />
-          </Route>
-          <Route path="*">
-            <Redirect to="/lil-bulb" />
-          </Route>
-        </Switch>
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <Switch>
+        <Route exact path="/:campaignSlug">
+          <Givelist />
+        </Route>
+        <Route path="*">
+          <Redirect to="/lil-bulb" />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 

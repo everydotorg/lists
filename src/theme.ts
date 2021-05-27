@@ -18,14 +18,23 @@ export const theme = {
     heading: 1.2
   },
   colors: {
-    text: '#000',
+    text: '#2E3434',
     textGray: '#868A8A',
-    background: '#fff',
+    background: '#FFF',
     divider: '#EEEEEE',
-    backgroundGray: '#EAEDED',
-    primary: '#07c',
-    secondary: '#30c',
-    muted: '#f6f6f6'
+    backgroundGray: '#FAFAFA',
+    primary: '#07C',
+    secondary: '#30C',
+    muted: '#EEEEEE',
+    progressBg: '#EAEDED'
+  },
+  images: {
+    avatar: {
+      width: '3.75rem',
+      height: '3.75rem',
+      borderRadius: '9999px',
+      flexShrink: 0
+    }
   },
   buttons: {
     primary: {
@@ -63,6 +72,21 @@ export const theme = {
       fontSize: 3,
       letterSpacing: '-0.01em'
     },
+    regular: {
+      fontFamily: 'body',
+      fontWeight: 'body',
+      fontSize: 3,
+      lineHeight: 'body',
+      letterSpacing: '-0.01em',
+      color: 'text'
+    },
+    heading: {
+      fontFamily: 'heading',
+      lineHeight: 'heading',
+      fontWeight: 'heading',
+      fontSize: 3,
+      letterSpacing: '-0.01em'
+    },
     small: {
       fontFamily: 'body',
       fontWeight: 'body',
@@ -70,11 +94,6 @@ export const theme = {
       lineHeight: 'body',
       letterSpacing: '-0.05em',
       color: 'textGray'
-    },
-    heading: {
-      fontFamily: 'heading',
-      lineHeight: 'heading',
-      fontWeight: 'heading'
     }
   },
   styles: {
