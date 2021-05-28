@@ -12,5 +12,8 @@ export const styles: Style = {
     fontWeight: 400,
     opacity: '0.8',
     mb: 1
+  },
+  donateButton: {
+    m: 1
   }
 }

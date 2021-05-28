@@ -4,9 +4,9 @@ export const styles: Style = {
   container: {
     color: 'white',
     flexDirection: 'column',
-    p: 3,
-    pt: 0
+    px: 3
   },
+  currencySymbol: { mr: 2 },
   label: {
     opacity: '0.8',
     mb: 3
