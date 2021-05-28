@@ -8,7 +8,7 @@ import {
   useParams
 } from 'react-router-dom'
 import { Campaign } from './modules/campaign'
-import { Thanks } from './modules/thanks'
+import { ThankYou } from './modules/thank-you'
 import { useEffect, useState } from 'react'
 import { getCampaignInfo } from './api/getCampaignInfo'
 import { CampaignInfo } from './types/CampaignInfo'
@@ -52,14 +52,14 @@ const Givelist = (): JSX.Element => {
         >
           <Router>
             <Switch>
-              <Route exact path="/:campaignSlug">
-                <Campaign />
+              <Route exact path="/:campaignSlug/thank-you">
+                <ThankYou />
               </Route>
               <Route exact path="/:campaignSlug/donate">
                 <Donation />
               </Route>
-              <Route exact path="/:campaignSlug/thanks">
-                <Thanks />
+              <Route path="/:campaignSlug">
+                <Campaign />
               </Route>
             </Switch>
           </Router>
@@ -73,7 +73,7 @@ const App = (): JSX.Element => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/:campaignSlug">
+        <Route path="/:campaignSlug">
           <Givelist />
         </Route>
         <Route path="*">

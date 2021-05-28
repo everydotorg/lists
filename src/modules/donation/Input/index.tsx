@@ -26,7 +26,16 @@ export const Input = ({ value, setValue }: InputProps): JSX.Element => {
           />
         </Flex>
         <Flex sx={styles.selectContainer}>
-          <Select arrow={<ChevronDown sx={styles.selectArrow} inverted />}>
+          <Select
+            arrow={
+              <ChevronDown
+                width={20}
+                height={10}
+                sx={styles.selectArrow}
+                inverted
+              />
+            }
+          >
             <option>USD</option>
             <option>EUR</option>
             <option>GBP</option>

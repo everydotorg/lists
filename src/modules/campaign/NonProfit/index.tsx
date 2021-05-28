@@ -39,6 +39,8 @@ export const NonProfit = ({ nonprofit }: NonProfitProps): JSX.Element => {
           </Flex>
         </Flex>
         <ChevronDown
+          width={20}
+          height={10}
           sx={{
             ...styles.chevron,
             ...(expanded ? styles.rotate : styles.rotateBack)

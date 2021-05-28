@@ -132,7 +132,7 @@ export const theme = {
     },
     h1: {
       variant: 'text.heading',
-      fontSize: 5
+      fontSize: 6
     },
     h2: {
       variant: 'text.heading',
