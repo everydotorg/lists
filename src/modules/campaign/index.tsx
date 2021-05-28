@@ -6,9 +6,16 @@ import { Logo } from './Logo'
 import { styles } from './styles'
 import { NonProfit } from './NonProfit'
 import { Cause } from './Cause'
+import { useHistory, useLocation } from 'react-router'
 
 export const Campaign = (): JSX.Element => {
   const { name, about, nonprofits } = useCampaignInfoContext()
+  const history = useHistory()
+  const location = useLocation()
+
+  const goToDonation = () => {
+    history.push(`${location.pathname}/donate`)
+  }
   return (
     <Box as="main" sx={styles.page}>
       <Flex sx={styles.container}>
@@ -30,7 +37,7 @@ export const Campaign = (): JSX.Element => {
         </Box>
       </Flex>
       <Box sx={styles.buttonContainer}>
-        <Button sx={styles.submitButton} onClick={console.log} type="button">
+        <Button sx={styles.submitButton} onClick={goToDonation} type="button">
           Donate to List
         </Button>
       </Box>

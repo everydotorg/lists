@@ -13,6 +13,7 @@ import { useEffect, useState } from 'react'
 import { getCampaignInfo } from './api/getCampaignInfo'
 import { CampaignInfo } from './types/CampaignInfo'
 import { CampaignInfoContext } from './contexts/CampaignInfoContext'
+import { Donation } from './modules/donation'
 
 const Givelist = (): JSX.Element => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
@@ -51,10 +52,13 @@ const Givelist = (): JSX.Element => {
         >
           <Router>
             <Switch>
-              <Route path="/:campaignSlug">
+              <Route exact path="/:campaignSlug">
                 <Campaign />
               </Route>
-              <Route path="/:campaignSlug/thanks">
+              <Route exact path="/:campaignSlug/donate">
+                <Donation />
+              </Route>
+              <Route exact path="/:campaignSlug/thanks">
                 <Thanks />
               </Route>
             </Switch>

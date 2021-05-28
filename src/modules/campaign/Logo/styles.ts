@@ -4,7 +4,7 @@ export const styles: Style = {
   container: {
     backgroundPosition: 'center',
     backgroundSize: 'cover',
-    height: '200px',
+    minHeight: '200px',
     position: 'relative'
   },
   logo: {

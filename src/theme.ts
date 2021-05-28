@@ -15,7 +15,8 @@ export const theme = {
   lineHeights: {
     base: 1,
     body: 1.5,
-    heading: 1.2
+    heading: 1.2,
+    input: 1.15
   },
   colors: {
     text: '#2E3434',
@@ -23,6 +24,7 @@ export const theme = {
     background: '#FFF',
     divider: '#EEEEEE',
     backgroundGray: '#FAFAFA',
+    dividerInverted: 'rgba(255, 255, 255, 0.1)',
     primary: '#07C',
     secondary: '#30C',
     muted: '#EEEEEE',
@@ -34,6 +36,25 @@ export const theme = {
       height: '3.75rem',
       borderRadius: '9999px',
       flexShrink: 0
+    }
+  },
+  forms: {
+    input: {
+      border: 'none',
+      outline: 'none',
+      color: 'white',
+      fontSize: 6,
+      lineHeight: 'input',
+      fontWeight: 'bold',
+      letterSpacing: '-0.02em',
+      fontFamily: 'body',
+      m: 0,
+      p: 0
+    },
+    select: {
+      border: 'none',
+      outline: 'none',
+      bg: 'transparent'
     }
   },
   buttons: {
@@ -94,6 +115,13 @@ export const theme = {
       lineHeight: 'body',
       letterSpacing: '-0.05em',
       color: 'textGray'
+    },
+    input: {
+      fontSize: 6,
+      lineHeight: 'input',
+      fontWeight: 'bold',
+      letterSpacing: '-0.02em',
+      fontFamily: 'body'
     }
   },
   styles: {

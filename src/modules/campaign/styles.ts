@@ -5,7 +5,7 @@ export const styles: Style = {
     display: 'grid',
     gridTemplateColumns: '1fr',
     gridTemplateRows: '1fr max-content',
-    height: '100%'
+    height: '100vh'
   },
   container: {
     flexDirection: 'column',

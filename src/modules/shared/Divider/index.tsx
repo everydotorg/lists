@@ -3,12 +3,17 @@ import {
   DividerProps as ThemeDividerProps
 } from 'theme-ui'
 
-type DividerProps = { space: number } & ThemeDividerProps
-export const Divider = ({ sx, space, ...props }: DividerProps): JSX.Element => {
+type DividerProps = { space: number; inverted?: boolean } & ThemeDividerProps
+export const Divider = ({
+  sx,
+  space,
+  inverted,
+  ...props
+}: DividerProps): JSX.Element => {
   return (
     <ThemeDivider
       sx={{
-        color: 'divider',
+        color: inverted ? 'dividerInverted' : 'divider',
         my: space,
         ...sx
       }}

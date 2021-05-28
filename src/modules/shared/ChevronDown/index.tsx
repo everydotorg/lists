@@ -1,8 +1,16 @@
 import { Box, BoxProps } from '@theme-ui/components'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 
-export const ChevronDown = ({ sx, ...props }: BoxProps): JSX.Element => {
+type ChevronDownProps = { inverted?: boolean } & BoxProps
+
+export const ChevronDown = ({
+  sx,
+  inverted,
+  ...props
+}: ChevronDownProps): JSX.Element => {
   const { primaryColor } = useCampaignInfoContext()
+
+  const strokeColor = inverted ? 'white' : primaryColor
 
   return (
     <Box sx={{ cursor: 'pointer', ...sx }} {...props}>
@@ -15,7 +23,7 @@ export const ChevronDown = ({ sx, ...props }: BoxProps): JSX.Element => {
       >
         <path
           d="M1 1L7 7L13 1"
-          stroke={primaryColor}
+          stroke={strokeColor}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
