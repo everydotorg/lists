@@ -11,6 +11,20 @@ export const styles: Style = {
     opacity: '0.8',
     mb: 3
   },
+  inputNumber: {
+    '::-webkit-outer-spin-button': {
+      WebkitAppearance: 'none',
+
+      margin: 0
+    },
+    '::-webkit-inner-spin-button': {
+      WebkitAppearance: 'none',
+      margin: 0
+    },
+    '&[type=number]': {
+      MozAppearance: 'textfield'
+    }
+  },
   donationContainer: { alignItems: 'center', justifyContent: 'space-between' },
   inputContainer: { flex: 3 },
   selectContainer: {

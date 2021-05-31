@@ -29,11 +29,13 @@ export const Input = ({
             {currencySymbol}
           </Text>
           <ThemeInput
-            value={donation}
+            value={donation ? donation : undefined}
             id="donationAmount"
             type="number"
             defaultValue="75"
+            sx={styles.inputNumber}
             onChange={(e) => setDonation(+e.target.value)}
+            min={0}
           />
         </Flex>
         <Flex sx={styles.selectContainer}>

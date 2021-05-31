@@ -41,7 +41,11 @@ export const Donation = (): JSX.Element => {
         <Disclaimer currency={currency} />
       </Flex>
       <Box sx={styles.donateButtonContainer}>
-        <Button variant="primaryInverted" sx={styles.donateButton}>
+        <Button
+          variant="primaryInverted"
+          sx={styles.donateButton}
+          disabled={donationAmount <= 0}
+        >
           Donate {currencySymbol}
           {donationAmount}
         </Button>
