@@ -76,7 +76,7 @@ const App = (): JSX.Element => {
           <Givelist />
         </Route>
         <Route path="*">
-          <Redirect to="/lil-bulb" />
+          <Redirect to="/lilbubs10thbirthday" />
         </Route>
       </Switch>
     </Router>
