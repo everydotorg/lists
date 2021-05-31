@@ -1,4 +1,5 @@
-import { Flex } from '@theme-ui/components'
+import { Flex, Box } from '@theme-ui/components'
+import { useHistory } from 'react-router'
 import { Text } from 'theme-ui'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { CloseIcon } from '../../shared/CloseIcon'
@@ -6,6 +7,7 @@ import { styles } from './styles'
 
 export const Header = (): JSX.Element => {
   const { name } = useCampaignInfoContext()
+  const history = useHistory()
 
   return (
     <Flex sx={styles.headerContainer}>
@@ -13,7 +15,9 @@ export const Header = (): JSX.Element => {
         <Text variant="title" sx={styles.header}>
           Donating to:
         </Text>
-        <CloseIcon />
+        <Box onClick={() => history.goBack()}>
+          <CloseIcon />
+        </Box>
       </Flex>
 
       <Text variant="title">{name}</Text>

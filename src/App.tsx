@@ -46,8 +46,7 @@ const Givelist = (): JSX.Element => {
           sx={{
             width: ['100%', '40vw'],
             margin: '0 auto',
-            background: 'white',
-            minHeight: '100vh'
+            background: 'white'
           }}
         >
           <Router>

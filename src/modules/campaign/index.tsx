@@ -7,6 +7,7 @@ import { styles } from './styles'
 import { NonProfit } from './NonProfit'
 import { Cause } from './Cause'
 import { useHistory, useLocation } from 'react-router'
+import { isIOS } from '../../utils/isIOS'
 
 export const Campaign = (): JSX.Element => {
   const { name, about, nonprofits } = useCampaignInfoContext()
@@ -17,7 +18,13 @@ export const Campaign = (): JSX.Element => {
     history.push(`${location.pathname}/donate`)
   }
   return (
-    <Box as="main" sx={styles.page}>
+    <Box
+      as="main"
+      sx={{
+        ...styles.page,
+        height: isIOS() ? '-webkit-fill-available' : '100vh'
+      }}
+    >
       <Flex sx={styles.container}>
         <Logo />
         <Flex sx={styles.campaignInfo}>

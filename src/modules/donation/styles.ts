@@ -5,7 +5,6 @@ export const styles: Style = {
     display: 'grid',
     gridTemplateColumns: '1fr',
     gridTemplateRows: '1fr max-content',
-    height: '100vh',
     bg: 'primary'
   },
   header: {
@@ -13,7 +12,13 @@ export const styles: Style = {
     opacity: '0.8',
     mb: 1
   },
+  donateButtonContainer: {
+    position: 'sticky',
+    bottom: 0,
+    bg: 'primary',
+    p: 1
+  },
   donateButton: {
-    m: 1
+    width: '100%'
   }
 }

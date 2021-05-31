@@ -8,6 +8,7 @@ import { Frequency } from './Frequency'
 import { Header } from './Header'
 import { Input } from './Input'
 import { styles } from './styles'
+import { isIOS } from '../../utils/isIOS'
 
 export const Donation = (): JSX.Element => {
   const [donationAmount, setDonationAmount] = useState(75)
@@ -19,7 +20,12 @@ export const Donation = (): JSX.Element => {
   const currencySymbol = useMemo(() => currencySymbolMap[currency], [currency])
 
   return (
-    <Box sx={styles.page}>
+    <Box
+      sx={{
+        ...styles.page,
+        height: isIOS() ? '-webkit-fill-available' : '100vh'
+      }}
+    >
       <Flex sx={{ flexDirection: 'column' }}>
         <Header />
         <Divider inverted space={3} />
@@ -34,10 +40,12 @@ export const Donation = (): JSX.Element => {
         <Divider inverted space={3} />
         <Disclaimer currency={currency} />
       </Flex>
-      <Button variant="primaryInverted" sx={styles.donateButton}>
-        Donate {currencySymbol}
-        {donationAmount}
-      </Button>
+      <Box sx={styles.donateButtonContainer}>
+        <Button variant="primaryInverted" sx={styles.donateButton}>
+          Donate {currencySymbol}
+          {donationAmount}
+        </Button>
+      </Box>
     </Box>
   )
 }

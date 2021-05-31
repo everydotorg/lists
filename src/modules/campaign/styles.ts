@@ -4,8 +4,7 @@ export const styles: Style = {
   page: {
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gridTemplateRows: '1fr max-content',
-    height: '100vh'
+    gridTemplateRows: '1fr max-content'
   },
   container: {
     flexDirection: 'column',
@@ -22,7 +21,9 @@ export const styles: Style = {
   buttonContainer: {
     bg: 'backgroundGray',
     gridRow: '2/3',
-    p: 1
+    p: 1,
+    position: 'sticky',
+    bottom: 0
   },
   submitButton: {
     width: '100%'
