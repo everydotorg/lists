@@ -19,6 +19,8 @@ export const Donation = (): JSX.Element => {
 
   const currencySymbol = useMemo(() => currencySymbolMap[currency], [currency])
 
+  const disabled = donationAmount <= 0
+
   return (
     <Box
       sx={{
@@ -43,8 +45,11 @@ export const Donation = (): JSX.Element => {
       <Box sx={styles.donateButtonContainer}>
         <Button
           variant="primaryInverted"
-          sx={styles.donateButton}
-          disabled={donationAmount <= 0}
+          sx={{
+            ...styles.donateButton,
+            ...(disabled ? styles.donateButtonDisabled : {})
+          }}
+          disabled={disabled}
         >
           Donate {currencySymbol}
           {donationAmount}

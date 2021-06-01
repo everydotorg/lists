@@ -15,7 +15,7 @@ export const Header = (): JSX.Element => {
         <Text variant="title" sx={styles.header}>
           Donating to:
         </Text>
-        <Box onClick={() => history.goBack()}>
+        <Box sx={styles.closeBox} onClick={() => history.goBack()}>
           <CloseIcon />
         </Box>
       </Flex>

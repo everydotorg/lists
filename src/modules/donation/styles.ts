@@ -20,5 +20,9 @@ export const styles: Style = {
   },
   donateButton: {
     width: '100%'
+  },
+  donateButtonDisabled: {
+    cursor: 'default',
+    opacity: 0.8
   }
 }

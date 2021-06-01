@@ -17,6 +17,7 @@ export const Campaign = (): JSX.Element => {
   const goToDonation = () => {
     history.push(`${location.pathname}/donate`)
   }
+
   return (
     <Box
       as="main"

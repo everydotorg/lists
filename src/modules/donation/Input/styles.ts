@@ -26,7 +26,7 @@ export const styles: Style = {
     }
   },
   donationContainer: { alignItems: 'center', justifyContent: 'space-between' },
-  inputContainer: { flex: 3 },
+  inputContainer: { flex: 3, alignItems: 'center' },
   selectContainer: {
     flex: 1,
     width: '100%',
