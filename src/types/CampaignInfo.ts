@@ -1,4 +1,5 @@
 import { NonProfit } from './NonProfit'
+import { Sponsor } from './Sponsor'
 
 export type CampaignInfo = {
   name: string
@@ -13,4 +14,5 @@ export type CampaignInfo = {
   givers: number
   cause: string
   nonprofits: NonProfit[]
+  sponsor: Sponsor
 }

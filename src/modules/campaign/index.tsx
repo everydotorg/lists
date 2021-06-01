@@ -8,6 +8,7 @@ import { NonProfit } from './NonProfit'
 import { Cause } from './Cause'
 import { useHistory, useLocation } from 'react-router'
 import { isIOS } from '../../utils/isIOS'
+import { Matching } from './Matching'
 
 export const Campaign = (): JSX.Element => {
   const { name, about, nonprofits } = useCampaignInfoContext()
@@ -33,6 +34,8 @@ export const Campaign = (): JSX.Element => {
             {name}
           </Text>
           <Text variant="small">{about}</Text>
+          <Divider space={3} />
+          <Matching />
           <Divider space={3} />
           <Goal />
         </Flex>

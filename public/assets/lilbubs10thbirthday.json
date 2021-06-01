@@ -10,6 +10,13 @@
   "donated": 76398,
   "givers": 95,
   "cause": "animals",
+  "sponsor": {
+    "name": "Sponsor X",
+    "type": "matching",
+    "ratio": "1:1",
+    "threshold": 500,
+    "description": "We will add an extra donation on top of yours, to the same value (up to $500 per donation). These matching funds are kindly provided by (Sponsor X) to advance our mission of helping animals in need."
+  },
   "nonprofits": [
     {
       "slug": "iamlilbub",

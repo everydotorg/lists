@@ -16,18 +16,7 @@ export const styles: Style = {
   avatar: {
     marginRight: 3
   },
-  chevron: {
-    transform: 'rotate(0deg)',
-    transition: 'transform 0.3s',
-    flexShrink: 0,
-    py: 2
-  },
-  rotate: {
-    transform: 'rotate(180deg)'
-  },
   aboutContainer: {
-    transition: 'max-height 0.5s ease',
-    overflow: 'hidden',
     backgroundColor: 'backgroundGray'
   },
   aboutText: {
