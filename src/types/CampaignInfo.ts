@@ -14,5 +14,5 @@ export type CampaignInfo = {
   givers: number
   cause: string
   nonprofits: NonProfit[]
-  sponsor: Sponsor
+  sponsor?: Sponsor
 }

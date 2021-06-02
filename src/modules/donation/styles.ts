@@ -7,6 +7,7 @@ export const styles: Style = {
     gridTemplateRows: '1fr max-content',
     bg: 'primary'
   },
+  container: { flexDirection: 'column', overflow: 'auto' },
   header: {
     fontWeight: 400,
     opacity: '0.8',

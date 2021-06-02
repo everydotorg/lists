@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { styles } from './styles'
 import { Flex, Box, ThemeUIStyleObject } from 'theme-ui'
-import { ChevronDown } from '../ChevronDown'
+import { ChevronDown, ChevronDownProps } from '../ChevronDown'
 
 interface ExpandableProps {
   renderTitle: React.ReactNode
@@ -9,6 +9,7 @@ interface ExpandableProps {
   descriptionStyle?: ThemeUIStyleObject
   containerStyle?: ThemeUIStyleObject
   chevronStyle?: ThemeUIStyleObject
+  chevronProps?: Partial<ChevronDownProps>
   space?: number
 }
 export const Expandable = ({
@@ -17,6 +18,7 @@ export const Expandable = ({
   chevronStyle,
   renderTitle,
   renderDescription,
+  chevronProps = {},
   space = 0
 }: ExpandableProps): JSX.Element => {
   const [expanded, setExpanded] = useState<boolean>(false)
@@ -38,6 +40,7 @@ export const Expandable = ({
         <ChevronDown
           width={20}
           height={10}
+          {...chevronProps}
           sx={{
             ...styles.chevron,
             ...chevronStyle,

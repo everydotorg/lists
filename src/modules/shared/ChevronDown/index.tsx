@@ -1,7 +1,7 @@
 import { Box, BoxProps } from '@theme-ui/components'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 
-type ChevronDownProps = {
+export type ChevronDownProps = {
   width: number
   height: number
   inverted?: boolean

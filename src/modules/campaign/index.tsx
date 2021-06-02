@@ -11,7 +11,7 @@ import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 
 export const Campaign = (): JSX.Element => {
-  const { name, about, nonprofits } = useCampaignInfoContext()
+  const { name, about, nonprofits, sponsor } = useCampaignInfoContext()
   const history = useHistory()
   const location = useLocation()
 
@@ -34,8 +34,12 @@ export const Campaign = (): JSX.Element => {
             {name}
           </Text>
           <Text variant="small">{about}</Text>
-          <Divider space={3} />
-          <Matching />
+          {sponsor && (
+            <>
+              <Divider space={3} />
+              <Matching />
+            </>
+          )}
           <Divider space={3} />
           <Goal />
         </Flex>

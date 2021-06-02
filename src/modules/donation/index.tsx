@@ -9,8 +9,12 @@ import { Header } from './Header'
 import { Input } from './Input'
 import { styles } from './styles'
 import { isIOS } from '../../utils/isIOS'
+import { Matching } from './Matching'
+import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 
 export const Donation = (): JSX.Element => {
+  const { sponsor } = useCampaignInfoContext()
+
   const [donationAmount, setDonationAmount] = useState(75)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)
   const [frequency, setFrequency] = useState<DonationFrequency>(
@@ -28,7 +32,7 @@ export const Donation = (): JSX.Element => {
         height: isIOS() ? '-webkit-fill-available' : '100vh'
       }}
     >
-      <Flex sx={{ flexDirection: 'column' }}>
+      <Flex sx={styles.container}>
         <Header />
         <Divider inverted space={3} />
         <Input
@@ -37,6 +41,15 @@ export const Donation = (): JSX.Element => {
           currencySymbol={currencySymbol}
           setCurrency={setCurrency}
         />
+        {sponsor && (
+          <>
+            <Divider inverted space={3} sx={{ mx: 3 }} />
+            <Matching
+              donationAmount={donationAmount}
+              currencySymbol={currencySymbol}
+            />
+          </>
+        )}
         <Divider inverted space={3} />
         <Frequency frequency={frequency} setFrequency={setFrequency} />
         <Divider inverted space={3} />
