@@ -7,7 +7,6 @@ import { styles } from './styles'
 import { Facebook } from '../shared/Facebook'
 import { Twitter } from '../shared/Twitter'
 import { useParams } from 'react-router-dom'
-import { isIOS } from '../../utils/isIOS'
 
 export const ThankYou = (): JSX.Element | null => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
@@ -23,7 +22,7 @@ export const ThankYou = (): JSX.Element | null => {
   const copyToClipboard = () => navigator.clipboard.writeText(shareUrl)
 
   return (
-    <Box sx={{ height: isIOS() ? '-webkit-fill-available' : '100vh' }}>
+    <Box sx={styles.page}>
       <Flex sx={{ ...styles.header, bg: primaryColor }}>
         <Image src={thankYouImageUrl} sx={styles.headerImg} />
         <Flex sx={styles.thankYouContainer}>
@@ -44,29 +43,31 @@ export const ThankYou = (): JSX.Element | null => {
         <Text as="p" variant="regular">
           {shareText}
         </Text>
-        <Button
-          as="a"
-          variant="primary"
-          type="button"
-          sx={styles.shareButton}
-          onClick={copyToClipboard}
-        >
-          Copy link to this list
-        </Button>
-        <Flex sx={styles.socialShareContainer}>
-          <Facebook
-            width={25}
-            height={25}
-            target="__blank"
-            href={facebookShare(shareUrl, about)}
-          />
-          <Twitter
-            width={25}
-            height={25}
-            target="__blank"
-            href={twitterShare(shareUrl, about)}
-          />
-        </Flex>
+        <Box>
+          <Button
+            as="a"
+            variant="primary"
+            type="button"
+            sx={styles.shareButton}
+            onClick={copyToClipboard}
+          >
+            Copy link to this list
+          </Button>
+          <Flex sx={styles.socialShareContainer}>
+            <Facebook
+              width={25}
+              height={25}
+              target="__blank"
+              href={facebookShare(shareUrl, about)}
+            />
+            <Twitter
+              width={25}
+              height={25}
+              target="__blank"
+              href={twitterShare(shareUrl, about)}
+            />
+          </Flex>
+        </Box>
       </Box>
     </Box>
   )

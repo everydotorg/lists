@@ -79,6 +79,11 @@ export const theme = {
         outline: 'none'
       }
     },
+    primarySmall: {
+      variant: 'buttons.primary',
+      py: '12px',
+      px: 5
+    },
     primaryInverted: {
       variant: 'buttons.primary',
       color: 'primary',
@@ -108,12 +113,20 @@ export const theme = {
       fontSize: 3,
       letterSpacing: '-0.01em'
     },
-    small: {
+    caption: {
       fontFamily: 'body',
       fontWeight: 'body',
       fontSize: 1,
       lineHeight: 'body',
       letterSpacing: '-0.05em',
+      color: 'textGray'
+    },
+    small: {
+      fontFamily: 'body',
+      fontWeight: 'body',
+      fontSize: [1, 3],
+      lineHeight: ['body', 'heading'],
+      letterSpacing: ['-0.05em', '-0.01em'],
       color: 'textGray'
     },
     input: {
@@ -122,6 +135,12 @@ export const theme = {
       fontWeight: 'bold',
       letterSpacing: '-0.02em',
       fontFamily: 'body'
+    },
+    large: {
+      fontSize: 4,
+      lineHeight: 'heading',
+      letterSpacing: '-0.015em',
+      color: 'text'
     }
   },
   styles: {

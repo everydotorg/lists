@@ -15,9 +15,10 @@ export const styles: Style = {
   campaignInfo: {
     flexDirection: 'column',
     bg: 'white',
-    padding: 3
+    padding: [3, 6]
   },
   campaignTitle: {
+    display: [null, 'none'],
     mb: 3
   },
   buttonContainer: {
@@ -25,13 +26,14 @@ export const styles: Style = {
     gridRow: '2/3',
     p: 1,
     position: 'sticky',
-    bottom: 0
+    bottom: 0,
+    display: [null, 'none']
   },
   submitButton: {
     width: '100%'
   },
   nonprofitsContainer: {
     backgroundColor: 'backgroundGray',
-    px: 3
+    px: [3, 6]
   }
 }
