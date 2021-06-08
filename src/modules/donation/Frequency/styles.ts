@@ -4,7 +4,7 @@ export const styles: Style = {
   container: {
     px: [3, 6],
     '& > :not(:last-child)': {
-      mb: [3, 6]
+      mb: 3
     }
   },
   label: { color: 'white', opacity: 0.8 },
