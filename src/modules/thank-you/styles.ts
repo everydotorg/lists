@@ -34,11 +34,11 @@ export const styles: Style = {
   thankYouTax: { color: 'white', opacity: '0.8' },
   goalContainer: {
     px: 5,
-    py: 3
+    py: [3, 6]
   },
   shareContainer: {
     px: 5,
-    py: 3,
+    py: [3, 6],
     borderTop: '1px solid',
     borderColor: 'muted',
     '& > :not(:last-child)': {

@@ -2,9 +2,9 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   container: {
-    px: 3,
+    px: [3, 6],
     '& > :not(:last-child)': {
-      mb: 3
+      mb: [3, 6]
     }
   },
   label: { color: 'white', opacity: 0.8 },
