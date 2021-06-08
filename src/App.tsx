@@ -14,6 +14,7 @@ import { getCampaignInfo } from './api/getCampaignInfo'
 import { CampaignInfo } from './types/CampaignInfo'
 import { CampaignInfoContext } from './contexts/CampaignInfoContext'
 import { Donation } from './modules/donation'
+import { Banner } from './modules/shared/Banner'
 
 const Givelist = (): JSX.Element => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
@@ -44,11 +45,15 @@ const Givelist = (): JSX.Element => {
       <CampaignInfoContext.Provider value={campaignInfo}>
         <Box
           sx={{
-            width: ['100%', '40vw'],
+            width: ['100%', '100vw'],
             margin: '0 auto',
-            background: 'white'
+            background: 'white',
+            display: [null, 'grid'],
+            gridTemplateColumns: [null, '1fr 1fr']
           }}
         >
+          <Banner />
+
           <Router>
             <Switch>
               <Route exact path="/:campaignSlug/thank-you">

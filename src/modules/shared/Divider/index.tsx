@@ -3,7 +3,10 @@ import {
   DividerProps as ThemeDividerProps
 } from 'theme-ui'
 
-type DividerProps = { space: number; inverted?: boolean } & ThemeDividerProps
+type DividerProps = {
+  space: number | number[]
+  inverted?: boolean
+} & ThemeDividerProps
 export const Divider = ({
   sx,
   space,

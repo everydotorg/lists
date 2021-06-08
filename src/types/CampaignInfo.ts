@@ -6,6 +6,7 @@ export type CampaignInfo = {
   primaryColor: string
   backgroundImageUrl: string
   thankYouImageUrl: string
+  bannerUrl: string
   shareText: string
   logoUrl: string
   about: string

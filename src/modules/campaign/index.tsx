@@ -2,7 +2,7 @@ import { Button, Flex, Text, Box } from '@theme-ui/components'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { Goal } from './Goal'
 import { Divider } from '../shared/Divider'
-import { Logo } from './Logo'
+import { Header } from './Header'
 import { styles } from './styles'
 import { NonProfit } from './NonProfit'
 import { Cause } from './Cause'
@@ -28,7 +28,7 @@ export const Campaign = (): JSX.Element => {
       }}
     >
       <Flex sx={styles.container}>
-        <Logo />
+        <Header onClickDonate={goToDonation} />
         <Flex sx={styles.campaignInfo}>
           <Text sx={styles.campaignTitle} variant="title">
             {name}
@@ -36,11 +36,11 @@ export const Campaign = (): JSX.Element => {
           <Text variant="small">{about}</Text>
           {sponsor && (
             <>
-              <Divider space={3} />
+              <Divider space={[3, 6]} />
               <Matching />
             </>
           )}
-          <Divider space={3} />
+          <Divider space={[3, 6]} />
           <Goal />
         </Flex>
         <Cause />

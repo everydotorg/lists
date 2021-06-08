@@ -20,11 +20,13 @@ export const Goal = (): JSX.Element => {
           <Text sx={styles.donated} variant="title">
             {formatter.format(donated)}
           </Text>
-          <Text variant="small">donated of {formatter.format(goal)} goal</Text>
+          <Text variant="caption">
+            donated of {formatter.format(goal)} goal
+          </Text>
         </Flex>
         <Flex sx={styles.legend}>
           <Text variant="title">{givers}</Text>
-          <Text variant="small">Givers</Text>
+          <Text variant="caption">Givers</Text>
         </Flex>
       </Flex>
     </Box>

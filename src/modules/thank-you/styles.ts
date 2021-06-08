@@ -1,12 +1,19 @@
 import { Style } from '../../types/Style'
 
 export const styles: Style = {
+  page: {
+    overflow: [null, 'auto'],
+    height: [null, '100vh'],
+    display: 'flex',
+    flexDirection: 'column'
+  },
   header: {
     flexDirection: 'column'
   },
   headerImg: {
-    margin: 0,
+    margin: [0, '0 auto'],
     padding: 0,
+    width: [null, '60%'],
     borderBottom: '1px solid',
     borderColor: 'dividerInverted'
   },
@@ -35,10 +42,14 @@ export const styles: Style = {
     borderTop: '1px solid',
     borderColor: 'muted',
     '& > :not(:last-child)': {
-      marginBottom: 4
-    }
+      mb: 4
+    },
+    flex: [null, 1],
+    display: [null, 'flex'],
+    flexDirection: [null, 'column'],
+    justifyContent: [null, 'space-between']
   },
-  shareButton: { width: '100%' },
+  shareButton: { width: '100%', mb: 4 },
   socialShareContainer: {
     justifyContent: 'center',
     marginBottom: 0,
