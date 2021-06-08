@@ -15,7 +15,7 @@ export const Matching = ({
   const { sponsor } = useCampaignInfoContext()
 
   return (
-    <Box sx={{ mx: 3 }}>
+    <Box sx={{ mx: [3, 6] }}>
       <Expandable
         containerStyle={styles.container}
         chevronStyle={styles.chevronDown}
