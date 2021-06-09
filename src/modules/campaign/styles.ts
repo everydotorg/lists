@@ -10,7 +10,8 @@ export const styles: Style = {
   container: {
     flexDirection: 'column',
     gridRow: '1/2',
-    overflow: 'auto'
+    overflow: 'auto',
+    backgroundColor: 'backgroundGray'
   },
   campaignInfo: {
     flexDirection: 'column',

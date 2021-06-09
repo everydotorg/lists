@@ -1,13 +1,6 @@
 import { Style } from '../../../types/Style'
 
 export const styles: Style = {
-  hover: {
-    px: 6,
-    mx: -6,
-    ':hover': {
-      bg: 'white'
-    }
-  },
   container: {
     alignItems: 'start',
     justifyContent: 'space-between',
