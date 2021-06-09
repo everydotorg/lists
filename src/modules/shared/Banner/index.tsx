@@ -14,7 +14,7 @@ export const Banner = (): JSX.Element => {
         display: ['none', 'flex']
       }}
     >
-      <Text sx={styles.urlText} variant="large">
+      <Text sx={styles.urlText} variant="normal">
         giveli.st/<strong>lilbubsbirthday</strong>
       </Text>
     </Box>
