@@ -10,6 +10,7 @@ interface NonProfitProps {
 export const NonProfit = ({ nonprofit }: NonProfitProps): JSX.Element => {
   return (
     <Expandable
+      hoverStyle={styles.hover}
       containerStyle={styles.container}
       renderTitle={
         <Flex>

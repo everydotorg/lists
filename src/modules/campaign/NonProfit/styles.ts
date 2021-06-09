@@ -1,11 +1,18 @@
 import { Style } from '../../../types/Style'
 
 export const styles: Style = {
+  hover: {
+    px: 6,
+    mx: -6,
+    ':hover': {
+      bg: 'white'
+    }
+  },
   container: {
     alignItems: 'start',
     justifyContent: 'space-between',
     py: 3,
-    backgroundColor: 'backgroundGray',
+    backgroundColor: 'inherit',
     borderTop: '1px solid',
     borderColor: 'muted'
   },
@@ -17,7 +24,7 @@ export const styles: Style = {
     marginRight: 3
   },
   aboutContainer: {
-    backgroundColor: 'backgroundGray'
+    backgroundColor: 'inherit'
   },
   aboutText: {
     fontSize: 2,

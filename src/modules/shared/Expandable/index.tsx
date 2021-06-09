@@ -10,14 +10,17 @@ interface ExpandableProps {
   containerStyle?: ThemeUIStyleObject
   chevronStyle?: ThemeUIStyleObject
   chevronProps?: Partial<ChevronDownProps>
+  hoverStyle?: ThemeUIStyleObject
   space?: number
 }
+
 export const Expandable = ({
-  containerStyle,
-  descriptionStyle,
-  chevronStyle,
   renderTitle,
   renderDescription,
+  containerStyle = {},
+  descriptionStyle = {},
+  chevronStyle = {},
+  hoverStyle = {},
   chevronProps = {},
   space = 0
 }: ExpandableProps): JSX.Element => {
@@ -37,7 +40,8 @@ export const Expandable = ({
     <Box
       onClick={toggle}
       sx={{
-        cursor: 'pointer'
+        cursor: 'pointer',
+        ...hoverStyle
       }}
     >
       <Flex sx={containerStyle}>
