@@ -1,4 +1,4 @@
 export enum DonationFrequency {
-  OneTime = 'onetime',
-  Monthly = 'monthly'
+  OneTime = 'ONCE',
+  Monthly = 'MONTHLY'
 }

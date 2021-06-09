@@ -1,19 +1,19 @@
 import { Text, Box } from '@theme-ui/components'
-import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
+import { Sponsor } from '../../../types/Sponsor'
 import { Expandable } from '../../shared/Expandable'
 import { styles } from './styles'
 
 interface MatchingProps {
+  sponsor: Sponsor
   donationAmount: number
   currencySymbol: string
 }
 
 export const Matching = ({
+  currencySymbol,
   donationAmount,
-  currencySymbol
+  sponsor
 }: MatchingProps): JSX.Element => {
-  const { sponsor } = useCampaignInfoContext()
-
   return (
     <Box sx={{ mx: 3 }}>
       <Expandable
@@ -27,15 +27,15 @@ export const Matching = ({
               Another{' '}
               <strong>
                 {currencySymbol}
-                {Math.min(donationAmount, sponsor?.threshold ?? 0)}
+                {Math.min(donationAmount, sponsor.threshold ?? 0)}
               </strong>{' '}
-              will be matched by <strong>{sponsor?.name}</strong>
+              will be matched by <strong>{sponsor.name}</strong>
             </Text>
           </Box>
         }
         renderDescription={
           <Text variant="small" sx={styles.descriptionText}>
-            {sponsor?.description}
+            {sponsor.description}
           </Text>
         }
       />

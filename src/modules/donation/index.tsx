@@ -11,9 +11,10 @@ import { styles } from './styles'
 import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
+import { createEveryUrl } from '../../utils/url'
 
 export const Donation = (): JSX.Element => {
-  const { sponsor } = useCampaignInfoContext()
+  const { slug, sponsor } = useCampaignInfoContext()
 
   const [donationAmount, setDonationAmount] = useState(75)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)
@@ -45,8 +46,9 @@ export const Donation = (): JSX.Element => {
           <>
             <Divider inverted space={3} sx={{ mx: 3 }} />
             <Matching
-              donationAmount={donationAmount}
               currencySymbol={currencySymbol}
+              donationAmount={donationAmount}
+              sponsor={sponsor}
             />
           </>
         )}
@@ -57,6 +59,12 @@ export const Donation = (): JSX.Element => {
       </Flex>
       <Box sx={styles.donateButtonContainer}>
         <Button
+          onClick={() =>
+            window.open(
+              createEveryUrl(slug, frequency, donationAmount),
+              '_self'
+            )
+          }
           variant="primaryInverted"
           sx={{
             ...styles.donateButton,

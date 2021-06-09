@@ -4,6 +4,7 @@ export const styles: Style = {
   page: {
     display: 'grid',
     gridTemplateColumns: '1fr',
+    bg: 'backgroundGray',
     gridTemplateRows: '1fr max-content'
   },
   container: {
@@ -13,6 +14,7 @@ export const styles: Style = {
   },
   campaignInfo: {
     flexDirection: 'column',
+    bg: 'white',
     padding: 3
   },
   campaignTitle: {
