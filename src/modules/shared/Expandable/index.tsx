@@ -34,7 +34,12 @@ export const Expandable = ({
   )
 
   return (
-    <>
+    <Box
+      onClick={toggle}
+      sx={{
+        cursor: 'pointer'
+      }}
+    >
       <Flex sx={containerStyle}>
         {renderTitle}
         <ChevronDown
@@ -46,7 +51,6 @@ export const Expandable = ({
             ...chevronStyle,
             ...(expanded ? styles.rotate : {})
           }}
-          onClick={toggle}
         />
       </Flex>
       <Box
@@ -60,6 +64,6 @@ export const Expandable = ({
       >
         {renderDescription}
       </Box>
-    </>
+    </Box>
   )
 }
