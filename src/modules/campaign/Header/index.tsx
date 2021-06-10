@@ -13,27 +13,13 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
       <Box
         sx={{
           ...styles.container,
-          backgroundImage: `url(${backgroundImageUrl})`,
-          display: [null, 'none']
+          backgroundImage: `url(${backgroundImageUrl})`
         }}
       >
         <Image sx={styles.logo} src={logoUrl} />
       </Box>
 
-      <Box
-        sx={{
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          display: ['none', 'flex'],
-          p: 6,
-          position: 'sticky',
-          bg: 'white',
-          top: 0,
-          borderBottom: '1px solid',
-          borderBottomColor: 'divider',
-          zIndex: [null, 1]
-        }}
-      >
+      <Box sx={styles.desktopContainer}>
         <Flex sx={{ alignItems: 'center' }}>
           <Image sx={styles.logoDesktop} src={logoUrl} />
           <Text variant="title">{name}</Text>

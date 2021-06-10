@@ -7,11 +7,8 @@ export const Banner = (): JSX.Element => {
   return (
     <Box
       sx={{
-        height: '100vh',
-        backgroundImage: `url(${bannerUrl})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        display: ['none', 'flex']
+        ...styles.banner,
+        backgroundImage: `url(${bannerUrl})`
       }}
     >
       <Text sx={styles.urlText} variant="normal">
