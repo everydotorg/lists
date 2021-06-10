@@ -6,21 +6,35 @@ import {
 type DividerProps = {
   space: number | number[]
   inverted?: boolean
+  color?: string
 } & ThemeDividerProps
 export const Divider = ({
   sx,
   space,
-  inverted,
+  inverted = false,
+  color = '',
   ...props
 }: DividerProps): JSX.Element => {
   return (
     <ThemeDivider
       sx={{
-        color: inverted ? 'dividerInverted' : 'divider',
+        color: getDividerColor(color, inverted),
         my: space,
         ...sx
       }}
       {...props}
     />
   )
+}
+
+const getDividerColor = (color: string, inverted: boolean): string => {
+  if (color) {
+    return color
+  }
+
+  if (inverted) {
+    return 'dividerInverted'
+  }
+
+  return 'divider'
 }

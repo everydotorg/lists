@@ -17,7 +17,7 @@ export const Matching = ({
   return (
     <Box sx={{ mx: [3, 6] }}>
       <Expandable
-        containerStyle={styles.container}
+        headerStyle={styles.container}
         chevronStyle={styles.chevronDown}
         space={2}
         chevronProps={{ inverted: true }}

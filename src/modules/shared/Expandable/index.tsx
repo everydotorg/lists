@@ -8,6 +8,7 @@ interface ExpandableProps {
   renderDescription: React.ReactNode
   descriptionStyle?: ThemeUIStyleObject
   containerStyle?: ThemeUIStyleObject
+  headerStyle?: ThemeUIStyleObject
   chevronStyle?: ThemeUIStyleObject
   chevronProps?: Partial<ChevronDownProps>
   space?: number
@@ -17,6 +18,7 @@ export const Expandable = ({
   renderTitle,
   renderDescription,
   containerStyle = {},
+  headerStyle = {},
   descriptionStyle = {},
   chevronStyle = {},
   chevronProps = {},
@@ -38,10 +40,11 @@ export const Expandable = ({
     <Box
       onClick={toggle}
       sx={{
-        cursor: 'pointer'
+        cursor: 'pointer',
+        ...containerStyle
       }}
     >
-      <Flex sx={containerStyle}>
+      <Flex sx={headerStyle}>
         {renderTitle}
         <ChevronDown
           width={20}
@@ -50,7 +53,8 @@ export const Expandable = ({
           sx={{
             ...styles.chevron,
             ...chevronStyle,
-            ...(expanded ? styles.rotate : {})
+            ...(expanded ? styles.rotate : {}),
+            color: 'primary'
           }}
         />
       </Flex>

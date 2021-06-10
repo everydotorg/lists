@@ -10,7 +10,7 @@ interface MatchingProps {
 export const Matching = ({ sponsor }: MatchingProps): JSX.Element => {
   return (
     <Expandable
-      containerStyle={styles.container}
+      headerStyle={styles.header}
       descriptionStyle={styles.description}
       chevronStyle={styles.chevronDown}
       space={2}

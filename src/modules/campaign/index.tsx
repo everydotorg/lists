@@ -52,7 +52,10 @@ export const Campaign = (): JSX.Element => {
         <Box sx={styles.nonprofitsContainer}>
           {nonprofits &&
             nonprofits.map((nonprofit) => (
-              <NonProfit key={nonprofit.slug} nonprofit={nonprofit} />
+              <>
+                <Divider space={0} color="muted" />
+                <NonProfit key={nonprofit.slug} nonprofit={nonprofit} />
+              </>
             ))}
         </Box>
       </Flex>
