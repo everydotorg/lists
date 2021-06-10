@@ -5,7 +5,7 @@ export const styles: Style = {
     flexDirection: 'column',
     color: 'white',
     p: 3,
-    pb: [0, 0]
+    pb: 0
   },
   firstLine: { alignItems: 'center', justifyContent: 'space-between' },
   closeBox: { cursor: 'pointer' },
