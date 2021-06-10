@@ -1,7 +1,9 @@
 import { NonProfit } from './NonProfit'
+import { Progress } from './Progress'
 import { Sponsor } from './Sponsor'
 
 export type CampaignInfo = {
+  slug: string
   name: string
   primaryColor: string
   backgroundImageUrl: string
@@ -10,9 +12,7 @@ export type CampaignInfo = {
   shareText: string
   logoUrl: string
   about: string
-  goal: number
-  donated: number
-  givers: number
+  progress?: Progress
   cause: string
   nonprofits: NonProfit[]
   sponsor?: Sponsor

@@ -12,12 +12,13 @@ interface ExpandableProps {
   chevronProps?: Partial<ChevronDownProps>
   space?: number
 }
+
 export const Expandable = ({
-  containerStyle,
-  descriptionStyle,
-  chevronStyle,
   renderTitle,
   renderDescription,
+  containerStyle = {},
+  descriptionStyle = {},
+  chevronStyle = {},
   chevronProps = {},
   space = 0
 }: ExpandableProps): JSX.Element => {
@@ -34,7 +35,12 @@ export const Expandable = ({
   )
 
   return (
-    <>
+    <Box
+      onClick={toggle}
+      sx={{
+        cursor: 'pointer'
+      }}
+    >
       <Flex sx={containerStyle}>
         {renderTitle}
         <ChevronDown
@@ -46,7 +52,6 @@ export const Expandable = ({
             ...chevronStyle,
             ...(expanded ? styles.rotate : {})
           }}
-          onClick={toggle}
         />
       </Flex>
       <Box
@@ -60,6 +65,6 @@ export const Expandable = ({
       >
         {renderDescription}
       </Box>
-    </>
+    </Box>
   )
 }

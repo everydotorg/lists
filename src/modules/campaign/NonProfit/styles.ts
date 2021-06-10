@@ -5,7 +5,7 @@ export const styles: Style = {
     alignItems: 'start',
     justifyContent: 'space-between',
     py: 3,
-    backgroundColor: 'backgroundGray',
+    backgroundColor: 'inherit',
     borderTop: '1px solid',
     borderColor: 'muted'
   },
@@ -17,7 +17,7 @@ export const styles: Style = {
     marginRight: 3
   },
   aboutContainer: {
-    backgroundColor: 'backgroundGray'
+    backgroundColor: 'inherit'
   },
   aboutText: {
     fontSize: 2,

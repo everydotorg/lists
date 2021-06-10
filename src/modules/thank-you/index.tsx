@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { Box, Button, Flex, Image, Text } from 'theme-ui'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
-import { facebookShare, twitterShare } from '../../utils/share'
+import { facebookShare, twitterShare } from '../../utils/url'
 import { Goal } from '../campaign/Goal'
 import { styles } from './styles'
 import { Facebook } from '../shared/Facebook'
@@ -11,7 +11,7 @@ import { useParams } from 'react-router-dom'
 export const ThankYou = (): JSX.Element | null => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
 
-  const { about, primaryColor, shareText, thankYouImageUrl } =
+  const { about, progress, primaryColor, shareText, thankYouImageUrl } =
     useCampaignInfoContext()
 
   const shareUrl = useMemo(
@@ -34,9 +34,11 @@ export const ThankYou = (): JSX.Element | null => {
           </Text>
         </Flex>
       </Flex>
-      <Box sx={styles.goalContainer}>
-        <Goal />
-      </Box>
+      {progress && (
+        <Box sx={styles.goalContainer}>
+          <Goal progress={progress} />
+        </Box>
+      )}
       <Box sx={styles.shareContainer}>
         <Text as="p" variant="regular">
           {shareText}
