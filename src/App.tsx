@@ -80,12 +80,21 @@ const App = (): JSX.Element => {
         <Route path="/:campaignSlug">
           <Givelist />
         </Route>
+        <Route exact path="/">
+          <RedirectToEvery />
+        </Route>
         <Route path="*">
           <Redirect to="/lilbubs10thbirthday" />
         </Route>
       </Switch>
     </Router>
   )
+}
+
+const RedirectToEvery = () => {
+  window.location.href = 'https://every.org'
+
+  return null
 }
 
 export default App
