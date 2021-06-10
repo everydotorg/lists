@@ -2,12 +2,23 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   container: {
+    px: [3, 6],
+    mx: [-3, -6],
+    bg: 'backgroundGray',
+    ':hover': {
+      bg: 'primary',
+      '& *': {
+        color: 'white'
+      }
+    },
+    transition: 'background .2s ease'
+  },
+  header: {
+    label: 'nonprofit-item',
     alignItems: 'start',
     justifyContent: 'space-between',
     py: 3,
-    backgroundColor: 'backgroundGray',
-    borderTop: '1px solid',
-    borderColor: 'muted'
+    backgroundColor: 'inherit'
   },
   textContainer: {
     flexDirection: 'column',
@@ -17,7 +28,7 @@ export const styles: Style = {
     marginRight: 3
   },
   aboutContainer: {
-    backgroundColor: 'backgroundGray'
+    backgroundColor: 'inherit'
   },
   aboutText: {
     fontSize: 2,

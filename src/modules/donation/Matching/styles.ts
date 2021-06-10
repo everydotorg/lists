@@ -1,7 +1,7 @@
 import { Style } from '../../../types/Style'
 
 export const styles: Style = {
-  container: {
+  header: {
     alignItems: 'center',
     justifyContent: 'space-between'
   },

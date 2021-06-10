@@ -4,7 +4,7 @@ export const styles: Style = {
   container: {
     color: 'white',
     flexDirection: 'column',
-    px: 3
+    px: [3, 6]
   },
   currencySymbol: { mr: 2 },
   label: {

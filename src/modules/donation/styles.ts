@@ -17,7 +17,7 @@ export const styles: Style = {
     position: 'sticky',
     bottom: 0,
     bg: 'primary',
-    p: 1
+    p: [1, 3]
   },
   donateButton: {
     width: '100%'

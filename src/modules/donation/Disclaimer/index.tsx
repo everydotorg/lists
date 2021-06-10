@@ -8,8 +8,8 @@ export const Disclaimer = ({ currency }: DisclaimerProps): JSX.Element => {
   return (
     <Box
       sx={{
-        px: 3,
-        pb: 3
+        px: [3, 6],
+        pb: [3, 6]
       }}
     >
       <Text variant="regular" sx={{ color: 'white', fontSize: 2 }}>

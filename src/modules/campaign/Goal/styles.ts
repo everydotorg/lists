@@ -2,10 +2,11 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   goalContainer: {
-    pt: 3
+    pt: [3, 0]
   },
   progressBar: {
-    backgroundColor: 'progressBg'
+    backgroundColor: 'progressBg',
+    height: [null, '8px']
   },
   legend: {
     flexDirection: 'column',

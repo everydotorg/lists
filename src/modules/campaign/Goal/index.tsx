@@ -26,13 +26,13 @@ export const Goal = ({ progress }: GoalProps): JSX.Element => {
           <Text sx={styles.donated} variant="title">
             {formatter.format(progress.donated)}
           </Text>
-          <Text variant="small">
+          <Text variant="caption">
             donated of {formatter.format(progress.goal)} goal
           </Text>
         </Flex>
         <Flex sx={styles.legend}>
           <Text variant="title">{progress.givers}</Text>
-          <Text variant="small">Givers</Text>
+          <Text variant="caption">Givers</Text>
         </Flex>
       </Flex>
     </Box>
