@@ -1,6 +1,5 @@
 import { Button, Flex, Text, Box } from '@theme-ui/components'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
-import { Goal } from './Goal'
 import { Divider } from '../shared/Divider'
 import { Header } from './Header'
 import { styles } from './styles'
@@ -11,8 +10,7 @@ import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 
 export const Campaign = (): JSX.Element => {
-  const { name, progress, about, nonprofits, sponsor } =
-    useCampaignInfoContext()
+  const { name, about, nonprofits, sponsor } = useCampaignInfoContext()
   const history = useHistory()
   const location = useLocation()
 
@@ -39,12 +37,6 @@ export const Campaign = (): JSX.Element => {
             <>
               <Divider space={[3, 6]} />
               <Matching sponsor={sponsor} />
-            </>
-          )}
-          {progress && (
-            <>
-              <Divider space={[3, 6]} />
-              <Goal progress={progress} />
             </>
           )}
         </Flex>
