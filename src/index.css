@@ -10,6 +10,21 @@ NORMALIZE CSS:
   box-sizing: inherit;
 }
 
+html {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 56.25em) {
+  html {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 112.5em) {
+  html {
+    font-size: 20px;
+  }
+}
+
 body {
   box-sizing: border-box;
   margin: 0;

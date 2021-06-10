@@ -31,7 +31,7 @@ export const Campaign = (): JSX.Element => {
           </Text>
           {sponsor && (
             <>
-              <Divider space={[3, 6]} />
+              <Divider space={3} />
               <Matching sponsor={sponsor} />
             </>
           )}

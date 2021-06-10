@@ -18,7 +18,7 @@ export const styles: Style = {
   campaignInfo: {
     flexDirection: 'column',
     bg: 'white',
-    padding: [3, 6]
+    padding: 3
   },
   campaignTitle: {
     display: [null, 'none'],
@@ -40,6 +40,6 @@ export const styles: Style = {
   },
   nonprofitsContainer: {
     backgroundColor: 'backgroundGray',
-    px: [3, 6]
+    px: 3
   }
 }

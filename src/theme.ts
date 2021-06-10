@@ -1,12 +1,34 @@
 // example base theme from @theme-ui/presets
 export const theme = {
   breakpoints: ['56.25em', '112.5em'],
-  space: [0, 4, 8, 16, 20, 24, 32, 64, 128, 256, 512],
+  space: [
+    0,
+    '0.25rem',
+    '0.5rem',
+    '1rem',
+    '1.25rem',
+    '1.5rem',
+    '2rem',
+    '4rem',
+    '8rem',
+    '16rem',
+    '32rem'
+  ],
   fonts: {
     body: '"Basis Grotesque Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: 'inherit'
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [
+    '0.75rem',
+    '0.875rem',
+    '1rem',
+    '1.25rem',
+    '1.5rem',
+    '2rem',
+    '3rem',
+    '4rem',
+    '6rem'
+  ],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -136,7 +158,7 @@ export const theme = {
     small: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [1, 3],
+      fontSize: 1,
       lineHeight: ['body', 'heading'],
       letterSpacing: ['-0.005em', '-0.01em'],
       color: 'textGray'

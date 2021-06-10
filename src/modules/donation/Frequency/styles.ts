@@ -2,7 +2,7 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   container: {
-    px: [3, 6],
+    px: 3,
     '& > :not(:last-child)': {
       mb: 3
     }

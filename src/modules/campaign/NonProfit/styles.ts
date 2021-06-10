@@ -2,8 +2,8 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   container: {
-    px: [3, 6],
-    mx: [-3, -6],
+    px: 3,
+    mx: -3,
     bg: 'backgroundGray',
     ':hover': {
       bg: 'primary',

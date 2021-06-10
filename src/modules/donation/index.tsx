@@ -35,7 +35,7 @@ export const Donation = (): JSX.Element => {
     >
       <Flex sx={styles.container}>
         <Header />
-        <Divider inverted space={[3, 6]} />
+        <Divider inverted space={3} />
         <Input
           donation={donationAmount}
           setDonation={setDonationAmount}
@@ -44,7 +44,7 @@ export const Donation = (): JSX.Element => {
         />
         {sponsor && (
           <>
-            <Divider inverted space={[3, 6]} sx={{ mx: [3, 6] }} />
+            <Divider inverted space={3} sx={{ mx: 3 }} />
             <Matching
               currencySymbol={currencySymbol}
               donationAmount={donationAmount}
@@ -52,9 +52,9 @@ export const Donation = (): JSX.Element => {
             />
           </>
         )}
-        <Divider inverted space={[3, 6]} />
+        <Divider inverted space={3} />
         <Frequency frequency={frequency} setFrequency={setFrequency} />
-        <Divider inverted space={[3, 6]} />
+        <Divider inverted space={3} />
         <Disclaimer currency={currency} />
       </Flex>
       <Box sx={styles.donateButtonContainer}>

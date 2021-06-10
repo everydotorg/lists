@@ -12,7 +12,7 @@ export const styles: Style = {
     alignItems: 'center',
     justifyContent: 'space-between',
     display: ['none', 'flex'],
-    p: 6,
+    p: 3,
     position: 'sticky',
     bg: 'white',
     top: 0,
