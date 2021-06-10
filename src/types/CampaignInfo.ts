@@ -1,3 +1,4 @@
+import { Currency } from './Currency'
 import { NonProfit } from './NonProfit'
 import { Progress } from './Progress'
 import { Sponsor } from './Sponsor'
@@ -16,4 +17,5 @@ export type CampaignInfo = {
   cause: string
   nonprofits: NonProfit[]
   sponsor?: Sponsor
+  currenciesSupported?: Currency[]
 }

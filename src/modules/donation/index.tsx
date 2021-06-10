@@ -73,7 +73,8 @@ export const Donation = (): JSX.Element => {
           disabled={disabled}
         >
           Donate {currencySymbol}
-          {donationAmount}
+          {donationAmount} {currency}{' '}
+          {frequency === DonationFrequency.Monthly ? 'every month' : ''}
         </Button>
       </Box>
     </Box>
