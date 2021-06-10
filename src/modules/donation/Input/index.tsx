@@ -1,5 +1,6 @@
 import { Label, Flex, Input as ThemeInput, Text, Select } from 'theme-ui'
-import { currencies, Currency } from '../../../types/Currency'
+import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
+import { Currency } from '../../../types/Currency'
 import { ChevronDown } from '../../shared/ChevronDown'
 import { styles } from './styles'
 
@@ -18,6 +19,8 @@ export const Input = ({
   currencySymbol,
   setCurrency
 }: InputProps): JSX.Element => {
+  const { currenciesSupported } = useCampaignInfoContext()
+
   return (
     <Flex sx={styles.container}>
       <Label sx={styles.label} htmlFor="donationAmount" variant="title">
@@ -39,21 +42,23 @@ export const Input = ({
           />
         </Flex>
         <Flex sx={styles.selectContainer}>
-          <Select
-            onChange={(e) => setCurrency(e.target.value as Currency)}
-            arrow={
-              <ChevronDown
-                width={20}
-                height={10}
-                sx={styles.selectArrow}
-                inverted
-              />
-            }
-          >
-            {currencies.map((c) => (
-              <option>{c}</option>
-            ))}
-          </Select>
+          {currenciesSupported && currenciesSupported.length > 0 && (
+            <Select
+              onChange={(e) => setCurrency(e.target.value as Currency)}
+              arrow={
+                <ChevronDown
+                  width={20}
+                  height={10}
+                  sx={styles.selectArrow}
+                  inverted
+                />
+              }
+            >
+              {currenciesSupported.map((c) => (
+                <option>{c}</option>
+              ))}
+            </Select>
+          )}
         </Flex>
       </Flex>
       <Flex sx={styles.addAmountContainer}>

@@ -77,7 +77,8 @@ export const theme = {
       },
       '&:focus': {
         outline: 'none'
-      }
+      },
+      transition: 'opacity .2s'
     },
     primarySmall: {
       variant: 'buttons.primary',

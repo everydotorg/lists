@@ -22,7 +22,8 @@ export const styles: Style = {
     cursor: 'pointer',
     textAlign: 'center',
     border: '1px solid',
-    borderColor: 'white'
+    borderColor: 'white',
+    transition: 'background .4s'
   },
   frequencyLeft: {
     borderTopLeftRadius: '9999px',
