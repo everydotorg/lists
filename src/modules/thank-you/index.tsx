@@ -7,6 +7,7 @@ import { Facebook } from '../shared/Facebook'
 import { Twitter } from '../shared/Twitter'
 import { useParams } from 'react-router-dom'
 import { Divider } from '../shared/Divider'
+import { RegisterInterest } from './RegisterInterest'
 
 export const ThankYou = (): JSX.Element | null => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
@@ -67,6 +68,7 @@ export const ThankYou = (): JSX.Element | null => {
           </Flex>
         </Box>
       </Box>
+      <RegisterInterest />
     </Box>
   )
 }
