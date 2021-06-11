@@ -13,9 +13,7 @@ export const styles: Style = {
   headerImg: {
     margin: [0, '0 auto'],
     padding: 0,
-    width: [null, '60%'],
-    borderBottom: '1px solid',
-    borderColor: 'dividerInverted'
+    width: [null, '60%']
   },
   thankYouContainer: {
     label: 'thankYouContainer',

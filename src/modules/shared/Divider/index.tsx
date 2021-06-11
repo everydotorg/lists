@@ -8,6 +8,7 @@ type DividerProps = {
   inverted?: boolean
   color?: string
 } & ThemeDividerProps
+
 export const Divider = ({
   sx,
   space,

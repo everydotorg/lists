@@ -6,6 +6,7 @@ import { styles } from './styles'
 import { Facebook } from '../shared/Facebook'
 import { Twitter } from '../shared/Twitter'
 import { useParams } from 'react-router-dom'
+import { Divider } from '../shared/Divider'
 
 export const ThankYou = (): JSX.Element | null => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
@@ -21,6 +22,7 @@ export const ThankYou = (): JSX.Element | null => {
     <Box sx={styles.page}>
       <Flex sx={{ ...styles.header, bg: primaryColor }}>
         <Image src={thankYouImageUrl} sx={styles.headerImg} />
+        <Divider space={0} inverted />
         <Flex sx={styles.thankYouContainer}>
           <Text as="h1" sx={styles.thankYouText}>
             Thank you for your support!

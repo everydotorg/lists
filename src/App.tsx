@@ -33,6 +33,7 @@ const Givelist = (): JSX.Element => {
           primary: campaignInfo.primaryColor
         }
       }
+      document.title = campaignInfo.name
       setCampaignTheme(newTheme)
       setCampaignInfo(campaignInfo)
     }
