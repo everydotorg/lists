@@ -8,6 +8,7 @@ import { Cause } from './Cause'
 import { useHistory, useLocation } from 'react-router'
 import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
+import { Fragment } from 'react'
 
 export const Campaign = (): JSX.Element => {
   const { name, about, nonprofits, sponsor } = useCampaignInfoContext()
@@ -44,10 +45,10 @@ export const Campaign = (): JSX.Element => {
         <Box sx={styles.nonprofitsContainer}>
           {nonprofits &&
             nonprofits.map((nonprofit) => (
-              <>
+              <Fragment key={nonprofit.slug}>
                 <Divider space={0} color="muted" />
-                <NonProfit key={nonprofit.slug} nonprofit={nonprofit} />
-              </>
+                <NonProfit nonprofit={nonprofit} />
+              </Fragment>
             ))}
         </Box>
       </Flex>

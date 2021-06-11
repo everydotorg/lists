@@ -1,4 +1,3 @@
-import { useMemo } from 'react'
 import { Box, Button, Flex, Image, Text } from 'theme-ui'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { facebookShare, twitterShare } from '../../utils/url'
@@ -14,10 +13,7 @@ export const ThankYou = (): JSX.Element | null => {
   const { about, progress, primaryColor, shareText, thankYouImageUrl } =
     useCampaignInfoContext()
 
-  const shareUrl = useMemo(
-    () => [window.location.origin, campaignSlug].join('/'),
-    [campaignSlug]
-  )
+  const shareUrl = [window.location.origin, campaignSlug].join('/')
 
   const copyToClipboard = () => navigator.clipboard.writeText(shareUrl)
 

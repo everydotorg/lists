@@ -2,7 +2,7 @@ import { Box, Text } from '@theme-ui/components'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { styles } from './styles'
 export const Banner = (): JSX.Element => {
-  const { bannerUrl } = useCampaignInfoContext()
+  const { bannerUrl, slug } = useCampaignInfoContext()
 
   return (
     <Box
@@ -12,7 +12,7 @@ export const Banner = (): JSX.Element => {
       }}
     >
       <Text sx={styles.urlText} variant="normal">
-        giveli.st/<strong>lilbubsbirthday</strong>
+        giveli.st/<strong>{slug}</strong>
       </Text>
     </Box>
   )

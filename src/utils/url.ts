@@ -1,16 +1,17 @@
 import { DonationFrequency } from '../types/Frequency'
 
-const objectToParams = (object: {
+interface Obj {
   [key: string]: string | number | undefined | null
-}): string => {
-  const params = Object.entries(object)
-    .filter(([, value]) => value !== undefined && value !== null)
-    .map(
-      ([key, value]) =>
-        `${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`
-    )
+}
 
-  return params.length > 0 ? `?${params.join('&')}` : ''
+export const objectToParams = (object: Obj): string => {
+  const params = new URLSearchParams()
+
+  Object.entries(object)
+    .filter(([, value]) => value !== undefined && value !== null)
+    .forEach(([key, value]) => params.set(key, value as string))
+
+  return params.toString()
 }
 
 export const createEveryUrl = (
@@ -19,41 +20,44 @@ export const createEveryUrl = (
   amount: number,
   extras = {}
 ): string => {
-  const base = [
-    process.env.NODE_ENV === 'production'
-      ? 'https://www.every.org'
-      : 'https://staging.every.org',
-    process.env.NODE_ENV === 'production' ? slug : 'owid',
-    'donate'
-  ].join('/')
+  const production = process.env.VERCEL_ENV === 'production'
 
-  return base.concat(
-    objectToParams({
-      frequency,
-      amount,
-      no_share: 1,
-      no_exit: 1,
-      share_info: 0,
-      redirect_url: window.location.origin.concat(`/${slug}/thank-you`),
-      ...extras
-    })
+  const url = new URL(
+    (production ? slug : 'owid') + '/donate',
+    production ? 'https://www.every.org' : 'https://staging.every.org'
   )
+
+  url.search = objectToParams({
+    frequency,
+    amount,
+    no_share: 1,
+    no_exit: 1,
+    share_info: 0,
+    success_url: window.location.origin.concat(`/${slug}/thank-you`),
+    ...extras
+  })
+
+  return url.href
 }
 
 export const facebookShare = (u: string, quote: string): string => {
-  return 'https://www.facebook.com/sharer/sharer.php'.concat(
-    objectToParams({
-      u,
-      quote
-    })
-  )
+  const url = new URL('', 'https://www.facebook.com/sharer/sharer.php')
+
+  url.search = objectToParams({
+    u,
+    quote
+  })
+
+  return url.href
 }
 
-export const twitterShare = (url: string, text: string): string => {
-  return 'https://twitter.com/share'.concat(
-    objectToParams({
-      url,
-      text
-    })
-  )
+export const twitterShare = (u: string, text: string): string => {
+  const url = new URL('', 'https://twitter.com/share')
+
+  url.search = objectToParams({
+    url: u,
+    text
+  })
+
+  return url.href
 }

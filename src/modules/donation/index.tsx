@@ -1,5 +1,5 @@
 import { Box, Button, Flex } from '@theme-ui/components'
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { Currency, currencySymbolMap } from '../../types/Currency'
 import { DonationFrequency } from '../../types/Frequency'
 import { Divider } from '../shared/Divider'
@@ -22,7 +22,7 @@ export const Donation = (): JSX.Element => {
     DonationFrequency.OneTime
   )
 
-  const currencySymbol = useMemo(() => currencySymbolMap[currency], [currency])
+  const currencySymbol = currencySymbolMap[currency]
 
   const disabled = donationAmount <= 0
 
