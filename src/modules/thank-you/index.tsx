@@ -20,7 +20,7 @@ export const ThankYou = (): JSX.Element | null => {
     primaryColor,
     shareText,
     thankYouImageUrl,
-    foundingGoal
+    fundingGoal
   } = useCampaignInfoContext()
 
   const [progress, setProgress] = useState<Progress | null>(null)
@@ -29,16 +29,16 @@ export const ThankYou = (): JSX.Element | null => {
     const fetchData = async () => {
       const data = await getProgressData(slug)
       setProgress({
-        goal: foundingGoal,
+        goal: fundingGoal,
         ...data
       })
     }
 
-    // slug and foundingGoal will be undefined till the .json request is fullfilled
-    if (slug && foundingGoal) {
+    // slug and fundingGoal will be undefined till the .json request is fullfilled
+    if (slug && fundingGoal) {
       fetchData()
     }
-  }, [slug, foundingGoal])
+  }, [slug, fundingGoal])
 
   const shareUrl = [window.location.origin, campaignSlug].join('/')
 

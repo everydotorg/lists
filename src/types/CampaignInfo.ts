@@ -12,7 +12,7 @@ export type CampaignInfo = {
   shareText: string
   logoUrl: string
   about: string
-  foundingGoal: number
+  fundingGoal: number
   cause: string
   nonprofits: NonProfit[]
   sponsor?: Sponsor
