@@ -88,7 +88,9 @@ export const theme = {
     primaryInverted: {
       variant: 'buttons.primary',
       color: 'primary',
-      background: 'white'
+      background: 'white',
+      border: '1px solid',
+      borderColor: 'primary'
     }
   },
   text: {
