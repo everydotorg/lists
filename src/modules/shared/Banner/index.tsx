@@ -1,4 +1,4 @@
-import { Box, Text } from '@theme-ui/components'
+import { Box, Button } from '@theme-ui/components'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { styles } from './styles'
 export const Banner = (): JSX.Element => {
@@ -11,9 +11,9 @@ export const Banner = (): JSX.Element => {
         backgroundImage: `url(${bannerUrl})`
       }}
     >
-      <Text sx={styles.urlText} variant="normal">
+      <Button sx={styles.urlText} variant="primarySmall">
         giveli.st/<strong>{slug}</strong>
-      </Text>
+      </Button>
     </Box>
   )
 }

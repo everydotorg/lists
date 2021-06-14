@@ -32,8 +32,8 @@ export const theme = {
   },
   images: {
     avatar: {
-      width: '3.75rem',
-      height: '3.75rem',
+      width: ['2.5rem', '3.5rem'],
+      height: ['2.5rem', '3.5rem'],
       borderRadius: '9999px',
       flexShrink: 0
     }
@@ -82,8 +82,17 @@ export const theme = {
     },
     primarySmall: {
       variant: 'buttons.primary',
-      py: '12px',
-      px: 5
+      height: ['2.5rem', '3.5rem'],
+      px: 5,
+      fontFamily: 'body',
+      fontWeight: 'body',
+      fontSize: 3,
+      letterSpacing: '-0.01em'
+    },
+    primarySmallInverted: {
+      variant: 'buttons.primarySmall',
+      bg: 'white',
+      color: 'text'
     },
     primaryInverted: {
       variant: 'buttons.primary',

@@ -8,10 +8,8 @@ export const styles: Style = {
     display: ['none', 'flex']
   },
   urlText: {
-    py: '12px',
-    px: 5,
     bg: 'white',
-    borderRadius: '100px',
+    color: 'text',
     m: 6,
     alignSelf: 'flex-end'
   }

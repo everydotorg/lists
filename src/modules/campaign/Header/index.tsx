@@ -24,7 +24,11 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
           <Image sx={styles.logoDesktop} src={logoUrl} />
           <Text variant="title">{name}</Text>
         </Flex>
-        <Button onClick={onClickDonate} variant="primarySmall">
+        <Button
+          sx={styles.donateButton}
+          onClick={onClickDonate}
+          variant="primarySmall"
+        >
           Donate
         </Button>
       </Box>

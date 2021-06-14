@@ -22,8 +22,8 @@ export const styles: Style = {
   },
   logo: {
     backgroundColor: 'white',
-    height: '3.5rem',
-    width: '3.5rem',
+    height: '2.5rem',
+    width: '2.5rem',
     borderRadius: '100%',
     position: 'absolute',
     top: '1rem',
@@ -31,9 +31,15 @@ export const styles: Style = {
   },
   logoDesktop: {
     backgroundColor: 'white',
-    height: '3rem',
-    width: '3rem',
+    height: '3.5rem',
+    width: '3.5rem',
     borderRadius: '100%',
     mr: 3
+  },
+  donateButton: {
+    fontFamily: 'body',
+    fontWeight: 'body',
+    fontSize: 3,
+    letterSpacing: '-0.01em'
   }
 }

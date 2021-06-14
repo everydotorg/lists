@@ -25,7 +25,8 @@ export const styles: Style = {
     justifyContent: 'center'
   },
   avatar: {
-    marginRight: 3
+    marginRight: 3,
+    alignSelf: 'center'
   },
   aboutContainer: {
     backgroundColor: 'inherit'
