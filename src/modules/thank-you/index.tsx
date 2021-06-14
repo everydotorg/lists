@@ -8,12 +8,37 @@ import { Twitter } from '../shared/Twitter'
 import { useParams } from 'react-router-dom'
 import { Divider } from '../shared/Divider'
 import { RegisterInterest } from './RegisterInterest'
+import { Progress } from '../../types/Progress'
+import { useEffect, useState } from 'react'
+import { getProgressData } from '../../utils/campaignData'
 
 export const ThankYou = (): JSX.Element | null => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
+  const {
+    slug,
+    about,
+    primaryColor,
+    shareText,
+    thankYouImageUrl,
+    foundingGoal
+  } = useCampaignInfoContext()
 
-  const { about, progress, primaryColor, shareText, thankYouImageUrl } =
-    useCampaignInfoContext()
+  const [progress, setProgress] = useState<Progress | null>(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getProgressData(slug)
+      setProgress({
+        goal: foundingGoal,
+        ...data
+      })
+    }
+
+    // slug and foundingGoal will be undefined till the .json request is fullfilled
+    if (slug && foundingGoal) {
+      fetchData()
+    }
+  }, [slug, foundingGoal])
 
   const shareUrl = [window.location.origin, campaignSlug].join('/')
 

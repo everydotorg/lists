@@ -9,11 +9,7 @@
   "shareText": "Share BUB’s 10th Birthday Give List to help even more animals in need, and to be entered to win a Signed Deluxe Edition of Lil BUB’s Commemorative Book!",
   "about": "To celebrate Lil BUB’s 10th BUBirthday, we are raising money for special needs pets. Your single contribution will benefit five amazing organizations close to BUB’s heart!",
   "cause": "animals",
-  "progress": {
-    "goal": 100000,
-    "donated": 76398,
-    "givers": 95
-  },
+  "foundingGoal": 100000,
   "nonprofits": [
     {
       "slug": "iamlilbub",
