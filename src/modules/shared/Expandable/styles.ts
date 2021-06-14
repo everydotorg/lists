@@ -3,7 +3,8 @@ export const styles = {
     transform: 'rotate(0deg)',
     transition: 'transform 0.3s',
     flexShrink: 0,
-    py: 2
+    py: 0,
+    lineHeight: 1
   },
   rotate: {
     transform: 'rotate(180deg)'

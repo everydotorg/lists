@@ -8,7 +8,7 @@ export const styles: Style = {
     display: ['none', 'flex']
   },
   urlButton: {
-    m: 6,
+    m: [6, 4],
     alignSelf: 'flex-end'
   }
 }

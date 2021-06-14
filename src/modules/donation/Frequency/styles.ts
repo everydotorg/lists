@@ -13,9 +13,9 @@ export const styles: Style = {
     alignItems: 'center'
   },
   frequencyBase: {
-    fontSize: 2,
+    fontSize: [3, 1],
     color: 'white',
-    px: 4,
+    px: [4, 3],
     py: 2,
     fontWeight: 'body',
     display: 'block',
@@ -37,5 +37,5 @@ export const styles: Style = {
     bg: 'white'
   },
   donationContainer: { borderRadius: '8px', bg: 'dividerInverted', p: 3 },
-  donationText: { color: 'white', fontSize: 2 }
+  donationText: { color: 'white' }
 }

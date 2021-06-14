@@ -5,7 +5,7 @@ export const styles: Style = {
     alignItems: 'center',
     justifyContent: 'space-between'
   },
-  descriptionText: { color: 'white', fontSize: 2, opacity: 0.8 },
+  descriptionText: { color: 'white', fontSize: 3, opacity: 0.8 },
   chevronDown: {
     p: 0,
     lineHeight: 1
