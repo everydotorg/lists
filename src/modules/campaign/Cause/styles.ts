@@ -9,7 +9,6 @@ export const styles: Style = {
   },
   text: {
     color: 'textGray',
-    fontSize: [2, 3],
     '& > span': {
       color: 'text'
     }

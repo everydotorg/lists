@@ -104,9 +104,9 @@ export const theme = {
     regular: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: 3,
+      fontSize: [2, 4],
       lineHeight: 'body',
-      letterSpacing: '-0.01em',
+      letterSpacing: ['-0.01em', '-0.015em'],
       color: 'text'
     },
     heading: {
@@ -119,9 +119,9 @@ export const theme = {
     caption: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: 1,
+      fontSize: [0, 1],
       lineHeight: 'body',
-      letterSpacing: '-0.05em',
+      letterSpacing: '-0.005em',
       color: 'textGray'
     },
     small: {
@@ -129,7 +129,7 @@ export const theme = {
       fontWeight: 'body',
       fontSize: [1, 3],
       lineHeight: ['body', 'heading'],
-      letterSpacing: ['-0.05em', '-0.01em'],
+      letterSpacing: ['-0.005em', '-0.01em'],
       color: 'textGray'
     },
     input: {
@@ -143,6 +143,13 @@ export const theme = {
       fontSize: 4,
       lineHeight: 'heading',
       letterSpacing: '-0.015em',
+      color: 'text'
+    },
+    h1: {
+      fontSize: 5,
+      lineHeight: 'input',
+      letterSpacing: '-0.015em',
+      fontWeight: 'bold',
       color: 'text'
     }
   },

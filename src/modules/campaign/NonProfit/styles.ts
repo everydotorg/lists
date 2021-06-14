@@ -31,14 +31,13 @@ export const styles: Style = {
     backgroundColor: 'inherit'
   },
   aboutText: {
-    fontSize: 2,
     display: 'block',
-    paddingBottom: 3
+    paddingBottom: 3,
+    color: 'text'
   },
   location: {
     textTransform: 'uppercase',
     color: 'textGray',
-    fontWeight: 'bold',
-    fontSize: 1
+    fontWeight: 'bold'
   }
 }

@@ -11,7 +11,7 @@ export const Cause = (): JSX.Element | null => {
 
   return (
     <Box sx={styles.container}>
-      <Text as="p" variant="regular" sx={styles.text}>
+      <Text as="p" variant="small" sx={styles.text}>
         Supporting <span>{nonprofits.length} nonprofits</span> from #
         <span>{cause}</span> causes
       </Text>
