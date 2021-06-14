@@ -1,12 +1,36 @@
 // example base theme from @theme-ui/presets
 export const theme = {
   breakpoints: ['56.25em', '112.5em'],
-  space: [0, 4, 8, 16, 20, 24, 32, 64, 128, 256, 512],
+  space: [
+    0,
+    '0.25rem',
+    '0.5rem',
+    '0.75rem',
+    '1rem',
+    '1.25rem',
+    '1.5rem',
+    '2rem',
+    '4rem',
+    '8rem',
+    '16rem',
+    '32rem'
+  ],
   fonts: {
     body: '"Basis Grotesque Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading: 'inherit'
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 96],
+  fontSizes: [
+    '0.5rem',
+    '0.75rem',
+    '0.875rem',
+    '1rem',
+    '1.25rem',
+    '1.5rem',
+    '2rem',
+    '3rem',
+    '4rem',
+    '6rem'
+  ],
   fontWeights: {
     body: 400,
     heading: 700,
@@ -15,7 +39,7 @@ export const theme = {
   lineHeights: {
     base: 1,
     body: 1.5,
-    heading: 1.2,
+    heading: 1.33,
     input: 1.15
   },
   colors: {
@@ -32,8 +56,8 @@ export const theme = {
   },
   images: {
     avatar: {
-      width: ['2.5rem', '3.5rem'],
-      height: ['2.5rem', '3.5rem'],
+      width: ['2.5rem', '1.75em'],
+      height: ['2.5rem', '1.75em'],
       borderRadius: '9999px',
       flexShrink: 0
     }
@@ -43,7 +67,7 @@ export const theme = {
       border: 'none',
       outline: 'none',
       color: 'white',
-      fontSize: 6,
+      fontSize: [7, 6],
       lineHeight: 'input',
       fontWeight: 'bold',
       letterSpacing: '-0.02em',
@@ -61,8 +85,8 @@ export const theme = {
     primary: {
       cursor: 'pointer',
       borderRadius: '100px',
-      py: 4,
-      fontSize: 2,
+      py: [4, 3],
+      fontSize: [3, 1],
       lineHeight: 'base',
       letterSpacing: '-0.01em',
       fontFamily: 'body',
@@ -82,11 +106,12 @@ export const theme = {
     },
     primarySmall: {
       variant: 'buttons.primary',
-      height: ['2.5rem', '3.5rem'],
-      px: 5,
+      height: ['2.5rem', '1.75rem'],
+      px: [5, 3],
+      py: 0,
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: 3,
+      fontSize: [3, 1],
       letterSpacing: '-0.01em'
     },
     primarySmallInverted: {
@@ -107,13 +132,13 @@ export const theme = {
       fontFamily: 'body',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 3,
+      fontSize: [4, 1],
       letterSpacing: '-0.01em'
     },
     regular: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [2, 4],
+      fontSize: [3, 1],
       lineHeight: 'body',
       letterSpacing: ['-0.01em', '-0.015em'],
       color: 'text'
@@ -122,13 +147,13 @@ export const theme = {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 3,
+      fontSize: 4,
       letterSpacing: '-0.01em'
     },
     caption: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [0, 1],
+      fontSize: [1, 0],
       lineHeight: 'body',
       letterSpacing: '-0.005em',
       color: 'textGray'
@@ -136,26 +161,26 @@ export const theme = {
     small: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [1, 3],
+      fontSize: [2, 1],
       lineHeight: ['body', 'heading'],
       letterSpacing: ['-0.005em', '-0.01em'],
       color: 'textGray'
     },
     input: {
-      fontSize: 6,
+      fontSize: [7, 6],
       lineHeight: 'input',
       fontWeight: 'bold',
       letterSpacing: '-0.02em',
       fontFamily: 'body'
     },
     large: {
-      fontSize: 4,
+      fontSize: 5,
       lineHeight: 'heading',
       letterSpacing: '-0.015em',
       color: 'text'
     },
     h1: {
-      fontSize: 5,
+      fontSize: 3,
       lineHeight: 'input',
       letterSpacing: '-0.015em',
       fontWeight: 'bold',
@@ -170,27 +195,27 @@ export const theme = {
     },
     h1: {
       variant: 'text.heading',
-      fontSize: 6
+      fontSize: 7
     },
     h2: {
       variant: 'text.heading',
-      fontSize: 4
+      fontSize: 5
     },
     h3: {
       variant: 'text.heading',
-      fontSize: 3
+      fontSize: 4
     },
     h4: {
       variant: 'text.heading',
-      fontSize: 2
+      fontSize: 3
     },
     h5: {
       variant: 'text.heading',
-      fontSize: 1
+      fontSize: 2
     },
     h6: {
       variant: 'text.heading',
-      fontSize: 0
+      fontSize: 1
     }
   }
 }

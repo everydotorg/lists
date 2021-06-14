@@ -7,7 +7,7 @@ export const styles: Style = {
     gridTemplateColumns: '1fr',
     bg: 'backgroundGray',
     gridTemplateRows: '1fr max-content',
-    height: isIOS() ? '-webkit-fill-available' : '100vh'
+    height: isIOS() ? ['-webkit-fill-available', '100%'] : '100vh'
   },
   container: {
     flexDirection: 'column',
@@ -18,14 +18,15 @@ export const styles: Style = {
   campaignInfo: {
     flexDirection: 'column',
     bg: 'white',
-    padding: [3, 6]
+    padding: 3
   },
   campaignTitle: {
     display: [null, 'none'],
     mb: 3
   },
   aboutText: {
-    color: 'textGray'
+    color: 'textGray',
+    lineHeight: 1.5
   },
   buttonContainer: {
     bg: 'backgroundGray',
@@ -40,6 +41,6 @@ export const styles: Style = {
   },
   nonprofitsContainer: {
     backgroundColor: 'backgroundGray',
-    px: [3, 6]
+    px: 3
   }
 }

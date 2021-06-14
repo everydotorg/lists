@@ -2,7 +2,7 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   container: {
-    padding: [3, 6],
+    padding: 3,
     backgroundColor: 'backgroundGray',
     borderTop: '1px solid',
     borderColor: 'muted'

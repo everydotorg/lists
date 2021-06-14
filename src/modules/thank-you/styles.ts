@@ -21,7 +21,7 @@ export const styles: Style = {
     alignItems: 'center',
     justifyContent: 'center',
     margin: 0,
-    px: 6,
+    px: 3,
     py: 3,
     textAlign: 'center',
     '& > :not(:last-child)': {
@@ -32,11 +32,11 @@ export const styles: Style = {
   thankYouTax: { color: 'white', opacity: '0.8' },
   goalContainer: {
     px: 5,
-    py: [3, 6]
+    py: 3
   },
   shareContainer: {
     px: 5,
-    py: [3, 6],
+    py: 3,
     borderTop: '1px solid',
     borderColor: 'muted',
     '& > :not(:last-child)': {

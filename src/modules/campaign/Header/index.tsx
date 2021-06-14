@@ -16,12 +16,12 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
           backgroundImage: `url(${backgroundImageUrl})`
         }}
       >
-        <Image sx={styles.logo} src={logoUrl} />
+        <Image variant="avatar" sx={styles.logo} src={logoUrl} />
       </Box>
 
       <Box sx={styles.desktopContainer}>
         <Flex sx={{ alignItems: 'center' }}>
-          <Image sx={styles.logoDesktop} src={logoUrl} />
+          <Image variant="avatar" sx={styles.logoDesktop} src={logoUrl} />
           <Text as="h1" variant="h1">
             {name}
           </Text>

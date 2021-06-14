@@ -15,7 +15,7 @@ export const Matching = ({
   sponsor
 }: MatchingProps): JSX.Element => {
   return (
-    <Box sx={{ mx: [3, 6] }}>
+    <Box sx={{ mx: 3 }}>
       <Expandable
         headerStyle={styles.container}
         chevronStyle={styles.chevronDown}
