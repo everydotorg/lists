@@ -14,7 +14,7 @@ import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
 
 export const Donation = (): JSX.Element => {
-  const { slug, sponsor } = useCampaignInfoContext()
+  const { slug, sponsor, primaryColor } = useCampaignInfoContext()
 
   const [donationAmount, setDonationAmount] = useState(75)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)
@@ -61,7 +61,10 @@ export const Donation = (): JSX.Element => {
         <Button
           onClick={() =>
             window.open(
-              createEveryUrl(slug, frequency, donationAmount),
+              createEveryUrl(slug, frequency, donationAmount, {
+                theme_color: 'FFF', // @todo: confirm
+                theme_color_highlight: primaryColor.replace('#', '')
+              }),
               '_self'
             )
           }

@@ -20,10 +20,11 @@ export const createEveryUrl = (
   amount: number,
   extras = {}
 ): string => {
-  const production = process.env.VERCEL_ENV === 'production'
+  // const production = process.env.VERCEL_ENV === 'production'
+  const production = true // @todo: check, forced till we have separate environments
 
   const url = new URL(
-    (production ? slug : 'owid') + '/donate',
+    slug + '/donate',
     production ? 'https://www.every.org' : 'https://staging.every.org'
   )
 
