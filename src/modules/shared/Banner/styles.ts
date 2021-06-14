@@ -7,11 +7,7 @@ export const styles: Style = {
     backgroundSize: 'cover',
     display: ['none', 'flex']
   },
-  urlText: {
-    py: '12px',
-    px: 5,
-    bg: 'white',
-    borderRadius: '100px',
+  urlButton: {
     m: 6,
     alignSelf: 'flex-end'
   }
