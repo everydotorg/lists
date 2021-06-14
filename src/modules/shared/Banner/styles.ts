@@ -7,9 +7,7 @@ export const styles: Style = {
     backgroundSize: 'cover',
     display: ['none', 'flex']
   },
-  urlText: {
-    bg: 'white',
-    color: 'text',
+  urlButton: {
     m: 6,
     alignSelf: 'flex-end'
   }

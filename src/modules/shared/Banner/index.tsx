@@ -11,7 +11,7 @@ export const Banner = (): JSX.Element => {
         backgroundImage: `url(${bannerUrl})`
       }}
     >
-      <Button sx={styles.urlText} variant="primarySmall">
+      <Button sx={styles.urlButton} variant="primarySmallInverted">
         giveli.st/<strong>{slug}</strong>
       </Button>
     </Box>
