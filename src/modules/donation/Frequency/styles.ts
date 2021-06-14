@@ -7,7 +7,7 @@ export const styles: Style = {
       mb: 3
     }
   },
-  label: { color: 'white', opacity: 0.8 },
+  label: { color: 'white', opacity: 0.8, fontWeight: 400 },
   input: { display: 'none' },
   selectorContainer: {
     alignItems: 'center'

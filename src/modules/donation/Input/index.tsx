@@ -23,7 +23,7 @@ export const Input = ({
 
   return (
     <Flex sx={styles.container}>
-      <Label sx={styles.label} htmlFor="donationAmount" variant="title">
+      <Label sx={styles.label} htmlFor="donationAmount" variant="text.title">
         How much to donate?
       </Label>
       <Flex sx={styles.donationContainer}>
