@@ -6,7 +6,6 @@ import { styles } from './styles'
 import { NonProfit } from './NonProfit'
 import { Cause } from './Cause'
 import { useHistory, useLocation } from 'react-router'
-import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 import { Fragment } from 'react'
 
@@ -20,20 +19,16 @@ export const Campaign = (): JSX.Element => {
   }
 
   return (
-    <Box
-      as="main"
-      sx={{
-        ...styles.page,
-        height: isIOS() ? '-webkit-fill-available' : '100vh'
-      }}
-    >
+    <Box as="main" sx={styles.page}>
       <Flex sx={styles.container}>
         <Header onClickDonate={goToDonation} />
         <Flex sx={styles.campaignInfo}>
           <Text sx={styles.campaignTitle} variant="title">
             {name}
           </Text>
-          <Text variant="small">{about}</Text>
+          <Text sx={styles.aboutText} variant="small">
+            {about}
+          </Text>
           {sponsor && (
             <>
               <Divider space={[3, 6]} />

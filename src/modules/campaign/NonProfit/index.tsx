@@ -22,7 +22,7 @@ export const NonProfit = ({ nonprofit }: NonProfitProps): JSX.Element => {
           />
           <Flex sx={styles.textContainer}>
             <Text variant="regular">{nonprofit.name}</Text>
-            <Text variant="regular" sx={styles.location}>
+            <Text variant="caption" sx={styles.location}>
               {nonprofit.location}
             </Text>
           </Flex>
@@ -30,7 +30,7 @@ export const NonProfit = ({ nonprofit }: NonProfitProps): JSX.Element => {
       }
       descriptionStyle={styles.aboutContainer}
       renderDescription={
-        <Text variant="regular" sx={styles.aboutText}>
+        <Text variant="small" sx={styles.aboutText}>
           {nonprofit.about}
         </Text>
       }

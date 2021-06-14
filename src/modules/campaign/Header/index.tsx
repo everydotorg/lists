@@ -22,7 +22,9 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
       <Box sx={styles.desktopContainer}>
         <Flex sx={{ alignItems: 'center' }}>
           <Image sx={styles.logoDesktop} src={logoUrl} />
-          <Text variant="title">{name}</Text>
+          <Text as="h1" variant="h1">
+            {name}
+          </Text>
         </Flex>
         <Button onClick={onClickDonate} variant="primarySmall">
           Donate

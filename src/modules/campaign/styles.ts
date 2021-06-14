@@ -1,11 +1,13 @@
 import { Style } from '../../types/Style'
+import { isIOS } from '../../utils/isIOS'
 
 export const styles: Style = {
   page: {
     display: 'grid',
     gridTemplateColumns: '1fr',
     bg: 'backgroundGray',
-    gridTemplateRows: '1fr max-content'
+    gridTemplateRows: '1fr max-content',
+    height: isIOS() ? '-webkit-fill-available' : '100vh'
   },
   container: {
     flexDirection: 'column',
@@ -21,6 +23,9 @@ export const styles: Style = {
   campaignTitle: {
     display: [null, 'none'],
     mb: 3
+  },
+  aboutText: {
+    color: 'textGray'
   },
   buttonContainer: {
     bg: 'backgroundGray',
