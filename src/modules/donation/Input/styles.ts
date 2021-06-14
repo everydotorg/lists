@@ -9,7 +9,8 @@ export const styles: Style = {
   currencySymbol: { mr: 2 },
   label: {
     opacity: '0.8',
-    mb: 3
+    mb: 3,
+    fontWeight: 400
   },
   inputNumber: {
     '::-webkit-outer-spin-button': {

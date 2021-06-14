@@ -22,7 +22,7 @@ export const Frequency = ({
 
   return (
     <Box sx={styles.container}>
-      <Label variant="title" sx={styles.label}>
+      <Label variant="text.title" sx={styles.label}>
         How often?
       </Label>
       <Flex sx={styles.selectorContainer}>
