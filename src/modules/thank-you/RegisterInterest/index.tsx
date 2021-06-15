@@ -1,15 +1,13 @@
-import { Box, Button, Text } from '@theme-ui/components'
+import { Box, Text, Link } from '@theme-ui/components'
 import { useState } from 'react'
-import { useLocation } from 'react-router-dom'
 import { styles } from './styles'
 
+const FORM_LINK = 'https://everydotorg.typeform.com/to/gfY2ziot'
+
 export const RegisterInterest = (): JSX.Element => {
-  const queryParams = new URLSearchParams(useLocation().search)
-  const email = queryParams.get('email')
   const [interestRegistered, setInterestRegistered] = useState(false)
 
   const registerUserInterest = () => {
-    alert(`Interest registered for ${email}`)
     setInterestRegistered(true)
   }
 
@@ -22,14 +20,15 @@ export const RegisterInterest = (): JSX.Element => {
           Giveli.st creator is ready try out!
         </Text>
       </Text>
-      <Button
+      <Link
+        href={FORM_LINK}
+        target="_blank"
         onClick={registerUserInterest}
         sx={styles.button}
-        variant="primaryInverted"
-        disabled={interestRegistered}
+        variant="buttons.primaryInverted"
       >
         {interestRegistered ? 'Thank you!' : 'Register Interest'}
-      </Button>
+      </Link>
     </Box>
   )
 }

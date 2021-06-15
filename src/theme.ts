@@ -92,6 +92,8 @@ export const theme = {
       fontFamily: 'body',
       fontWeight: 'heading',
       color: 'white',
+      textDecoration: 'none',
+      display: 'block',
       '&:hover': {
         opacity: '0.85'
       },

@@ -16,6 +16,7 @@ export const styles: Style = {
   },
   button: {
     width: '100%',
-    mt: 4
+    mt: 4,
+    textAlign: 'center'
   }
 }
