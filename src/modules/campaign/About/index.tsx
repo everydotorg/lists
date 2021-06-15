@@ -1,4 +1,5 @@
 import { Box, Flex, Text, Link } from 'theme-ui'
+import { pushEvent } from '../../../utils/gtag'
 import { CloseIcon } from '../../shared/CloseIcon'
 import { Divider } from '../../shared/Divider'
 import { EveryOrgLogo } from '../../shared/EveryOrgLogo'
@@ -9,6 +10,11 @@ type AboutProps = {
 }
 
 export const About: React.FC<AboutProps> = ({ onClose }) => {
+  const pushClosedEvent = () => {
+    pushEvent(`About - Closed`, {})
+    onClose()
+  }
+
   return (
     <Flex sx={styles.container}>
       <Flex sx={styles.content}>
@@ -17,7 +23,7 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
             <strong>giveli.st</strong> a simple and fast way to create and share
             your own list of recommended nonprofits.
           </Text>
-          <Box id="close-about" sx={styles.closeBox} onClick={onClose}>
+          <Box sx={styles.closeBox} onClick={pushClosedEvent}>
             <CloseIcon />
           </Box>
         </Flex>
