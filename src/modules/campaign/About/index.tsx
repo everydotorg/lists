@@ -11,7 +11,7 @@ type AboutProps = {
 
 export const About: React.FC<AboutProps> = ({ onClose }) => {
   const pushClosedEvent = () => {
-    pushEvent(`About - Closed`, {})
+    pushEvent(`about_close`, {})
     onClose()
   }
 

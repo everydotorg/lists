@@ -11,7 +11,7 @@ export const Header = (): JSX.Element => {
   const history = useHistory()
 
   const closeDonatePage = () => {
-    pushEvent(`Donate - Close`, {})
+    pushEvent(`donate_close`, {})
     history.goBack()
   }
   return (
