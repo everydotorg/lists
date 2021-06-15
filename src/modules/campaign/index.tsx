@@ -46,7 +46,12 @@ export const Campaign = (): JSX.Element => {
         </Box>
       </Flex>
       <Box sx={styles.buttonContainer}>
-        <Button sx={styles.submitButton} onClick={goToDonation} type="button">
+        <Button
+          id="campaign-mobile-donate"
+          sx={styles.submitButton}
+          onClick={goToDonation}
+          type="button"
+        >
           Donate to List
         </Button>
       </Box>
