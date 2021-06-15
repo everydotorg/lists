@@ -11,6 +11,7 @@ interface ExpandableProps {
   headerStyle?: ThemeUIStyleObject
   chevronStyle?: ThemeUIStyleObject
   chevronProps?: Partial<ChevronDownProps>
+  onExpand?: (open: boolean) => void
   space?: number
 }
 
@@ -22,14 +23,18 @@ export const Expandable = ({
   descriptionStyle = {},
   chevronStyle = {},
   chevronProps = {},
-  space = 0
+  space = 0,
+  onExpand
 }: ExpandableProps): JSX.Element => {
   const [expanded, setExpanded] = useState<boolean>(false)
   const [height, setHeight] = useState<number>(0)
 
   const aboutRef = useRef<HTMLDivElement>(null)
 
-  const toggle = () => setExpanded((prev) => !prev)
+  const toggle = () => {
+    onExpand && onExpand(!expanded)
+    setExpanded((prev) => !prev)
+  }
 
   useEffect(
     () => setHeight(expanded ? aboutRef.current?.scrollHeight ?? 0 : 0),
