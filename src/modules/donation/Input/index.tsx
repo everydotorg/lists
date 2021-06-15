@@ -35,7 +35,6 @@ export const Input = ({
             value={donation ? donation : undefined}
             id="donationAmount"
             type="number"
-            defaultValue="75"
             sx={styles.inputNumber}
             onChange={(e) => setDonation(+e.target.value)}
             min={0}

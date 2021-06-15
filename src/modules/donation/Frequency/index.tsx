@@ -1,5 +1,4 @@
 import { Box, Flex, Input, Label, Text } from '@theme-ui/components'
-import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { DonationFrequency } from '../../../types/Frequency'
 import { styles } from './styles'
 import React from 'react'
@@ -13,11 +12,9 @@ export const Frequency = ({
   frequency,
   setFrequency
 }: FrequencyProps): JSX.Element => {
-  const { primaryColor } = useCampaignInfoContext()
-
   const selected = {
     bg: 'white',
-    color: primaryColor
+    color: 'primary'
   }
 
   return (

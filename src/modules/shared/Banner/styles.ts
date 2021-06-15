@@ -9,6 +9,19 @@ export const styles: Style = {
   },
   urlButton: {
     m: [6, 4],
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
+    ':hover': {
+      opacity: 1,
+      bg: 'primary',
+      color: 'white'
+    }
+  },
+  linkCopied: {
+    color: 'primary',
+    cursor: 'unset',
+    ':hover': {
+      bg: 'white',
+      opacity: 1
+    }
   }
 }

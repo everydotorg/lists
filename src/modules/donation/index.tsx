@@ -12,9 +12,11 @@ import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
+import { useThemeUI } from 'theme-ui'
 
 export const Donation = (): JSX.Element => {
-  const { slug, sponsor, primaryColor } = useCampaignInfoContext()
+  const { slug, sponsor } = useCampaignInfoContext()
+  const { theme } = useThemeUI()
 
   const [donationAmount, setDonationAmount] = useState(75)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)
@@ -63,7 +65,9 @@ export const Donation = (): JSX.Element => {
             window.open(
               createEveryUrl(slug, frequency, donationAmount, {
                 theme_color: 'FFF', // @todo: confirm
-                theme_color_highlight: primaryColor.replace('#', '')
+                theme_color_highlight: (
+                  theme.colors?.primary as string
+                )?.replace('#', '')
               }),
               '_self'
             )

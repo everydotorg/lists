@@ -1,27 +1,20 @@
-import { Box, Button, Flex, Image, Text } from 'theme-ui'
+import { Box, Flex, Image, Text } from 'theme-ui'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { facebookShare, twitterShare } from '../../utils/url'
 import { Goal } from '../campaign/Goal'
 import { styles } from './styles'
 import { Facebook } from '../shared/Facebook'
 import { Twitter } from '../shared/Twitter'
-import { useParams } from 'react-router-dom'
 import { Divider } from '../shared/Divider'
 import { RegisterInterest } from './RegisterInterest'
 import { Progress } from '../../types/Progress'
 import { useEffect, useState } from 'react'
 import { getProgressData } from '../../utils/campaignData'
+import { CopyToClipboard } from '../shared/CopyToClipboard'
 
 export const ThankYou = (): JSX.Element | null => {
-  const { campaignSlug } = useParams<{ campaignSlug: string }>()
-  const {
-    slug,
-    about,
-    primaryColor,
-    shareText,
-    thankYouImageUrl,
-    fundingGoal
-  } = useCampaignInfoContext()
+  const { slug, about, shareText, thankYouImageUrl, fundingGoal } =
+    useCampaignInfoContext()
 
   const [progress, setProgress] = useState<Progress | null>(null)
 
@@ -40,13 +33,11 @@ export const ThankYou = (): JSX.Element | null => {
     }
   }, [slug, fundingGoal])
 
-  const shareUrl = [window.location.origin, campaignSlug].join('/')
-
-  const copyToClipboard = () => navigator.clipboard.writeText(shareUrl)
+  const shareUrl = [window.location.origin, slug].join('/')
 
   return (
     <Box sx={styles.page}>
-      <Flex sx={{ ...styles.header, bg: primaryColor }}>
+      <Flex sx={{ ...styles.header, bg: 'primary' }}>
         <Image src={thankYouImageUrl} sx={styles.headerImg} />
         <Divider space={0} inverted />
         <Flex sx={styles.thankYouContainer}>
@@ -68,15 +59,15 @@ export const ThankYou = (): JSX.Element | null => {
           {shareText}
         </Text>
         <Box>
-          <Button
+          <CopyToClipboard
+            text={shareUrl}
             as="a"
-            variant="primary"
+            variant="primaryInverted"
             type="button"
             sx={styles.shareButton}
-            onClick={copyToClipboard}
           >
-            Copy link to this list
-          </Button>
+            giveli.st/{slug}
+          </CopyToClipboard>
           <Flex sx={styles.socialShareContainer}>
             <Facebook
               width={25}
