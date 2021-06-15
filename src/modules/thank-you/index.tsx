@@ -60,6 +60,7 @@ export const ThankYou = (): JSX.Element | null => {
         </Text>
         <Box>
           <CopyToClipboard
+            id="thankyou-copylink"
             text={shareUrl}
             as="a"
             variant="primaryInverted"

@@ -17,7 +17,7 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
             <strong>giveli.st</strong> a simple and fast way to create and share
             your own list of recommended nonprofits.
           </Text>
-          <Box sx={styles.closeBox} onClick={onClose}>
+          <Box id="close-about" sx={styles.closeBox} onClick={onClose}>
             <CloseIcon />
           </Box>
         </Flex>

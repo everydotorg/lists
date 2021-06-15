@@ -4,12 +4,14 @@ import { Button, ButtonProps, ThemeUIStyleObject } from 'theme-ui'
 type CopyToClipboardProps = {
   text: string
   linkCopiedStyle?: ThemeUIStyleObject
+  id: string
 } & ButtonProps
 
 export const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
   text,
   children,
   sx,
+  id,
   linkCopiedStyle,
   ...props
 }) => {
@@ -23,6 +25,7 @@ export const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
 
   return (
     <Button
+      id={id}
       sx={{ ...sx, ...(linkCopied && linkCopiedStyle ? linkCopiedStyle : {}) }}
       {...props}
       onClick={copy}
