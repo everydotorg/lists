@@ -1,6 +1,5 @@
 import { Currency } from './Currency'
 import { NonProfit } from './NonProfit'
-import { Progress } from './Progress'
 import { Sponsor } from './Sponsor'
 
 export type CampaignInfo = {
@@ -13,7 +12,7 @@ export type CampaignInfo = {
   shareText: string
   logoUrl: string
   about: string
-  progress?: Progress
+  fundingGoal: number
   cause: string
   nonprofits: NonProfit[]
   sponsor?: Sponsor

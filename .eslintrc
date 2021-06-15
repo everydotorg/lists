@@ -38,5 +38,6 @@
       "prefer-arrow-callback": "warn",
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": 0,
+      "@typescript-eslint/explicit-module-boundary-types": "off"
     }
   }
