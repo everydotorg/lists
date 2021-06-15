@@ -4,6 +4,7 @@ import { Sponsor } from './Sponsor'
 
 export type CampaignInfo = {
   slug: string
+  everySlug: string
   name: string
   primaryColor: string
   backgroundImageUrl: string

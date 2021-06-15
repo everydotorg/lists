@@ -16,7 +16,7 @@ import { createEveryUrl } from '../../utils/url'
 export const Donation = (): JSX.Element => {
   const { slug, sponsor, primaryColor } = useCampaignInfoContext()
 
-  const [donationAmount, setDonationAmount] = useState(75)
+  const [donationAmount, setDonationAmount] = useState(10)
   const [error, setError] = useState(false)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)
   const [frequency, setFrequency] = useState<DonationFrequency>(

@@ -1,5 +1,6 @@
 {
-  "slug": "lilbubs10thbirthday",
+  "slug": "lilbub",
+  "everySlug": "lilbubs10thbirthday",
   "name": "Lil BUB’s 10th Birthday",
   "primaryColor": "#D55684",
   "backgroundImageUrl": "assets/background.jpeg",
@@ -38,6 +39,13 @@
       "location": "Spring Valley, CA",
       "about": "Dedicated to saving the lives of the tiniest felines.",
       "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/getd3etc0bbbewctfpmy"
+    },
+    {
+      "slug": "thejacksongalaxyproject",
+      "name": "The Jackson Galaxy Project",
+      "location": "Seattle, WA",
+      "about": "The Jackson Galaxy Project is a program of Greater Good Charities that helps animals and the people who care for them.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/uizvyadoqjmnsf3kkbqw"
     }
   ]
 }

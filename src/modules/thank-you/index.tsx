@@ -13,14 +13,14 @@ import { getProgressData } from '../../utils/campaignData'
 import { CopyToClipboard } from '../shared/CopyToClipboard'
 
 export const ThankYou = (): JSX.Element | null => {
-  const { slug, about, shareText, thankYouImageUrl, fundingGoal } =
+  const { slug, everySlug, about, shareText, thankYouImageUrl, fundingGoal } =
     useCampaignInfoContext()
 
   const [progress, setProgress] = useState<Progress | null>(null)
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getProgressData(slug)
+      const data = await getProgressData(everySlug)
       setProgress({
         goal: fundingGoal,
         ...data
@@ -28,10 +28,10 @@ export const ThankYou = (): JSX.Element | null => {
     }
 
     // slug and fundingGoal will be undefined till the .json request is fullfilled
-    if (slug && fundingGoal) {
+    if (everySlug && fundingGoal) {
       fetchData()
     }
-  }, [slug, fundingGoal])
+  }, [everySlug, fundingGoal])
 
   const shareUrl = [window.location.origin, slug].join('/')
 
