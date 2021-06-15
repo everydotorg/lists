@@ -21,7 +21,9 @@ export const NonProfit = ({ nonprofit }: NonProfitProps): JSX.Element => {
             sx={styles.avatar}
           />
           <Flex sx={styles.textContainer}>
-            <Text variant="regular">{nonprofit.name}</Text>
+            <Text id="nonprofit-name" variant="regular">
+              {nonprofit.name}
+            </Text>
             <Text variant="caption" sx={styles.location}>
               {nonprofit.location}
             </Text>
