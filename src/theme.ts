@@ -31,6 +31,13 @@ export const theme = {
     '4rem',
     '6rem'
   ],
+  radii: {
+    zero: 0,
+    small: 8,
+    card: 24,
+    button: 100,
+    full: 9999
+  },
   fontWeights: {
     body: 400,
     heading: 700,
@@ -58,7 +65,7 @@ export const theme = {
     avatar: {
       width: ['2.5rem', '1.75em'],
       height: ['2.5rem', '1.75em'],
-      borderRadius: '9999px',
+      borderRadius: 'full',
       flexShrink: 0
     }
   },
@@ -84,7 +91,7 @@ export const theme = {
   buttons: {
     primary: {
       cursor: 'pointer',
-      borderRadius: '100px',
+      borderRadius: 'button',
       py: [4, 3],
       fontSize: [3, 1],
       lineHeight: 'base',
@@ -184,7 +191,7 @@ export const theme = {
       fontSize: [1, 0]
     },
     large: {
-      fontSize: 5,
+      fontSize: [5, 2],
       lineHeight: 'heading',
       letterSpacing: '-0.015em',
       color: 'text'
@@ -195,6 +202,21 @@ export const theme = {
       letterSpacing: '-0.015em',
       fontWeight: 'bold',
       color: 'text'
+    }
+  },
+  links: {
+    smallSubtle: {
+      cursor: 'pointer',
+      lineHeight: 'base',
+      letterSpacing: '-0.01em',
+      fontWeight: 'body',
+      fontSize: [2, 0],
+      color: 'textGray',
+      textDecoration: 'none',
+      '&:hover': {
+        opacity: '0.85'
+      },
+      transition: 'opacity .2s'
     }
   },
   styles: {

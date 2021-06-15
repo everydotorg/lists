@@ -26,16 +26,16 @@ export const styles: Style = {
     transition: 'background .4s'
   },
   frequencyLeft: {
-    borderTopLeftRadius: '9999px',
-    borderBottomLeftRadius: '9999px'
+    borderTopLeftRadius: 'full',
+    borderBottomLeftRadius: 'full'
   },
   frequencyRight: {
-    borderTopRightRadius: '9999px',
-    borderBottomRightRadius: '9999px'
+    borderTopRightRadius: 'full',
+    borderBottomRightRadius: 'full'
   },
   selectedFrequency: {
     bg: 'white'
   },
-  donationContainer: { borderRadius: '8px', bg: 'dividerInverted', p: 3 },
+  donationContainer: { borderRadius: 'small', bg: 'dividerInverted', p: 3 },
   donationText: { color: 'white' }
 }

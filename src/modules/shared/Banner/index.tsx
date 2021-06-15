@@ -1,15 +1,13 @@
 import { Box } from '@theme-ui/components'
 import { useLocation } from 'react-router-dom'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
+import { BannerButtons } from '../../campaign/BannerButtons'
 import { styles } from './styles'
-import { CopyToClipboard } from '../CopyToClipboard'
 
-export const Banner = (): JSX.Element => {
-  const { bannerUrl, slug } = useCampaignInfoContext()
+export const Banner: React.FC = () => {
+  const { bannerUrl } = useCampaignInfoContext()
 
   const notOnThankYouPage = !useLocation().pathname.includes('thank-you')
-
-  const shareUrl = [window.location.origin, slug].join('/')
 
   return (
     <Box
@@ -18,16 +16,7 @@ export const Banner = (): JSX.Element => {
         backgroundImage: `url(${bannerUrl})`
       }}
     >
-      {notOnThankYouPage && (
-        <CopyToClipboard
-          text={shareUrl}
-          sx={styles.urlButton}
-          linkCopiedStyle={styles.linkCopied}
-          variant="primarySmallInverted"
-        >
-          giveli.st/<strong>{slug}</strong>
-        </CopyToClipboard>
-      )}
+      {notOnThankYouPage && <BannerButtons />}
     </Box>
   )
 }

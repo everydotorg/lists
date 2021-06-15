@@ -1,6 +1,7 @@
 import { Box, Image, Flex, Text, Button } from 'theme-ui'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { styles } from './styles'
+import { BannerButtons } from '../BannerButtons'
 
 interface HeaderProps {
   onClickDonate: () => void
@@ -16,7 +17,7 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
           backgroundImage: `url(${backgroundImageUrl})`
         }}
       >
-        <Image variant="avatar" sx={styles.logo} src={logoUrl} />
+        <BannerButtons />
       </Box>
 
       <Box sx={styles.desktopContainer}>
