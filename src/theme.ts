@@ -140,8 +140,8 @@ export const theme = {
     regular: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [3, 1],
       lineHeight: 'body',
+      fontSize: [3, 1],
       letterSpacing: ['-0.01em', '-0.015em'],
       color: 'text'
     },
@@ -174,6 +174,14 @@ export const theme = {
       fontWeight: 'bold',
       letterSpacing: '-0.02em',
       fontFamily: 'body'
+    },
+    error: {
+      fontFamily: 'body',
+      fontWeight: 'body',
+      lineHeight: 'body',
+      color: 'white',
+      letterSpacing: ['-0.01em', '-0.015em'],
+      fontSize: [1, 0]
     },
     large: {
       fontSize: 5,

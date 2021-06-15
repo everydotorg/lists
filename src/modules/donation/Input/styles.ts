@@ -41,7 +41,6 @@ export const styles: Style = {
     pointerEvents: 'none'
   },
   addAmountContainer: {
-    mt: 3,
     '& > *:not(:last-child)': {
       mr: 3
     }

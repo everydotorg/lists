@@ -12,13 +12,12 @@ import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
-import { useThemeUI } from 'theme-ui'
 
 export const Donation = (): JSX.Element => {
-  const { slug, sponsor } = useCampaignInfoContext()
-  const { theme } = useThemeUI()
+  const { slug, sponsor, primaryColor } = useCampaignInfoContext()
 
   const [donationAmount, setDonationAmount] = useState(75)
+  const [error, setError] = useState(false)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)
   const [frequency, setFrequency] = useState<DonationFrequency>(
     DonationFrequency.OneTime
@@ -27,6 +26,22 @@ export const Donation = (): JSX.Element => {
   const currencySymbol = currencySymbolMap[currency]
 
   const disabled = donationAmount <= 0
+
+  const donate = () => {
+    if (donationAmount < 10) {
+      return setError(true)
+    }
+
+    const color = primaryColor.replace('#', '')
+
+    window.open(
+      createEveryUrl(slug, frequency, donationAmount, {
+        theme_color: color,
+        theme_color_highlight: color
+      }),
+      '_self'
+    )
+  }
 
   return (
     <Box
@@ -43,6 +58,8 @@ export const Donation = (): JSX.Element => {
           setDonation={setDonationAmount}
           currencySymbol={currencySymbol}
           setCurrency={setCurrency}
+          error={error}
+          setError={setError}
         />
         {sponsor && (
           <>
@@ -61,17 +78,7 @@ export const Donation = (): JSX.Element => {
       </Flex>
       <Box sx={styles.donateButtonContainer}>
         <Button
-          onClick={() =>
-            window.open(
-              createEveryUrl(slug, frequency, donationAmount, {
-                theme_color: 'FFF', // @todo: confirm
-                theme_color_highlight: (
-                  theme.colors?.primary as string
-                )?.replace('#', '')
-              }),
-              '_self'
-            )
-          }
+          onClick={donate}
           variant="primaryInverted"
           sx={{
             ...styles.donateButton,

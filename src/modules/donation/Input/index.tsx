@@ -11,13 +11,17 @@ interface InputProps {
   setDonation: React.Dispatch<React.SetStateAction<number>>
   currencySymbol: string
   setCurrency: React.Dispatch<React.SetStateAction<Currency>>
+  error: boolean
+  setError: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export const Input = ({
   donation,
   setDonation,
   currencySymbol,
-  setCurrency
+  setCurrency,
+  error,
+  setError
 }: InputProps): JSX.Element => {
   const { currenciesSupported } = useCampaignInfoContext()
 
@@ -36,7 +40,10 @@ export const Input = ({
             id="donationAmount"
             type="number"
             sx={styles.inputNumber}
-            onChange={(e) => setDonation(+e.target.value)}
+            onChange={(e) => {
+              setDonation(+e.target.value)
+              setError(false)
+            }}
             min={0}
           />
         </Flex>
@@ -60,6 +67,9 @@ export const Input = ({
           )}
         </Flex>
       </Flex>
+      <Text variant="error" sx={{ mt: -1 }}>
+        {error && 'The minimum donation amount is $10'}&nbsp;
+      </Text>
       <Flex sx={styles.addAmountContainer}>
         {amountsToAdd.map((amount) => (
           <Text
