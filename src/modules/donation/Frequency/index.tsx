@@ -24,6 +24,7 @@ export const Frequency = ({
       </Label>
       <Flex sx={styles.selectorContainer}>
         <Label
+          id="frequency-one-time"
           onClick={() => setFrequency(DonationFrequency.OneTime)}
           htmlFor="one-time"
           sx={{
@@ -41,6 +42,7 @@ export const Frequency = ({
           One Time
         </Label>
         <Label
+          id="frequency-monthly"
           htmlFor="monthly"
           onClick={() => setFrequency(DonationFrequency.Monthly)}
           sx={{

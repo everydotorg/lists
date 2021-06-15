@@ -3,6 +3,8 @@ import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { Currency } from '../../../types/Currency'
 import { ChevronDown } from '../../shared/ChevronDown'
 import { styles } from './styles'
+import { pushEvent } from '../../../utils/gtag'
+import React from 'react'
 
 const amountsToAdd = [10, 20, 50, 100]
 
@@ -25,6 +27,25 @@ export const Input = ({
 }: InputProps): JSX.Element => {
   const { currenciesSupported } = useCampaignInfoContext()
 
+  const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDonation(+e.target.value)
+    setError(false)
+    pushEvent('donation_amount_changed', {
+      type: 'keyboard',
+      value: e.target.value
+    })
+  }
+
+  const addAmount = (amount: number) => {
+    pushEvent('donation_amount_changed', {
+      type: 'button',
+      amount: amount,
+      value: donation + amount
+    })
+
+    setDonation((prev) => prev + amount)
+  }
+
   return (
     <Flex sx={styles.container}>
       <Label sx={styles.label} htmlFor="donationAmount" variant="text.title">
@@ -40,10 +61,7 @@ export const Input = ({
             id="donationAmount"
             type="number"
             sx={styles.inputNumber}
-            onChange={(e) => {
-              setDonation(+e.target.value)
-              setError(false)
-            }}
+            onChange={inputChange}
             min={0}
           />
         </Flex>
@@ -77,7 +95,7 @@ export const Input = ({
             role="button"
             variant="title"
             key={amount}
-            onClick={() => setDonation((prev) => prev + amount)}
+            onClick={() => addAmount(amount)}
           >
             +{amount}
           </Text>

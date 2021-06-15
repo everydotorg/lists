@@ -71,12 +71,14 @@ export const ThankYou = (): JSX.Element | null => {
           </CopyToClipboard>
           <Flex sx={styles.socialShareContainer}>
             <Facebook
+              id="facebook-share"
               width={25}
               height={25}
               target="__blank"
               href={facebookShare(shareUrl, about)}
             />
             <Twitter
+              id="twitter-share"
               width={25}
               height={25}
               target="__blank"

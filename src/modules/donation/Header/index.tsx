@@ -15,7 +15,11 @@ export const Header = (): JSX.Element => {
         <Text variant="title" sx={styles.header}>
           Donating to:
         </Text>
-        <Box sx={styles.closeBox} onClick={() => history.goBack()}>
+        <Box
+          id="close-donation"
+          sx={styles.closeBox}
+          onClick={() => history.goBack()}
+        >
           <CloseIcon />
         </Box>
       </Flex>
