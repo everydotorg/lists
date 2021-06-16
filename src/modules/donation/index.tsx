@@ -14,7 +14,7 @@ import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
 
 export const Donation = (): JSX.Element => {
-  const { everySlug, sponsor, primaryColor } = useCampaignInfoContext()
+  const { slug, everySlug, sponsor, primaryColor } = useCampaignInfoContext()
 
   const [donationAmount, setDonationAmount] = useState(10)
   const [error, setError] = useState(false)
@@ -35,7 +35,7 @@ export const Donation = (): JSX.Element => {
     const color = primaryColor.replace('#', '')
 
     window.open(
-      createEveryUrl(everySlug, frequency, donationAmount, {
+      createEveryUrl(slug, everySlug, frequency, donationAmount, {
         theme_color: color,
         theme_color_highlight: color
       }),

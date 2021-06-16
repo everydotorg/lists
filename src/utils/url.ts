@@ -16,15 +16,15 @@ export const objectToParams = (object: Obj): string => {
 
 export const createEveryUrl = (
   slug: string,
+  everySlug: string,
   frequency: DonationFrequency,
   amount: number,
   extras = {}
 ): string => {
-  // const production = process.env.VERCEL_ENV === 'production'
-  const production = true // @todo: check, forced till we have separate environments
+  const production = process.env.VERCEL_ENV === 'production'
 
   const url = new URL(
-    slug + '/donate',
+    everySlug + '/donate',
     production ? 'https://www.every.org' : 'https://staging.every.org'
   )
 
