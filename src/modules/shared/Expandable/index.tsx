@@ -4,6 +4,8 @@ import { Flex, Box, ThemeUIStyleObject } from 'theme-ui'
 import { ChevronDown, ChevronDownProps } from '../ChevronDown'
 
 interface ExpandableProps {
+  expanded: boolean
+  onClick: () => void
   renderTitle: React.ReactNode
   renderDescription: React.ReactNode
   descriptionStyle?: ThemeUIStyleObject
@@ -16,6 +18,8 @@ interface ExpandableProps {
 }
 
 export const Expandable = ({
+  expanded,
+  onClick,
   renderTitle,
   renderDescription,
   containerStyle = {},
@@ -26,24 +30,20 @@ export const Expandable = ({
   space = 0,
   onExpand
 }: ExpandableProps): JSX.Element => {
-  const [expanded, setExpanded] = useState<boolean>(false)
   const [height, setHeight] = useState<number>(0)
 
   const aboutRef = useRef<HTMLDivElement>(null)
-
-  const toggle = () => {
-    onExpand && onExpand(!expanded)
-    setExpanded((prev) => !prev)
-  }
 
   useEffect(
     () => setHeight(expanded ? aboutRef.current?.scrollHeight ?? 0 : 0),
     [expanded]
   )
 
+  useEffect(() => onExpand && onExpand(expanded), [onExpand, expanded])
+
   return (
     <Box
-      onClick={toggle}
+      onClick={onClick}
       sx={{
         cursor: 'pointer',
         ...containerStyle
@@ -57,9 +57,9 @@ export const Expandable = ({
           {...chevronProps}
           sx={{
             ...styles.chevron,
+            color: 'primary',
             ...chevronStyle,
-            ...(expanded ? styles.rotate : {}),
-            color: 'primary'
+            ...(expanded ? styles.rotate : {})
           }}
         />
       </Flex>

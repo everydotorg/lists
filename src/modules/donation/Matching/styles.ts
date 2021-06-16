@@ -8,6 +8,7 @@ export const styles: Style = {
   descriptionText: { color: 'white', fontSize: 3, opacity: 0.8 },
   chevronDown: {
     p: 0,
-    lineHeight: 1
+    lineHeight: 1,
+    color: 'white'
   }
 }

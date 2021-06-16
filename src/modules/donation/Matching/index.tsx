@@ -1,4 +1,5 @@
-import { Text, Box } from '@theme-ui/components'
+import { Box, Text } from '@theme-ui/components'
+import { useState } from 'react'
 import { Sponsor } from '../../../types/Sponsor'
 import { Expandable } from '../../shared/Expandable'
 import { styles } from './styles'
@@ -9,15 +10,19 @@ interface MatchingProps {
   currencySymbol: string
 }
 
-export const Matching = ({
+export const Matching: React.FC<MatchingProps> = ({
   currencySymbol,
   donationAmount,
   sponsor
-}: MatchingProps): JSX.Element => {
+}) => {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <Box sx={{ mx: 3 }}>
       <Expandable
-        headerStyle={styles.container}
+        expanded={expanded}
+        onClick={() => setExpanded((prev) => !prev)}
+        headerStyle={styles.header}
         chevronStyle={styles.chevronDown}
         space={2}
         chevronProps={{ inverted: true }}

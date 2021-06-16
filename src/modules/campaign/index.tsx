@@ -3,11 +3,10 @@ import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { Divider } from '../shared/Divider'
 import { Header } from './Header'
 import { styles } from './styles'
-import { NonProfit } from './NonProfit'
+import { NonProfitList } from './NonProfitList'
 import { Cause } from './Cause'
 import { useHistory, useLocation } from 'react-router'
 import { Matching } from './Matching'
-import { Fragment } from 'react'
 
 export const Campaign = (): JSX.Element => {
   const { name, about, nonprofits, sponsor } = useCampaignInfoContext()
@@ -35,15 +34,11 @@ export const Campaign = (): JSX.Element => {
           )}
         </Flex>
         <Cause />
-        <Box sx={styles.nonprofitsContainer}>
-          {nonprofits &&
-            nonprofits.map((nonprofit) => (
-              <Fragment key={nonprofit.slug}>
-                <Divider space={0} color="muted" />
-                <NonProfit nonprofit={nonprofit} />
-              </Fragment>
-            ))}
-        </Box>
+        {nonprofits && (
+          <Box sx={styles.nonprofitsContainer}>
+            <NonProfitList list={nonprofits} />
+          </Box>
+        )}
       </Flex>
       <Box sx={styles.buttonContainer}>
         <Button

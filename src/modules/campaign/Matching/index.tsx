@@ -1,4 +1,5 @@
 import { Text, Flex } from '@theme-ui/components'
+import { useState } from 'react'
 import { Sponsor } from '../../../types/Sponsor'
 import { Expandable } from '../../shared/Expandable'
 import { styles } from './styles'
@@ -7,9 +8,13 @@ interface MatchingProps {
   sponsor: Sponsor
 }
 
-export const Matching = ({ sponsor }: MatchingProps): JSX.Element => {
+export const Matching: React.FC<MatchingProps> = ({ sponsor }) => {
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <Expandable
+      expanded={expanded}
+      onClick={() => setExpanded((prev) => !prev)}
       headerStyle={styles.header}
       descriptionStyle={styles.description}
       chevronStyle={styles.chevronDown}
