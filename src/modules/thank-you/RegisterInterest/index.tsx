@@ -17,7 +17,7 @@ export const RegisterInterest = (): JSX.Element => {
         Want to make your own list of nonprofits?{' '}
         <Text sx={styles.lightText}>
           Register your interest and we will let you know as soon as the
-          Giveli.st creator is ready try out!
+          Giveli.st creator is ready to try out!
         </Text>
       </Text>
       <Link
