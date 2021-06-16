@@ -55,12 +55,14 @@ export const Frequency = ({
           Monthly
         </Label>
       </Flex>
-      <Box sx={styles.donationContainer}>
-        <Text variant="regular" sx={styles.donationText}>
-          Monthly gifts help nonprofits focus on their mission and long-term
-          impact, not fundraising.
-        </Text>
-      </Box>
+      {frequency === DonationFrequency.OneTime ? (
+        <Box sx={styles.donationContainer}>
+          <Text variant="regular" sx={styles.donationText}>
+            Monthly gifts help nonprofits focus on their mission and long-term
+            impact, not fundraising.
+          </Text>
+        </Box>
+      ) : null}
     </Box>
   )
 }
