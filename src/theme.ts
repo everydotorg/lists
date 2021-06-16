@@ -220,6 +220,18 @@ export const theme = {
     }
   },
   styles: {
+    a: {
+      color: 'inherit',
+      '&:visited': {
+        color: 'inherit'
+      },
+      '&:active': {
+        color: 'inherit'
+      },
+      '&:link': {
+        color: 'inherit'
+      }
+    },
     root: {
       fontFamily: 'body',
       lineHeight: 'body',

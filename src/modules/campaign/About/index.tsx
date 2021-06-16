@@ -18,20 +18,43 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
   return (
     <Flex sx={styles.container}>
       <Flex sx={styles.content}>
-        <Flex sx={styles.header}>
+        <Flex>
           <Text variant="large" sx={{ color: 'text' }}>
-            <strong>giveli.st</strong> a simple and fast way to create and share
-            your own list of recommended nonprofits.
+            <strong>giveli.st</strong> is a simple and fast way to create and
+            share a list of recommended nonprofits.
           </Text>
           <Box sx={styles.closeBox} onClick={pushClosedEvent}>
             <CloseIcon />
           </Box>
         </Flex>
-        <Text variant="title" sx={{ color: 'textGray', fontWeight: 400 }}>
-          Givelist clearly shows the giver who they are donating to and handles
-          the entire giving experience, from payment step, tax receipt, and
-          payout to each of the nonprofits - all actioned directly from the
-          Givelist.
+        <Text variant="title" sx={styles.aboutText}>
+          Givelist clearly shows which 501(c)(3) nonprofits your donation will
+          support. It also handles the entire giving experience, from payment
+          step, tax receipt, and payout to each of the nonprofits - all
+          simplified directly from the Givelist.
+        </Text>
+        <Text variant="title" sx={styles.aboutText}>
+          An always free public good service, Givelist is brought to you by{' '}
+          <Link target="_blank" href="https://p22.studio/">
+            P22 Studio
+          </Link>
+          , and{' '}
+          <Link target="_blank" href="https://every.org/">
+            Every.org
+          </Link>{' '}
+          - a registered 501(c)(3) nonprofit on a mission to provide free
+          technologies and tools that encourage individuals to take action and
+          spread generosity. Original concept by{' '}
+          <Link target="_blank" href="https://www.bettergivingstudio.com/">
+            Better Giving Studio
+          </Link>{' '}
+          and{' '}
+          <Link
+            href="https://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
+          >
+            Licensed under CC BY 4.0.
+          </Link>
         </Text>
       </Flex>
       <Divider space={2} sx={styles.divider} />
