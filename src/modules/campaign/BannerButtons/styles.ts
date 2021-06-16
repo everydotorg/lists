@@ -2,6 +2,9 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   group: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
     m: [2, 4],
     justifyContent: ['space-between', 'unset'],
     alignSelf: 'flex-end',

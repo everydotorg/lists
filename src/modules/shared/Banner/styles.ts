@@ -3,9 +3,14 @@ import { Style } from '../../../types/Style'
 export const styles: Style = {
   banner: {
     height: '100vh',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    display: ['none', 'flex'],
-    position: 'relative'
+    display: ['none', 'block'],
+    position: 'relative',
+
+    '& img': {
+      objectFit: 'cover',
+      objectPosition: 'center',
+      width: '50vw',
+      height: '100%'
+    }
   }
 }
