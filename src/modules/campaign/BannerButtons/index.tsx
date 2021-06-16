@@ -15,6 +15,7 @@ export const BannerButtons: React.FC = () => {
     <>
       <Flex sx={styles.group}>
         <CopyToClipboard
+          id="campaign-copylink"
           text={shareUrl}
           sx={styles.linkButton}
           linkCopiedStyle={styles.linkCopied}
@@ -24,6 +25,7 @@ export const BannerButtons: React.FC = () => {
         </CopyToClipboard>
 
         <Button
+          id="open-about"
           variant="primarySmallInverted"
           onClick={() => setShowPopup(true)}
         >

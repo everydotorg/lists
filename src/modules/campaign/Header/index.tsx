@@ -28,6 +28,7 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
           </Text>
         </Flex>
         <Button
+          id="campaign-desktop-donate"
           sx={styles.donateButton}
           onClick={onClickDonate}
           variant="primarySmall"

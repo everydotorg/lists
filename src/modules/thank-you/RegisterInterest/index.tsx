@@ -21,6 +21,7 @@ export const RegisterInterest = (): JSX.Element => {
         </Text>
       </Text>
       <Link
+        id="register-interest"
         href={FORM_LINK}
         target="_blank"
         onClick={registerUserInterest}

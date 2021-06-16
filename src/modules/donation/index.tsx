@@ -78,6 +78,7 @@ export const Donation = (): JSX.Element => {
       </Flex>
       <Box sx={styles.donateButtonContainer}>
         <Button
+          id="submit-donation"
           onClick={donate}
           variant="primaryInverted"
           sx={{

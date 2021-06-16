@@ -28,6 +28,7 @@ export const styles: Style = {
     flexShrink: 0,
     color: 'primary',
     cursor: 'pointer',
+    alignSelf: 'flex-start',
     ml: [4, 2]
   },
   footer: {
