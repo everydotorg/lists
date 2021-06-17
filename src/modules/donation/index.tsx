@@ -90,7 +90,7 @@ export const Donation = (): JSX.Element => {
         <Divider inverted space={3} />
         <Frequency frequency={frequency} setFrequency={setFrequency} />
         <Divider inverted space={3} />
-        <Disclaimer currency={currency} />
+        <Disclaimer />
       </Flex>
       <Box sx={styles.donateButtonContainer}>
         <Button
