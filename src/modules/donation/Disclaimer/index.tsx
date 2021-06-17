@@ -12,7 +12,7 @@ export const Disclaimer = ({ currency }: DisclaimerProps): JSX.Element => {
         pb: 3
       }}
     >
-      <Text variant="regular" sx={{ color: 'white' }}>
+      <Text as="p" variant="regular" sx={{ color: 'white' }}>
         You will be redirected to Every.org to complete your {currency} donation
         to a United States registered charity.
       </Text>
