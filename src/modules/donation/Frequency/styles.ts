@@ -16,14 +16,17 @@ export const styles: Style = {
     fontSize: [3, 1],
     color: 'white',
     px: [4, 3],
-    py: 2,
+    py: 0,
+    lineHeight: 'base',
+    height: ['2.5rem', '1.75rem'],
     fontWeight: 'body',
-    display: 'block',
     cursor: 'pointer',
     textAlign: 'center',
     border: '1px solid',
     borderColor: 'white',
-    transition: 'background .4s'
+    transition: 'background .4s',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   frequencyLeft: {
     borderTopLeftRadius: 'full',
