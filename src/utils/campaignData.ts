@@ -17,7 +17,7 @@ type EveryResponse = {
 } & { [x: string]: unknown }
 
 const getNonprofitInfo = async (slug: string): Promise<EveryResponse> => {
-  const production = process.env.VERCEL_ENV === 'production'
+  const production = process.env.REACT_APP_VERCEL_ENV === 'production'
   const everyUrl = production ? EVERY_BASE_URL : EVERY_STAGING_BASE_URL
 
   const response = await fetch(everyUrl + slug)

@@ -21,7 +21,7 @@ export const createEveryUrl = (
   amount: number,
   extras = {}
 ): string => {
-  const production = process.env.VERCEL_ENV === 'production'
+  const production = process.env.REACT_APP_VERCEL_ENV === 'production'
 
   const url = new URL(
     everySlug + '/donate',
