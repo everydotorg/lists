@@ -18,4 +18,5 @@ export type CampaignInfo = {
   nonprofits: NonProfit[]
   sponsor?: Sponsor
   currenciesSupported?: Currency[]
+  defaultDonationAmount: number
 }
