@@ -34,6 +34,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
           <Expandable
             expanded={nonprofit.slug === expandedSlug}
             onClick={() => handleClick(nonprofit.slug)}
+            autoScroll
             containerStyle={styles.container}
             headerStyle={styles.header}
             renderTitle={

@@ -15,6 +15,7 @@ interface ExpandableProps {
   chevronProps?: Partial<ChevronDownProps>
   onExpand?: (open: boolean) => void
   space?: number
+  autoScroll?: boolean
 }
 
 export const Expandable = ({
@@ -22,6 +23,7 @@ export const Expandable = ({
   onClick,
   renderTitle,
   renderDescription,
+  autoScroll = false,
   containerStyle = {},
   headerStyle = {},
   descriptionStyle = {},
@@ -34,10 +36,24 @@ export const Expandable = ({
 
   const aboutRef = useRef<HTMLDivElement>(null)
 
-  useEffect(
-    () => setHeight(expanded ? aboutRef.current?.scrollHeight ?? 0 : 0),
-    [expanded]
-  )
+  useEffect(() => {
+    setHeight(expanded ? aboutRef.current?.scrollHeight ?? 0 : 0)
+
+    if (expanded && autoScroll) {
+      const timeout = setTimeout(
+        () =>
+          aboutRef.current?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest'
+          }),
+        500 // the duration of the animation
+      )
+
+      return () => clearTimeout(timeout)
+    }
+
+    return () => null
+  }, [expanded, autoScroll])
 
   useEffect(() => onExpand && onExpand(expanded), [onExpand, expanded])
 
