@@ -39,7 +39,7 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
             P22 Studio
           </Link>
           , and{' '}
-          <Link target="_blank" href="https://every.org/">
+          <Link target="_blank" href="https://every.org/about-us">
             Every.org
           </Link>{' '}
           - a registered 501(c)(3) nonprofit on a mission to provide free
