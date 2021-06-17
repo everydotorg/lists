@@ -14,7 +14,7 @@ export const Banner: React.FC = () => {
         src="/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_2040.jpg"
         alt="Happy cat"
       />
-      {notOnThankYouPage && <BannerButtons />}
+      {notOnThankYouPage && <BannerButtons sx={styles.buttons} />}
     </Box>
   )
 }
