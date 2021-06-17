@@ -1,5 +1,5 @@
 import { Flex, Text, Image } from '@theme-ui/components'
-import { Fragment, useState } from 'react'
+import { Fragment, useCallback, useState } from 'react'
 import { NonProfit as NonProfitType } from '../../../types/NonProfit'
 import { pushEvent } from '../../../utils/gtag'
 import { Divider } from '../../shared/Divider'
@@ -18,10 +18,13 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
       return curr === slug ? null : slug
     })
 
-  const pushAnalyticEvent = (name: string) => (expanded: boolean) =>
-    pushEvent(`${expanded ? 'open' : 'close'}_nonprofit`, {
-      name: name
-    })
+  const pushAnalyticEvent = useCallback(
+    (name: string) => (expanded: boolean) =>
+      pushEvent(`${expanded ? 'open' : 'close'}_nonprofit`, {
+        name: name
+      }),
+    []
+  )
 
   return (
     <>
