@@ -16,14 +16,20 @@ import { CampaignInfoContext } from './contexts/CampaignInfoContext'
 import { Donation } from './modules/donation'
 import { Banner } from './modules/shared/Banner'
 import { getDefaultAmountAbTest } from './donation-amount-ab-test'
+import { pushEvent } from './utils/gtag'
+
+const defaultDonationAmount = getDefaultAmountAbTest()
 
 const Givelist = (): JSX.Element => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
-  const defaultDonationAmount = getDefaultAmountAbTest()
   const [campaignTheme, setCampaignTheme] = useState(theme)
   const [campaignInfo, setCampaignInfo] = useState<CampaignInfo>(
     {} as CampaignInfo
   )
+
+  useEffect(() => {
+    pushEvent('default_donation_amount', { amount: defaultDonationAmount })
+  }, [])
 
   useEffect(() => {
     const fetchCampaignInfo = async () => {
