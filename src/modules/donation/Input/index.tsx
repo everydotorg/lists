@@ -1,18 +1,14 @@
-import { Label, Flex, Input as ThemeInput, Text, Select } from 'theme-ui'
-import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
-import { Currency } from '../../../types/Currency'
-import { ChevronDown } from '../../shared/ChevronDown'
+import { Label, Flex, Input as ThemeInput, Text } from 'theme-ui'
 import { styles } from './styles'
 import { pushEvent } from '../../../utils/gtag'
 import React from 'react'
 
-const amountsToAdd = [10, 20, 50, 100]
+const amountsToAdd = [40, 80, 200]
 
 interface InputProps {
   donation: number
   setDonation: React.Dispatch<React.SetStateAction<number>>
   currencySymbol: string
-  setCurrency: React.Dispatch<React.SetStateAction<Currency>>
   error: boolean
   setError: React.Dispatch<React.SetStateAction<boolean>>
 }
@@ -21,12 +17,9 @@ export const Input = ({
   donation,
   setDonation,
   currencySymbol,
-  setCurrency,
   error,
   setError
 }: InputProps): JSX.Element => {
-  const { currenciesSupported } = useCampaignInfoContext()
-
   const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDonation(+e.target.value)
     setError(false)
@@ -51,43 +44,22 @@ export const Input = ({
       <Label sx={styles.label} htmlFor="donationAmount" variant="text.title">
         How much to donate?
       </Label>
-      <Flex sx={styles.donationContainer}>
-        <Flex sx={styles.inputContainer}>
-          <Text variant="input" sx={styles.currencySymbol}>
-            {currencySymbol}
-          </Text>
-          <ThemeInput
-            value={donation ? donation : undefined}
-            id="donationAmount"
-            type="number"
-            sx={styles.inputNumber}
-            onChange={inputChange}
-            min={0}
-            placeholder="amount"
-          />
+      <Flex sx={styles.inputContainer}>
+        <Flex sx={styles.currencyContainer}>
+          <Text variant="input">{currencySymbol}</Text>
         </Flex>
-        <Flex sx={styles.selectContainer}>
-          {currenciesSupported && currenciesSupported.length > 0 && (
-            <Select
-              onChange={(e) => setCurrency(e.target.value as Currency)}
-              arrow={
-                <ChevronDown
-                  width={20}
-                  height={10}
-                  sx={styles.selectArrow}
-                  inverted
-                />
-              }
-            >
-              {currenciesSupported.map((c) => (
-                <option>{c}</option>
-              ))}
-            </Select>
-          )}
-        </Flex>
+        <ThemeInput
+          value={donation ? donation : undefined}
+          id="donationAmount"
+          type="number"
+          onChange={inputChange}
+          min={0}
+          sx={{ ...styles.inputNumber, ...(error ? styles.inputError : {}) }}
+          placeholder="Enter amount in USD"
+        />
       </Flex>
-      <Text variant="error" sx={{ mt: -1 }}>
-        {error && 'The minimum donation amount is $10'}&nbsp;
+      <Text variant="error" sx={{ mt: '1px', alignSelf: 'flex-end' }}>
+        {error && 'Amount must be at least $10'}&nbsp;
       </Text>
       <Flex sx={styles.addAmountContainer}>
         {amountsToAdd.map((amount) => (

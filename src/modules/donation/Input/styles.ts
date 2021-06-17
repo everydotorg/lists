@@ -2,17 +2,27 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   container: {
-    color: 'white',
     flexDirection: 'column',
-    px: 3
+    px: 4
   },
-  currencySymbol: { mr: 2 },
+  inputContainer: {
+    position: 'relative',
+    width: '100%'
+  },
+  currencyContainer: {
+    ml: 4,
+    alignItems: 'center',
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    pointerEvents: 'none'
+  },
   label: {
-    opacity: '0.8',
-    mb: 3,
+    mb: 4,
     fontWeight: 400
   },
   inputNumber: {
+    pl: 'calc(2rem + 16px)',
     '::-webkit-outer-spin-button': {
       WebkitAppearance: 'none',
 
@@ -26,8 +36,11 @@ export const styles: Style = {
       MozAppearance: 'textfield'
     }
   },
-  donationContainer: { alignItems: 'center', justifyContent: 'space-between' },
-  inputContainer: { flex: 3, alignItems: 'center' },
+  inputError: {
+    border: '1px solid',
+    borderColor: '#EF4444',
+    boxShadow: '0px 0px 0px 2px #FECACA'
+  },
   selectContainer: {
     flex: 1,
     width: '100%',
@@ -41,9 +54,13 @@ export const styles: Style = {
     pointerEvents: 'none'
   },
   addAmountContainer: {
+    color: 'primary',
     '& > *:not(:last-child)': {
       mr: 3
     }
   },
-  addAmountText: { fontWeight: '400', cursor: 'pointer' }
+  addAmountText: {
+    fontWeight: '400',
+    cursor: 'pointer'
+  }
 }

@@ -18,7 +18,7 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
   return (
     <Flex sx={styles.container}>
       <Flex sx={styles.content}>
-        <Flex>
+        <Flex sx={{ justifyContent: 'space-between' }}>
           <Text variant="large" sx={{ color: 'text' }}>
             <strong>giveli.st</strong> is a simple and fast way to create and
             share a list of recommended nonprofits.

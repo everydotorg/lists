@@ -1,4 +1,3 @@
-// example base theme from @theme-ui/presets
 export const theme = {
   breakpoints: ['56.25em', '112.5em'],
   space: [
@@ -54,12 +53,14 @@ export const theme = {
     textGray: '#868A8A',
     background: '#FFF',
     divider: '#EEEEEE',
+    inputBackground: '#F3F6F6',
     backgroundGray: '#FAFAFA',
     dividerInverted: 'rgba(255, 255, 255, 0.1)',
     primary: '#07C',
     secondary: '#30C',
     muted: '#EEEEEE',
-    progressBg: '#EAEDED'
+    progressBg: '#EAEDED',
+    error: '#EF4444'
   },
   images: {
     avatar: {
@@ -71,18 +72,25 @@ export const theme = {
   },
   forms: {
     input: {
-      border: 'none',
+      border: '1px solid transparent',
+      borderRadius: 'small',
       outline: 'none',
-      color: 'white',
-      fontSize: [7, 6],
+      bg: 'inputBackground',
+      fontSize: [5, 3],
       lineHeight: 'input',
-      fontWeight: 'bold',
+      fontWeight: 'heading',
       letterSpacing: '-0.02em',
       fontFamily: 'body',
-      m: 0,
-      p: 0,
+      width: '100%',
+      py: 3,
+      ':focus': {
+        bg: 'white',
+        border: '1px solid',
+        borderColor: 'primary',
+        boxShadow: '0px 0px 0px 2px rgba(215, 83, 131, 0.2)'
+      },
       '::placeholder': {
-        color: 'white',
+        fontSize: [4, 2],
         opacity: 0.7
       }
     },
@@ -180,9 +188,9 @@ export const theme = {
       color: 'textGray'
     },
     input: {
-      fontSize: [7, 6],
+      fontSize: [5, 3],
       lineHeight: 'input',
-      fontWeight: 'bold',
+      fontWeight: 'heading',
       letterSpacing: '-0.02em',
       fontFamily: 'body'
     },
@@ -190,7 +198,8 @@ export const theme = {
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
-      color: 'white',
+      color: 'error',
+      opacity: '0.9',
       letterSpacing: ['-0.01em', '-0.015em'],
       fontSize: [1, 0]
     },

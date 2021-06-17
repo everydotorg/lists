@@ -12,11 +12,6 @@ export const Frequency = ({
   frequency,
   setFrequency
 }: FrequencyProps): JSX.Element => {
-  const selected = {
-    bg: 'white',
-    color: 'primary'
-  }
-
   return (
     <Box sx={styles.container}>
       <Label variant="text.title" sx={styles.label}>
@@ -30,7 +25,9 @@ export const Frequency = ({
           sx={{
             ...styles.frequencyBase,
             ...styles.frequencyLeft,
-            ...(frequency === DonationFrequency.OneTime ? selected : {})
+            ...(frequency === DonationFrequency.OneTime
+              ? styles.selectedFrequency
+              : {})
           }}
         >
           <Input
@@ -39,7 +36,7 @@ export const Frequency = ({
             id="one-time"
             sx={styles.input}
           />
-          One Time
+          One-time
         </Label>
         <Label
           id="frequency-monthly"
@@ -48,7 +45,9 @@ export const Frequency = ({
           sx={{
             ...styles.frequencyBase,
             ...styles.frequencyRight,
-            ...(frequency === DonationFrequency.Monthly ? selected : {})
+            ...(frequency === DonationFrequency.Monthly
+              ? styles.selectedFrequency
+              : {})
           }}
         >
           <Input type="radio" name="frequency" id="monthly" sx={styles.input} />

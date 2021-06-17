@@ -2,19 +2,23 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   container: {
-    px: 3,
+    px: 4,
     '& > :not(:last-child)': {
-      mb: 3
+      mb: 4
     }
   },
-  label: { color: 'white', opacity: 0.8, fontWeight: 400 },
-  input: { display: 'none' },
+  label: {
+    fontWeight: 400
+  },
+  input: {
+    display: 'none'
+  },
   selectorContainer: {
     alignItems: 'center'
   },
   frequencyBase: {
     fontSize: [3, 1],
-    color: 'white',
+    color: 'primary',
     px: [4, 3],
     py: 0,
     lineHeight: 'base',
@@ -23,7 +27,7 @@ export const styles: Style = {
     cursor: 'pointer',
     textAlign: 'center',
     border: '1px solid',
-    borderColor: 'white',
+    borderColor: 'primary',
     transition: 'background .4s',
     alignItems: 'center',
     justifyContent: 'center'
@@ -37,8 +41,13 @@ export const styles: Style = {
     borderBottomRightRadius: 'full'
   },
   selectedFrequency: {
-    bg: 'white'
+    color: 'white',
+    bg: 'primary'
   },
-  donationContainer: { borderRadius: 'small', bg: 'dividerInverted', p: 3 },
-  donationText: { color: 'white' }
+  donationContainer: {
+    border: '1px solid #CCCCCC',
+    borderRadius: 'small',
+    bg: 'dividerInverted',
+    p: 4
+  }
 }

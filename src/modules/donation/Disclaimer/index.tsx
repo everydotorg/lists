@@ -4,11 +4,10 @@ export const Disclaimer: React.FC = () => {
   return (
     <Box
       sx={{
-        px: 3,
-        pb: 3
+        px: 4
       }}
     >
-      <Text as="p" variant="regular" sx={{ color: 'white' }}>
+      <Text as="p" variant="regular" sx={{ color: 'textGray' }}>
         You will be redirected to Every.org to complete your donation.
       </Text>
     </Box>

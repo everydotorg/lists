@@ -19,7 +19,7 @@ export const Donation = (): JSX.Element => {
 
   const [donationAmount, setDonationAmount] = useState(defaultDonationAmount)
   const [error, setError] = useState(false)
-  const [currency, setCurrency] = useState<Currency>(Currency.USD)
+  const [currency] = useState<Currency>(Currency.USD)
   const [frequency, setFrequency] = useState<DonationFrequency>(
     DonationFrequency.OneTime
   )
@@ -46,7 +46,7 @@ export const Donation = (): JSX.Element => {
 
   const getDonateButtonText = () => {
     if (!donationAmount || donationAmount === 0) {
-      return 'Enter amount'
+      return 'Donate'
     }
 
     const frequencyText =
@@ -63,18 +63,17 @@ export const Donation = (): JSX.Element => {
     >
       <Flex sx={styles.container}>
         <Header />
-        <Divider inverted space={3} />
+        <Divider space={4} />
         <Input
           donation={donationAmount}
           setDonation={setDonationAmount}
           currencySymbol={currencySymbol}
-          setCurrency={setCurrency}
           error={error}
           setError={setError}
         />
         {sponsor && (
           <>
-            <Divider inverted space={3} sx={{ mx: 3 }} />
+            <Divider space={4} sx={{ mx: 3 }} />
             <Matching
               currencySymbol={currencySymbol}
               donationAmount={donationAmount}
@@ -82,16 +81,17 @@ export const Donation = (): JSX.Element => {
             />
           </>
         )}
-        <Divider inverted space={3} />
+        <Divider space={4} />
         <Frequency frequency={frequency} setFrequency={setFrequency} />
-        <Divider inverted space={3} />
+        <Divider space={4} />
         <Disclaimer />
+        <Divider space={4} />
       </Flex>
       <Box sx={styles.donateButtonContainer}>
         <Button
           id="submit-donation"
           onClick={donate}
-          variant="primaryInverted"
+          variant="primary"
           sx={{
             ...styles.donateButton,
             ...(disabled ? styles.donateButtonDisabled : {})

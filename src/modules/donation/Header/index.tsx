@@ -14,6 +14,7 @@ export const Header = (): JSX.Element => {
     pushEvent(`donate_close`, {})
     history.goBack()
   }
+
   return (
     <Flex sx={styles.headerContainer}>
       <Flex sx={styles.firstLine}>

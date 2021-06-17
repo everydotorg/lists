@@ -4,20 +4,24 @@ export const styles: Style = {
   page: {
     display: 'grid',
     gridTemplateColumns: '1fr',
-    gridTemplateRows: '1fr max-content',
-    bg: 'primary'
+    gridTemplateRows: '1fr max-content'
   },
-  container: { flexDirection: 'column', overflow: 'auto' },
+  container: {
+    flexDirection: 'column',
+    overflow: 'auto'
+  },
   header: {
     fontWeight: 400,
     opacity: '0.8',
     mb: 1
   },
   donateButtonContainer: {
+    bg: 'white',
     position: 'sticky',
     bottom: 0,
-    bg: 'primary',
-    p: [1, 3]
+    px: 4,
+    pt: 2,
+    pb: 4
   },
   donateButton: {
     width: '100%'
