@@ -1,5 +1,5 @@
 import { Box, Button, Flex } from '@theme-ui/components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Currency, currencySymbolMap } from '../../types/Currency'
 import { DonationFrequency } from '../../types/Frequency'
 import { Divider } from '../shared/Divider'
@@ -13,6 +13,7 @@ import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
 import { getDefaultAmountAbTest } from '../../donation-amount-ab-test'
+import { pushEvent } from '../../utils/gtag'
 
 export const Donation = (): JSX.Element => {
   const { slug, everySlug, sponsor, primaryColor } = useCampaignInfoContext()
@@ -23,6 +24,10 @@ export const Donation = (): JSX.Element => {
   const [frequency, setFrequency] = useState<DonationFrequency>(
     DonationFrequency.OneTime
   )
+
+  useEffect(() => {
+    pushEvent('default_donation_amount', { amount: defaultDonationAmount })
+  }, [defaultDonationAmount])
 
   const currencySymbol = currencySymbolMap[currency]
 
