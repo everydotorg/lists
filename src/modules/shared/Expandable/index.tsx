@@ -70,7 +70,6 @@ export const Expandable = React.memo(
       }
 
       if (onExpand && id) {
-        console.log('HG')
         onExpand(id, expanded)
       }
     }, [id, expanded, onExpand])
