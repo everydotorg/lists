@@ -80,7 +80,11 @@ export const theme = {
       letterSpacing: '-0.02em',
       fontFamily: 'body',
       m: 0,
-      p: 0
+      p: 0,
+      '::placeholder': {
+        color: 'white',
+        opacity: 0.7
+      }
     },
     select: {
       border: 'none',

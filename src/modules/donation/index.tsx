@@ -1,5 +1,5 @@
 import { Box, Button, Flex } from '@theme-ui/components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Currency, currencySymbolMap } from '../../types/Currency'
 import { DonationFrequency } from '../../types/Frequency'
 import { Divider } from '../shared/Divider'
@@ -12,16 +12,22 @@ import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
+import { getDefaultAmountAbTest } from '../../donation-amount-ab-test'
+import { pushEvent } from '../../utils/gtag'
 
 export const Donation = (): JSX.Element => {
-  const { everySlug, sponsor, primaryColor } = useCampaignInfoContext()
-
-  const [donationAmount, setDonationAmount] = useState(10)
+  const { slug, everySlug, sponsor, primaryColor } = useCampaignInfoContext()
+  const defaultDonationAmount = getDefaultAmountAbTest()
+  const [donationAmount, setDonationAmount] = useState(defaultDonationAmount)
   const [error, setError] = useState(false)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)
   const [frequency, setFrequency] = useState<DonationFrequency>(
     DonationFrequency.OneTime
   )
+
+  useEffect(() => {
+    pushEvent('default_donation_amount', { amount: defaultDonationAmount })
+  }, [defaultDonationAmount])
 
   const currencySymbol = currencySymbolMap[currency]
 
@@ -35,12 +41,22 @@ export const Donation = (): JSX.Element => {
     const color = primaryColor.replace('#', '')
 
     window.open(
-      createEveryUrl(everySlug, frequency, donationAmount, {
+      createEveryUrl(slug, everySlug, frequency, donationAmount, {
         theme_color: color,
         theme_color_highlight: color
       }),
       '_self'
     )
+  }
+
+  const getDonateButtonText = () => {
+    if (!donationAmount || donationAmount === 0) {
+      return 'Enter amount'
+    }
+
+    const frequencyText =
+      frequency === DonationFrequency.Monthly ? 'every month' : ''
+    return `Donate ${currencySymbol} ${donationAmount} ${currency} ${frequencyText}`
   }
 
   return (
@@ -87,9 +103,7 @@ export const Donation = (): JSX.Element => {
           }}
           disabled={disabled}
         >
-          Donate {currencySymbol}
-          {donationAmount} {currency}{' '}
-          {frequency === DonationFrequency.Monthly ? 'every month' : ''}
+          {getDonateButtonText()}
         </Button>
       </Box>
     </Box>
