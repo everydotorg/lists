@@ -63,6 +63,7 @@ export const Input = ({
             sx={styles.inputNumber}
             onChange={inputChange}
             min={0}
+            placeholder="amount"
           />
         </Flex>
         <Flex sx={styles.selectContainer}>

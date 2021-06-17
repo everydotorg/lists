@@ -12,11 +12,12 @@ import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
+import { getDefaultAmountAbTest } from '../../donation-amount-ab-test'
 
 export const Donation = (): JSX.Element => {
   const { slug, everySlug, sponsor, primaryColor } = useCampaignInfoContext()
-
-  const [donationAmount, setDonationAmount] = useState(10)
+  const defaultDonationAmount = getDefaultAmountAbTest()
+  const [donationAmount, setDonationAmount] = useState(defaultDonationAmount)
   const [error, setError] = useState(false)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)
   const [frequency, setFrequency] = useState<DonationFrequency>(
@@ -41,6 +42,16 @@ export const Donation = (): JSX.Element => {
       }),
       '_self'
     )
+  }
+
+  const getDonateButtonText = () => {
+    if (!donationAmount || donationAmount === 0) {
+      return 'Enter amount'
+    }
+
+    const frequencyText =
+      frequency === DonationFrequency.Monthly ? 'every month' : ''
+    return `Donate ${currencySymbol} ${donationAmount} ${currency} ${frequencyText}`
   }
 
   return (
@@ -87,9 +98,7 @@ export const Donation = (): JSX.Element => {
           }}
           disabled={disabled}
         >
-          Donate {currencySymbol}
-          {donationAmount} {currency}{' '}
-          {frequency === DonationFrequency.Monthly ? 'every month' : ''}
+          {getDonateButtonText()}
         </Button>
       </Box>
     </Box>
