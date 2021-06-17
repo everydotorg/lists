@@ -15,14 +15,14 @@ export const styles: Style = {
     flexDirection: 'column',
     justifyContent: 'space-between'
   },
-  header: {
-    mb: [6, 2]
-  },
   divider: {
     display: ['none', 'unset']
   },
   content: {
-    flexDirection: 'column'
+    flexDirection: 'column',
+    '& > *:not(:last-child)': {
+      mb: [6, 2]
+    }
   },
   closeBox: {
     flexShrink: 0,
@@ -41,5 +41,10 @@ export const styles: Style = {
     '& > *:not(:last-child)': {
       mr: 1
     }
+  },
+  aboutText: {
+    color: 'textGray',
+    fontWeight: 400,
+    '& > span': { display: 'block' }
   }
 }
