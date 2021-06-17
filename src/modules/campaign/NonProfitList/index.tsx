@@ -18,13 +18,11 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
       return curr === slug ? null : slug
     })
 
-  const pushAnalyticEvent = useCallback(
-    () => (name: string, expanded: boolean) =>
-      pushEvent(`${expanded ? 'open' : 'close'}_nonprofit`, {
-        name: name
-      }),
-    []
-  )
+  const pushAnalyticEvent = useCallback((name: string, expanded: boolean) => {
+    pushEvent(`${expanded ? 'open' : 'close'}_nonprofit`, {
+      name: name
+    })
+  }, [])
 
   return (
     <>
