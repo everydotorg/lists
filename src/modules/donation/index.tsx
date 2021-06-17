@@ -12,12 +12,12 @@ import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
-import { getDefaultAmountAbTest } from '../../donation-amount-ab-test'
 import { pushEvent } from '../../utils/gtag'
 
 export const Donation = (): JSX.Element => {
-  const { slug, everySlug, sponsor, primaryColor } = useCampaignInfoContext()
-  const defaultDonationAmount = getDefaultAmountAbTest()
+  const { slug, everySlug, sponsor, primaryColor, defaultDonationAmount } =
+    useCampaignInfoContext()
+
   const [donationAmount, setDonationAmount] = useState(defaultDonationAmount)
   const [error, setError] = useState(false)
   const [currency, setCurrency] = useState<Currency>(Currency.USD)

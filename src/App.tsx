@@ -15,9 +15,11 @@ import { CampaignInfo } from './types/CampaignInfo'
 import { CampaignInfoContext } from './contexts/CampaignInfoContext'
 import { Donation } from './modules/donation'
 import { Banner } from './modules/shared/Banner'
+import { getDefaultAmountAbTest } from './donation-amount-ab-test'
 
 const Givelist = (): JSX.Element => {
   const { campaignSlug } = useParams<{ campaignSlug: string }>()
+  const defaultDonationAmount = getDefaultAmountAbTest()
   const [campaignTheme, setCampaignTheme] = useState(theme)
   const [campaignInfo, setCampaignInfo] = useState<CampaignInfo>(
     {} as CampaignInfo
@@ -43,7 +45,9 @@ const Givelist = (): JSX.Element => {
 
   return (
     <ThemeProvider theme={campaignTheme}>
-      <CampaignInfoContext.Provider value={campaignInfo}>
+      <CampaignInfoContext.Provider
+        value={{ ...campaignInfo, defaultDonationAmount }}
+      >
         <Box
           sx={{
             width: ['100%', '100vw'],
