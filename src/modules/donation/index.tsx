@@ -38,7 +38,9 @@ export const Donation = (): JSX.Element => {
     window.open(
       createEveryUrl(slug, everySlug, frequency, donationAmount, {
         theme_color: color,
-        theme_color_highlight: color
+        theme_color_highlight: color,
+        utm_content:
+          defaultDonationAmount === 0 ? 'default_blank' : 'default_25'
       }),
       '_self'
     )
