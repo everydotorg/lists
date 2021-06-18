@@ -17,7 +17,7 @@ export const styles: Style = {
     label: 'nonprofit-item',
     alignItems: 'start',
     justifyContent: 'space-between',
-    py: 3,
+    py: 4,
     backgroundColor: 'inherit'
   },
   textContainer: {
@@ -33,7 +33,7 @@ export const styles: Style = {
   },
   aboutText: {
     display: 'block',
-    paddingBottom: 3,
+    paddingBottom: 4,
     color: 'text'
   },
   location: {

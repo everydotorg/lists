@@ -18,11 +18,11 @@ export const styles: Style = {
   campaignInfo: {
     flexDirection: 'column',
     bg: 'white',
-    padding: 3
+    padding: 4
   },
   campaignTitle: {
     display: [null, 'none'],
-    mb: 3
+    mb: 4
   },
   aboutText: {
     color: 'textGray',
