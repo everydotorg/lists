@@ -4,8 +4,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect,
-  useParams
+  Redirect
 } from 'react-router-dom'
 import { Campaign } from './modules/campaign'
 import { ThankYou } from './modules/thank-you'
@@ -21,7 +20,9 @@ import { pushEvent } from './utils/gtag'
 const defaultDonationAmount = getDefaultAmountAbTest()
 
 const Givelist = (): JSX.Element => {
-  const { campaignSlug } = useParams<{ campaignSlug: string }>()
+  // The url is hardcoded and will always be /lilbub until we have more campaigns
+  const campaignSlug = 'lilbub'
+  // const { campaignSlug } = useParams<{ campaignSlug: string }>()
   const [campaignTheme, setCampaignTheme] = useState(theme)
   const [campaignInfo, setCampaignInfo] = useState<CampaignInfo>(
     {} as CampaignInfo
@@ -88,24 +89,20 @@ const App = (): JSX.Element => {
   return (
     <Router>
       <Switch>
-        <Route path="/:campaignSlug">
+        {/* Hardcoded for now until we have more active campaigns /*}
+        {/* <Route path="/:campaignSlug"> */}
+        <Route path="/lilbub">
           <Givelist />
         </Route>
         <Route exact path="/">
-          <RedirectToEvery />
+          <Redirect to="/lilbub" />
         </Route>
         <Route path="*">
-          <Redirect to="/lilbubs10thbirthday" />
+          <Redirect to="/lilbub" />
         </Route>
       </Switch>
     </Router>
   )
-}
-
-const RedirectToEvery = () => {
-  window.location.href = 'https://every.org'
-
-  return null
 }
 
 export default App
