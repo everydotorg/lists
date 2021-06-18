@@ -36,7 +36,7 @@ export const Frequency = ({
             id="one-time"
             sx={styles.input}
           />
-          One-time
+          <span>One-time</span>
         </Label>
         <Label
           id="frequency-monthly"
@@ -51,7 +51,7 @@ export const Frequency = ({
           }}
         >
           <Input type="radio" name="frequency" id="monthly" sx={styles.input} />
-          Monthly
+          <span>Monthly</span>
         </Label>
       </Flex>
       {frequency === DonationFrequency.OneTime ? (

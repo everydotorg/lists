@@ -33,7 +33,7 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
           onClick={onClickDonate}
           variant="primarySmall"
         >
-          Donate
+          <span>Donate</span>
         </Button>
       </Box>
     </>

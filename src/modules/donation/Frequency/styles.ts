@@ -30,7 +30,11 @@ export const styles: Style = {
     borderColor: 'primary',
     transition: 'background .4s',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    '& > span': {
+      display: 'block',
+      transform: [null, 'translateY(0.1em)']
+    }
   },
   frequencyLeft: {
     borderTopLeftRadius: 'full',

@@ -123,7 +123,13 @@ export const theme = {
       '&:focus': {
         outline: 'none'
       },
-      transition: 'opacity .2s'
+      transition: 'opacity .2s',
+      '& > span': {
+        // hack to center the text of the button
+        // https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
+        transform: ['translateY(0.07em)', 'translateY(0.1em)'],
+        display: 'block'
+      }
     },
     primarySmall: {
       variant: 'buttons.primary',

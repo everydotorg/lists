@@ -28,7 +28,7 @@ export const RegisterInterest = (): JSX.Element => {
         sx={styles.button}
         variant="buttons.primaryInverted"
       >
-        {interestRegistered ? 'Thank you!' : 'Register Interest'}
+        <span>{interestRegistered ? 'Thank you!' : 'Register Interest'}</span>
       </Link>
     </Box>
   )

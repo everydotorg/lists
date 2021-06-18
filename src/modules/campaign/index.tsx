@@ -47,7 +47,7 @@ export const Campaign = (): JSX.Element => {
           onClick={goToDonation}
           type="button"
         >
-          Donate to List
+          <span>Donate to List</span>
         </Button>
       </Box>
     </Box>

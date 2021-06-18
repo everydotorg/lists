@@ -30,7 +30,7 @@ export const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
       {...props}
       onClick={copy}
     >
-      {linkCopied ? 'Link copied' : children}
+      <span>{linkCopied ? 'Link copied' : children}</span>
     </Button>
   )
 }

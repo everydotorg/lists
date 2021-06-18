@@ -32,7 +32,7 @@ export const BannerButtons: React.FC<BannerButtonsProps> = ({ sx = {} }) => {
           variant="primarySmallInverted"
           onClick={() => setShowPopup(true)}
         >
-          About
+          <span>About</span>
         </Button>
       </Flex>
 

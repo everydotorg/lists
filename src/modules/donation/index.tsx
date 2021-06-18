@@ -100,7 +100,7 @@ export const Donation = (): JSX.Element => {
           }}
           disabled={disabled}
         >
-          {getDonateButtonText()}
+          <span>{getDonateButtonText()}</span>
         </Button>
       </Box>
     </Box>
