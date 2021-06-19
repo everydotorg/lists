@@ -5,7 +5,6 @@ export const styles: Style = {
   page: {
     display: ['flex', 'block'],
     bg: 'backgroundGray',
-
     flexDirection: ['column', 'unset'],
 
     height: isIOS() ? [null, '100vh'] : ['100%', '100vh'],
