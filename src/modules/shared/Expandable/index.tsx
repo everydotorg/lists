@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { styles } from './styles'
 import { Flex, Box, ThemeUIStyleObject } from 'theme-ui'
 import { ChevronDown, ChevronDownProps } from '../ChevronDown'
+import { useScrollToElement } from '../../../hooks/useScrollToElement'
+import { isMobile } from 'react-device-detect'
 
 interface ExpandableProps {
   expanded: boolean
@@ -38,6 +40,8 @@ export const Expandable = React.memo(
     const [height, setHeight] = useState<number>(0)
     const isFirstRun = useRef(true)
     const aboutRef = useRef<HTMLDivElement>(null)
+    const endDescriptionRef = useRef<HTMLDivElement>(null)
+    const scrollToElement = useScrollToElement(endDescriptionRef)
 
     useEffect(
       () => setHeight(expanded ? aboutRef.current?.scrollHeight ?? 0 : 0),
@@ -50,18 +54,20 @@ export const Expandable = React.memo(
       if (expanded && autoScroll) {
         const timeout = setTimeout(
           () =>
-            aboutRef.current?.scrollIntoView({
-              behavior: 'smooth',
-              block: 'nearest'
-            }),
-          500 // the duration of the animation
+            isMobile
+              ? scrollToElement()
+              : aboutRef.current?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'nearest'
+                }),
+          550 // the duration of the animation
         )
 
         return () => clearTimeout(timeout)
       }
 
       return () => null
-    }, [expanded, autoScroll])
+    }, [expanded, autoScroll, scrollToElement])
 
     const onExpandMemoized = useCallback(() => {
       if (isFirstRun.current) {
@@ -110,6 +116,7 @@ export const Expandable = React.memo(
           ref={aboutRef}
         >
           {renderDescription}
+          <div ref={endDescriptionRef}></div>
         </Box>
       </Box>
     )
