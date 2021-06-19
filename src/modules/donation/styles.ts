@@ -1,14 +1,22 @@
 import { Style } from '../../types/Style'
+import { isIOS } from '../../utils/isIOS'
 
 export const styles: Style = {
   page: {
-    display: 'grid',
-    gridTemplateColumns: '1fr',
-    gridTemplateRows: '1fr max-content'
+    display: ['flex', 'grid'],
+    gridTemplateColumns: [null, '1fr'],
+    gridTemplateRows: [null, '1fr max-content'],
+
+    flexDirection: ['column', 'unset'],
+
+    height: isIOS() ? [null, '100vh'] : ['100%', '100vh'],
+    minHeight: [isIOS() ? '-webkit-fill-available' : '100vh', 'unset']
   },
   container: {
     flexDirection: 'column',
-    overflow: 'auto'
+    overflow: 'auto',
+    height: ['100%', 'unset'],
+    flex: ['1', 'unset']
   },
   header: {
     fontWeight: 400,
@@ -19,6 +27,7 @@ export const styles: Style = {
     bg: 'white',
     position: 'sticky',
     bottom: 0,
+    left: 0,
     p: 1
   },
   donateButton: {

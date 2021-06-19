@@ -8,7 +8,6 @@ import { Frequency } from './Frequency'
 import { Header } from './Header'
 import { Input } from './Input'
 import { styles } from './styles'
-import { isIOS } from '../../utils/isIOS'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from '../../utils/url'
@@ -57,12 +56,7 @@ export const Donation = (): JSX.Element => {
   }
 
   return (
-    <Box
-      sx={{
-        ...styles.page,
-        height: isIOS() ? '-webkit-fill-available' : '100vh'
-      }}
-    >
+    <Box sx={styles.page}>
       <Flex sx={styles.container}>
         <Header />
         <Divider space={4} />

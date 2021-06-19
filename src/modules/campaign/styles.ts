@@ -3,17 +3,20 @@ import { isIOS } from '../../utils/isIOS'
 
 export const styles: Style = {
   page: {
-    display: 'grid',
-    gridTemplateColumns: '1fr',
+    display: ['flex', 'block'],
     bg: 'backgroundGray',
-    gridTemplateRows: '1fr max-content',
-    height: isIOS() ? ['-webkit-fill-available', '100%'] : '100vh'
+
+    flexDirection: ['column', 'unset'],
+
+    height: isIOS() ? [null, '100vh'] : ['100%', '100vh'],
+    minHeight: [isIOS() ? '-webkit-fill-available' : '100vh', 'unset']
   },
   container: {
     flexDirection: 'column',
-    gridRow: '1/2',
     overflow: 'auto',
-    backgroundColor: 'backgroundGray'
+    backgroundColor: 'backgroundGray',
+    height: ['100%', '100vh'],
+    flex: ['1', 'unset']
   },
   campaignInfo: {
     flexDirection: 'column',
@@ -34,6 +37,8 @@ export const styles: Style = {
     p: 1,
     position: 'sticky',
     bottom: 0,
+    left: 0,
+
     display: [null, 'none']
   },
   submitButton: {
