@@ -6,9 +6,9 @@ export const styles: Style = {
     mx: -3,
     bg: 'backgroundGray',
     ':hover': {
-      bg: 'primary',
+      bg: ['inherit', 'primary'],
       '& *': {
-        color: 'white'
+        color: [null, 'white']
       }
     },
     transition: 'background .2s ease'
