@@ -31,9 +31,8 @@ export const createEveryUrl = (
   url.search = objectToParams({
     frequency,
     amount,
-    no_share: 1,
     no_exit: 1,
-    share_info: 0,
+    share_info: 1,
     success_url: window.location.origin.concat(`/${slug}/thank-you`),
     ...extras
   })
