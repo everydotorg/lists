@@ -5,15 +5,14 @@ import { Header } from './Header'
 import { styles } from './styles'
 import { NonProfitList } from './NonProfitList'
 import { Cause } from './Cause'
-import { useHistory, useLocation } from 'react-router'
+import { useHistory } from 'react-router'
 import { Matching } from './Matching'
 
 export const Campaign = (): JSX.Element => {
   const { name, about, nonprofits, sponsor } = useCampaignInfoContext()
   const history = useHistory()
-  const location = useLocation()
 
-  const goToDonation = () => history.push(`${location.pathname}/donate`)
+  const goToDonation = () => history.push(`/lilbub/donate`)
 
   return (
     <Box as="main" sx={styles.page}>
