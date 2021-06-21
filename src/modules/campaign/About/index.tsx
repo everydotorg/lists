@@ -35,7 +35,14 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
           Givelist clearly shows which 501(c)(3) nonprofits your donation will
           support. It also handles the entire giving experience, from payment
           step, tax receipt, and payout to each of the nonprofits - all
-          simplified directly from the Givelist.
+          simplified directly from the Givelist. Want to make your own Givelist?{' '}
+          <Link
+            onClick={pushRegisterInterestToAnalytics}
+            href="https://everydotorg.typeform.com/to/gfY2ziot"
+            target="_blank"
+          >
+            Register interest!
+          </Link>
         </Text>
         <Text variant="title" sx={styles.aboutText}>
           An always free public good service, Givelist is brought to you by{' '}
@@ -58,16 +65,6 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
             target="_blank"
           >
             Licensed under CC BY 4.0.
-          </Link>
-        </Text>
-        <Text variant="title" sx={styles.aboutText}>
-          Want to make your own Givelist?{' '}
-          <Link
-            onClick={pushRegisterInterestToAnalytics}
-            href="https://everydotorg.typeform.com/to/gfY2ziot"
-            target="_blank"
-          >
-            Register interest!
           </Link>
         </Text>
       </Flex>
