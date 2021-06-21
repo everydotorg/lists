@@ -15,6 +15,10 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
     onClose()
   }
 
+  const pushRegisterInterestToAnalytics = () => {
+    pushEvent('about_register-interest', {})
+  }
+
   return (
     <Flex sx={styles.container}>
       <Flex sx={styles.content}>
@@ -54,6 +58,16 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
             target="_blank"
           >
             Licensed under CC BY 4.0.
+          </Link>
+        </Text>
+        <Text variant="title" sx={styles.aboutText}>
+          Want to make your own Givelist?{' '}
+          <Link
+            onClick={pushRegisterInterestToAnalytics}
+            href="https://everydotorg.typeform.com/to/gfY2ziot"
+            target="_blank"
+          >
+            Register interest!
           </Link>
         </Text>
       </Flex>
