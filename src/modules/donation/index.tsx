@@ -39,7 +39,7 @@ export const Donation = (): JSX.Element => {
         theme_color: color,
         theme_color_highlight: color,
         utm_content:
-          defaultDonationAmount === 0 ? 'default_blank' : 'default_25'
+          defaultDonationAmount === 0 ? 'v2_default_blank' : 'v2_default_40'
       }),
       '_self'
     )
