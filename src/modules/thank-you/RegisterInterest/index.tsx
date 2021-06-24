@@ -2,7 +2,7 @@ import { Box, Text, Link } from '@theme-ui/components'
 import { useState } from 'react'
 import { styles } from './styles'
 
-const FORM_LINK = 'https://everydotorg.typeform.com/to/gfY2ziot'
+const FORM_LINK = 'https://forms.gle/pXcGBMSBssSoPDAv9'
 
 export const RegisterInterest = (): JSX.Element => {
   const [interestRegistered, setInterestRegistered] = useState(false)

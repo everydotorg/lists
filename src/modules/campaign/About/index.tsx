@@ -38,7 +38,7 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
           simplified directly from the Givelist. Want to make your own Givelist?{' '}
           <Link
             onClick={pushRegisterInterestToAnalytics}
-            href="https://everydotorg.typeform.com/to/gfY2ziot"
+            href="https://forms.gle/pXcGBMSBssSoPDAv9"
             target="_blank"
           >
             Register interest!
