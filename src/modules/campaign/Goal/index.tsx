@@ -32,7 +32,7 @@ export const Goal = ({ progress }: GoalProps): JSX.Element => {
         </Flex>
         <Flex sx={styles.legend}>
           <Text variant="title">{progress.givers}</Text>
-          <Text variant="caption">Givers</Text>
+          <Text variant="caption">Gifts</Text>
         </Flex>
       </Flex>
     </Box>
