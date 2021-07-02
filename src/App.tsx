@@ -9,12 +9,12 @@ import {
 import { Campaign } from './modules/campaign'
 import { ThankYou } from './modules/thank-you'
 import { useEffect, useState } from 'react'
-import { getCampaignInfo } from './api/getCampaignInfo'
+import { getCampaignInfo } from './services/getCampaignInfo'
 import { CampaignInfo } from './types/CampaignInfo'
-import { CampaignInfoContext } from './contexts/CampaignInfoContext'
+import { CampaignInfoContext } from '../contexts/CampaignInfoContext'
 import { Donation } from './modules/donation'
 import { Banner } from './modules/shared/Banner'
-import { getDefaultAmountAbTest } from './donation-amount-ab-test'
+import { getDefaultAmountAbTest } from '../services/donation-amount-ab-test'
 import { pushEvent } from './utils/gtag'
 
 const defaultDonationAmount = getDefaultAmountAbTest()
