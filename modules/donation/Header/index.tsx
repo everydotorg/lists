@@ -2,7 +2,7 @@ import { Flex, Box } from '@theme-ui/components'
 import { useHistory } from 'react-router'
 import { Text } from 'theme-ui'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
-import { pushEvent } from '../../../utils/gtag'
+import { pushEvent } from 'services/gtag'
 import { CloseIcon } from '../../shared/CloseIcon'
 import { styles } from './styles'
 

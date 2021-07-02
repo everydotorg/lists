@@ -1,6 +1,6 @@
 import { Box, Flex, Image, Text } from 'theme-ui'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
-import { facebookShare, twitterShare } from '../../utils/url'
+import { facebookShare, twitterShare } from 'services/url'
 import { Goal } from '../campaign/Goal'
 import { styles } from './styles'
 import { Facebook } from '../shared/Facebook'
@@ -9,7 +9,7 @@ import { Divider } from '../shared/Divider'
 import { RegisterInterest } from './RegisterInterest'
 import { Progress } from '../../types/Progress'
 import { useEffect, useState } from 'react'
-import { getProgressData } from '../../utils/campaignData'
+import { getProgressData } from '../../services/campaignData'
 import { CopyToClipboard } from '../shared/CopyToClipboard'
 
 export const ThankYou = (): JSX.Element | null => {

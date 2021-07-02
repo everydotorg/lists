@@ -1,6 +1,6 @@
 import { Label, Flex, Input as ThemeInput, Text } from 'theme-ui'
 import { styles } from './styles'
-import { pushEvent } from '../../../utils/gtag'
+import { pushEvent } from 'services/gtag'
 import React from 'react'
 
 const amountsToAdd = [40, 80, 200]

@@ -10,7 +10,7 @@ import { Input } from './Input'
 import { styles } from './styles'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
-import { createEveryUrl } from '../../utils/url'
+import { createEveryUrl } from 'services/url'
 
 export const Donation = (): JSX.Element => {
   const { slug, everySlug, sponsor, primaryColor, defaultDonationAmount } =

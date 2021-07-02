@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Flex, Button, ThemeUIStyleObject } from 'theme-ui'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { CopyToClipboard } from '../../shared/CopyToClipboard'
@@ -8,11 +8,15 @@ import { styles } from './styles'
 interface BannerButtonsProps {
   sx?: ThemeUIStyleObject
 }
+
 export const BannerButtons: React.FC<BannerButtonsProps> = ({ sx = {} }) => {
   const { slug } = useCampaignInfoContext()
   const [showPopup, setShowPopup] = useState(false)
+  const [shareUrl, setShareUrl] = useState('')
 
-  const shareUrl = [window.location.origin, slug].join('/')
+  useEffect(() => {
+    setShareUrl([window.location.origin, slug].join('/'))
+  }, [])
 
   return (
     <>

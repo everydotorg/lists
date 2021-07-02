@@ -1,10 +1,11 @@
 import { Box } from '@theme-ui/components'
-import { useLocation } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import { BannerButtons } from '../../campaign/BannerButtons'
 import { styles } from './styles'
 
 export const Banner: React.FC = () => {
-  const notOnThankYouPage = !useLocation().pathname.includes('thank-you')
+  const router = useRouter()
+  const notOnThankYouPage = !router.pathname.includes('thank-you')
 
   return (
     <Box sx={styles.banner}>

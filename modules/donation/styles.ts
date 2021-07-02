@@ -1,5 +1,5 @@
 import { Style } from '../../types/Style'
-import { isIOS } from '../../utils/isIOS'
+import { isIOS } from 'react-device-detect'
 
 export const styles: Style = {
   page: {
@@ -9,8 +9,8 @@ export const styles: Style = {
 
     flexDirection: ['column', 'unset'],
 
-    height: isIOS() ? [null, '100vh'] : ['100%', '100vh'],
-    minHeight: [isIOS() ? '-webkit-fill-available' : '100vh', 'unset']
+    height: isIOS ? [null, '100vh'] : ['100%', '100vh'],
+    minHeight: [isIOS ? '-webkit-fill-available' : '100vh', 'unset']
   },
   container: {
     flexDirection: 'column',

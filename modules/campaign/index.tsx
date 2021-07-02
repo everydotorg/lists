@@ -1,18 +1,18 @@
 import { Button, Flex, Text, Box } from '@theme-ui/components'
-import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
+import { useCampaignInfoContext } from 'hooks/useCampaignInfoContext'
 import { Divider } from '../shared/Divider'
 import { Header } from './Header'
 import { styles } from './styles'
 import { NonProfitList } from './NonProfitList'
 import { Cause } from './Cause'
-import { useHistory } from 'react-router'
 import { Matching } from './Matching'
+import { useRouter } from 'next/router'
 
 export const Campaign = (): JSX.Element => {
-  const { name, about, nonprofits, sponsor } = useCampaignInfoContext()
-  const history = useHistory()
+  const { slug, name, about, nonprofits, sponsor } = useCampaignInfoContext()
+  const router = useRouter()
 
-  const goToDonation = () => history.push(`/lilbub/donate`)
+  const goToDonation = () => router.push(`/${slug}/donate`)
 
   return (
     <Box as="main" sx={styles.page}>

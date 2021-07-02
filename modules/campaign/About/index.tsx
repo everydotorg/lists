@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Link } from 'theme-ui'
-import { pushEvent } from '../../../utils/gtag'
+import { pushEvent } from 'services/gtag'
 import { CloseIcon } from '../../shared/CloseIcon'
 import { Divider } from '../../shared/Divider'
 import { EveryOrgLogo } from '../../shared/EveryOrgLogo'

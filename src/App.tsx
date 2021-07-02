@@ -15,7 +15,7 @@ import { CampaignInfoContext } from '../contexts/CampaignInfoContext'
 import { Donation } from './modules/donation'
 import { Banner } from './modules/shared/Banner'
 import { getDefaultAmountAbTest } from '../services/donation-amount-ab-test'
-import { pushEvent } from './utils/gtag'
+import { pushEvent } from 'services/gtag'
 
 const defaultDonationAmount = getDefaultAmountAbTest()
 

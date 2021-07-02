@@ -1,13 +1,13 @@
 import { Box, ThemeProvider } from 'theme-ui'
 import { theme } from 'styles/theme'
-import { Campaign } from 'src/modules/campaign'
+import { Campaign } from 'modules/campaign'
 import { useEffect, useState } from 'react'
-import { getCampaignInfo } from 'src/services/getCampaignInfo'
-import { CampaignInfo } from 'src/types/CampaignInfo'
+import { getCampaignInfo } from 'services/getCampaignInfo'
+import { CampaignInfo } from 'types/CampaignInfo'
 import { CampaignInfoContext } from 'contexts/CampaignInfoContext'
-import { Banner } from 'src/modules/shared/Banner'
+import { Banner } from 'modules/shared/Banner'
 import { getDefaultAmountAbTest } from 'services/donation-amount-ab-test'
-import { pushEvent } from 'src/utils/gtag'
+import { pushEvent } from 'services/gtag'
 import { useRouter } from 'next/router'
 
 const defaultDonationAmount = getDefaultAmountAbTest()
