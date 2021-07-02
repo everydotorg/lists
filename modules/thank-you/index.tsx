@@ -17,6 +17,7 @@ export const ThankYou = (): JSX.Element | null => {
     useCampaignInfoContext()
 
   const [progress, setProgress] = useState<Progress | null>(null)
+  const [shareUrl, setShareUrl] = useState('')
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +34,9 @@ export const ThankYou = (): JSX.Element | null => {
     }
   }, [everySlug, fundingGoal])
 
-  const shareUrl = [window.location.origin, slug].join('/')
+  useEffect(() => {
+    setShareUrl([window.location.origin, slug].join('/'))
+  }, [slug])
 
   return (
     <Box sx={styles.page}>
