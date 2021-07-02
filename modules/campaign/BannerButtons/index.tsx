@@ -16,7 +16,7 @@ export const BannerButtons: React.FC<BannerButtonsProps> = ({ sx = {} }) => {
 
   useEffect(() => {
     setShareUrl([window.location.origin, slug].join('/'))
-  }, [])
+  }, [slug])
 
   return (
     <>
