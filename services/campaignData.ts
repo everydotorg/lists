@@ -36,7 +36,7 @@ export const getProgressData = async (slug: string) => {
   const every = await getNonprofitInfo(slug)
 
   return {
-    donated: parseFloat(every?.data?.fundMetadata?.allTimeRaised?.amount),
-    givers: every?.data?.fundMetadata?.donationChargesCount
+    donated: parseFloat(every?.data?.fundMetadata?.allTimeRaised?.amount ?? 0),
+    givers: every?.data?.fundMetadata?.donationChargesCount ?? 0
   }
 }

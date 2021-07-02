@@ -10,7 +10,8 @@ export type CampaignInfo = {
   backgroundImageUrl: string
   thankYouImageUrl: string
   bannerUrl: string
-  shareText: string
+  socialShareText: string
+  socialShareIncentive: string
   logoUrl: string
   about: string
   fundingGoal: number

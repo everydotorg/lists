@@ -13,8 +13,14 @@ import { getProgressData } from '../../services/campaignData'
 import { CopyToClipboard } from '../shared/CopyToClipboard'
 
 export const ThankYou = (): JSX.Element | null => {
-  const { slug, everySlug, about, shareText, thankYouImageUrl, fundingGoal } =
-    useCampaignInfoContext()
+  const {
+    slug,
+    everySlug,
+    socialShareIncentive,
+    socialShareText,
+    thankYouImageUrl,
+    fundingGoal
+  } = useCampaignInfoContext()
 
   const [progress, setProgress] = useState<Progress | null>(null)
   const [shareUrl, setShareUrl] = useState('')
@@ -59,7 +65,7 @@ export const ThankYou = (): JSX.Element | null => {
       )}
       <Box sx={styles.shareContainer}>
         <Text as="p" variant="regular">
-          {shareText}
+          {socialShareIncentive}
         </Text>
         <Box>
           <CopyToClipboard
@@ -78,14 +84,14 @@ export const ThankYou = (): JSX.Element | null => {
               width={25}
               height={25}
               target="__blank"
-              href={facebookShare(shareUrl, about)}
+              href={facebookShare(shareUrl, socialShareText)}
             />
             <Twitter
               id="twitter-share"
               width={25}
               height={25}
               target="__blank"
-              href={twitterShare(shareUrl, about)}
+              href={twitterShare(shareUrl, socialShareText)}
             />
           </Flex>
         </Box>

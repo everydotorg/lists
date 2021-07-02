@@ -26,23 +26,27 @@ export const CampaignLayout: React.FC = ({ children }) => {
 
   useEffect(() => {
     const fetchCampaignInfo = async () => {
-      const campaignInfo = await getCampaignInfo(campaign as string)
-      const newTheme = {
-        ...theme,
-        colors: {
-          ...theme.colors,
-          primary: campaignInfo.primaryColor
+      try {
+        const campaignInfo = await getCampaignInfo(campaign as string)
+        const newTheme = {
+          ...theme,
+          colors: {
+            ...theme.colors,
+            primary: campaignInfo.primaryColor
+          }
         }
+        document.title = campaignInfo.name
+        setCampaignTheme(newTheme)
+        setCampaignInfo(campaignInfo)
+      } catch (error) {
+        router.push('/lilbub')
       }
-      document.title = campaignInfo.name
-      setCampaignTheme(newTheme)
-      setCampaignInfo(campaignInfo)
     }
 
     if (campaign) {
       fetchCampaignInfo()
     }
-  }, [campaign])
+  }, [campaign, router])
 
   return (
     <ThemeProvider theme={campaignTheme}>
