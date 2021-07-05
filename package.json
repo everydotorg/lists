@@ -31,8 +31,8 @@
   "scripts": {
     "build": "next build",
     "start": "next dev",
-    "lint": "eslint \"src/**/*.{js,jsx,json,ts,tsx}\"",
-    "lint:fix": "eslint \"src/**/*.{js,jsx,json,ts,tsx}\" --fix",
+    "lint": "eslint \"./**/*.{js,jsx,json,ts,tsx}\"",
+    "lint:fix": "eslint \"./**/*.{js,jsx,json,ts,tsx}\" --fix",
     "prepare": "husky install"
   },
   "eslintConfig": {
@@ -42,7 +42,7 @@
     ]
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,ts,tsx}": [
+    "./**/*.{js,jsx,json,ts,tsx}": [
       "yarn run lint:fix"
     ]
   },
