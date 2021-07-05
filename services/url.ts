@@ -21,7 +21,7 @@ export const createEveryUrl = (
   amount: number,
   extras = {}
 ): string => {
-  const production = process.env.REACT_APP_VERCEL_ENV === 'production'
+  const production = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
 
   const url = new URL(
     everySlug + '/donate',
@@ -33,7 +33,7 @@ export const createEveryUrl = (
     amount,
     no_exit: 1,
     share_info: 1,
-    success_url: window.location.origin.concat(`/${slug}/thank-you`),
+    success_url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}/thank-you`,
     ...extras
   })
 

@@ -23,7 +23,7 @@ export const ThankYou = (): JSX.Element | null => {
   } = useCampaignInfoContext()
 
   const [progress, setProgress] = useState<Progress | null>(null)
-  const [shareUrl, setShareUrl] = useState('')
+  const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}`
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,10 +39,6 @@ export const ThankYou = (): JSX.Element | null => {
       fetchData()
     }
   }, [everySlug, fundingGoal])
-
-  useEffect(() => {
-    setShareUrl([window.location.origin, slug].join('/'))
-  }, [slug])
 
   return (
     <Box sx={styles.page}>

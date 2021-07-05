@@ -12,11 +12,7 @@ interface BannerButtonsProps {
 export const BannerButtons: React.FC<BannerButtonsProps> = ({ sx = {} }) => {
   const { slug } = useCampaignInfoContext()
   const [showPopup, setShowPopup] = useState(false)
-  const [shareUrl, setShareUrl] = useState('')
-
-  useEffect(() => {
-    setShareUrl([window.location.origin, slug].join('/'))
-  }, [slug])
+  const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}`
 
   return (
     <>

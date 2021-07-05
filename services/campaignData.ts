@@ -1,6 +1,7 @@
 const EVERY_BASE_URL = 'https://partners.every.org/v0.2/nonprofit/'
 // const EVERY_STAGING_BASE_URL =
 //   'https://partners-staging.every.org/v0.2/nonprofit/'
+
 type EveryResponse = {
   message: string
   data: {
@@ -17,7 +18,7 @@ type EveryResponse = {
 } & { [x: string]: unknown }
 
 const getNonprofitInfo = async (slug: string): Promise<EveryResponse> => {
-  // const production = process.env.REACT_APP_VERCEL_ENV === 'production'
+  // const production = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
   // const everyUrl = production ? EVERY_BASE_URL : EVERY_STAGING_BASE_URL
 
   // EVERY STAGING IS NOT RETRIEVING ANYTHING FOR THIS ENDPOINT. WE CHANGED TEMPORARILY TO TEST SOME CHANGES
