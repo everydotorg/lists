@@ -1,19 +1,11 @@
-import { CampaignInfo } from '../types/CampaignInfo'
+import path from 'path'
+import fs from 'fs'
+import { CampaignInfo } from 'types/CampaignInfo'
 
-export const getCampaignInfo = async (slug: string): Promise<CampaignInfo> => {
-  try {
-    const campaignInfoResponse = await fetch(`/assets/${slug}.json`, {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json'
-      }
-    })
+export const getCampaignInfo = (slug: string): CampaignInfo => {
+  const campaignJsonFile = path.join(process.cwd(), 'campaings', `${slug}.json`)
 
-    const campaignInfo: CampaignInfo = await campaignInfoResponse.json()
+  const fileContents = fs.readFileSync(campaignJsonFile, 'utf8')
 
-    return campaignInfo
-  } catch (e) {
-    console.log(e)
-    throw e
-  }
+  return JSON.parse(fileContents)
 }

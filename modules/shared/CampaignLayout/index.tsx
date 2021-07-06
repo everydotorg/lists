@@ -1,58 +1,67 @@
 import { Box, ThemeProvider } from 'theme-ui'
 import { theme } from 'styles/theme'
-import { useEffect, useState } from 'react'
-import { getCampaignInfo } from 'services/getCampaignInfo'
 import { CampaignInfo } from 'types/CampaignInfo'
 import { CampaignInfoContext } from 'contexts/CampaignInfoContext'
 import { Banner } from 'modules/shared/Banner'
 import { getDefaultAmountAbTest } from 'services/donation-amount-ab-test'
-import { pushEvent } from 'services/gtag'
-import { useRouter } from 'next/router'
+import { ReactNode } from 'react'
+import Head from 'next/head'
 
 const defaultDonationAmount = getDefaultAmountAbTest()
 
-export const CampaignLayout: React.FC = ({ children }) => {
-  const router = useRouter()
-  const { campaign } = router.query
+type CampaignLayoutProps = {
+  campaignInfo: CampaignInfo
+  hideBannerButtons?: boolean
+  children: ReactNode
+}
 
-  const [campaignTheme, setCampaignTheme] = useState(theme)
-  const [campaignInfo, setCampaignInfo] = useState<CampaignInfo>(
-    {} as CampaignInfo
-  )
-
-  useEffect(() => {
-    pushEvent('default_donation_amount', { amount: defaultDonationAmount })
-  }, [])
-
-  useEffect(() => {
-    const fetchCampaignInfo = async () => {
-      try {
-        const campaignInfo = await getCampaignInfo(campaign as string)
-        const newTheme = {
-          ...theme,
-          colors: {
-            ...theme.colors,
-            primary: campaignInfo.primaryColor
-          }
-        }
-        document.title = campaignInfo.name
-        setCampaignTheme(newTheme)
-        setCampaignInfo(campaignInfo)
-      } catch (error) {
-        router.push('/lilbub')
-      }
+export const CampaignLayout = ({
+  campaignInfo,
+  hideBannerButtons = false,
+  children
+}: CampaignLayoutProps) => {
+  const campaignTheme = {
+    ...theme,
+    colors: {
+      ...theme.colors,
+      primary: campaignInfo.primaryColor
     }
-
-    if (campaign) {
-      fetchCampaignInfo()
-    }
-  }, [campaign, router])
+  }
 
   return (
     <ThemeProvider theme={campaignTheme}>
       <CampaignInfoContext.Provider
         value={{ ...campaignInfo, defaultDonationAmount }}
       >
+        <Head>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer', 'GTM-PTXWSQK');`
+            }}
+          />
+          <title>{campaignInfo.name}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta property="og:title" content={campaignInfo.name} />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:url"
+            content={`https://giveli.st/${campaignInfo.slug}`}
+          />
+          <meta
+            property="og:description"
+            content={campaignInfo.socialShareText}
+          />
+          <meta property="og:image" content={campaignInfo.previewImage} />
+          <meta
+            name="description"
+            content="giveli.st a simple and fast way to create and share your own list of recommended nonprofits."
+          />
+        </Head>
         <Box
           sx={{
             width: ['100%', '100vw'],
@@ -62,7 +71,7 @@ export const CampaignLayout: React.FC = ({ children }) => {
             gridTemplateColumns: [null, '1fr 1fr']
           }}
         >
-          <Banner />
+          <Banner hideButtons={hideBannerButtons} />
           {children}
         </Box>
       </CampaignInfoContext.Provider>

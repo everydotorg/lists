@@ -1,0 +1,60 @@
+{
+  "slug": "antiracism",
+  "everySlug": "antiracism",
+  "name": "Anti-Racism and Justice for All",
+  "primaryColor": "#34D399",
+  "backgroundImageUrl": "/assets/background.jpeg",
+  "logoUrl": "/assets/logo.png",
+  "thankYouImageUrl": "/assets/thank-you.png",
+  "bannerUrl": "/assets/banner.png",
+  "socialShareText": "Share this",
+  "socialShareIncentive": "Share this",
+  "previewImage": "/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1095.jpg",
+  "about": "This is the about text of Anti-Racism and Justice for all.",
+  "cause": "anti-racism",
+  "fundingGoal": 50000,
+  "nonprofits": [
+    {
+      "slug": "540wmain",
+      "name": "540 WMain",
+      "location": "Rochester, NY",
+      "about": "A virtual non-profit organization & antiracist education brand that promotes justice for all.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/zlp47evyyinbr4faz3jd"
+    },
+    {
+      "slug": "blackandbrownfounders",
+      "name": "Black & Brown Founders",
+      "location": "San Francisco, CA",
+      "about": "Giving Black & Latinx entrepreneurs knowledge, tools and tactics to launch startups without relying on venture capital.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/jnyyqs4c6deey5xriq8b"
+    },
+    {
+      "slug": "innocenceproject",
+      "name": "Innocence Project",
+      "location": "New York, NY",
+      "about": "Works to exonerate innocent people through DNA testing and reform the criminal justice system to prevent injustice.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/b7ky2hh7jxcteqcsb8g7"
+    },
+    {
+      "slug": "alp",
+      "name": "Audre Lorde Project",
+      "location": "New York, NY",
+      "about": "Community organizing center for LGBTSTGNC People of Color.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/orrxiitz7knfqk47jytq"
+    },
+    {
+      "slug": "aajc",
+      "name": "Asian Americans Advancing Justice - AAJC",
+      "location": "Washington, DC",
+      "about": "Advance civil and human rights for Asian Americans and to build and promote a fair and equitable society for all.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/och7scywvxtcn6nhygdx"
+    },
+    {
+      "slug": "eji",
+      "name": "Equal Justice Initiative",
+      "location": "Montgomery, AL",
+      "about": "EJI is committed to ending mass incarceration in the US and challenging racial and economic injustice.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/eji_kdsj1q"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "lgbtq+",
+  "everySlug": "lgbtq+",
+  "name": "LGBTQ+ Rights",
+  "primaryColor": "#34D399",
+  "backgroundImageUrl": "/assets/background.jpeg",
+  "logoUrl": "/assets/logo.png",
+  "thankYouImageUrl": "/assets/thank-you.png",
+  "bannerUrl": "/assets/banner.png",
+  "socialShareText": "Share this",
+  "socialShareIncentive": "Share this",
+  "previewImage": "/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1095.jpg",
+  "about": "This is the about text of LGBTQ+ Rights.",
+  "cause": "lgbtq+",
+  "fundingGoal": 50000,
+  "nonprofits": [
+    {
+      "slug": "transemergencyfund",
+      "name": "Transgender Emergency Fund Of Massachusetts",
+      "location": "Worcester, MA",
+      "about": "Critical assistance for low-income and homeless transgender people living in Massachusetts.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/f0lppbbhvsem3jotwi6a"
+    },
+    {
+      "slug": "trevorproject",
+      "name": "The Trevor Project",
+      "location": "West Hollywood, CA",
+      "about": "The world's largest suicide prevention and crisis intervention organization for LGBTQ youth. TrevorLifeline: 866.488.7386.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/sq3etyrvuwwz6fjzhmio"
+    },
+    {
+      "slug": "alp",
+      "name": "Audre Lorde Project",
+      "location": "New York, NY",
+      "about": "Community organizing center for LGBTSTGNC People of Color.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/orrxiitz7knfqk47jytq"
+    },
+    {
+      "slug": "hrc",
+      "name": "Human Rights Campaign",
+      "location": "",
+      "about": "We envision a world where LGBTQ people are ensured equality at home, at work and in every community.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/egwi6zxsanz0im5halcl"
+    },
+    {
+      "slug": "nbjc",
+      "name": "National Black Justice Coalition",
+      "location": "",
+      "about": "The National Black Justice Coalition is a civil rights organization dedicated to the empowerment of Black LGBTQ people.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/zzue4o7zlhx0puwwbq4p"
+    },
+    {
+      "slug": "rainbowrailroad",
+      "name": "Rainbow Railroad",
+      "location": "New York, NY",
+      "about": "We help LGBTQI people escape persecution and violence around the world. 🏳️‍🌈🌎 You can help save lives.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/meiue59urqiu5rgw9vrt"
+    }
+  ]
+}

@@ -1,5 +1,4 @@
 import { Button, Flex, Text, Box } from '@theme-ui/components'
-import { useCampaignInfoContext } from 'hooks/useCampaignInfoContext'
 import { Divider } from '../shared/Divider'
 import { Header } from './Header'
 import { styles } from './styles'
@@ -7,6 +6,7 @@ import { NonProfitList } from './NonProfitList'
 import { Cause } from './Cause'
 import { Matching } from './Matching'
 import { useRouter } from 'next/router'
+import { useCampaignInfoContext } from 'hooks/useCampaignInfoContext'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor } = useCampaignInfoContext()

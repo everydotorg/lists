@@ -1,0 +1,53 @@
+{
+  "slug": "effectivehealthcareeverywhere",
+  "everySlug": "effectivehealthcareeverywhere",
+  "name": "Effective Healthcare Everywhere",
+  "primaryColor": "#34D399",
+  "backgroundImageUrl": "/assets/background.jpeg",
+  "logoUrl": "/assets/logo.png",
+  "thankYouImageUrl": "/assets/thank-you.png",
+  "bannerUrl": "/assets/banner.png",
+  "socialShareText": "Share this",
+  "socialShareIncentive": "Share this",
+  "previewImage": "/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1095.jpg",
+  "about": "This is the about text of Effective Healthcare Everywhere.",
+  "cause": "healthcare",
+  "fundingGoal": 50000,
+  "nonprofits": [
+    {
+      "slug": "sightsavers",
+      "name": "Sightsavers",
+      "location": "Boston, MA",
+      "about": "Protecting sight and fighting for disability rights.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/lsv0wkjto09abcz1u8fk"
+    },
+    {
+      "slug": "malaria-consortium",
+      "name": "Malaria Consortium",
+      "location": "Raleigh, NC",
+      "about": "Prevention, control and treatment of malaria and other communicable diseases among vulnerable populations.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/1397449_10151946054631875_574997683_o_vzuqce"
+    },
+    {
+      "slug": "againstmalaria",
+      "name": "The Against Malaria Foundation",
+      "location": "Kansas City, MO",
+      "about": "One of GiveWell's top charities for the past several years, AMF provides anti-malarial bednets to people in need.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/pmy1aagavepx24qbrdz3"
+    },
+    {
+      "slug": "hki",
+      "name": "Hellen Keller International",
+      "location": "New York, NY",
+      "about": "Helen Keller, our co-founder, envisioned a world without barriers to human potential. We are continuing her work.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/wxtloedq3wueneayoaex"
+    },
+    {
+      "slug": "strongminds",
+      "name": "Strong Minds",
+      "location": "Maplewood, NJ",
+      "about": "Provides life-changing mental health services to low-income Africans using an innovative community-based approach.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/ilcto5hg7fmz5rv9bwq9"
+    }
+  ]
+}

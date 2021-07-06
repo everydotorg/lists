@@ -1,5 +1,5 @@
 import { Box, Button, Flex } from '@theme-ui/components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Currency, currencySymbolMap } from '../../types/Currency'
 import { DonationFrequency } from '../../types/Frequency'
 import { Divider } from '../shared/Divider'
@@ -11,10 +11,16 @@ import { styles } from './styles'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from 'services/url'
+import { pushEvent } from 'services/gtag'
 
 export const Donation = (): JSX.Element => {
   const { slug, everySlug, sponsor, primaryColor, defaultDonationAmount } =
     useCampaignInfoContext()
+
+  useEffect(() => {
+    pushEvent('default_donation_amount', { amount: defaultDonationAmount })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const [donationAmount, setDonationAmount] = useState(defaultDonationAmount)
   const [error, setError] = useState(false)

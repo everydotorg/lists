@@ -1,0 +1,46 @@
+{
+  "slug": "educationeverywhere",
+  "everySlug": "educationeverywhere",
+  "name": "Education Everywhere",
+  "primaryColor": "#34D399",
+  "backgroundImageUrl": "/assets/background.jpeg",
+  "logoUrl": "/assets/logo.png",
+  "thankYouImageUrl": "/assets/thank-you.png",
+  "bannerUrl": "/assets/banner.png",
+  "socialShareText": "Share this",
+  "socialShareIncentive": "Share this",
+  "previewImage": "/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1095.jpg",
+  "about": "This is the about text of Education Everywhere.",
+  "cause": "education",
+  "fundingGoal": 50000,
+  "nonprofits": [
+    {
+      "slug": "tarl",
+      "name": "Teaching at the Right Level (TaRL Africa)",
+      "location": "Africa",
+      "about": "Supports governments across Africa to adapt and scale up an evidence-based approach to improving students’ foundational skills.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/lsozljmajdbt9k91fren"
+    },
+    {
+      "slug": "ign",
+      "name": "Iodine Global Network",
+      "location": "Ottawa, ON, Canada",
+      "about": "Dedicated to the sustainable elimination of iodine deficiency worldwide.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/dj3ctnh9nucjwy54quhb"
+    },
+    {
+      "slug": "ei",
+      "name": "Educational Initiatives",
+      "location": "Bengaluru, India",
+      "about": "Supporting students and teachers with affordable, accessible tech to improve educational outcomes.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/profile_pics/mimfnrvmvqxubojkimxm"
+    },
+    {
+      "slug": "codecrew",
+      "name": "Code Crew",
+      "location": "Memphis, TN",
+      "about": "To empower and mentor those most underrepresented in tech, to be tech innovators through hands-on computer science training.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_64,h_64,dpr_1/c_crop,ar_64:64/q_auto,f_auto,fl_progressive/faja_profile/jvlivnr3nax9w1cggsml"
+    }
+  ]
+}

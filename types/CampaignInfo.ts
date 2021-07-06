@@ -12,6 +12,7 @@ export type CampaignInfo = {
   bannerUrl: string
   socialShareText: string
   socialShareIncentive: string
+  previewImage: string
   logoUrl: string
   about: string
   fundingGoal: number
