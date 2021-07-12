@@ -9,8 +9,8 @@ export const styles: Style = {
     p: 4,
     top: [0, 'unset'],
     m: [0, 4],
+    height: ['100%', 'auto'],
     zIndex: [10, null],
-    height: '100%',
     flexDirection: 'column',
     justifyContent: 'space-between'
   },

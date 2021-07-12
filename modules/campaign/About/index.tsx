@@ -68,7 +68,7 @@ export const About: React.FC<AboutProps> = ({ onClose }) => {
           </Link>
         </Text>
       </Flex>
-      <Divider space={2} sx={styles.divider} />
+      <Divider space={4} sx={styles.divider} />
       <Flex sx={styles.footer}>
         <Link
           href="https://www.every.org/terms"
