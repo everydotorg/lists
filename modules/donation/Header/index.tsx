@@ -1,7 +1,7 @@
 import { Flex, Box } from '@theme-ui/components'
 import { Text } from 'theme-ui'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
-import { pushEvent } from 'services/gtag'
+import { gtag } from 'services/gtag'
 import { CloseIcon } from '../../shared/CloseIcon'
 import { styles } from './styles'
 import { useRouter } from 'next/router'
@@ -11,7 +11,7 @@ export const Header = (): JSX.Element => {
   const router = useRouter()
 
   const closeDonatePage = () => {
-    pushEvent(`donate_close`, {})
+    gtag.pushEvent(`donate_close`, {})
     router.back()
   }
 

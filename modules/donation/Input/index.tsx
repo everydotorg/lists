@@ -1,6 +1,6 @@
 import { Label, Flex, Input as ThemeInput, Text } from 'theme-ui'
 import { styles } from './styles'
-import { pushEvent } from 'services/gtag'
+import { gtag } from 'services/gtag'
 import React from 'react'
 
 const amountsToAdd = [40, 80, 200]
@@ -23,14 +23,14 @@ export const Input = ({
   const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDonation(+e.target.value)
     setError(false)
-    pushEvent('donation_amount_changed', {
+    gtag.pushEvent('donation_amount_changed', {
       type: 'keyboard',
       value: e.target.value
     })
   }
 
   const addAmount = (amount: number) => {
-    pushEvent('donation_amount_changed', {
+    gtag.pushEvent('donation_amount_changed', {
       type: 'button',
       amount: amount,
       value: donation + amount

@@ -11,14 +11,14 @@ import { styles } from './styles'
 import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from 'services/url'
-import { pushEvent } from 'services/gtag'
+import { gtag } from 'services/gtag'
 
 export const Donation = (): JSX.Element => {
   const { slug, everySlug, sponsor, primaryColor, defaultDonationAmount } =
     useCampaignInfoContext()
 
   useEffect(() => {
-    pushEvent('default_donation_amount', { amount: defaultDonationAmount })
+    gtag.pushEvent('default_donation_amount', { amount: defaultDonationAmount })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 

@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Link } from 'theme-ui'
-import { pushEvent } from 'services/gtag'
+import { gtag } from 'services/gtag'
 import { CloseIcon } from '../../shared/CloseIcon'
 import { Divider } from '../../shared/Divider'
 import { EveryOrgLogo } from '../../shared/EveryOrgLogo'
@@ -11,12 +11,12 @@ type AboutProps = {
 
 export const About: React.FC<AboutProps> = ({ onClose }) => {
   const pushClosedEvent = () => {
-    pushEvent(`about_close`, {})
+    gtag.pushEvent(`about_close`, {})
     onClose()
   }
 
   const pushRegisterInterestToAnalytics = () => {
-    pushEvent('about_register-interest', {})
+    gtag.pushEvent('about_register-interest', {})
   }
 
   return (
