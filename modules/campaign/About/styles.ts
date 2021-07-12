@@ -1,5 +1,4 @@
 import { Style } from 'types/Style'
-import { isIOS } from 'react-device-detect'
 
 export const styles: Style = {
   container: {
@@ -11,7 +10,7 @@ export const styles: Style = {
     top: [0, 'unset'],
     m: [0, 4],
     zIndex: [10, null],
-    height: [isIOS ? '-webkit-fill-available' : '100vh', 'unset'],
+    height: '100%',
     flexDirection: 'column',
     justifyContent: 'space-between'
   },

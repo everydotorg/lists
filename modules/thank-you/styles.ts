@@ -3,7 +3,7 @@ import { Style } from '../../types/Style'
 export const styles: Style = {
   page: {
     overflow: [null, 'auto'],
-    height: [null, '100vh'],
+    height: '100%',
     display: 'flex',
     flexDirection: 'column'
   },

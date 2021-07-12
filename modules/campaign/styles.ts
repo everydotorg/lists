@@ -1,20 +1,17 @@
 import { Style } from '../../types/Style'
-import { isIOS } from 'react-device-detect'
 
 export const styles: Style = {
   page: {
     display: ['flex', 'block'],
     bg: 'backgroundGray',
     flexDirection: ['column', 'unset'],
-
-    height: isIOS ? [null, '100vh'] : ['100%', '100vh'],
-    minHeight: [isIOS ? '-webkit-fill-available' : '100vh', 'unset']
+    flex: 1
   },
   container: {
     flexDirection: 'column',
     overflow: 'auto',
     backgroundColor: 'backgroundGray',
-    height: ['100%', '100vh'],
+    height: '100%',
     flex: ['1', 'unset']
   },
   campaignInfo: {

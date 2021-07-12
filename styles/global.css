@@ -12,6 +12,7 @@ NORMALIZE CSS:
 
 html {
   font-size: 16px;
+  height: 100%;
 }
 
 @media screen and (min-width: 56.25em) {
@@ -31,6 +32,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #efefef;
+  height: 100%;
+}
+
+#__next {
   height: 100%;
 }
 

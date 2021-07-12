@@ -2,15 +2,18 @@ import { Style } from '../../../types/Style'
 
 export const styles: Style = {
   banner: {
-    height: '100vh',
     display: ['none', 'flex'],
     position: 'relative',
+    flex: 1,
 
     '& img': {
       objectFit: 'cover',
       objectPosition: 'center',
-      width: '50vw',
-      height: '100%'
+      position: 'absolute',
+      height: '100%',
+      width: '100%',
+      top: 0,
+      left: 0
     }
   },
   buttons: {

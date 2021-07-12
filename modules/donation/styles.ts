@@ -1,16 +1,12 @@
 import { Style } from '../../types/Style'
-import { isIOS } from 'react-device-detect'
 
 export const styles: Style = {
   page: {
     display: ['flex', 'grid'],
     gridTemplateColumns: [null, '1fr'],
     gridTemplateRows: [null, '1fr max-content'],
-
     flexDirection: ['column', 'unset'],
-
-    height: isIOS ? [null, '100vh'] : ['100%', '100vh'],
-    minHeight: [isIOS ? '-webkit-fill-available' : '100vh', 'unset']
+    flex: 1
   },
   container: {
     flexDirection: 'column',

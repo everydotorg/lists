@@ -1,11 +1,11 @@
-import { Box, ThemeProvider } from 'theme-ui'
-import { theme } from 'styles/theme'
-import { CampaignInfo } from 'types/CampaignInfo'
 import { CampaignInfoContext } from 'contexts/CampaignInfoContext'
 import { Banner } from 'modules/shared/Banner'
-import { getDefaultAmountAbTest } from 'services/donation-amount-ab-test'
-import { ReactNode } from 'react'
 import Head from 'next/head'
+import { ReactNode } from 'react'
+import { getDefaultAmountAbTest } from 'services/donation-amount-ab-test'
+import { theme } from 'styles/theme'
+import { Box, ThemeProvider } from 'theme-ui'
+import { CampaignInfo } from 'types/CampaignInfo'
 
 const defaultDonationAmount = getDefaultAmountAbTest()
 
@@ -64,11 +64,9 @@ export const CampaignLayout = ({
         </Head>
         <Box
           sx={{
-            width: ['100%', '100vw'],
-            margin: '0 auto',
+            height: '100%',
             background: 'white',
-            display: [null, 'grid'],
-            gridTemplateColumns: [null, '1fr 1fr']
+            display: 'flex'
           }}
         >
           <Banner hideButtons={hideBannerButtons} />
