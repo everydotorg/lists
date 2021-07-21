@@ -35,17 +35,6 @@
     "lint:fix": "eslint \"./**/*.{js,jsx,json,ts,tsx}\" --fix",
     "prepare": "husky install"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "lint-staged": {
-    "./**/*.{js,jsx,json,ts,tsx}": [
-      "yarn run lint:fix"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
