@@ -1,8 +1,8 @@
-import { Campaign } from 'modules/campaign'
-import { CampaignLayout } from 'modules/shared/CampaignLayout'
-import { PageProps } from 'campaings/ssr'
+import { Campaign } from 'src/pages/Campaign'
+import { CampaignLayout } from 'src/components/CampaignLayout'
+import { PageProps } from 'src/campaings/ssr'
 
-export { getStaticProps, getStaticPaths } from 'campaings/ssr'
+export { getStaticProps, getStaticPaths } from 'src/campaings/ssr'
 
 const CampaignPage = ({ campaignInfo }: PageProps) => {
   return (

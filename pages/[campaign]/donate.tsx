@@ -1,7 +1,8 @@
-import { Donation } from 'modules/donation'
-import { CampaignLayout } from 'modules/shared/CampaignLayout'
-import { PageProps } from 'campaings/ssr'
-export { getStaticProps, getStaticPaths } from 'campaings/ssr'
+import { Donation } from 'src/pages/Donation'
+import { CampaignLayout } from 'src/components/CampaignLayout'
+import { PageProps } from 'src/campaings/ssr'
+
+export { getStaticProps, getStaticPaths } from 'src/campaings/ssr'
 
 const DonationPage = ({ campaignInfo }: PageProps) => {
   return (
