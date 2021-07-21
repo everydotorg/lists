@@ -1,6 +1,6 @@
 import { Box, Progress, Flex, Text } from 'theme-ui'
 import { Progress as ProgressType } from '../../../types/Progress'
-import { styles } from './styles'
+import { styles } from './goalStyles'
 
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',

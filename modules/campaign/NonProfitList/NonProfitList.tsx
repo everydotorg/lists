@@ -4,7 +4,7 @@ import { NonProfit as NonProfitType } from '../../../types/NonProfit'
 import { gtag } from 'services/gtag'
 import { Divider } from '../../shared/Divider'
 import { Expandable } from '../../shared/Expandable'
-import { styles } from './styles'
+import { styles } from './nonProfitListStyles'
 
 interface NonProfitProps {
   list: NonProfitType[]

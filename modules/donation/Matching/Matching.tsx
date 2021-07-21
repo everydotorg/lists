@@ -2,7 +2,7 @@ import { Box, Text } from '@theme-ui/components'
 import { useState } from 'react'
 import { Sponsor } from '../../../types/Sponsor'
 import { Expandable } from '../../shared/Expandable'
-import { styles } from './styles'
+import { styles } from './matchingStyles'
 
 interface MatchingProps {
   sponsor: Sponsor

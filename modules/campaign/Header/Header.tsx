@@ -1,6 +1,6 @@
 import { Box, Image, Flex, Text, Button } from 'theme-ui'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
-import { styles } from './styles'
+import { styles } from './headerStyles'
 import { BannerButtons } from '../BannerButtons'
 
 interface HeaderProps {

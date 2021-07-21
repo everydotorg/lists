@@ -1,6 +1,6 @@
 import { Box, Flex, Input, Label, Text } from '@theme-ui/components'
 import { DonationFrequency } from '../../../types/Frequency'
-import { styles } from './styles'
+import { styles } from './frequencyStyles'
 import React from 'react'
 
 interface FrequencyProps {

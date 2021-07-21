@@ -1,6 +1,6 @@
 import { Box, Text } from '@theme-ui/components'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
-import { styles } from './styles'
+import { styles } from './causeStyles'
 
 export const Cause = (): JSX.Element | null => {
   const { nonprofits, cause } = useCampaignInfoContext()

@@ -1,6 +1,6 @@
 import { Box } from '@theme-ui/components'
 import { BannerButtons } from '../../campaign/BannerButtons'
-import { styles } from './styles'
+import { styles } from './bannerStyles'
 
 export const Banner = ({ hideButtons = false }) => (
   <Box sx={styles.banner}>

@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { styles } from './styles'
+import { styles } from './expandableStyles'
 import { Flex, Box, ThemeUIStyleObject } from 'theme-ui'
 import { ChevronDown, ChevronDownProps } from '../ChevronDown'
 import { useScrollToElement } from '../../../hooks/useScrollToElement'

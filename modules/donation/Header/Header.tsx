@@ -3,7 +3,7 @@ import { Text } from 'theme-ui'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { gtag } from 'services/gtag'
 import { CloseIcon } from '../../shared/CloseIcon'
-import { styles } from './styles'
+import { styles } from './headerStyles'
 import { useRouter } from 'next/router'
 
 export const Header = (): JSX.Element => {

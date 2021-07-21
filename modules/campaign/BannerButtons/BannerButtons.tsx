@@ -3,7 +3,7 @@ import { Flex, Button, ThemeUIStyleObject } from 'theme-ui'
 import { useCampaignInfoContext } from '../../../hooks/useCampaignInfoContext'
 import { CopyToClipboard } from '../../shared/CopyToClipboard'
 import { About } from '../About'
-import { styles } from './styles'
+import { styles } from './bannerButtonsStyles'
 
 interface BannerButtonsProps {
   sx?: ThemeUIStyleObject

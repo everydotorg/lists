@@ -1,7 +1,7 @@
 import { Button, Flex, Text, Box } from '@theme-ui/components'
 import { Divider } from '../shared/Divider'
 import { Header } from './Header'
-import { styles } from './styles'
+import { styles } from './campaignStyles'
 import { NonProfitList } from './NonProfitList'
 import { Cause } from './Cause'
 import { Matching } from './Matching'

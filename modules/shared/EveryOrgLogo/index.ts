@@ -1,0 +1,1 @@
+export { EveryOrgLogo } from './EveryOrgLogo'

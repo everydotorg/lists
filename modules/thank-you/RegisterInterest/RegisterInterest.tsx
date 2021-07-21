@@ -1,6 +1,6 @@
 import { Box, Text, Link } from '@theme-ui/components'
 import { useState } from 'react'
-import { styles } from './styles'
+import { styles } from './registerInterestStyles'
 
 const FORM_LINK = 'https://forms.gle/pXcGBMSBssSoPDAv9'
 

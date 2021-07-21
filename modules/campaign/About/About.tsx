@@ -3,7 +3,7 @@ import { gtag } from 'services/gtag'
 import { CloseIcon } from '../../shared/CloseIcon'
 import { Divider } from '../../shared/Divider'
 import { EveryOrgLogo } from '../../shared/EveryOrgLogo'
-import { styles } from './styles'
+import { styles } from './aboutStyles'
 
 type AboutProps = {
   onClose: () => void

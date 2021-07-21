@@ -1,5 +1,5 @@
 import { Label, Flex, Input as ThemeInput, Text } from 'theme-ui'
-import { styles } from './styles'
+import { styles } from './inputStyles'
 import { gtag } from 'services/gtag'
 import React from 'react'
 
