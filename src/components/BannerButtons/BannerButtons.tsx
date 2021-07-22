@@ -16,12 +16,7 @@ export const BannerButtons: React.FC<BannerButtonsProps> = ({ sx = {} }) => {
         <Button
           id="open-about"
           variant="primarySmallInverted"
-          sx={{
-            bg: 'rgba(0, 0, 0, 0.2)',
-            color: 'white',
-            backdropFilter: 'blur(100px)',
-            border: 'none'
-          }}
+          sx={styles.aboutButton}
           onClick={() => setShowPopup(true)}
         >
           <span>About giveli.st</span>
