@@ -50,7 +50,6 @@ export const Campaign = (): JSX.Element => {
           <Divider space={0} color="borderGray" />
           <Button
             sx={styles.aboutButton}
-            onClick={goToDonation}
             type="button"
             variant="primaryInverted"
           >
