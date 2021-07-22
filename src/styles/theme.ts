@@ -9,6 +9,7 @@ export const theme = {
     '1.25rem',
     '1.5rem',
     '2rem',
+    '2.5rem',
     '4rem',
     '8rem',
     '16rem',
@@ -26,6 +27,7 @@ export const theme = {
     '1.25rem',
     '1.5rem',
     '2rem',
+    '2.5rem',
     '3rem',
     '4rem',
     '6rem'
@@ -34,7 +36,7 @@ export const theme = {
     zero: 0,
     small: 8,
     card: 24,
-    button: 100,
+    button: 12,
     full: 9999
   },
   fontWeights: {
@@ -50,7 +52,7 @@ export const theme = {
   },
   colors: {
     text: '#2E3434',
-    textGray: '#868A8A',
+    textGray: 'rgba(46, 52, 52, 0.6)',
     background: '#FFF',
     divider: '#EEEEEE',
     inputBackground: '#F3F6F6',
@@ -60,12 +62,13 @@ export const theme = {
     secondary: '#30C',
     muted: '#EEEEEE',
     progressBg: '#EAEDED',
-    error: '#EF4444'
+    error: '#EF4444',
+    borderGray: '#CCCCCC'
   },
   images: {
     avatar: {
-      width: ['2.5rem', '1.75em'],
-      height: ['2.5rem', '1.75em'],
+      width: ['2.5rem', '4rem'],
+      height: ['2.5rem', '4rem'],
       borderRadius: 'full',
       flexShrink: 0
     }
@@ -104,7 +107,8 @@ export const theme = {
     primary: {
       cursor: 'pointer',
       borderRadius: 'button',
-      py: [4, 3],
+      px: 5,
+      py: 3,
       fontSize: [3, 1],
       lineHeight: 'base',
       letterSpacing: '-0.01em',
@@ -133,18 +137,20 @@ export const theme = {
     },
     primarySmall: {
       variant: 'buttons.primary',
-      height: ['2.5rem', '1.75rem'],
-      px: [5, 3],
-      py: 0,
+      px: 6,
+      py: 4,
       fontFamily: 'body',
-      fontWeight: 'body',
-      fontSize: [3, 1],
+      fontWeight: 'heading',
+      fontSize: [3, 4],
+      lineHeight: 'body',
       letterSpacing: '-0.01em'
     },
     primarySmallInverted: {
       variant: 'buttons.primarySmall',
       bg: 'white',
-      color: 'text'
+      color: 'primary',
+      border: '1px solid',
+      borderColor: 'borderGray'
     },
     primaryInverted: {
       variant: 'buttons.primary',
@@ -166,7 +172,7 @@ export const theme = {
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
-      fontSize: [3, 1],
+      fontSize: [3, 5],
       letterSpacing: ['-0.01em', '-0.015em'],
       color: 'text'
     },
@@ -180,7 +186,7 @@ export const theme = {
     caption: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [1, 0],
+      fontSize: [1, 3],
       lineHeight: 'body',
       letterSpacing: '-0.005em',
       color: 'textGray'
@@ -188,7 +194,7 @@ export const theme = {
     small: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [2, 1],
+      fontSize: [4, 4],
       lineHeight: ['body', 'heading'],
       letterSpacing: ['-0.005em', '-0.01em'],
       color: 'textGray'
@@ -216,7 +222,7 @@ export const theme = {
       color: 'text'
     },
     h1: {
-      fontSize: 3,
+      fontSize: [5, 7],
       lineHeight: 'input',
       letterSpacing: '-0.015em',
       fontWeight: 'bold',

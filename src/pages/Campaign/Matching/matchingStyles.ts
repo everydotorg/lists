@@ -12,5 +12,13 @@ export const styles: Style = {
   chevronDown: {
     p: 0,
     lineHeight: 1
+  },
+  container: {
+    border: '1px solid',
+    borderColor: 'borderGray',
+    borderRadius: 'button',
+    px: 6,
+    py: 4,
+    mt: 7
   }
 }

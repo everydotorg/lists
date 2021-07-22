@@ -3,24 +3,21 @@ import { Style } from 'types/Style'
 export const styles: Style = {
   page: {
     display: ['flex', 'block'],
-    bg: 'backgroundGray',
     flexDirection: ['column', 'unset'],
-    flex: 1
+    flex: '43%'
   },
   container: {
     flexDirection: 'column',
     overflow: 'auto',
-    backgroundColor: 'backgroundGray',
     height: '100%',
     flex: ['1', 'unset']
   },
   campaignInfo: {
     flexDirection: 'column',
     bg: 'white',
-    padding: 4
+    padding: 6
   },
   campaignTitle: {
-    display: [null, 'none'],
     mb: 4
   },
   aboutText: {
@@ -28,7 +25,6 @@ export const styles: Style = {
     lineHeight: 1.5
   },
   buttonContainer: {
-    bg: 'backgroundGray',
     gridRow: '2/3',
     p: 1,
     position: 'sticky',
@@ -41,7 +37,15 @@ export const styles: Style = {
     width: '100%'
   },
   nonprofitsContainer: {
-    backgroundColor: 'backgroundGray',
-    px: 3
+    // backgroundColor: 'backgroundGray',
+    border: '1px solid',
+    borderColor: 'borderGray',
+    borderRadius: 'button',
+    mx: 6,
+    '& > *:not(:last-child)': {
+      borderBottom: '1px solid',
+      borderBottomColor: 'borderGray'
+    },
+    mb: 4
   }
 }

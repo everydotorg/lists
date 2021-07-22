@@ -17,22 +17,18 @@ export const BannerButtons: React.FC<BannerButtonsProps> = ({ sx = {} }) => {
   return (
     <>
       <Flex sx={{ ...styles.group, ...sx }}>
-        <CopyToClipboard
-          id="campaign-copylink"
-          text={shareUrl}
-          sx={styles.linkButton}
-          linkCopiedStyle={styles.linkCopied}
-          variant="primarySmallInverted"
-        >
-          giveli.st/<strong>{slug}</strong>
-        </CopyToClipboard>
-
         <Button
           id="open-about"
           variant="primarySmallInverted"
+          sx={{
+            bg: 'rgba(0, 0, 0, 0.2)',
+            color: 'white',
+            backdropFilter: 'blur(100px)',
+            border: 'none'
+          }}
           onClick={() => setShowPopup(true)}
         >
-          <span>About</span>
+          <span>About giveli.st</span>
         </Button>
       </Flex>
 

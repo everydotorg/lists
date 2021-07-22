@@ -2,9 +2,7 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   container: {
-    px: 3,
-    mx: -3,
-    bg: 'backgroundGray',
+    p: 6,
     ':hover': {
       bg: ['inherit', 'primary'],
       '& *': {
@@ -16,16 +14,17 @@ export const styles: Style = {
   header: {
     label: 'nonprofit-item',
     alignItems: 'start',
-    justifyContent: 'space-between',
-    py: 4,
-    backgroundColor: 'inherit'
+    justifyContent: 'space-between'
   },
   textContainer: {
     flexDirection: 'column',
     justifyContent: 'center'
   },
+  expandableChevron: {
+    alignSelf: 'center'
+  },
   avatar: {
-    marginRight: 3,
+    marginRight: 7,
     alignSelf: 'center'
   },
   aboutContainer: {
@@ -37,8 +36,6 @@ export const styles: Style = {
     color: 'text'
   },
   location: {
-    textTransform: 'uppercase',
-    color: 'textGray',
-    fontWeight: 'bold'
+    color: 'textGray'
   }
 }

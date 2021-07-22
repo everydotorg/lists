@@ -1,12 +1,11 @@
 import { Button, Flex, Text, Box } from '@theme-ui/components'
-import { Divider } from 'src/components/Divider'
 import { Header } from './Header'
 import { styles } from './campaignStyles'
 import { NonProfitList } from './NonProfitList'
-import { Cause } from './Cause'
 import { Matching } from './Matching'
 import { useRouter } from 'next/router'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
+import { Footer } from 'src/components/Footer'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor } = useCampaignInfoContext()
@@ -19,7 +18,7 @@ export const Campaign = (): JSX.Element => {
       <Flex sx={styles.container}>
         <Header onClickDonate={goToDonation} />
         <Flex sx={styles.campaignInfo}>
-          <Text sx={styles.campaignTitle} variant="title">
+          <Text sx={styles.campaignTitle} as="h1" variant="h1">
             {name}
           </Text>
           <Text sx={styles.aboutText} variant="small">
@@ -27,17 +26,16 @@ export const Campaign = (): JSX.Element => {
           </Text>
           {sponsor && (
             <>
-              <Divider space={3} />
               <Matching sponsor={sponsor} />
             </>
           )}
         </Flex>
-        <Cause />
         {nonprofits && (
           <Box sx={styles.nonprofitsContainer}>
             <NonProfitList list={nonprofits} />
           </Box>
         )}
+        <Footer />
       </Flex>
       <Box sx={styles.buttonContainer}>
         <Button

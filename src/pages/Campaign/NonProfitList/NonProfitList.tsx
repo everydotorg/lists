@@ -28,7 +28,6 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
     <>
       {list.map((nonprofit) => (
         <Fragment key={nonprofit.slug}>
-          <Divider space={0} color="muted" />
           <Expandable
             expanded={nonprofit.slug === expandedSlug}
             onClick={() => handleClick(nonprofit.slug)}
@@ -44,7 +43,9 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                   sx={styles.avatar}
                 />
                 <Flex sx={styles.textContainer}>
-                  <Text variant="regular">{nonprofit.name}</Text>
+                  <Text variant="regular">
+                    <strong>{nonprofit.name}</strong>
+                  </Text>
                   <Text variant="caption" sx={styles.location}>
                     {nonprofit.location}
                   </Text>
@@ -52,6 +53,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
               </Flex>
             }
             descriptionStyle={styles.aboutContainer}
+            chevronStyle={styles.expandableChevron}
             renderDescription={
               <Text variant="small" sx={styles.aboutText}>
                 {nonprofit.about}

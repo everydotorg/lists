@@ -13,6 +13,13 @@
   "about": "To celebrate Lil BUB’s 10th BUBirthday, we are raising money for special needs pets. Your single contribution will benefit these five amazing 501(c)(3) charities close to BUB’s heart!",
   "cause": "animals",
   "fundingGoal": 60000,
+  "sponsor": {
+    "name": "",
+    "type": "matching",
+    "ratio": "1-for-1",
+    "threshold": 25,
+    "description": "We will contribute an extra donation on top of yours, to the same value (up to $25 per donation). These matching funds are kindly provided by Every.org up to a total value of $10,000"
+  },
   "nonprofits": [
     {
       "slug": "iamlilbub",
