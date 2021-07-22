@@ -17,8 +17,16 @@ export const styles: Style = {
     border: '1px solid',
     borderColor: 'borderGray',
     borderRadius: 'button',
-    px: 6,
-    py: 4,
-    mt: 7
+    px: [3, 6],
+    py: [3, 4],
+    mt: [6, 9]
+  },
+  matchingTitle: {
+    color: 'text',
+    lineHeight: ['20px', '32px']
+  },
+  matchingDescription: {
+    opacity: '0.8',
+    lineHeight: ['20px', '24px']
   }
 }

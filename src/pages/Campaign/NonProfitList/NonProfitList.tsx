@@ -2,7 +2,6 @@ import { Flex, Text, Image } from '@theme-ui/components'
 import { Fragment, useCallback, useState } from 'react'
 import { NonProfit as NonProfitType } from 'types/NonProfit'
 import { gtag } from 'src/services/gtag'
-import { Divider } from 'src/components/Divider'
 import { Expandable } from 'src/components/Expandable'
 import { styles } from './nonProfitListStyles'
 

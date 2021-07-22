@@ -10,6 +10,7 @@ export const theme = {
     '1.5rem',
     '2rem',
     '2.5rem',
+    '3rem',
     '4rem',
     '8rem',
     '16rem',
@@ -47,7 +48,7 @@ export const theme = {
   lineHeights: {
     base: 1,
     body: 1.5,
-    heading: 1.33,
+    heading: 1.25,
     input: 1.15
   },
   colors: {
@@ -110,7 +111,7 @@ export const theme = {
       px: 5,
       py: 3,
       fontSize: [3, 1],
-      lineHeight: 'base',
+      lineHeight: ['body', 'base'],
       letterSpacing: '-0.01em',
       fontFamily: 'body',
       fontWeight: 'heading',
@@ -157,7 +158,7 @@ export const theme = {
       color: 'primary',
       background: 'white',
       border: '1px solid',
-      borderColor: 'primary'
+      borderColor: 'borderGray'
     }
   },
   text: {
@@ -186,7 +187,7 @@ export const theme = {
     caption: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [1, 3],
+      fontSize: [2, 3],
       lineHeight: 'body',
       letterSpacing: '-0.005em',
       color: 'textGray'
@@ -194,7 +195,7 @@ export const theme = {
     small: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [4, 4],
+      fontSize: [2, 4],
       lineHeight: ['body', 'heading'],
       letterSpacing: ['-0.005em', '-0.01em'],
       color: 'textGray'
@@ -222,8 +223,8 @@ export const theme = {
       color: 'text'
     },
     h1: {
-      fontSize: [5, 7],
-      lineHeight: 'input',
+      fontSize: [4, 7],
+      lineHeight: ['heading', 'input'],
       letterSpacing: '-0.015em',
       fontWeight: 'bold',
       color: 'text'

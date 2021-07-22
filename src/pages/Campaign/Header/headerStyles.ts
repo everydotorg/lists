@@ -6,7 +6,11 @@ export const styles: Style = {
     backgroundSize: 'cover',
     minHeight: '200px',
     position: 'relative',
-    display: [null, 'none']
+    display: [null, 'none'],
+    m: 1,
+    mb: 0,
+    borderTopLeftRadius: 'button',
+    borderTopRightRadius: 'button'
   },
   desktopContainer: {
     alignItems: 'center',

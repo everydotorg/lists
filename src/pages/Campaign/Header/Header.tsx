@@ -1,8 +1,7 @@
-import { Box, Image, Flex, Text, Button } from 'theme-ui'
+import { Box, Button } from 'theme-ui'
 import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import { styles } from './headerStyles'
-import { BannerButtons } from 'src/components/BannerButtons'
 
 interface HeaderProps {
   onClickDonate: () => void
@@ -18,9 +17,7 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
           ...styles.container,
           backgroundImage: `url(${backgroundImageUrl})`
         }}
-      >
-        <BannerButtons />
-      </Box>
+      ></Box>
 
       <Box sx={styles.desktopContainer}>
         <CopyToClipboard

@@ -6,6 +6,7 @@ import { Matching } from './Matching'
 import { useRouter } from 'next/router'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import { Footer } from 'src/components/Footer'
+import { Divider } from 'src/components/Divider'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor } = useCampaignInfoContext()
@@ -24,6 +25,16 @@ export const Campaign = (): JSX.Element => {
           <Text sx={styles.aboutText} variant="small">
             {about}
           </Text>
+          <Box sx={styles.buttonContainer}>
+            <Button
+              id="campaign-mobile-donate"
+              sx={styles.submitButton}
+              onClick={goToDonation}
+              type="button"
+            >
+              <span>Donate</span>
+            </Button>
+          </Box>
           {sponsor && (
             <>
               <Matching sponsor={sponsor} />
@@ -35,18 +46,19 @@ export const Campaign = (): JSX.Element => {
             <NonProfitList list={nonprofits} />
           </Box>
         )}
+        <Box sx={styles.aboutButtonContainer}>
+          <Divider space={0} color="borderGray" />
+          <Button
+            sx={styles.aboutButton}
+            onClick={goToDonation}
+            type="button"
+            variant="primaryInverted"
+          >
+            <span>About giveli.st</span>
+          </Button>
+        </Box>
         <Footer />
       </Flex>
-      <Box sx={styles.buttonContainer}>
-        <Button
-          id="campaign-mobile-donate"
-          sx={styles.submitButton}
-          onClick={goToDonation}
-          type="button"
-        >
-          <span>Donate to List</span>
-        </Button>
-      </Box>
     </Box>
   )
 }

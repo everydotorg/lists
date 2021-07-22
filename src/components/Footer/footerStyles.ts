@@ -19,5 +19,6 @@ export const styles: Style = {
     color: 'text',
     fontWeight: 'bold'
   },
-  logoSpace: { label: 'footer-logoSpace', mr: 2 }
+  logoSpace: { label: 'footer-logoSpace', mr: 2 },
+  alignCenter: { alignItems: 'center' }
 }

@@ -2,7 +2,7 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   container: {
-    p: 6,
+    p: [3, 6],
     ':hover': {
       bg: ['inherit', 'primary'],
       '& *': {
@@ -24,7 +24,7 @@ export const styles: Style = {
     alignSelf: 'center'
   },
   avatar: {
-    marginRight: 7,
+    marginRight: [4, 7],
     alignSelf: 'center'
   },
   aboutContainer: {
@@ -32,7 +32,7 @@ export const styles: Style = {
   },
   aboutText: {
     display: 'block',
-    paddingBottom: 4,
+    pt: 4,
     color: 'text'
   },
   location: {

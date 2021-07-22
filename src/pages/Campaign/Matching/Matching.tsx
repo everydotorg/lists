@@ -22,14 +22,14 @@ export const Matching: React.FC<MatchingProps> = ({ sponsor }) => {
       space={2}
       renderTitle={
         <Flex>
-          <Text variant="small" sx={{ color: 'text', lineHeight: '32px' }}>
+          <Text variant="small" sx={styles.matchingTitle}>
             Your donation will be <strong>Matched {sponsor.ratio}</strong> up to{' '}
             <strong>${sponsor.threshold}</strong>
           </Text>
         </Flex>
       }
       renderDescription={
-        <Text variant="small" sx={{ opacity: '0.8', lineHeight: '24px' }}>
+        <Text as="p" variant="small" sx={styles.matchingDescription}>
           {sponsor.description}
         </Text>
       }

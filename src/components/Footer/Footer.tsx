@@ -10,7 +10,7 @@ export const Footer = () => {
         <Text variant="small" sx={styles.givelistText}>
           giveli.st
         </Text>
-        <Flex>
+        <Flex sx={styles.alignCenter}>
           <Text sx={styles.logoSpace} variant="small">
             powered by
           </Text>
