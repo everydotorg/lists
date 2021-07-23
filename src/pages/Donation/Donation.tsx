@@ -2,20 +2,18 @@ import { Box, Button, Flex } from '@theme-ui/components'
 import { useEffect, useState } from 'react'
 import { Currency, currencySymbolMap } from 'types/Currency'
 import { DonationFrequency } from 'types/Frequency'
-import { Divider } from 'src/components/Divider'
 import { Disclaimer } from './Disclaimer'
 import { Frequency } from './Frequency'
 import { Header } from './Header'
 import { Input } from './Input'
 import { styles } from './donationStyles'
-import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from 'src/services/url'
 import { gtag } from 'src/services/gtag'
 import { Footer } from 'src/components/Footer'
 
 export const Donation = (): JSX.Element => {
-  const { slug, everySlug, sponsor, primaryColor, defaultDonationAmount } =
+  const { slug, everySlug, primaryColor, defaultDonationAmount } =
     useCampaignInfoContext()
 
   useEffect(() => {
