@@ -3,6 +3,7 @@
   "everySlug": "healthcare.everywhere",
   "name": "Effective Healthcare Everywhere",
   "primaryColor": "#34D399",
+  "imageUrl": "/assets/endfactoryfarming/image.png",
   "backgroundImageUrl": "/assets/background.jpeg",
   "logoUrl": "/assets/logo.png",
   "thankYouImageUrl": "/assets/thank-you.png",
@@ -11,7 +12,7 @@
   "socialShareIncentive": "Share this",
   "previewImage": "/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1095.jpg",
   "about": "This is the about text of Effective Healthcare Everywhere.",
-  "cause": "healthcare",
+  "cause": "health",
   "fundingGoal": 50000,
   "sponsor": {
     "name": "",

@@ -7,7 +7,8 @@ export type CampaignInfo = {
   everySlug: string
   name: string
   primaryColor: string
-  backgroundImageUrl: string
+  imageUrl: string
+  backgroundImageUrl: string // @todo: deprecate
   thankYouImageUrl: string
   bannerUrl: string
   socialShareText: string

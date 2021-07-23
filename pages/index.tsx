@@ -1,14 +1,28 @@
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { GetStaticProps } from 'next'
+import { campaigns } from 'src/campaings/ssr'
+import { Home, HomeProps } from 'src/pages/Home'
+import { getCampaignInfo } from 'src/services/getCampaignInfo'
 
-const Redirect = () => {
-  const router = useRouter()
+export const getStaticProps: GetStaticProps = async () => {
+  const nonProfits = campaigns
+    .map((campaign) => getCampaignInfo(campaign))
+    .map((info) => ({
+      slug: info.slug,
+      name: info.name,
+      imageUrl: info.imageUrl,
+      about: info.about,
+      cause: info.cause
+    }))
 
-  useEffect(() => {
-    router.push('/lilbub')
-  })
-
-  return null
+  return {
+    props: {
+      nonProfits
+    }
+  }
 }
 
-export default Redirect
+const Homepage = ({ nonProfits }: HomeProps) => {
+  return <Home nonProfits={nonProfits} />
+}
+
+export default Homepage

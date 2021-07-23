@@ -4,6 +4,7 @@
   "name": "LGBTQ+ Rights",
   "primaryColor": "#34D399",
   "backgroundImageUrl": "/assets/background.jpeg",
+  "imageUrl": "/assets/endfactoryfarming/image.png",
   "logoUrl": "/assets/logo.png",
   "thankYouImageUrl": "/assets/thank-you.png",
   "bannerUrl": "/assets/banner.png",
@@ -11,7 +12,7 @@
   "socialShareIncentive": "Share this",
   "previewImage": "/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1095.jpg",
   "about": "This is the about text of LGBTQ+ Rights.",
-  "cause": "lgbtq+",
+  "cause": "humans",
   "fundingGoal": 50000,
   "sponsor": {
     "name": "",

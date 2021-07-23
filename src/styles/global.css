@@ -20,6 +20,7 @@ html {
     font-size: 16px;
   }
 }
+
 @media screen and (min-width: 112.5em) {
   html {
     /* font-size: 24px; */
@@ -31,7 +32,6 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #efefef;
   height: 100%;
 }
 

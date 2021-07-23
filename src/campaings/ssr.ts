@@ -1,21 +1,27 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getCampaignInfo } from 'src/services/getCampaignInfo'
 
+export const campaigns = [
+  'lilbub',
+  'endfactoryfarming',
+  'educationeverywhere',
+  'antiracism',
+  'lgbtq+',
+  'effectivehealthcareeverywhere',
+  'endingglobalpoverty',
+  'tacklingclimatechange',
+  'scienceandtechnology'
+]
+
 export type PageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 export const getStaticPaths: GetStaticPaths = () => {
   return {
-    paths: [
-      { params: { campaign: 'lilbub' } },
-      { params: { campaign: 'endfactoryfarming' } },
-      { params: { campaign: 'educationeverywhere' } },
-      { params: { campaign: 'antiracism' } },
-      { params: { campaign: 'lgbtq+' } },
-      { params: { campaign: 'effectivehealthcareeverywhere' } },
-      { params: { campaign: 'endingglobalpoverty' } },
-      { params: { campaign: 'tacklingclimatechange' } },
-      { params: { campaign: 'scienceandtechnology' } }
-    ],
+    paths: campaigns.map((campaign) => ({
+      params: {
+        campaign
+      }
+    })),
     fallback: false
   }
 }

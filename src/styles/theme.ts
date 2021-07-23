@@ -1,5 +1,5 @@
 export const theme = {
-  breakpoints: ['56.25em', '112.5em'],
+  breakpoints: ['56.25em', '132.5em'],
   space: [
     0,
     '0.25rem',
@@ -36,8 +36,8 @@ export const theme = {
   radii: {
     zero: 0,
     small: 8,
-    card: 24,
     button: 12,
+    card: 16,
     full: 9999
   },
   fontWeights: {
@@ -47,19 +47,41 @@ export const theme = {
   },
   lineHeights: {
     base: 1,
-    body: 1.5,
+    input: 1.15,
     heading: 1.25,
-    input: 1.15
+    body: 1.5
   },
   colors: {
+    // causes colors
+    justice: '#C8E2E3',
+    justiceText: '#2F7074',
+
+    animals: '#F6DCC1',
+    animalsText: '#AC6B28',
+
+    education: '#D8E4F2',
+    educationText: '#4D6B8E',
+
+    humans: '#F7E5C5',
+    humansText: '#A47929',
+
+    health: '#F0D3E4',
+    healthText: '#944C75',
+
+    environment: '#DBE7BB',
+    environmentText: '#5E7D0F',
+
+    // apps colors
     text: '#2E3434',
     textGray: 'rgba(46, 52, 52, 0.6)',
+    primary: '#00A37F',
+
+    // @todo: revisit
     background: '#FFF',
     divider: '#EEEEEE',
     inputBackground: '#F3F6F6',
     backgroundGray: '#FAFAFA',
     dividerInverted: 'rgba(255, 255, 255, 0.1)',
-    primary: '#07C',
     secondary: '#30C',
     muted: '#EEEEEE',
     progressBg: '#EAEDED',
@@ -166,7 +188,7 @@ export const theme = {
       fontFamily: 'body',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: [4, 1],
+      fontSize: [4, 5],
       letterSpacing: '-0.01em'
     },
     regular: {
@@ -231,6 +253,18 @@ export const theme = {
     }
   },
   links: {
+    button: {
+      cursor: 'pointer',
+      lineHeight: 'base',
+      letterSpacing: '-0.01em',
+      fontSize: 3,
+      fontWeight: 'body',
+      textDecoration: 'none',
+      px: 3,
+      py: 2,
+      border: '1px solid',
+      borderRadius: 'small'
+    },
     smallSubtle: {
       cursor: 'pointer',
       lineHeight: 'base',
@@ -289,3 +323,5 @@ export const theme = {
     }
   }
 }
+
+export const causeTextColor = (cause: string) => cause + 'Text'

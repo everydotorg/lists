@@ -15,6 +15,7 @@ type CampaignLayoutProps = {
   children: ReactNode
 }
 
+// @TODO: delete
 export const CampaignLayout = ({
   campaignInfo,
   hideBannerButtons = false,
