@@ -3,7 +3,7 @@ import { styles } from './inputStyles'
 import { gtag } from 'src/services/gtag'
 import React from 'react'
 
-const amountsToAdd = [40, 80, 200]
+const amountsToAdd = [20, 40, 80, 200, 500]
 
 interface InputProps {
   donation: number
@@ -41,7 +41,7 @@ export const Input = ({
 
   return (
     <Flex sx={styles.container}>
-      <Label sx={styles.label} htmlFor="donationAmount" variant="text.title">
+      <Label sx={styles.label} htmlFor="donationAmount" variant="text.small">
         How much to donate?
       </Label>
       <Flex sx={styles.inputContainer}>
@@ -66,7 +66,7 @@ export const Input = ({
           <Text
             sx={styles.addAmountText}
             role="button"
-            variant="title"
+            variant="caption"
             key={amount}
             onClick={() => addAmount(amount)}
           >

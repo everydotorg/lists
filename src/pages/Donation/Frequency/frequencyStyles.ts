@@ -2,32 +2,35 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   container: {
-    px: 4,
-    '& > :not(:last-child)': {
-      mb: 4
-    }
+    mt: [7, 9],
+    px: 4
   },
   label: {
-    fontWeight: 400
+    fontWeight: 400,
+    mb: [3, 6]
   },
   input: {
     display: 'none'
   },
   selectorContainer: {
-    alignItems: 'center'
+    alignItems: 'center',
+    border: '1px solid',
+    borderColor: 'borderGray',
+    borderRadius: 'small',
+    p: 1,
+    mb: [4, 6]
   },
   frequencyBase: {
-    fontSize: [3, 1],
     color: 'primary',
     px: [4, 3],
-    py: 0,
+    py: 3,
     lineHeight: 'base',
-    height: ['2.5rem', '1.75rem'],
     fontWeight: 'body',
     cursor: 'pointer',
     textAlign: 'center',
-    border: '1px solid',
-    borderColor: 'primary',
+    border: '2px solid',
+    borderColor: 'transparent',
+    borderRadius: 'frequency',
     transition: 'background .4s',
     alignItems: 'center',
     justifyContent: 'center',
@@ -36,22 +39,36 @@ export const styles: Style = {
       transform: [null, 'translateY(0.1em)']
     }
   },
-  frequencyLeft: {
-    borderTopLeftRadius: 'full',
-    borderBottomLeftRadius: 'full'
-  },
-  frequencyRight: {
-    borderTopRightRadius: 'full',
-    borderBottomRightRadius: 'full'
-  },
   selectedFrequency: {
-    color: 'white',
-    bg: 'primary'
+    color: 'primary',
+    position: 'relative',
+    borderColor: 'primary',
+    //Trick to decrease the opacity of the bg and keep the content opaque
+    '&::after': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bg: 'primary',
+      opacity: '0.1',
+      borderRadius: 'frequency'
+    }
   },
   donationContainer: {
-    border: '1px solid #CCCCCC',
+    label: 'frequency-donationContainer',
     borderRadius: 'small',
-    bg: 'dividerInverted',
-    p: 4
+    bg: 'backgroundGray',
+    p: 4,
+    position: 'relative'
+  },
+  donationContainerArrow: {
+    color: 'backgroundGray',
+    label: 'frequency-donationContainerArrow',
+    position: 'absolute',
+    top: 0,
+    right: '25%',
+    transform: 'translate(50%, -63%)'
   }
 }

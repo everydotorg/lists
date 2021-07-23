@@ -35,7 +35,8 @@ export const theme = {
   ],
   radii: {
     zero: 0,
-    small: 8,
+    frequency: 8,
+    small: 12,
     button: 12,
     card: 16,
     full: 9999
@@ -79,8 +80,8 @@ export const theme = {
     // @todo: revisit
     background: '#FFF',
     divider: '#EEEEEE',
-    inputBackground: '#F3F6F6',
-    backgroundGray: '#FAFAFA',
+    inputBackground: '#FFF',
+    backgroundGray: '#F3F6F6',
     dividerInverted: 'rgba(255, 255, 255, 0.1)',
     secondary: '#30C',
     muted: '#EEEEEE',
@@ -98,17 +99,19 @@ export const theme = {
   },
   forms: {
     input: {
-      border: '1px solid transparent',
+      border: '1px solid',
+      borderColor: 'borderGray',
       borderRadius: 'small',
       outline: 'none',
       bg: 'inputBackground',
-      fontSize: [5, 3],
+      fontSize: [5, 5],
       lineHeight: 'input',
       fontWeight: 'heading',
       letterSpacing: '-0.02em',
       fontFamily: 'body',
       width: '100%',
-      py: 3,
+      py: 4,
+      px: 6,
       ':focus': {
         bg: 'white',
         border: '1px solid',
@@ -116,8 +119,9 @@ export const theme = {
         boxShadow: '0px 0px 0px 2px rgba(215, 83, 131, 0.2)'
       },
       '::placeholder': {
-        fontSize: [4, 2],
-        opacity: 0.7
+        fontSize: [4, 5],
+        opacity: 0.7,
+        fontWeight: 'body'
       }
     },
     select: {
@@ -131,8 +135,8 @@ export const theme = {
       cursor: 'pointer',
       borderRadius: 'button',
       px: 5,
-      py: 3,
-      fontSize: [3, 1],
+      py: [3, 4],
+      fontSize: [3, 4],
       lineHeight: ['body', 'base'],
       letterSpacing: '-0.01em',
       fontFamily: 'body',
@@ -180,16 +184,17 @@ export const theme = {
       color: 'primary',
       background: 'white',
       border: '1px solid',
-      borderColor: 'borderGray'
+      borderColor: 'borderGray',
+      fontWeight: 'body'
     }
   },
   text: {
     title: {
       fontFamily: 'body',
-      lineHeight: 'heading',
+      lineHeight: 'body',
       fontWeight: 'heading',
-      fontSize: [4, 5],
-      letterSpacing: '-0.01em'
+      fontSize: [3, 5],
+      letterSpacing: '-0.015em'
     },
     regular: {
       fontFamily: 'body',
@@ -223,11 +228,12 @@ export const theme = {
       color: 'textGray'
     },
     input: {
-      fontSize: [5, 3],
+      fontSize: [5, 5],
       lineHeight: 'input',
       fontWeight: 'heading',
       letterSpacing: '-0.02em',
-      fontFamily: 'body'
+      fontFamily: 'body',
+      color: 'textGray'
     },
     error: {
       fontFamily: 'body',
@@ -236,7 +242,7 @@ export const theme = {
       color: 'error',
       opacity: '0.9',
       letterSpacing: ['-0.01em', '-0.015em'],
-      fontSize: [1, 0]
+      fontSize: 0
     },
     large: {
       fontSize: [5, 2],

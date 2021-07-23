@@ -20,14 +20,16 @@ export const styles: Style = {
     mb: 1
   },
   donateButtonContainer: {
-    bg: 'white',
-    position: 'sticky',
-    bottom: 0,
-    left: 0,
-    p: 1
+    px: 4,
+    mt: [7, 9]
+  },
+  donateCryptoButtonContainer: {
+    mt: [2, 3],
+    px: 4
   },
   donateButton: {
-    width: '100%'
+    width: '100%',
+    opacity: 1
   },
   donateButtonDisabled: {
     cursor: 'default',

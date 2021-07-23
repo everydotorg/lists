@@ -19,14 +19,13 @@ export const Header = (): JSX.Element => {
     <Flex sx={styles.headerContainer}>
       <Flex sx={styles.firstLine}>
         <Text variant="title" sx={styles.header}>
-          Donating to:
+          Donate to:
         </Text>
-        <Box id="close-donation" sx={styles.closeBox} onClick={closeDonatePage}>
-          <CloseIcon />
-        </Box>
+        <Text variant="title">{name}</Text>
       </Flex>
-
-      <Text variant="title">{name}</Text>
+      <Box id="close-donation" sx={styles.closeBox} onClick={closeDonatePage}>
+        <CloseIcon />
+      </Box>
     </Flex>
   )
 }

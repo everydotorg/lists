@@ -3,14 +3,15 @@ import { Style } from 'types/Style'
 export const styles: Style = {
   container: {
     flexDirection: 'column',
-    px: 4
+    px: 4,
+    mt: [7, 9]
   },
   inputContainer: {
     position: 'relative',
     width: '100%'
   },
   currencyContainer: {
-    ml: 4,
+    ml: 6,
     alignItems: 'center',
     position: 'absolute',
     top: 0,
@@ -18,7 +19,7 @@ export const styles: Style = {
     pointerEvents: 'none'
   },
   label: {
-    mb: 4,
+    mb: [3, 6],
     fontWeight: 400
   },
   inputNumber: {
@@ -56,11 +57,30 @@ export const styles: Style = {
   addAmountContainer: {
     color: 'primary',
     '& > *:not(:last-child)': {
-      mr: 3
+      mr: 1
     }
   },
   addAmountText: {
     fontWeight: '400',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    py: 2,
+    px: 3,
+    position: 'relative',
+    display: 'flex',
+    alignItems: 'center',
+    color: 'primary',
+    lineHeight: 1.5,
+    //Trick to decrease the opacity of the bg and keep the content opaque
+    '&::after': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bg: 'primary',
+      opacity: '0.1',
+      borderRadius: 'small'
+    }
   }
 }
