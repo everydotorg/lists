@@ -12,5 +12,21 @@ export const styles: Style = {
   chevronDown: {
     p: 0,
     lineHeight: 1
+  },
+  container: {
+    border: '1px solid',
+    borderColor: 'borderGray',
+    borderRadius: 'button',
+    px: [3, 6],
+    py: [3, 4],
+    mt: [6, 9]
+  },
+  matchingTitle: {
+    color: 'text',
+    lineHeight: ['20px', '32px']
+  },
+  matchingDescription: {
+    opacity: '0.8',
+    lineHeight: ['20px', '24px']
   }
 }

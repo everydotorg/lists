@@ -1,12 +1,12 @@
 import { Button, Flex, Text, Box } from '@theme-ui/components'
-import { Divider } from 'src/components/Divider'
 import { Header } from './Header'
 import { styles } from './campaignStyles'
 import { NonProfitList } from './NonProfitList'
-import { Cause } from './Cause'
 import { Matching } from './Matching'
 import { useRouter } from 'next/router'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
+import { Footer } from 'src/components/Footer'
+import { Divider } from 'src/components/Divider'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor } = useCampaignInfoContext()
@@ -19,36 +19,45 @@ export const Campaign = (): JSX.Element => {
       <Flex sx={styles.container}>
         <Header onClickDonate={goToDonation} />
         <Flex sx={styles.campaignInfo}>
-          <Text sx={styles.campaignTitle} variant="title">
+          <Text sx={styles.campaignTitle} as="h1" variant="h1">
             {name}
           </Text>
           <Text sx={styles.aboutText} variant="small">
             {about}
           </Text>
+          <Box sx={styles.buttonContainer}>
+            <Button
+              id="campaign-mobile-donate"
+              sx={styles.submitButton}
+              onClick={goToDonation}
+              type="button"
+            >
+              <span>Donate</span>
+            </Button>
+          </Box>
           {sponsor && (
             <>
-              <Divider space={3} />
               <Matching sponsor={sponsor} />
             </>
           )}
         </Flex>
-        <Cause />
         {nonprofits && (
           <Box sx={styles.nonprofitsContainer}>
             <NonProfitList list={nonprofits} />
           </Box>
         )}
+        <Box sx={styles.aboutButtonContainer}>
+          <Divider space={0} color="borderGray" />
+          <Button
+            sx={styles.aboutButton}
+            type="button"
+            variant="primaryInverted"
+          >
+            <span>About giveli.st</span>
+          </Button>
+        </Box>
+        <Footer />
       </Flex>
-      <Box sx={styles.buttonContainer}>
-        <Button
-          id="campaign-mobile-donate"
-          sx={styles.submitButton}
-          onClick={goToDonation}
-          type="button"
-        >
-          <span>Donate to List</span>
-        </Button>
-      </Box>
     </Box>
   )
 }

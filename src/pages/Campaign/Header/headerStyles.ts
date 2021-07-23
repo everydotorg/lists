@@ -6,18 +6,20 @@ export const styles: Style = {
     backgroundSize: 'cover',
     minHeight: '200px',
     position: 'relative',
-    display: [null, 'none']
+    display: [null, 'none'],
+    m: 1,
+    mb: 0,
+    borderTopLeftRadius: 'button',
+    borderTopRightRadius: 'button'
   },
   desktopContainer: {
     alignItems: 'center',
     justifyContent: 'space-between',
     display: ['none', 'flex'],
-    p: 3,
+    p: 6,
     position: 'sticky',
     bg: 'white',
     top: 0,
-    borderBottom: '1px solid',
-    borderBottomColor: 'divider',
     zIndex: [null, 1]
   },
   logo: {
@@ -31,9 +33,23 @@ export const styles: Style = {
     mr: 3
   },
   donateButton: {
-    fontFamily: 'body',
-    fontWeight: 'body',
     fontSize: 3,
     letterSpacing: '-0.01em'
+  },
+  linkButton: {
+    fontWeight: '400',
+    ':hover': {
+      opacity: 1,
+      bg: 'primary',
+      color: 'white'
+    }
+  },
+  linkCopied: {
+    color: 'primary',
+    cursor: 'unset',
+    ':hover': {
+      bg: 'white',
+      opacity: 1
+    }
   }
 }

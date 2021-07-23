@@ -5,7 +5,8 @@ export const styles: Style = {
     overflow: [null, 'auto'],
     height: '100%',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    flex: '43%'
   },
   header: {
     flexDirection: 'column'

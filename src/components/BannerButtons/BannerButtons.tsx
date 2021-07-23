@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import { Flex, Button, ThemeUIStyleObject } from 'theme-ui'
-import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
-import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { About } from '../../pages/Campaign/About'
 import { styles } from './bannerButtonsStyles'
 
@@ -10,29 +8,18 @@ interface BannerButtonsProps {
 }
 
 export const BannerButtons: React.FC<BannerButtonsProps> = ({ sx = {} }) => {
-  const { slug } = useCampaignInfoContext()
   const [showPopup, setShowPopup] = useState(false)
-  const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}`
 
   return (
     <>
       <Flex sx={{ ...styles.group, ...sx }}>
-        <CopyToClipboard
-          id="campaign-copylink"
-          text={shareUrl}
-          sx={styles.linkButton}
-          linkCopiedStyle={styles.linkCopied}
-          variant="primarySmallInverted"
-        >
-          giveli.st/<strong>{slug}</strong>
-        </CopyToClipboard>
-
         <Button
           id="open-about"
           variant="primarySmallInverted"
+          sx={styles.aboutButton}
           onClick={() => setShowPopup(true)}
         >
-          <span>About</span>
+          <span>About giveli.st</span>
         </Button>
       </Flex>
 

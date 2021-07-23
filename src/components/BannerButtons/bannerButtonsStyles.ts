@@ -9,19 +9,10 @@ export const styles: Style = {
       mr: 3
     }
   },
-  linkButton: {
-    ':hover': {
-      opacity: 1,
-      bg: 'primary',
-      color: 'white'
-    }
-  },
-  linkCopied: {
-    color: 'primary',
-    cursor: 'unset',
-    ':hover': {
-      bg: 'white',
-      opacity: 1
-    }
+  aboutButton: {
+    bg: 'rgba(0, 0, 0, 0.2)',
+    color: 'white',
+    backdropFilter: 'blur(100px)',
+    border: 'none'
   }
 }

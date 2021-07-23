@@ -18,21 +18,18 @@ export const Matching: React.FC<MatchingProps> = ({ sponsor }) => {
       headerStyle={styles.header}
       descriptionStyle={styles.description}
       chevronStyle={styles.chevronDown}
+      containerStyle={styles.container}
       space={2}
       renderTitle={
         <Flex>
-          <Text variant="small" sx={{ color: 'text' }}>
-            Matching {sponsor.ratio}
-            <Text variant="small" sx={{ opacity: '0.8' }}>
-              {' '}
-              up to{' '}
-            </Text>
-            ${sponsor.threshold} per donation
+          <Text variant="small" sx={styles.matchingTitle}>
+            Your donation will be <strong>Matched {sponsor.ratio}</strong> up to{' '}
+            <strong>${sponsor.threshold}</strong>
           </Text>
         </Flex>
       }
       renderDescription={
-        <Text variant="small" sx={{ opacity: '0.8' }}>
+        <Text as="p" variant="small" sx={styles.matchingDescription}>
           {sponsor.description}
         </Text>
       }
