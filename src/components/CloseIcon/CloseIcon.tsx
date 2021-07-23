@@ -1,25 +1,15 @@
-export const CloseIcon = (): JSX.Element => {
+export const CloseIcon = ({}): JSX.Element => {
   return (
     <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      viewBox="0 0 17 18"
       fill="currentcolor"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M18 6L6 18"
-        stroke="currentcolor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M6 6L18 18"
-        stroke="currentcolor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M16.7071 2.70589C17.0976 2.31536 17.0976 1.6822 16.7071 1.29167C16.3166 0.901148 15.6834 0.901148 15.2929 1.29167L8.9987 7.58583L2.70454 1.29167C2.31402 0.901148 1.68085 0.901148 1.29033 1.29167C0.899805 1.6822 0.899805 2.31536 1.29033 2.70589L7.58449 9.00005L1.29033 15.2942C0.899805 15.6847 0.899805 16.3179 1.29033 16.7084C1.68085 17.0989 2.31402 17.0989 2.70454 16.7084L8.9987 10.4143L15.2929 16.7084C15.6834 17.0989 16.3166 17.0989 16.7071 16.7084C17.0976 16.3179 17.0976 15.6847 16.7071 15.2942L10.4129 9.00005L16.7071 2.70589Z"
+        fill="currentcolor"
       />
     </svg>
   )

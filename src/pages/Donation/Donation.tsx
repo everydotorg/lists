@@ -2,19 +2,18 @@ import { Box, Button, Flex } from '@theme-ui/components'
 import { useEffect, useState } from 'react'
 import { Currency, currencySymbolMap } from 'types/Currency'
 import { DonationFrequency } from 'types/Frequency'
-import { Divider } from 'src/components/Divider'
 import { Disclaimer } from './Disclaimer'
 import { Frequency } from './Frequency'
 import { Header } from './Header'
 import { Input } from './Input'
 import { styles } from './donationStyles'
-import { Matching } from './Matching'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from 'src/services/url'
 import { gtag } from 'src/services/gtag'
+import { Footer } from 'src/components/Footer'
 
 export const Donation = (): JSX.Element => {
-  const { slug, everySlug, sponsor, primaryColor, defaultDonationAmount } =
+  const { slug, everySlug, primaryColor, defaultDonationAmount } =
     useCampaignInfoContext()
 
   useEffect(() => {
@@ -58,14 +57,13 @@ export const Donation = (): JSX.Element => {
 
     const frequencyText =
       frequency === DonationFrequency.Monthly ? 'every month' : ''
-    return `Donate ${currencySymbol} ${donationAmount} ${currency} ${frequencyText}`
+    return `Donate ${currencySymbol}${donationAmount} ${currency} ${frequencyText}`
   }
 
   return (
     <Box sx={styles.page}>
       <Flex sx={styles.container}>
         <Header />
-        <Divider space={4} />
         <Input
           donation={donationAmount}
           setDonation={setDonationAmount}
@@ -73,36 +71,35 @@ export const Donation = (): JSX.Element => {
           error={error}
           setError={setError}
         />
-        {sponsor && (
-          <>
-            <Divider space={4} sx={{ mx: 3 }} />
-            <Matching
-              currencySymbol={currencySymbol}
-              donationAmount={donationAmount}
-              sponsor={sponsor}
-            />
-          </>
-        )}
-        <Divider space={4} />
         <Frequency frequency={frequency} setFrequency={setFrequency} />
-        <Divider space={4} />
+        <Box sx={styles.donateButtonContainer}>
+          <Button
+            id="submit-donation"
+            onClick={donate}
+            variant="primary"
+            sx={{
+              ...styles.donateButton,
+              ...(disabled ? styles.donateButtonDisabled : {})
+            }}
+            disabled={disabled}
+          >
+            <span>{getDonateButtonText()}</span>
+          </Button>
+        </Box>
+        <Box sx={styles.donateCryptoButtonContainer}>
+          <Button
+            onClick={donate}
+            variant="primaryInverted"
+            sx={{
+              ...styles.donateButton
+            }}
+          >
+            <span>Donate Crypto, stocks, or DAF</span>
+          </Button>
+        </Box>
         <Disclaimer />
-        <Divider space={4} />
+        <Footer />
       </Flex>
-      <Box sx={styles.donateButtonContainer}>
-        <Button
-          id="submit-donation"
-          onClick={donate}
-          variant="primary"
-          sx={{
-            ...styles.donateButton,
-            ...(disabled ? styles.donateButtonDisabled : {})
-          }}
-          disabled={disabled}
-        >
-          <span>{getDonateButtonText()}</span>
-        </Button>
-      </Box>
     </Box>
   )
 }
