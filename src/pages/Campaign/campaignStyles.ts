@@ -50,6 +50,14 @@ export const styles: Style = {
       borderBottom: '1px solid',
       borderBottomColor: 'borderGray'
     },
+    '& > *:first-of-type': {
+      borderTopLeftRadius: 'button',
+      borderTopRightRadius: 'button'
+    },
+    '& > *:last-of-type': {
+      borderBottomLeftRadius: 'button',
+      borderBottomRightRadius: 'button'
+    },
     mb: [6, 9]
   }
 }
