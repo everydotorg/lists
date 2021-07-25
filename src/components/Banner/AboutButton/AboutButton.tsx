@@ -1,18 +1,14 @@
 import { useState } from 'react'
-import { Flex, Button, ThemeUIStyleObject } from 'theme-ui'
-import { About } from '../../pages/Campaign/About'
-import { styles } from './bannerButtonsStyles'
+import { Flex, Button } from 'theme-ui'
+import { About } from '../../../pages/Campaign/About'
+import { styles } from './aboutButtonStyles'
 
-interface BannerButtonsProps {
-  sx?: ThemeUIStyleObject
-}
-
-export const BannerButtons: React.FC<BannerButtonsProps> = ({ sx = {} }) => {
+export const AboutButton = () => {
   const [showPopup, setShowPopup] = useState(false)
 
   return (
     <>
-      <Flex sx={{ ...styles.group, ...sx }}>
+      <Flex sx={styles.aboutContainer}>
         <Button
           id="open-about"
           variant="primarySmallInverted"

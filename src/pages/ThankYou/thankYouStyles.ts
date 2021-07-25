@@ -9,12 +9,17 @@ export const styles: Style = {
     flex: '43%'
   },
   header: {
+    p: [3, 6],
+    pb: [0, 0],
     flexDirection: 'column'
   },
-  headerImg: {
-    margin: [0, '0 auto'],
-    padding: 0,
-    width: [null, '60%']
+  cardList: {
+    flexDirection: 'column',
+    p: [3, 6],
+    pt: [0, 0],
+    '& > *:not(:last-child)': {
+      mb: [3, 6]
+    }
   },
   thankYouContainer: {
     label: 'thankYouContainer',
@@ -48,7 +53,6 @@ export const styles: Style = {
     flexDirection: [null, 'column'],
     justifyContent: [null, 'space-between']
   },
-  shareButton: { width: '100%', mb: 4 },
   socialShareContainer: {
     justifyContent: 'center',
     marginBottom: 0,
