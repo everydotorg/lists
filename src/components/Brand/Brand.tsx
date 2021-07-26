@@ -9,15 +9,17 @@ type BrandProps = {
 
 export const Brand = ({ sx = {} }: BrandProps) => {
   return (
-    <Flex sx={{ ...styles.footerContent, ...sx }}>
-      <Text variant="caption" sx={styles.givelistText}>
-        giveli.st
-      </Text>
-      <Flex sx={styles.alignCenter}>
-        <Text variant="caption" sx={styles.logoSpace}>
-          powered by
+    <Flex sx={styles.brandContainer}>
+      <Flex sx={styles.brandContent}>
+        <Text variant="caption" sx={styles.givelistText}>
+          giveli.st
         </Text>
-        <EveryOrgLogo />
+        <Flex sx={styles.alignCenter}>
+          <Text variant="caption" sx={styles.logoSpace}>
+            powered by
+          </Text>
+          <EveryOrgLogo />
+        </Flex>
       </Flex>
     </Flex>
   )

@@ -1,4 +1,5 @@
 import { DonationFrequency } from 'types/Frequency'
+import { getShouldAddReturnUrlAbTest } from './return-url-ab-test'
 
 interface Obj {
   [key: string]: string | number | undefined | null
@@ -38,6 +39,11 @@ export const createEveryUrl = (
     everySlug + '/donate',
     production ? 'https://www.every.org' : 'https://staging.every.org'
   )
+
+  const shouldAddReturnUrl = getShouldAddReturnUrlAbTest()
+  const successUrl = shouldAddReturnUrl
+    ? { success_url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}/thank-you` }
+    : {}
 
   url.search = objectToParams({
     frequency,
