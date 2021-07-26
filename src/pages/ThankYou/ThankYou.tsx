@@ -7,7 +7,7 @@ import { Twitter } from 'src/components/Twitter'
 import { Divider } from 'src/components/Divider'
 import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { Card } from './Card'
-import { Footer } from 'src/components/Footer'
+import { Brand } from 'src/components/Brand'
 
 export const ThankYou = (): JSX.Element | null => {
   const { slug, socialShareText, name } = useCampaignInfoContext()
@@ -100,7 +100,7 @@ export const ThankYou = (): JSX.Element | null => {
           inverted
         />
       </Flex>
-      <Footer />
+      <Brand />
     </Box>
   )
 }
