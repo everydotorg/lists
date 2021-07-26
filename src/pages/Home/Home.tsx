@@ -3,6 +3,8 @@ import { Nonprofit } from './Nonprofit'
 import { Hero } from './Hero'
 import { CampaignInfo } from 'types/CampaignInfo'
 import { styles } from './homeStyles'
+import { useEffect, useRef } from 'react'
+import { useBreakpointIndex } from '@theme-ui/match-media'
 
 export type HomeNonProfit = Pick<
   CampaignInfo,
@@ -13,10 +15,54 @@ export type HomeProps = {
   nonProfits: Array<HomeNonProfit>
 }
 
+type Interval = NodeJS.Timeout
+
 export const Home = ({ nonProfits }: HomeProps) => {
+  const listRef = useRef<HTMLDivElement>(null)
+  const intervalRef = useRef<Interval | null>(null)
+  const breakpointIndex = useBreakpointIndex()
+
+  useEffect(() => {
+    const { current } = listRef
+
+    // The autoscroll only applies on desktop
+    if (current && breakpointIndex < 3) {
+      const id = setInterval(() => {
+        if (current.scrollTop + current.offsetHeight < current.scrollHeight) {
+          console.log('running')
+
+          current.scrollTo({
+            top: current.scrollTop + 10
+          })
+        } else {
+          console.log('cleared')
+
+          clearInterval(intervalRef.current as Interval)
+        }
+      }, 500)
+
+      intervalRef.current = id
+    }
+
+    return () => {
+      clearInterval(intervalRef.current as Interval)
+    }
+  }, [breakpointIndex])
+
+  const onUserInteraction = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+    }
+  }
+
   return (
     <Flex sx={styles.container}>
-      <Flex id="list" sx={styles.givelistSection}>
+      <Flex
+        id="list"
+        sx={styles.givelistSection}
+        ref={listRef}
+        onWheel={onUserInteraction}
+      >
         {nonProfits.map((nonprofit) => (
           <Nonprofit nonprofit={nonprofit} key={nonprofit.slug} />
         ))}

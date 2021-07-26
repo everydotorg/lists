@@ -14,6 +14,7 @@ export const styles: Style = {
     '-webkit-overflow-scrolling': 'touch',
     flex: [1, '57%'],
     overflow: 'auto',
+    scrollBehavior: 'smooth',
     flexDirection: 'column',
     p: 5,
     borderRight: ['unset', '1px solid'],
