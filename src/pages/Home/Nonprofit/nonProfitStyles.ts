@@ -4,7 +4,7 @@ export const styles: Style = {
   container: {
     p: [4, 5],
     flexDirection: ['column-reverse', 'row'],
-    borderRadius: 'card'
+    borderRadius: 'button'
   },
   section: {
     flex: 1
@@ -33,7 +33,7 @@ export const styles: Style = {
   image: {
     minHeight: '256px',
     width: '100%',
-    borderRadius: 'card',
+    borderRadius: 'button',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     mixBlendMode: 'multiply'

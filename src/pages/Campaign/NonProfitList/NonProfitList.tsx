@@ -42,10 +42,10 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                   sx={styles.avatar}
                 />
                 <Flex sx={styles.textContainer}>
-                  <Text variant="regular">
+                  <Text variant="heading">
                     <strong>{nonprofit.name}</strong>
                   </Text>
-                  <Text variant="caption" sx={styles.location}>
+                  <Text variant="small" sx={styles.location}>
                     {nonprofit.location}
                   </Text>
                 </Flex>

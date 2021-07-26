@@ -10,7 +10,7 @@ import { styles } from './donationStyles'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from 'src/services/url'
 import { gtag } from 'src/services/gtag'
-import { Footer } from 'src/components/Footer'
+import { Brand } from 'src/components/Brand'
 
 export const Donation = (): JSX.Element => {
   const { slug, everySlug, primaryColor, defaultDonationAmount } =
@@ -98,7 +98,7 @@ export const Donation = (): JSX.Element => {
           </Button>
         </Box>
         <Disclaimer />
-        <Footer />
+        <Brand />
       </Flex>
     </Box>
   )

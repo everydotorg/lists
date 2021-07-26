@@ -5,7 +5,7 @@ import { NonProfitList } from './NonProfitList'
 import { Matching } from './Matching'
 import { useRouter } from 'next/router'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
-import { Footer } from 'src/components/Footer'
+import { Brand } from 'src/components/Brand'
 import { Divider } from 'src/components/Divider'
 
 export const Campaign = (): JSX.Element => {
@@ -56,7 +56,9 @@ export const Campaign = (): JSX.Element => {
             <span>About giveli.st</span>
           </Button>
         </Box>
-        <Footer />
+        <Flex sx={styles.footerContainer}>
+          <Brand />
+        </Flex>
       </Flex>
     </Box>
   )

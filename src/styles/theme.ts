@@ -12,6 +12,7 @@ export const theme = {
     '2.5rem',
     '3rem',
     '4rem',
+    '6rem',
     '8rem',
     '16rem',
     '32rem'
@@ -37,7 +38,7 @@ export const theme = {
     zero: 0,
     frequency: 8,
     small: 12,
-    button: 12,
+    button: 12, // @todo: maybe a better name would be "default" or just use "small"
     card: 16,
     full: 9999
   },
@@ -76,12 +77,12 @@ export const theme = {
     text: '#2E3434',
     textGray: 'rgba(46, 52, 52, 0.6)',
     primary: '#00A37F',
-
-    // @todo: revisit
+    divider: '#DBDBDB',
     background: '#FFF',
-    divider: '#EEEEEE',
     inputBackground: '#FFF',
     backgroundGray: '#F3F6F6',
+
+    // @todo: revisit
     dividerInverted: 'rgba(255, 255, 255, 0.1)',
     secondary: '#30C',
     muted: '#EEEEEE',
@@ -140,7 +141,7 @@ export const theme = {
       lineHeight: ['body', 'base'],
       letterSpacing: '-0.01em',
       fontFamily: 'body',
-      fontWeight: 'heading',
+      fontWeight: 'bold',
       color: 'white',
       textDecoration: 'none',
       display: 'block',
@@ -200,7 +201,7 @@ export const theme = {
       fontFamily: 'body',
       fontWeight: 'body',
       lineHeight: 'body',
-      fontSize: [3, 5],
+      fontSize: [3, 4],
       letterSpacing: ['-0.01em', '-0.015em'],
       color: 'text'
     },
@@ -208,7 +209,7 @@ export const theme = {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: 4,
+      fontSize: [3, 5],
       letterSpacing: '-0.01em'
     },
     caption: {
@@ -222,7 +223,7 @@ export const theme = {
     small: {
       fontFamily: 'body',
       fontWeight: 'body',
-      fontSize: [2, 4],
+      fontSize: [3, 4],
       lineHeight: ['body', 'heading'],
       letterSpacing: ['-0.005em', '-0.01em'],
       color: 'textGray'
@@ -269,7 +270,21 @@ export const theme = {
       px: 3,
       py: 2,
       border: '1px solid',
-      borderRadius: 'small'
+      borderRadius: 'button'
+    },
+    inverted: {
+      cursor: 'pointer',
+      lineHeight: 'base',
+      letterSpacing: '-0.01em',
+      fontSize: [3, 4],
+      fontWeight: 'heading',
+      textDecoration: 'none',
+      px: 5,
+      py: 4,
+      color: 'primary',
+      border: '1px solid',
+      borderColor: 'primary',
+      borderRadius: 'button'
     },
     smallSubtle: {
       cursor: 'pointer',
@@ -288,6 +303,8 @@ export const theme = {
   styles: {
     a: {
       color: 'inherit',
+      textDecoration: 'none',
+      cursor: 'pointer',
       '&:visited': {
         color: 'inherit'
       },

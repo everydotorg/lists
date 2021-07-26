@@ -51,5 +51,10 @@ export const styles: Style = {
       borderBottomColor: 'borderGray'
     },
     mb: [6, 9]
+  },
+  footerContainer: {
+    label: 'footer-container',
+    flex: 1,
+    alignItems: 'flex-end'
   }
 }

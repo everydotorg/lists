@@ -5,7 +5,7 @@ export const styles: Style = {
     position: ['fixed', 'absolute'],
     bottom: ['unset', 0],
     bg: 'white',
-    borderRadius: ['zero', 'card'],
+    borderRadius: ['zero', 'button'],
     p: 4,
     top: [0, 'unset'],
     m: [0, 4],

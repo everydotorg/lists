@@ -1,11 +1,6 @@
 import { Style } from 'types/Style'
 
 export const styles: Style = {
-  footerContainer: {
-    label: 'footer-container',
-    flex: 1,
-    alignItems: 'flex-end'
-  },
   footerContent: {
     label: 'footer-content',
     flex: 1,
