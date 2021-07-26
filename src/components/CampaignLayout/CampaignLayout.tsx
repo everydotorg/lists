@@ -11,14 +11,18 @@ const defaultDonationAmount = getDefaultAmountAbTest()
 
 type CampaignLayoutProps = {
   campaignInfo: CampaignInfo
-  hideBannerButtons?: boolean
+  showAbout?: boolean
+  showDiscover?: boolean
+  showBackExamples?: boolean
   children: ReactNode
 }
 
 // @TODO: delete
 export const CampaignLayout = ({
   campaignInfo,
-  hideBannerButtons = false,
+  showAbout = true,
+  showDiscover = false,
+  showBackExamples = false,
   children
 }: CampaignLayoutProps) => {
   const campaignTheme = {
@@ -70,7 +74,11 @@ export const CampaignLayout = ({
             display: 'flex'
           }}
         >
-          <Banner hideButtons={hideBannerButtons} />
+          <Banner
+            showAbout={showAbout}
+            showDiscover={showDiscover}
+            showBackExamples={showBackExamples}
+          />
           {children}
         </Box>
       </CampaignInfoContext.Provider>

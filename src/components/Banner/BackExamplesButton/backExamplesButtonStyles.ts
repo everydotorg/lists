@@ -1,15 +1,14 @@
 import { Style } from 'types/Style'
 
 export const styles: Style = {
-  group: {
+  backExamplesContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
     m: [2, 4],
-    justifyContent: ['space-between', 'unset'],
-    alignSelf: 'flex-end',
-    '& > :not(:last-child)': {
-      mr: 3
-    }
+    alignSelf: 'flex-start'
   },
-  aboutButton: {
+  backExamplesButton: {
     bg: 'rgba(0, 0, 0, 0.2)',
     color: 'white',
     backdropFilter: 'blur(100px)',

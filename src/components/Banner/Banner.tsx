@@ -1,8 +1,19 @@
 import { Box } from '@theme-ui/components'
-import { BannerButtons } from '../BannerButtons'
+import { AboutButton } from './AboutButton'
+import { DiscoverButton } from './DiscoverButton'
 import { styles } from './bannerStyles'
+import { BackExamplesButton } from './BackExamplesButton'
 
-export const Banner = ({ hideButtons = false }) => (
+interface BannerProps {
+  showAbout: boolean
+  showDiscover: boolean
+  showBackExamples: boolean
+}
+export const Banner = ({
+  showAbout,
+  showDiscover,
+  showBackExamples
+}: BannerProps) => (
   <Box sx={styles.banner}>
     <img
       sizes="50vw"
@@ -10,6 +21,8 @@ export const Banner = ({ hideButtons = false }) => (
       src="/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_2040.jpg"
       alt="Happy cat"
     />
-    {!hideButtons && <BannerButtons sx={styles.buttons} />}
+    {showBackExamples && <BackExamplesButton />}
+    {showAbout && <AboutButton />}
+    {showDiscover && <DiscoverButton />}
   </Box>
 )

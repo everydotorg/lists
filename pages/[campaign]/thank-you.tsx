@@ -6,7 +6,7 @@ export { getStaticProps, getStaticPaths } from 'src/campaings/ssr'
 
 const ThankYouPage = ({ campaignInfo }: PageProps) => {
   return (
-    <CampaignLayout campaignInfo={campaignInfo} hideBannerButtons>
+    <CampaignLayout campaignInfo={campaignInfo} showAbout={false} showDiscover>
       <ThankYou />
     </CampaignLayout>
   )

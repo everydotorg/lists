@@ -163,6 +163,28 @@ export const theme = {
         display: 'block'
       }
     },
+    secondary: {
+      variant: 'buttons.primary',
+      border: '1px solid',
+      borderColor: 'primary',
+      py: 2,
+      px: 3,
+      fontSize: [2, 4],
+      letterSpacing: '-0.01em',
+      lineHeight: 1.5,
+      transition: 'background .2s, color .2s'
+    },
+    secondaryInverted: {
+      variant: 'buttons.secondary',
+      bg: 'white',
+      color: 'primary',
+
+      '&:hover': {
+        bg: 'primary',
+        color: 'white'
+      }
+    },
+
     primarySmall: {
       variant: 'buttons.primary',
       px: 6,

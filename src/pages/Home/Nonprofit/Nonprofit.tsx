@@ -1,5 +1,6 @@
 import { styles } from './nonProfitStyles'
-import { Text, Flex, Box, Link } from 'theme-ui'
+import Link from 'next/link'
+import { Text, Flex, Box, Link as RebassLink } from 'theme-ui'
 import { HomeNonProfit } from '../Home'
 import { causeTextColor } from 'src/styles/theme'
 
@@ -43,15 +44,26 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             {nonprofit.about}
           </Text>
         </Flex>
+
         <Link
-          variant="button"
-          href={`/${nonprofit.slug}`}
-          sx={{
-            alignSelf: 'flex-start',
-            color: textColor
+          href={{
+            pathname: `/[campaign]`,
+            query: {
+              campaign: nonprofit.slug,
+              showBackToExamples: true
+            }
           }}
+          as={`/${nonprofit.slug}`}
         >
-          giveli.st/{nonprofit.slug}
+          <RebassLink
+            variant="button"
+            sx={{
+              alignSelf: 'flex-start',
+              color: textColor
+            }}
+          >
+            giveli.st/{nonprofit.slug}
+          </RebassLink>
         </Link>
       </Flex>
       <Flex
