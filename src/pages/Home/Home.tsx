@@ -79,10 +79,6 @@ export const Home = ({ nonProfits }: HomeProps) => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current)
     }
-
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
-    }
   }
 
   return (
