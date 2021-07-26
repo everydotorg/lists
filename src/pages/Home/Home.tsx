@@ -4,7 +4,7 @@ import { Hero } from './Hero'
 import { CampaignInfo } from 'types/CampaignInfo'
 import { styles } from './homeStyles'
 import { useEffect, useRef } from 'react'
-import { useBreakpointIndex } from '@theme-ui/match-media'
+import { useIsMobile } from 'src/hooks/useIsMobile'
 
 export type HomeNonProfit = Pick<
   CampaignInfo,
@@ -20,13 +20,13 @@ type Interval = NodeJS.Timeout
 export const Home = ({ nonProfits }: HomeProps) => {
   const listRef = useRef<HTMLDivElement>(null)
   const intervalRef = useRef<Interval | null>(null)
-  const breakpointIndex = useBreakpointIndex()
+  const desktop = !useIsMobile()
 
   useEffect(() => {
     const { current } = listRef
 
     // The autoscroll only applies on desktop
-    if (current && breakpointIndex < 3) {
+    if (current && desktop) {
       const id = setInterval(() => {
         if (current.scrollTop + current.offsetHeight < current.scrollHeight) {
           console.log('running')
@@ -47,7 +47,7 @@ export const Home = ({ nonProfits }: HomeProps) => {
     return () => {
       clearInterval(intervalRef.current as Interval)
     }
-  }, [breakpointIndex])
+  }, [desktop])
 
   const onUserInteraction = () => {
     if (intervalRef.current) {
