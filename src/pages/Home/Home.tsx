@@ -16,11 +16,13 @@ export type HomeProps = {
 }
 
 type Interval = NodeJS.Timeout
+type Timeout = NodeJS.Timeout
 
 export const Home = ({ nonProfits }: HomeProps) => {
   const listRef = useRef<HTMLDivElement>(null)
   const intervalRef = useRef<Interval | null>(null)
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = useRef<Timeout | null>(null)
+
   const desktop = !useIsMobile()
 
   useEffect(() => {
@@ -29,12 +31,14 @@ export const Home = ({ nonProfits }: HomeProps) => {
     // The autoscroll only applies on desktop
     if (current && desktop) {
       const handler = () => {
+        console.log('event')
+
         clearTimeout(timeoutRef.current as Interval)
 
-        timeoutRef.current = setTimeout(() => {
+        const timeoutId = setTimeout(() => {
           clearInterval(intervalRef.current as Interval)
 
-          intervalRef.current = setInterval(() => {
+          const intervalId = setInterval(() => {
             if (
               current.scrollTop + current.offsetHeight <
               current.scrollHeight
@@ -50,34 +54,20 @@ export const Home = ({ nonProfits }: HomeProps) => {
               clearInterval(intervalRef.current as Interval)
             }
           }, 500)
+
+          intervalRef.current = intervalId
         }, 3000)
+
+        timeoutRef.current = timeoutId
       }
 
-      listRef.current?.addEventListener('scroll', handler)
+      handler() // so it starts scrolling on first render
 
-      handler()
-
-      // const id = setInterval(() => {
-      //   if (current.scrollTop + current.offsetHeight < current.scrollHeight) {
-      //     console.log('running')
-
-      //     current.scrollTo({
-      //       top: current.scrollTop + 10
-      //     })
-      //   } else {
-      //     console.log('cleared')
-
-      //     clearInterval(intervalRef.current as Interval)
-      //   }
-      // }, 500)
-
-      // intervalRef.current = id
-
-      // handler()
+      current.addEventListener('scroll', handler)
 
       return () => {
         clearInterval(intervalRef.current as Interval)
-        clearTimeout(timeoutRef.current as Interval)
+        clearTimeout(timeoutRef.current as Timeout)
         current.removeEventListener('scroll', handler)
       }
     }
@@ -88,6 +78,10 @@ export const Home = ({ nonProfits }: HomeProps) => {
   const onUserInteraction = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current)
+    }
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
     }
   }
 
