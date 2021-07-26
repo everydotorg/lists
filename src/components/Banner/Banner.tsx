@@ -3,6 +3,7 @@ import { AboutButton } from './AboutButton'
 import { DiscoverButton } from './DiscoverButton'
 import { styles } from './bannerStyles'
 import { BackExamplesButton } from './BackExamplesButton'
+import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 
 interface BannerProps {
   showAbout: boolean
@@ -13,16 +14,15 @@ export const Banner = ({
   showAbout,
   showDiscover,
   showBackExamples
-}: BannerProps) => (
-  <Box sx={styles.banner}>
-    <img
-      sizes="50vw"
-      srcSet="/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_190.jpg 190w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_510.jpg 510w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_764.jpg 764w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_956.jpg 956w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1095.jpg 1095w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1268.jpg 1268w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1405.jpg 1405w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1563.jpg 1563w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1784.jpg 1784w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_2028.jpg 2028w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1949.jpg 1949w, /assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_2040.jpg 2040w"
-      src="/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_2040.jpg"
-      alt="Happy cat"
-    />
-    {showBackExamples && <BackExamplesButton />}
-    {showAbout && <AboutButton />}
-    {showDiscover && <DiscoverButton />}
-  </Box>
-)
+}: BannerProps) => {
+  const { bannerUrl } = useCampaignInfoContext()
+
+  return (
+    <Box sx={styles.banner}>
+      <img src={bannerUrl} alt="campaign banner" />
+      {showBackExamples && <BackExamplesButton />}
+      {showAbout && <AboutButton />}
+      {showDiscover && <DiscoverButton />}
+    </Box>
+  )
+}
