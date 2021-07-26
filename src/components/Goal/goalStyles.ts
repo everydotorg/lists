@@ -2,24 +2,30 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   goalContainer: {
-    pt: [3, 0]
+    mt: [3, 6],
+    p: [3, 6],
+    border: '1px solid',
+    borderColor: 'borderGray',
+    borderRadius: 'small',
+    flexDirection: 'column'
   },
   progressBar: {
-    backgroundColor: 'progressBg',
-    height: [null, '8px']
-  },
-  legend: {
-    flexDirection: 'column',
-    '& > *+*': {
-      mt: 1
+    height: ['12px', '24px'],
+    bg: 'transparent',
+    position: 'relative',
+    mb: [3, 6],
+    '&:after': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      opacity: 0.2,
+      bg: 'primary',
+      zIndex: 1
     }
   },
-  donated: {
-    color: 'primary'
-  },
-  goalDetails: {
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    mt: 3
-  }
+  legend: { flexDirection: 'column', flex: 1 },
+  legendValue: { color: 'primary' }
 }
