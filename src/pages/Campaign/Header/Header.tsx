@@ -7,7 +7,7 @@ interface HeaderProps {
   onClickDonate: () => void
 }
 export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
-  const { backgroundImageUrl, slug } = useCampaignInfoContext()
+  const { mobileBannerUrl, slug } = useCampaignInfoContext()
   const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}`
 
   return (
@@ -15,7 +15,7 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
       <Box
         sx={{
           ...styles.container,
-          backgroundImage: `url(${backgroundImageUrl})`
+          backgroundImage: `url(${mobileBannerUrl})`
         }}
       ></Box>
 

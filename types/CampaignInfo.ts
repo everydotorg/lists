@@ -1,4 +1,3 @@
-import { Currency } from './Currency'
 import { NonProfit } from './NonProfit'
 import { Sponsor } from './Sponsor'
 
@@ -8,18 +7,14 @@ export type CampaignInfo = {
   name: string
   primaryColor: string
   imageUrl: string
-  backgroundImageUrl: string // @todo: deprecate
-  thankYouImageUrl: string
+  mobileBannerUrl: string
   bannerUrl: string
   socialShareText: string
-  socialShareIncentive: string
   previewImage: string
-  logoUrl: string
   about: string
   fundingGoal: number
   cause: string
   nonprofits: NonProfit[]
   sponsor?: Sponsor
-  currenciesSupported?: Currency[]
   defaultDonationAmount: number
 }
