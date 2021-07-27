@@ -20,7 +20,7 @@ export const styles: Style = {
     px: [3, 6],
     py: [3, 4],
     m: [4, 6],
-    mt: [6, 9]
+    mt: [4, 0]
   },
   matchingTitle: {
     color: 'text',

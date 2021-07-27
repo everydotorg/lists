@@ -21,6 +21,9 @@ export const styles: Style = {
       mb: [3, 6]
     }
   },
+  progressGoal: {
+    mt: [3, 6]
+  },
   thankYouContainer: {
     label: 'thankYouContainer',
     flexDirection: 'column',

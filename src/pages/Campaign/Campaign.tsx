@@ -32,9 +32,10 @@ export const Campaign = (): JSX.Element => {
           <Text sx={styles.aboutText} variant="small">
             {about}
           </Text>
-          {progress && showGoalOnListPage && <Goal progress={progress} />}
         </Flex>
-
+        {progress && showGoalOnListPage && (
+          <Goal progress={progress} sx={styles.progressGoal} />
+        )}
         <MobileDonateButton onClick={goToDonation} />
         {sponsor && (
           <>

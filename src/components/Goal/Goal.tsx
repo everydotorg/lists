@@ -1,4 +1,4 @@
-import { Progress, Flex, Text } from 'theme-ui'
+import { Progress, Flex, Text, ThemeUIStyleObject } from 'theme-ui'
 import { Progress as ProgressType } from 'types/Progress'
 import { styles } from './goalStyles'
 
@@ -24,11 +24,12 @@ const Info = ({ value, label }: InfoProps) => (
 
 interface GoalProps {
   progress: ProgressType
+  sx?: ThemeUIStyleObject
 }
 
-export const Goal = ({ progress }: GoalProps) => {
+export const Goal = ({ progress, sx = {} }: GoalProps) => {
   return (
-    <Flex sx={styles.goalContainer}>
+    <Flex sx={{ ...styles.goalContainer, ...sx }}>
       <Progress
         sx={styles.progressBar}
         max={progress.goal}

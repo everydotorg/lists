@@ -32,7 +32,9 @@ export const ThankYou = (): JSX.Element | null => {
           dedicated to providing free tools that encourage individuals to take
           action and spread generosity.{' '}
         </Text>
-        {progress && showGoalOnThankyouPage && <Goal progress={progress} />}
+        {progress && showGoalOnThankyouPage && (
+          <Goal progress={progress} sx={styles.progressGoal} />
+        )}
       </Flex>
       <Divider space={[3, 6]} />
       <Flex sx={styles.cardList}>
