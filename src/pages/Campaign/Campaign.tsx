@@ -58,9 +58,7 @@ export const Campaign = (): JSX.Element => {
             <span>About giveli.st</span>
           </Button>
         </Box>
-        <Flex sx={styles.footerContainer}>
-          <Brand sx={{ flex: 1 }} />
-        </Flex>
+        <Brand sx={{ flex: 1 }} />
       </Flex>
     </Box>
   )

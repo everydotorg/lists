@@ -9,7 +9,7 @@ type BrandProps = {
 
 export const Brand = ({ sx = {} }: BrandProps) => {
   return (
-    <Flex sx={styles.brandContainer}>
+    <Flex sx={{ ...styles.brandContainer, ...sx }}>
       <Flex sx={styles.brandContent}>
         <Text variant="caption" sx={styles.givelistText}>
           giveli.st

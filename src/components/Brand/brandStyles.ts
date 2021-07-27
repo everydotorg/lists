@@ -3,7 +3,6 @@ import { Style } from 'types/Style'
 export const styles: Style = {
   brandContainer: {
     label: 'brand-container',
-    flex: 1,
     alignItems: 'flex-end'
   },
   brandContent: {
