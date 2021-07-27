@@ -16,11 +16,23 @@ export const Frequency = ({
   frequency,
   setFrequency
 }: FrequencyProps): JSX.Element => {
-  const transition = useTransition(frequency === DonationFrequency.OneTime, {
-    from: { transform: 'translateY(-100%)', opacity: 0, maxHeight: '0px' },
-    enter: { transform: 'translateY(0%)', opacity: 1, maxHeight: '400px' },
-    leave: { transform: 'translateY(-100%)', opacity: 0, maxHeight: '0px' },
-    expires: true,
+  const transition = useTransition(frequency !== DonationFrequency.Monthly, {
+    from: {
+      transform: 'translateY(-200%)',
+      opacity: 0,
+      maxHeight: '0px'
+    },
+    enter: {
+      transform: 'translateY(0%)',
+      opacity: 1,
+      maxHeight: '400px'
+    },
+    leave: {
+      transform: 'translateY(-200%)',
+      opacity: 0,
+      maxHeight: '0px'
+    },
+    expires: false,
     config: {
       ...config.default,
       duration: 400,
@@ -65,14 +77,16 @@ export const Frequency = ({
       {transition(
         (style, show) =>
           show && (
-            <AnimatedBox style={style} sx={styles.donationContainer}>
-              <Box sx={styles.donationContainerArrow}>
-                <ArrowUpIcon />
+            <AnimatedBox style={style}>
+              <Box sx={styles.donationContainer}>
+                <Box sx={styles.donationContainerArrow}>
+                  <ArrowUpIcon />
+                </Box>
+                <Text as="p" variant="small" sx={styles.donationText}>
+                  Monthly gifts help nonprofits focus on their mission and
+                  long-term impact, not fundraising.
+                </Text>
               </Box>
-              <Text as="p" variant="small" sx={styles.donationText}>
-                Monthly gifts help nonprofits focus on their mission and
-                long-term impact, not fundraising.
-              </Text>
             </AnimatedBox>
           )
       )}
