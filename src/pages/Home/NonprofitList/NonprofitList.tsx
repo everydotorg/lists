@@ -61,14 +61,13 @@ export const NonprofitList = ({ sx, nonProfits }: NonprofitListProps) => {
 
   const onUserInteraction = () => {
     if (desktop) {
-      console.log('onUserInteraction')
       clearTimers()
       autoscroll()
     }
   }
 
   return (
-    <Flex id="list" sx={sx} ref={listRef} onWheel={onUserInteraction}>
+    <Flex sx={sx} ref={listRef} onWheel={onUserInteraction}>
       {nonProfits.map((nonprofit) => (
         <Nonprofit nonprofit={nonprofit} key={nonprofit.slug} />
       ))}
