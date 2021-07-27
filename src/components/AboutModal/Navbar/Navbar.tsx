@@ -1,6 +1,6 @@
 import { CloseIcon } from 'src/components/CloseIcon'
 import { useAboutModal } from 'src/hooks/useAboutModal'
-import { Box, Flex, Text } from 'theme-ui'
+import { Box, Flex, Text, Link } from 'theme-ui'
 import { styles } from './navbarStyles'
 
 export type Section = 'about'
@@ -16,14 +16,16 @@ export const Navbar = ({ selected }: NavbarProps) => {
     <Flex sx={styles.navbarContainer}>
       <Flex sx={styles.menuContainer}>
         <Text
-          variant="caption"
           sx={{
             ...styles.menuItem,
-            ...(selected === 'about' ? { fontWeight: 'bold' } : {})
+            ...(selected === 'about' ? styles.menuItemSelected : {})
           }}
         >
           About
         </Text>
+        <Link href="mailto:contact@giveli.st" sx={styles.menuItem}>
+          Contact
+        </Link>
       </Flex>
       <Box sx={styles.closeContainer} onClick={() => aboutModal.setOpen(false)}>
         <CloseIcon />

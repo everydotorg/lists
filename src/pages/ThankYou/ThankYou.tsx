@@ -1,4 +1,4 @@
-import { Box, Flex, Button, Text } from 'theme-ui'
+import { Box, Flex, Button, Text, Link } from 'theme-ui'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import { facebookShare, twitterShare } from 'src/services/url'
 import { styles } from './thankYouStyles'
@@ -94,7 +94,13 @@ export const ThankYou = (): JSX.Element | null => {
           description="Take a 3 minute survey to help us shape the best Givelist experience for you."
           renderActions={
             <Flex sx={{ alignItems: 'flex-start' }}>
-              <Button variant="secondaryInverted">Begin survey</Button>
+              <Link
+                variant="buttons.secondaryInverted"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe0Rzl5TXdyZ64qkxVSFRbkTATJd2Gw6oeNnBnLgB50u0tw2A/viewform"
+                target="_blank"
+              >
+                Begin survey
+              </Link>
             </Flex>
           }
           inverted

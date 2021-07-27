@@ -14,7 +14,14 @@ export const styles: Style = {
     }
   },
   menuItem: {
-    color: 'primary'
+    fontSize: [2, 3],
+    fontWeight: 'body',
+    color: 'textGray',
+    cursor: 'pointer'
+  },
+  menuItemSelected: {
+    color: 'primary',
+    fontWeight: 'bold'
   },
   closeContainer: {
     cursor: 'pointer',

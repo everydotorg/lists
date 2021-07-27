@@ -324,17 +324,14 @@ export const theme = {
   },
   styles: {
     a: {
-      color: 'inherit',
+      color: 'primary',
       textDecoration: 'none',
       cursor: 'pointer',
       '&:visited': {
         color: 'inherit'
       },
       '&:active': {
-        color: 'inherit'
-      },
-      '&:link': {
-        color: 'inherit'
+        color: 'primary'
       }
     },
     root: {
