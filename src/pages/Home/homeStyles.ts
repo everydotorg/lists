@@ -12,6 +12,11 @@ export const styles: Style = {
   },
   givelistSection: {
     '-webkit-overflow-scrolling': 'touch',
+    // Safari & Chromium
+    '::-webkit-scrollbar': {
+      display: 'none'
+    },
+    'scrollbar-width': 'none', // firefox
     flex: [1, '57%'],
     overflow: 'auto',
     scrollBehavior: 'smooth',

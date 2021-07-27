@@ -1,7 +1,7 @@
 import { styles } from './nonProfitStyles'
 import Link from 'next/link'
 import { Text, Flex, Box, Link as RebassLink } from 'theme-ui'
-import { HomeNonProfit } from '../Home'
+import { HomeNonProfit } from '../../Home'
 import { causeTextColor } from 'src/styles/theme'
 import { useAboutModal } from 'src/hooks/useAboutModal'
 
