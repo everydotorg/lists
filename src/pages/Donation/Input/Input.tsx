@@ -41,8 +41,12 @@ export const Input = ({
 
   return (
     <Flex sx={styles.container}>
-      <Label sx={styles.label} htmlFor="donationAmount" variant="text.small">
-        How much to donate?
+      <Label
+        sx={{ ...styles.label, color: error ? 'error' : '' }}
+        htmlFor="donationAmount"
+        variant="text.small"
+      >
+        {error ? 'Please donate more than $10 USD' : 'How much to donate?'}
       </Label>
       <Flex sx={styles.inputContainer}>
         <Flex sx={styles.currencyContainer}>
@@ -58,9 +62,6 @@ export const Input = ({
           placeholder="Enter amount in USD"
         />
       </Flex>
-      <Text variant="error" sx={{ mt: '1px', alignSelf: 'flex-end' }}>
-        {error && 'Amount must be at least $10'}&nbsp;
-      </Text>
       <Flex sx={styles.addAmountContainer}>
         {amountsToAdd.map((amount) => (
           <Text
