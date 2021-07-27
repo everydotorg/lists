@@ -3,9 +3,8 @@ import { Style } from 'types/Style'
 export const styles: Style = {
   footerContent: {
     label: 'footer-content',
-    flex: 1,
     justifyContent: 'space-between',
-    p: 6,
+    p: [4, 6],
     borderTop: '1px solid',
     borderTopColor: 'borderGray'
   },

@@ -98,7 +98,7 @@ export const Donation = (): JSX.Element => {
           </Button>
         </Box>
         <Disclaimer />
-        <Brand />
+        <Brand sx={{ flex: 1 }} />
       </Flex>
     </Box>
   )

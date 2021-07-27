@@ -6,6 +6,7 @@ import { getDefaultAmountAbTest } from 'src/services/donation-amount-ab-test'
 import { theme } from 'src/styles/theme'
 import { Box, ThemeProvider } from 'theme-ui'
 import { CampaignInfo } from 'types/CampaignInfo'
+import { AboutModalProvider } from 'src/contexts/AboutModalContext'
 
 const defaultDonationAmount = getDefaultAmountAbTest()
 
@@ -74,12 +75,14 @@ export const CampaignLayout = ({
             display: 'flex'
           }}
         >
-          <Banner
-            showAbout={showAbout}
-            showDiscover={showDiscover}
-            showBackExamples={showBackExamples}
-          />
-          {children}
+          <AboutModalProvider>
+            <Banner
+              showAbout={showAbout}
+              showDiscover={showDiscover}
+              showBackExamples={showBackExamples}
+            />
+            {children}
+          </AboutModalProvider>
         </Box>
       </CampaignInfoContext.Provider>
     </ThemeProvider>

@@ -35,7 +35,6 @@ export const styles: Style = {
     width: '100%',
     borderRadius: 'button',
     backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    mixBlendMode: 'multiply'
+    backgroundPosition: 'center'
   }
 }

@@ -100,7 +100,7 @@ export const ThankYou = (): JSX.Element | null => {
           inverted
         />
       </Flex>
-      <Brand />
+      <Brand sx={{ flex: 1 }} />
     </Box>
   )
 }

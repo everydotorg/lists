@@ -3,12 +3,14 @@ import Link from 'next/link'
 import { Text, Flex, Box, Link as RebassLink } from 'theme-ui'
 import { HomeNonProfit } from '../Home'
 import { causeTextColor } from 'src/styles/theme'
+import { useAboutModal } from 'src/hooks/useAboutModal'
 
 type NonprofitProps = {
   nonprofit: HomeNonProfit
 }
 
 export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
+  const aboutModal = useAboutModal()
   const textColor = causeTextColor(nonprofit.cause)
 
   return (
@@ -75,6 +77,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         <Box
           sx={{
             ...styles.image,
+            ...(aboutModal.open ? {} : { mixBlendMode: 'multiply' }), // this doesnt play nicely with backdrop
             backgroundImage: `url(${nonprofit.imageUrl})`
           }}
         />

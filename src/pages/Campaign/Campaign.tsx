@@ -7,10 +7,13 @@ import { useRouter } from 'next/router'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import { Brand } from 'src/components/Brand'
 import { Divider } from 'src/components/Divider'
+import { useAboutModal } from 'src/hooks/useAboutModal'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor } = useCampaignInfoContext()
+
   const router = useRouter()
+  const aboutModal = useAboutModal()
 
   const goToDonation = () => router.push(`/${slug}/donate`)
 
@@ -52,12 +55,13 @@ export const Campaign = (): JSX.Element => {
             sx={styles.aboutButton}
             type="button"
             variant="primaryInverted"
+            onClick={() => aboutModal.setOpen(true)}
           >
             <span>About giveli.st</span>
           </Button>
         </Box>
         <Flex sx={styles.footerContainer}>
-          <Brand />
+          <Brand sx={{ flex: 1 }} />
         </Flex>
       </Flex>
     </Box>

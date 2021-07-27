@@ -1,13 +1,16 @@
 import { styles } from './heroStyles'
 import { Brand } from 'src/components/Brand'
-import { Link, Flex, Text } from 'theme-ui'
+import { Button, Flex, Text } from 'theme-ui'
 import { SurveyButton } from './SurveyButton'
+import { useAboutModal } from 'src/hooks/useAboutModal'
 
 export const Hero = () => {
+  const aboutModal = useAboutModal()
+
   return (
     <>
       <Flex sx={styles.brandContainer}>
-        <Brand />
+        <Brand sx={{ flex: 1 }} />
       </Flex>
       <Flex sx={styles.textContainer}>
         <Text as="h1" variant="h1">
@@ -20,13 +23,13 @@ export const Hero = () => {
       </Flex>
       <Flex sx={styles.buttonsContainer}>
         <SurveyButton />
-        <Link
-          href="https://giveli.st"
-          variant="inverted"
-          sx={{ width: '100%', textAlign: 'center' }}
+        <Button
+          variant="primaryInverted"
+          sx={{ borderColor: 'primary' }}
+          onClick={() => aboutModal.setOpen(true)}
         >
-          Read more about giveli.st
-        </Link>
+          <span>Read more about giveli.st</span>
+        </Button>
       </Flex>
     </>
   )

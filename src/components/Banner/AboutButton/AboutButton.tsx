@@ -1,10 +1,9 @@
-import { useState } from 'react'
+import { useAboutModal } from 'src/hooks/useAboutModal'
 import { Flex, Button } from 'theme-ui'
-import { About } from '../../../pages/Campaign/About'
 import { styles } from './aboutButtonStyles'
 
 export const AboutButton = () => {
-  const [showPopup, setShowPopup] = useState(false)
+  const aboutModal = useAboutModal()
 
   return (
     <>
@@ -13,13 +12,11 @@ export const AboutButton = () => {
           id="open-about"
           variant="primarySmallInverted"
           sx={styles.aboutButton}
-          onClick={() => setShowPopup(true)}
+          onClick={() => aboutModal.setOpen(true)}
         >
           <span>About giveli.st</span>
         </Button>
       </Flex>
-
-      {showPopup && <About onClose={() => setShowPopup(false)} />}
     </>
   )
 }

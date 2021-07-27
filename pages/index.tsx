@@ -1,7 +1,10 @@
 import { GetStaticProps } from 'next'
 import { campaigns } from 'src/campaings/ssr'
+import { AboutModalProvider } from 'src/contexts/AboutModalContext'
 import { Home, HomeProps } from 'src/pages/Home'
 import { getCampaignInfo } from 'src/services/getCampaignInfo'
+import { ThemeProvider } from 'theme-ui'
+import { theme } from 'src/styles/theme'
 
 export const getStaticProps: GetStaticProps = async () => {
   const nonProfits = campaigns
@@ -22,7 +25,13 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const Homepage = ({ nonProfits }: HomeProps) => {
-  return <Home nonProfits={nonProfits} />
+  return (
+    <ThemeProvider theme={theme}>
+      <AboutModalProvider>
+        <Home nonProfits={nonProfits} />
+      </AboutModalProvider>
+    </ThemeProvider>
+  )
 }
 
 export default Homepage

@@ -1,11 +1,15 @@
 import React from 'react'
-import { Flex, Text } from 'theme-ui'
+import { Flex, Text, ThemeUIStyleObject } from 'theme-ui'
 import { EveryOrgLogo } from '../EveryOrgLogo'
 import { styles } from './brandStyles'
 
-export const Brand = () => {
+type BrandProps = {
+  sx?: ThemeUIStyleObject
+}
+
+export const Brand = ({ sx = {} }: BrandProps) => {
   return (
-    <Flex sx={styles.footerContent}>
+    <Flex sx={{ ...styles.footerContent, ...sx }}>
       <Text variant="caption" sx={styles.givelistText}>
         giveli.st
       </Text>

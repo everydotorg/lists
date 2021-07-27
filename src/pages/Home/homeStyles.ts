@@ -6,12 +6,13 @@ export const styles: Style = {
     flexDirection: ['column-reverse', 'row']
   },
   heroSection: {
-    flex: '43%',
+    flex: [1, '43%'],
     flexBasis: 'auto',
     flexDirection: 'column'
   },
   givelistSection: {
     '-webkit-overflow-scrolling': 'touch',
+    flex: [1, '57%'],
     overflow: 'auto',
     flexDirection: 'column',
     p: 5,
