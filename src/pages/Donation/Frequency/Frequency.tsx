@@ -18,7 +18,7 @@ export const Frequency = ({
 }: FrequencyProps): JSX.Element => {
   const transition = useTransition(frequency !== DonationFrequency.Monthly, {
     from: {
-      transform: 'translateY(-200%)',
+      transform: 'translateY(-50%)',
       opacity: 0,
       maxHeight: '0px'
     },
@@ -28,14 +28,14 @@ export const Frequency = ({
       maxHeight: '400px'
     },
     leave: {
-      transform: 'translateY(-200%)',
+      transform: 'translateY(-50%)',
       opacity: 0,
       maxHeight: '0px'
     },
     expires: false,
     config: {
       ...config.default,
-      duration: 400,
+      duration: 600,
       easing: cubicBezier(0.55, 0.08, 0, 1)
     }
   })
