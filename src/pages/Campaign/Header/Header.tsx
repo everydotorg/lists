@@ -29,15 +29,15 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
         >
           giveli.st/{slug}
         </CopyToClipboard>
-        <Button
-          id="campaign-desktop-donate"
-          sx={styles.donateButton}
-          onClick={onClickDonate}
-          variant="primarySmall"
-        >
-          <span>Donate</span>
-        </Button>
       </Box>
+      <Button
+        id="campaign-desktop-donate"
+        sx={styles.donateButton}
+        onClick={onClickDonate}
+        variant="primarySmall"
+      >
+        <span>Donate</span>
+      </Button>
     </>
   )
 }

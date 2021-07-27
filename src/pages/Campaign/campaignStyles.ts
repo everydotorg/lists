@@ -25,10 +25,6 @@ export const styles: Style = {
     color: 'textGray',
     lineHeight: 1.5
   },
-  buttonContainer: {
-    display: [null, 'none'],
-    mt: 6
-  },
   aboutButtonContainer: {
     mx: 4,
     display: [null, 'none'],
@@ -36,9 +32,6 @@ export const styles: Style = {
   },
   aboutButton: {
     mt: 6,
-    width: '100%'
-  },
-  submitButton: {
     width: '100%'
   },
   nonprofitsContainer: {
