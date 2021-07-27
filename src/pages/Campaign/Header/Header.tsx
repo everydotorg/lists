@@ -2,13 +2,15 @@ import { Box, Button } from 'theme-ui'
 import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import { styles } from './headerStyles'
+import { baseUrlWithPaths } from 'src/services/url'
 
 interface HeaderProps {
   onClickDonate: () => void
 }
+
 export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
   const { mobileBannerUrl, slug } = useCampaignInfoContext()
-  const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}`
+  const shareUrl = baseUrlWithPaths(slug)
 
   return (
     <>

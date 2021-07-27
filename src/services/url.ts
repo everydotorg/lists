@@ -4,6 +4,17 @@ interface Obj {
   [key: string]: string | number | undefined | null
 }
 
+export const baseUrl = () => {
+  const base = process.env.NEXT_PUBLIC_VERCEL_URL
+
+  const hasProtocol = base?.includes('http')
+
+  return hasProtocol ? base : 'https://' + base
+}
+
+export const baseUrlWithPaths = (...paths: string[]) =>
+  baseUrl() + '/' + paths.join('/')
+
 export const objectToParams = (object: Obj): string => {
   const params = new URLSearchParams()
 
@@ -33,7 +44,7 @@ export const createEveryUrl = (
     amount,
     no_exit: 1,
     share_info: 1,
-    success_url: `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}/thank-you`,
+    success_url: baseUrlWithPaths(slug, 'thank-you'),
     ...extras
   })
 

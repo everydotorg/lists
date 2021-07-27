@@ -7,6 +7,7 @@ import { theme } from 'src/styles/theme'
 import { Box, ThemeProvider } from 'theme-ui'
 import { CampaignInfo } from 'types/CampaignInfo'
 import { AboutModalProvider } from 'src/contexts/AboutModalContext'
+import { baseUrlWithPaths } from 'src/services/url'
 
 const defaultDonationAmount = getDefaultAmountAbTest()
 
@@ -52,21 +53,33 @@ export const CampaignLayout = ({
           />
           <title>{campaignInfo.name}</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="description" content={campaignInfo.socialShareText} />
+
+          {/* og */}
           <meta property="og:title" content={campaignInfo.name} />
           <meta property="og:type" content="website" />
           <meta
             property="og:url"
-            content={`https://giveli.st/${campaignInfo.slug}`}
+            content={baseUrlWithPaths(campaignInfo.slug)}
           />
           <meta
             property="og:description"
             content={campaignInfo.socialShareText}
           />
           <meta property="og:image" content={campaignInfo.previewImage} />
+
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
           <meta
-            name="description"
-            content="giveli.st a simple and fast way to create and share your own list of recommended nonprofits."
+            name="twitter:url"
+            content={baseUrlWithPaths(campaignInfo.slug)}
           />
+          <meta name="twitter:title" content={campaignInfo.name} />
+          <meta
+            name="twitter:description"
+            content={campaignInfo.socialShareText}
+          />
+          <meta name="twitter:image" content={campaignInfo.previewImage} />
         </Head>
         <Box
           sx={{

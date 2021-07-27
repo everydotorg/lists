@@ -7,7 +7,7 @@
   "imageUrl": "/assets/endfactoryfarming/image.png",
   "bannerUrl": "/assets/banner.png",
   "socialShareText": "Share this",
-  "previewImage": "/assets/campaign/June_4th_birthday_BUB_A_kxcvzj_c_scale_w_1095.jpg",
+  "previewImage": "https://givelist-git-pilot-2-p22.vercel.app/assets/background.jpeg",
   "about": "This is the about text of LGBTQ+ Rights.",
   "cause": "humans",
   "fundingGoal": 50000,

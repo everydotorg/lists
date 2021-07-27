@@ -1,6 +1,6 @@
 import { Box, Flex, Button, Text, Link } from 'theme-ui'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
-import { facebookShare, twitterShare } from 'src/services/url'
+import { baseUrlWithPaths, facebookShare, twitterShare } from 'src/services/url'
 import { styles } from './thankYouStyles'
 import { Facebook } from 'src/components/Facebook'
 import { Twitter } from 'src/components/Twitter'
@@ -17,7 +17,7 @@ export const ThankYou = (): JSX.Element | null => {
   const progress = useProgressData()
 
   const showSignupCard = true // Probably we will get this value from the url
-  const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}`
+  const shareUrl = baseUrlWithPaths(slug)
 
   return (
     <Box sx={styles.page}>
