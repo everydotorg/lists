@@ -8,9 +8,13 @@ import { Divider } from 'src/components/Divider'
 import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { Card } from './Card'
 import { Brand } from 'src/components/Brand'
+import { useProgressData } from 'src/hooks/useProgressData'
+import { Goal } from 'src/components/Goal'
 
 export const ThankYou = (): JSX.Element | null => {
-  const { slug, socialShareText, name } = useCampaignInfoContext()
+  const { slug, socialShareText, name, showGoalOnThankyouPage } =
+    useCampaignInfoContext()
+  const progress = useProgressData()
 
   const showSignupCard = true // Probably we will get this value from the url
   const shareUrl = `${process.env.NEXT_PUBLIC_VERCEL_URL}/${slug}`
@@ -28,6 +32,9 @@ export const ThankYou = (): JSX.Element | null => {
           dedicated to providing free tools that encourage individuals to take
           action and spread generosity.{' '}
         </Text>
+        {progress && showGoalOnThankyouPage && (
+          <Goal progress={progress} sx={styles.progressGoal} />
+        )}
       </Flex>
       <Divider space={[3, 6]} />
       <Flex sx={styles.cardList}>

@@ -9,12 +9,15 @@ import { Brand } from 'src/components/Brand'
 import { Divider } from 'src/components/Divider'
 import { useAboutModal } from 'src/hooks/useAboutModal'
 import { MobileDonateButton } from './MobileDonateButton'
+import { Goal } from 'src/components/Goal'
+import { useProgressData } from 'src/hooks/useProgressData'
 
 export const Campaign = (): JSX.Element => {
-  const { slug, name, about, nonprofits, sponsor } = useCampaignInfoContext()
-
+  const { slug, name, about, nonprofits, sponsor, showGoalOnListPage } =
+    useCampaignInfoContext()
   const router = useRouter()
   const aboutModal = useAboutModal()
+  const progress = useProgressData()
 
   const goToDonation = () => router.push(`/${slug}/donate`)
 
@@ -30,7 +33,9 @@ export const Campaign = (): JSX.Element => {
             {about}
           </Text>
         </Flex>
-
+        {progress && showGoalOnListPage && (
+          <Goal progress={progress} sx={styles.progressGoal} />
+        )}
         <MobileDonateButton onClick={goToDonation} />
         {sponsor && (
           <>

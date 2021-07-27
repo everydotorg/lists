@@ -34,6 +34,7 @@ export const styles: Style = {
     mt: 6,
     width: '100%'
   },
+  progressGoal: { m: [4, 6], mt: [0, 0] },
   nonprofitsContainer: {
     border: '1px solid',
     borderColor: 'borderGray',
