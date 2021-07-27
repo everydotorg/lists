@@ -8,6 +8,7 @@ import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import { Brand } from 'src/components/Brand'
 import { Divider } from 'src/components/Divider'
 import { useAboutModal } from 'src/hooks/useAboutModal'
+import { MobileDonateButton } from './MobileDonateButton'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor } = useCampaignInfoContext()
@@ -28,22 +29,14 @@ export const Campaign = (): JSX.Element => {
           <Text sx={styles.aboutText} variant="small">
             {about}
           </Text>
-          <Box sx={styles.buttonContainer}>
-            <Button
-              id="campaign-mobile-donate"
-              sx={styles.submitButton}
-              onClick={goToDonation}
-              type="button"
-            >
-              <span>Donate</span>
-            </Button>
-          </Box>
-          {sponsor && (
-            <>
-              <Matching sponsor={sponsor} />
-            </>
-          )}
         </Flex>
+
+        <MobileDonateButton onClick={goToDonation} />
+        {sponsor && (
+          <>
+            <Matching sponsor={sponsor} />
+          </>
+        )}
         {nonprofits && (
           <Box sx={styles.nonprofitsContainer}>
             <NonProfitList list={nonprofits} />
