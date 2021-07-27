@@ -3,7 +3,7 @@ import { Nonprofit } from './Nonprofit'
 import { Hero } from './Hero'
 import { CampaignInfo } from 'types/CampaignInfo'
 import { styles } from './homeStyles'
-import { useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { useIsMobile } from 'src/hooks/useIsMobile'
 
 export type HomeNonProfit = Pick<
@@ -15,69 +15,61 @@ export type HomeProps = {
   nonProfits: Array<HomeNonProfit>
 }
 
-type Interval = NodeJS.Timeout
-type Timeout = NodeJS.Timeout
-
 export const Home = ({ nonProfits }: HomeProps) => {
   const listRef = useRef<HTMLDivElement>(null)
-  const intervalRef = useRef<Interval | null>(null)
-  const timeoutRef = useRef<Timeout | null>(null)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const desktop = !useIsMobile()
 
+  const clearTimers = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+      intervalRef.current = null
+    }
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current)
+      timeoutRef.current = null
+    }
+  }
+
+  const autoscroll = useCallback(() => {
+    const ref = listRef.current as HTMLDivElement
+
+    timeoutRef.current = setTimeout(() => {
+      intervalRef.current = setInterval(() => {
+        if (ref.scrollTop + ref.offsetHeight < ref.scrollHeight) {
+          ref.scrollTo({
+            top: ref.scrollTop + 1,
+            behavior: 'smooth'
+          })
+        } else {
+          clearTimers()
+          ref.scrollTo({ top: 0, behavior: 'smooth' })
+          autoscroll()
+        }
+      }, 50)
+    }, 3000)
+  }, [])
+
   useEffect(() => {
-    const { current } = listRef
-
-    // The autoscroll only applies on desktop
-    if (current && desktop) {
-      const handler = () => {
-        console.log('event')
-
-        clearTimeout(timeoutRef.current as Interval)
-
-        const timeoutId = setTimeout(() => {
-          clearInterval(intervalRef.current as Interval)
-
-          const intervalId = setInterval(() => {
-            if (
-              current.scrollTop + current.offsetHeight <
-              current.scrollHeight
-            ) {
-              console.log('running')
-
-              current.scrollTo({
-                top: current.scrollTop + 10
-              })
-            } else {
-              console.log('cleared')
-
-              clearInterval(intervalRef.current as Interval)
-            }
-          }, 500)
-
-          intervalRef.current = intervalId
-        }, 3000)
-
-        timeoutRef.current = timeoutId
-      }
-
-      handler() // so it starts scrolling on first render
-
-      current.addEventListener('scroll', handler)
+    if (listRef.current && desktop) {
+      autoscroll()
 
       return () => {
-        clearInterval(intervalRef.current as Interval)
-        clearTimeout(timeoutRef.current as Timeout)
-        current.removeEventListener('scroll', handler)
+        clearTimers()
       }
     }
 
     return () => null
-  }, [desktop])
+  }, [autoscroll, desktop])
 
   const onUserInteraction = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current)
+    if (desktop) {
+      console.log('onUserInteraction')
+      clearTimers()
+      autoscroll()
     }
   }
 
