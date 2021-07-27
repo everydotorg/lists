@@ -55,22 +55,22 @@ export const theme = {
   },
   colors: {
     // causes colors
-    justice: '#C8E2E3',
+    justice: '#E3F0F1',
     justiceText: '#2F7074',
 
-    animals: '#F6DCC1',
+    animals: '#FAEDE0',
     animalsText: '#AC6B28',
 
-    education: '#D8E4F2',
+    education: '#EBF1F8',
     educationText: '#4D6B8E',
 
-    humans: '#F7E5C5',
+    humans: '#FBF2E2',
     humansText: '#A47929',
 
-    health: '#F0D3E4',
+    health: '#F8E9F1',
     healthText: '#944C75',
 
-    environment: '#DBE7BB',
+    environment: '#EDF3DD',
     environmentText: '#5E7D0F',
 
     // apps colors
