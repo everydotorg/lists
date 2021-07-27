@@ -11,6 +11,7 @@
   "about": "This is the about text of Anti-Racism and Justice for all.",
   "cause": "justice",
   "fundingGoal": 50000,
+  "showGoalOnListPage": true,
   "sponsor": {
     "ratio": "1-for-1",
     "threshold": 25,
