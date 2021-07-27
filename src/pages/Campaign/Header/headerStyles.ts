@@ -17,24 +17,16 @@ export const styles: Style = {
     justifyContent: 'space-between',
     display: ['none', 'flex'],
     p: 6,
-    position: 'sticky',
-    bg: 'white',
-    top: 0,
-    zIndex: [null, 1]
-  },
-  logo: {
-    backgroundColor: 'white',
-    position: 'absolute',
-    top: '1rem',
-    right: '1rem'
-  },
-  logoDesktop: {
-    backgroundColor: 'white',
-    mr: 3
+    bg: 'white'
   },
   donateButton: {
     fontSize: 3,
-    letterSpacing: '-0.01em'
+    letterSpacing: '-0.01em',
+    position: 'fixed',
+    m: 6,
+    top: 0,
+    right: 0,
+    zIndex: [null, 1]
   },
   linkButton: {
     fontWeight: '400',
