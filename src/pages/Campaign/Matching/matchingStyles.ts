@@ -16,7 +16,7 @@ export const styles: Style = {
   container: {
     border: '1px solid',
     borderColor: 'borderGray',
-    borderRadius: 'button',
+    borderRadius: 'small',
     px: [3, 4],
     py: [3, 4],
     m: [4, 6],

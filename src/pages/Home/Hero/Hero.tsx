@@ -25,7 +25,7 @@ export const Hero = () => {
         <SurveyButton />
         <Button
           variant="primaryInverted"
-          sx={{ borderColor: 'primary' }}
+          sx={{ borderColor: 'primary', px: 4 }}
           onClick={() => aboutModal.setOpen(true)}
         >
           <span>Read more about giveli.st</span>

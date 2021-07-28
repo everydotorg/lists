@@ -3,12 +3,13 @@ import { Style } from 'types/Style'
 export const styles: Style = {
   container: {
     flexDirection: 'column',
-    px: 4,
+    px: [4, 6],
     mt: [7, 9]
   },
   inputContainer: {
     position: 'relative',
-    width: '100%'
+    width: '100%',
+    height: ['3rem', '3.5rem']
   },
   currencyContainer: {
     ml: 6,
@@ -19,7 +20,7 @@ export const styles: Style = {
     pointerEvents: 'none'
   },
   label: {
-    mb: [3, 6],
+    mb: [3, 4],
     fontWeight: 400
   },
   inputNumber: {

@@ -3,11 +3,11 @@ import { Style } from 'types/Style'
 export const styles: Style = {
   container: {
     mt: [7, 9],
-    px: 4
+    px: [4, 6]
   },
   label: {
     fontWeight: 400,
-    mb: [3, 6]
+    mb: [3, 4]
   },
   input: {
     display: 'none'
@@ -19,6 +19,7 @@ export const styles: Style = {
     borderRadius: 'small',
     p: 1,
     mb: [4, 6],
+    height: ['3rem', '3.5rem'],
     '& > #one-time:not(:checked) + label': {
       '&::before': {
         transform: 'translateX(100%)'
