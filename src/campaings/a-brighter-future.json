@@ -3,18 +3,18 @@
   "everySlug": "stem.future",
   "name": "Science and Technology for a Brighter Future",
   "primaryColor": "#34D399",
-  "mobileBannerUrl": "/assets/background.jpeg",
-  "imageUrl": "/assets/endfactoryfarming/image.png",
-  "bannerUrl": "/assets/banner.png",
+  "mobileBannerUrl": "https://i.imgur.com/O0fNKAr.png",
+  "imageUrl": "https://i.imgur.com/O0fNKAr.png",
+  "bannerUrl": "https://i.imgur.com/M4VVTWt.jpg",
   "socialShareText": "Share this",
-  "previewImage": "https://givelist-git-pilot-2-p22.vercel.app/assets/background.jpeg",
-  "about": "This Givelist supports nonprofits dedicated to ending the abuse of animals raised for food.",
+  "previewImage": "https://i.imgur.com/O0fNKAr.png",
+  "about": "Solving some of the world's biggest challenges with cutting edge research and policy.",
   "cause": "animals",
   "fundingGoal": 50000,
   "sponsor": {
     "ratio": "1-for-1",
     "threshold": 25,
-    "description": "We will contribute an extra donation on top of yours, to the same value (up to $25 per donation). These matching funds are kindly provided by Every.org up to a total value of $10,000"
+    "description": "Amplify your giving! We will match your generous donation dollar-for-dollar up to $25 each time until we reach $10,000 total matched! You can donate as many times as you like. Matching funds are kindly provided by Every.org"
   },
   "nonprofits": [
     {

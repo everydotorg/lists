@@ -36,9 +36,7 @@ export const About = () => {
         </CardLink>
 
         <CardLink title="Made by p22.studio" href="https://p22.studio">
-          A registered 501(c)(3) nonprofit on a mission to provide free
-          technologies and tools that encourage individuals to take action and
-          spread generosity
+          A digital design and development studio.
         </CardLink>
 
         <CardLink
