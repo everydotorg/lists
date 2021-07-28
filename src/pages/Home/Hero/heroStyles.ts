@@ -4,9 +4,6 @@ export const styles: Style = {
   brandContainer: {
     alignItems: 'flex-start'
   },
-  header: {
-    fontSize: [6, 7]
-  },
   textContainer: {
     flex: 1,
     px: [4, 6],

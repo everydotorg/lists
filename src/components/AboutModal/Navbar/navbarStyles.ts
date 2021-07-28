@@ -9,11 +9,13 @@ export const styles: Style = {
     p: [4, 6]
   },
   menuContainer: {
+    alignItems: 'flex-start',
     '& > :not(:last-child)': {
       mr: 5
     }
   },
   menuItem: {
+    height: ['auto', 'auto'],
     fontSize: [2, 3],
     fontWeight: 'body',
     color: 'textGray',
