@@ -1,9 +1,9 @@
 import { styles } from './nonProfitStyles'
-import Link from 'next/link'
 import { Text, Flex, Box, Link as RebassLink } from 'theme-ui'
 import { HomeNonProfit } from '../../Home'
 import { causeTextColor } from 'src/styles/theme'
 import { useAboutModal } from 'src/hooks/useAboutModal'
+import { useRouter } from 'next/router'
 
 type NonprofitProps = {
   nonprofit: HomeNonProfit
@@ -13,12 +13,26 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
   const aboutModal = useAboutModal()
   const textColor = causeTextColor(nonprofit.cause)
 
+  const router = useRouter()
+
   return (
     <Flex
       sx={{
         ...styles.container,
         backgroundColor: nonprofit.cause
       }}
+      onClick={() =>
+        router.push(
+          {
+            pathname: '/[campaign]',
+            query: {
+              campaign: nonprofit.slug,
+              showBackToExamples: true
+            }
+          },
+          `/${nonprofit.slug}`
+        )
+      }
     >
       <Flex
         sx={{
@@ -47,26 +61,16 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           </Text>
         </Flex>
 
-        <Link
-          href={{
-            pathname: `/[campaign]`,
-            query: {
-              campaign: nonprofit.slug,
-              showBackToExamples: true
-            }
+        <RebassLink
+          variant="button"
+          as="span"
+          sx={{
+            alignSelf: 'flex-start',
+            color: textColor
           }}
-          as={`/${nonprofit.slug}`}
         >
-          <RebassLink
-            variant="button"
-            sx={{
-              alignSelf: 'flex-start',
-              color: textColor
-            }}
-          >
-            giveli.st/{nonprofit.slug}
-          </RebassLink>
-        </Link>
+          giveli.st/{nonprofit.slug}
+        </RebassLink>
       </Flex>
       <Flex
         sx={{

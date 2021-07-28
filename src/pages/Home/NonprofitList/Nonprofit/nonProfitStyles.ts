@@ -4,7 +4,8 @@ export const styles: Style = {
   container: {
     p: [4, 5],
     flexDirection: ['column-reverse', 'row'],
-    borderRadius: 'button'
+    borderRadius: 'button',
+    cursor: 'pointer'
   },
   section: {
     flex: 1
