@@ -4,7 +4,7 @@ export const styles: Style = {
   banner: {
     display: ['none', 'flex'],
     position: 'relative',
-    flex: '57%',
+    flex: [null, '50%', '57%'],
 
     '& img': {
       objectFit: 'cover',
