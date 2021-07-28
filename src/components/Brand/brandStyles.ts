@@ -9,6 +9,7 @@ export const styles: Style = {
     label: 'brand-content',
     flex: 1,
     justifyContent: 'space-between',
+    alignItems: 'center',
     p: [4, 6]
   },
   withBorderTop: {
