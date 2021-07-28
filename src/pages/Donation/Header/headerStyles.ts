@@ -4,8 +4,8 @@ export const styles: Style = {
   headerContainer: {
     justifyContent: 'space-between',
     alignItems: 'center',
-    p: 4,
-    pb: 0
+    p: [4, 6],
+    pb: [0, 0]
   },
   firstLine: {
     flexDirection: 'column',

@@ -145,6 +145,7 @@ export const theme = {
       color: 'white',
       textDecoration: 'none',
       display: 'block',
+      height: ['3rem', '3.5rem'],
       '&:hover': {
         opacity: '0.85'
       },
@@ -169,10 +170,11 @@ export const theme = {
       borderColor: 'primary',
       py: 2,
       px: 3,
-      fontSize: [2, 4],
+      fontSize: [2, 3],
       letterSpacing: '-0.01em',
-      lineHeight: 1.5,
-      transition: 'background .2s, color .2s'
+      lineHeight: 1.25,
+      transition: 'background .2s, color .2s',
+      height: ['2rem', '2.5rem']
     },
     secondaryInverted: {
       variant: 'buttons.secondary',
@@ -193,7 +195,9 @@ export const theme = {
       fontWeight: '500',
       fontSize: [3, 4],
       lineHeight: 'body',
-      letterSpacing: '-0.01em'
+      letterSpacing: '-0.01em',
+      height: 'auto',
+      transition: 'background .2s, color .2s, opacity .2s'
     },
     primarySmallInverted: {
       variant: 'buttons.primarySmall',
@@ -293,7 +297,6 @@ export const theme = {
       py: 2,
       border: '1px solid',
       borderRadius: 'button',
-      transition: 'background .2s, color .2s',
       '& > span': {
         // hack to center the text of the button
         // https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
@@ -331,6 +334,8 @@ export const theme = {
   },
   styles: {
     a: {
+      label: 'anchor',
+      height: ['3rem', '3.5rem'],
       color: 'primary',
       textDecoration: 'none',
       cursor: 'pointer',

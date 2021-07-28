@@ -11,6 +11,8 @@ export const styles: Style = {
     ':hover': {
       opacity: 0.8
     },
+    alignItems: 'center',
+    height: '100%',
     '& > span': {
       transform: 'translateY(0.07em)'
     }

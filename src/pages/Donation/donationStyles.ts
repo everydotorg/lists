@@ -22,12 +22,12 @@ export const styles: Style = {
     mb: 1
   },
   donateButtonContainer: {
-    px: 4,
+    px: [4, 6],
     mt: [7, 9]
   },
   donateCryptoButtonContainer: {
     mt: [2, 3],
-    px: 4
+    px: [4, 6]
   },
   donateButton: {
     width: '100%',
