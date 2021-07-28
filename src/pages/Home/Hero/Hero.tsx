@@ -13,7 +13,7 @@ export const Hero = () => {
         <Brand sx={{ flex: 1 }} />
       </Flex>
       <Flex sx={styles.textContainer}>
-        <Text as="h1" variant="h1">
+        <Text as="h1" variant="h1" sx={styles.header}>
           Discover, donate, and share lists of recommended nonprofits.
         </Text>
         <Text variant="small">
