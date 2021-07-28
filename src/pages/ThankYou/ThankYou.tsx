@@ -10,13 +10,13 @@ import { Card } from './Card'
 import { Brand } from 'src/components/Brand'
 import { useProgressData } from 'src/hooks/useProgressData'
 import { Goal } from 'src/components/Goal'
-
+import { useRouter } from 'next/router'
 export const ThankYou = (): JSX.Element | null => {
   const { slug, socialShareText, name, showGoalOnThankyouPage } =
     useCampaignInfoContext()
   const progress = useProgressData()
-
-  const showSignupCard = true // Probably we will get this value from the url
+  const router = useRouter()
+  const { showsignup } = router.query
   const shareUrl = baseUrlWithPaths(slug)
 
   return (
@@ -38,7 +38,7 @@ export const ThankYou = (): JSX.Element | null => {
       </Flex>
       <Divider space={[3, 6]} />
       <Flex sx={styles.cardList}>
-        {showSignupCard && (
+        {Boolean(showsignup) && (
           <Card
             title="Claim your free every.org account"
             description="Save your charitable giving history. Explore, donate, and share."
