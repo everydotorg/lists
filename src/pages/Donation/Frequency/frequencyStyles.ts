@@ -42,7 +42,7 @@ export const styles: Style = {
     justifyContent: 'center',
     '& > span': {
       display: 'block',
-      transform: [null, 'translateY(0.1em)']
+      transform: 'translateY(0.07em)'
     }
   },
 

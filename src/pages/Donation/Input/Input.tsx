@@ -71,7 +71,7 @@ export const Input = ({
             key={amount}
             onClick={() => addAmount(amount)}
           >
-            +{amount}
+            <span>+{amount}</span>
           </Text>
         ))}
       </Flex>

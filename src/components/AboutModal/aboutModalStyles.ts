@@ -16,7 +16,7 @@ export const styles: Style = {
   modalContent: {
     label: 'modal-content',
     flexDirection: 'column',
-    flex: [1, '43%'],
+    flex: [1, '50%', '43%'],
     bg: 'white'
   },
   contentSection: {

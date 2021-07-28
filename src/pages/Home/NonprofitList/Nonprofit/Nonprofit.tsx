@@ -69,7 +69,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             color: textColor
           }}
         >
-          giveli.st/{nonprofit.slug}
+          <span>giveli.st/{nonprofit.slug}</span>
         </RebassLink>
       </Flex>
       <Flex

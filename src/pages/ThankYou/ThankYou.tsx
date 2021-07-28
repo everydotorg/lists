@@ -106,7 +106,7 @@ export const ThankYou = (): JSX.Element | null => {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSe0Rzl5TXdyZ64qkxVSFRbkTATJd2Gw6oeNnBnLgB50u0tw2A/viewform"
                 target="_blank"
               >
-                Begin survey
+                <span>Begin survey</span>
               </Link>
             </Flex>
           }

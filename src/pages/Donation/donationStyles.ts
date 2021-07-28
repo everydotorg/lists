@@ -2,11 +2,13 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   page: {
+    label: 'page',
+
     display: ['flex', 'grid'],
     gridTemplateColumns: [null, '1fr'],
     gridTemplateRows: [null, '1fr max-content'],
     flexDirection: ['column', 'unset'],
-    flex: '43%'
+    flex: [1, '50%', '43%']
   },
   container: {
     flexDirection: 'column',

@@ -1,5 +1,5 @@
 export const theme = {
-  breakpoints: ['56.25em', '132.5em'],
+  breakpoints: ['56.25em', '81.25em', '132.5em'],
   space: [
     0,
     '0.25rem',
@@ -117,7 +117,7 @@ export const theme = {
         bg: 'white',
         border: '1px solid',
         borderColor: 'primary',
-        boxShadow: '0px 0px 0px 2px rgba(215, 83, 131, 0.2)'
+        boxShadow: '0px 0px 0px 2px #afafaf47'
       },
       '::placeholder': {
         fontSize: [4, 5],
@@ -141,7 +141,7 @@ export const theme = {
       lineHeight: ['body', 'base'],
       letterSpacing: '-0.01em',
       fontFamily: 'body',
-      fontWeight: 'bold',
+      fontWeight: '500',
       color: 'white',
       textDecoration: 'none',
       display: 'block',
@@ -190,7 +190,7 @@ export const theme = {
       px: 4,
       py: 4,
       fontFamily: 'body',
-      fontWeight: 'heading',
+      fontWeight: '500',
       fontSize: [3, 4],
       lineHeight: 'body',
       letterSpacing: '-0.01em'
@@ -208,7 +208,7 @@ export const theme = {
       background: 'white',
       border: '1px solid',
       borderColor: 'borderGray',
-      fontWeight: 'body'
+      fontWeight: '500'
     }
   },
   text: {
@@ -287,19 +287,26 @@ export const theme = {
       lineHeight: 'base',
       letterSpacing: '-0.01em',
       fontSize: 3,
-      fontWeight: 'body',
+      fontWeight: '500',
       textDecoration: 'none',
       px: 3,
       py: 2,
       border: '1px solid',
-      borderRadius: 'button'
+      borderRadius: 'button',
+      transition: 'background .2s, color .2s',
+      '& > span': {
+        // hack to center the text of the button
+        // https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
+        transform: ['translateY(0.07em)', 'translateY(0.1em)'],
+        display: 'block'
+      }
     },
     inverted: {
       cursor: 'pointer',
       lineHeight: 'base',
       letterSpacing: '-0.01em',
       fontSize: [3, 4],
-      fontWeight: 'heading',
+      fontWeight: '500',
       textDecoration: 'none',
       px: 5,
       py: 4,
@@ -312,7 +319,7 @@ export const theme = {
       cursor: 'pointer',
       lineHeight: 'base',
       letterSpacing: '-0.01em',
-      fontWeight: 'body',
+      fontWeight: '500',
       fontSize: [2, 0],
       color: 'textGray',
       textDecoration: 'none',
