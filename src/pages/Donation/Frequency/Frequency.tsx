@@ -3,6 +3,9 @@ import { DonationFrequency } from 'types/Frequency'
 import { styles } from './frequencyStyles'
 import React from 'react'
 import { ArrowUpIcon } from 'src/components/ArrowUpIcon'
+import { useTransition, config } from '@react-spring/core'
+import cubicBezier from 'bezier-easing'
+import { animated } from '@react-spring/web'
 
 interface FrequencyProps {
   frequency: DonationFrequency
@@ -13,12 +16,39 @@ export const Frequency = ({
   frequency,
   setFrequency
 }: FrequencyProps): JSX.Element => {
+  const transition = useTransition(frequency !== DonationFrequency.Monthly, {
+    from: {
+      transform: 'translateY(-50%)',
+      opacity: 0,
+      maxHeight: '0px'
+    },
+    enter: {
+      transform: 'translateY(0%)',
+      opacity: 1,
+      maxHeight: '400px'
+    },
+    leave: {
+      transform: 'translateY(-50%)',
+      opacity: 0,
+      maxHeight: '0px'
+    },
+    expires: false,
+    config: {
+      ...config.default,
+      duration: 600,
+      easing: cubicBezier(0.55, 0.08, 0, 1)
+    }
+  })
+
+  const AnimatedBox = animated(Box)
+
   return (
     <Box sx={styles.container}>
       <Label variant="text.small" sx={styles.label}>
         How often?
       </Label>
       <Flex sx={styles.selectorContainer}>
+        <Input type="radio" name="frequency" id="one-time" sx={styles.input} />
         <Label
           id="frequency-one-time"
           onClick={() => setFrequency(DonationFrequency.OneTime)}
@@ -26,46 +56,40 @@ export const Frequency = ({
           variant="text.small"
           sx={{
             ...styles.frequencyBase,
-            ...(frequency === DonationFrequency.OneTime
-              ? styles.selectedFrequency
-              : {})
+            ...styles.selectedFrequency
           }}
         >
-          <Input
-            type="radio"
-            name="frequency"
-            id="one-time"
-            sx={styles.input}
-          />
           <span>One-time</span>
         </Label>
+        <Input type="radio" name="frequency" id="monthly" sx={styles.input} />
         <Label
           id="frequency-monthly"
           htmlFor="monthly"
           onClick={() => setFrequency(DonationFrequency.Monthly)}
           variant="text.small"
           sx={{
-            ...styles.frequencyBase,
-            ...(frequency === DonationFrequency.Monthly
-              ? styles.selectedFrequency
-              : {})
+            ...styles.frequencyBase
           }}
         >
-          <Input type="radio" name="frequency" id="monthly" sx={styles.input} />
           <span>Monthly</span>
         </Label>
       </Flex>
-      {frequency === DonationFrequency.OneTime ? (
-        <Box sx={styles.donationContainer}>
-          <Box sx={styles.donationContainerArrow}>
-            <ArrowUpIcon />
-          </Box>
-          <Text as="p" variant="small" sx={styles.donationText}>
-            Monthly gifts help nonprofits focus on their mission and long-term
-            impact, not fundraising.
-          </Text>
-        </Box>
-      ) : null}
+      {transition(
+        (style, show) =>
+          show && (
+            <AnimatedBox style={style}>
+              <Box sx={styles.donationContainer}>
+                <Box sx={styles.donationContainerArrow}>
+                  <ArrowUpIcon />
+                </Box>
+                <Text as="p" variant="small" sx={styles.donationText}>
+                  Monthly gifts help nonprofits focus on their mission and
+                  long-term impact, not fundraising.
+                </Text>
+              </Box>
+            </AnimatedBox>
+          )
+      )}
     </Box>
   )
 }

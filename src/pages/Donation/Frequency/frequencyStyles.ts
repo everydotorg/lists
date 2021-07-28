@@ -18,7 +18,15 @@ export const styles: Style = {
     borderColor: 'borderGray',
     borderRadius: 'small',
     p: 1,
-    mb: [4, 6]
+    mb: [4, 6],
+    '& > #one-time:not(:checked) + label': {
+      '&::before': {
+        transform: 'translateX(100%)'
+      },
+      '&::after': {
+        transform: 'translateX(100%)'
+      }
+    }
   },
   frequencyBase: {
     color: 'primary',
@@ -28,8 +36,6 @@ export const styles: Style = {
     fontWeight: 'body',
     cursor: 'pointer',
     textAlign: 'center',
-    border: '2px solid',
-    borderColor: 'transparent',
     borderRadius: 'frequency',
     transition: 'background .4s',
     alignItems: 'center',
@@ -39,10 +45,21 @@ export const styles: Style = {
       transform: [null, 'translateY(0.1em)']
     }
   },
+
   selectedFrequency: {
-    color: 'primary',
     position: 'relative',
-    borderColor: 'primary',
+    '&::before': {
+      content: '""',
+      width: '100%',
+      height: '100%',
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      border: '2px solid',
+      borderColor: 'primary',
+      borderRadius: 'frequency',
+      transition: 'transform .4s cubic-bezier(0.76, 0, 0.24, 1)'
+    },
     //Trick to decrease the opacity of the bg and keep the content opaque
     '&::after': {
       content: '""',
@@ -53,7 +70,8 @@ export const styles: Style = {
       left: 0,
       bg: 'primary',
       opacity: '0.1',
-      borderRadius: 'frequency'
+      borderRadius: 'frequency',
+      transition: 'transform .4s cubic-bezier(0.76, 0, 0.24, 1)'
     }
   },
   donationContainer: {

@@ -25,7 +25,7 @@ export const Donation = (): JSX.Element => {
   const [error, setError] = useState(false)
   const [currency] = useState<Currency>(Currency.USD)
   const [frequency, setFrequency] = useState<DonationFrequency>(
-    DonationFrequency.OneTime
+    DonationFrequency.Monthly
   )
 
   const currencySymbol = currencySymbolMap[currency]
