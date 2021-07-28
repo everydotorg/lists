@@ -35,7 +35,7 @@ export const Frequency = ({
     expires: false,
     config: {
       ...config.default,
-      duration: 600,
+      duration: 250,
       easing: cubicBezier(0.55, 0.08, 0, 1)
     }
   })

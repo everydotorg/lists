@@ -58,7 +58,7 @@ export const styles: Style = {
       border: '2px solid',
       borderColor: 'primary',
       borderRadius: 'frequency',
-      transition: 'transform .4s cubic-bezier(0.76, 0, 0.24, 1)'
+      transition: 'transform .25s cubic-bezier(.55,.08,0,1)'
     },
     //Trick to decrease the opacity of the bg and keep the content opaque
     '&::after': {
@@ -71,7 +71,7 @@ export const styles: Style = {
       bg: 'primary',
       opacity: '0.1',
       borderRadius: 'frequency',
-      transition: 'transform .4s cubic-bezier(0.76, 0, 0.24, 1)'
+      transition: 'transform .25s cubic-bezier(.55,.08,0,1)'
     }
   },
   donationContainer: {
