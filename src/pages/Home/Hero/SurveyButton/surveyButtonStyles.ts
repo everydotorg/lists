@@ -10,11 +10,14 @@ export const styles: Style = {
     justifyContent: ['center', 'space-between'],
     ':hover': {
       opacity: 0.8
+    },
+    '& > span': {
+      transform: 'translateY(0.07em)'
     }
   },
-  text: { color: 'white', fontWeight: 'bold' },
+  text: { color: 'white', fontWeight: 'bold', display: 'block' },
   caption: {
-    display: ['none', 'unset'],
+    display: ['none', 'block'],
     color: 'white',
     opacity: '0.6'
   }

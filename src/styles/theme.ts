@@ -117,7 +117,7 @@ export const theme = {
         bg: 'white',
         border: '1px solid',
         borderColor: 'primary',
-        boxShadow: '0px 0px 0px 2px rgba(215, 83, 131, 0.2)'
+        boxShadow: '0px 0px 0px 2px #afafaf47'
       },
       '::placeholder': {
         fontSize: [4, 5],
@@ -292,7 +292,14 @@ export const theme = {
       px: 3,
       py: 2,
       border: '1px solid',
-      borderRadius: 'button'
+      borderRadius: 'button',
+      transition: 'background .2s, color .2s',
+      '& > span': {
+        // hack to center the text of the button
+        // https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
+        transform: ['translateY(0.07em)', 'translateY(0.1em)'],
+        display: 'block'
+      }
     },
     inverted: {
       cursor: 'pointer',

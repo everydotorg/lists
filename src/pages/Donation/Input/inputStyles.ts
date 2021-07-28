@@ -82,6 +82,10 @@ export const styles: Style = {
       bg: 'primary',
       opacity: '0.1',
       borderRadius: 'small'
+    },
+    '& > span': {
+      display: 'block',
+      transform: ['translateY(0.07em)', 'translateY(0.1em)']
     }
   }
 }
