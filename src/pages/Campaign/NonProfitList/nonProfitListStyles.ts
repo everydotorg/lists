@@ -28,7 +28,7 @@ export const styles: Style = {
     alignSelf: 'center'
   },
   aboutContainer: {
-    backgroundColor: 'inherit'
+    backgroundColor: 'transparent'
   },
   aboutText: {
     display: 'block',
