@@ -62,7 +62,7 @@ export const styles: Style = {
     }
   },
   addAmountText: {
-    fontWeight: '400',
+    fontWeight: '500',
     cursor: 'pointer',
     py: 2,
     px: 3,
