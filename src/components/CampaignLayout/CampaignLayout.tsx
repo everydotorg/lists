@@ -27,16 +27,8 @@ export const CampaignLayout = ({
   showBackExamples = false,
   children
 }: CampaignLayoutProps) => {
-  const campaignTheme = {
-    ...theme,
-    colors: {
-      ...theme.colors,
-      primary: campaignInfo.primaryColor
-    }
-  }
-
   return (
-    <ThemeProvider theme={campaignTheme}>
+    <ThemeProvider theme={theme}>
       <CampaignInfoContext.Provider
         value={{ ...campaignInfo, defaultDonationAmount }}
       >
