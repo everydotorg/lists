@@ -4,7 +4,7 @@ export const styles: Style = {
   container: {
     p: [4, 5],
     flexDirection: ['column-reverse', 'row'],
-    borderRadius: 'button',
+    borderRadius: 'small',
     cursor: 'pointer'
   },
   section: {
@@ -34,7 +34,7 @@ export const styles: Style = {
   image: {
     minHeight: '256px',
     width: '100%',
-    borderRadius: 'button',
+    borderRadius: 'small',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
   }

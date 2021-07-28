@@ -38,19 +38,19 @@ export const styles: Style = {
   nonprofitsContainer: {
     border: '1px solid',
     borderColor: 'borderGray',
-    borderRadius: 'button',
+    borderRadius: 'small',
     mx: [4, 6],
     '& > *:not(:last-child)': {
       borderBottom: '1px solid',
       borderBottomColor: 'borderGray'
     },
     '& > *:first-of-type': {
-      borderTopLeftRadius: 'button',
-      borderTopRightRadius: 'button'
+      borderTopLeftRadius: 'small',
+      borderTopRightRadius: 'small'
     },
     '& > *:last-of-type': {
-      borderBottomLeftRadius: 'button',
-      borderBottomRightRadius: 'button'
+      borderBottomLeftRadius: 'small',
+      borderBottomRightRadius: 'small'
     },
     mb: [6, 9]
   },

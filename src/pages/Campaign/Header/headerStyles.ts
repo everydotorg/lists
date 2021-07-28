@@ -9,8 +9,8 @@ export const styles: Style = {
     display: [null, 'none'],
     m: 1,
     mb: 0,
-    borderTopLeftRadius: 'button',
-    borderTopRightRadius: 'button'
+    borderTopLeftRadius: 'small',
+    borderTopRightRadius: 'small'
   },
   desktopContainer: {
     alignItems: 'center',

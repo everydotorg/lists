@@ -29,6 +29,7 @@ export const NonprofitList = ({ sx, nonProfits }: NonprofitListProps) => {
   }
 
   const autoscroll = useCallback(() => {
+    return
     const ref = listRef.current as HTMLDivElement
 
     timeoutRef.current = setTimeout(() => {

@@ -38,7 +38,7 @@ export const theme = {
     zero: 0,
     frequency: 8,
     small: 12,
-    button: 12, // @todo: maybe a better name would be "default" or just use "small"
+    default: 8,
     card: 16,
     full: 9999
   },
@@ -134,7 +134,7 @@ export const theme = {
   buttons: {
     primary: {
       cursor: 'pointer',
-      borderRadius: 'button',
+      borderRadius: ['default', 'small'],
       px: 5,
       py: [3, 4],
       fontSize: [3, 4],
@@ -144,7 +144,9 @@ export const theme = {
       fontWeight: '500',
       color: 'white',
       textDecoration: 'none',
-      display: 'block',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       height: ['3rem', '3.5rem'],
       '&:hover': {
         opacity: '0.85'
@@ -278,7 +280,7 @@ export const theme = {
       color: 'text'
     },
     h1: {
-      fontSize: [4, 7],
+      fontSize: [6, 7],
       lineHeight: ['heading', 'input'],
       letterSpacing: '-0.015em',
       fontWeight: 'bold',
@@ -288,19 +290,22 @@ export const theme = {
   links: {
     button: {
       cursor: 'pointer',
-      lineHeight: 'base',
       letterSpacing: '-0.01em',
       fontSize: 3,
       fontWeight: '500',
+      lineHeight: 1.5,
+      height: ['2rem', '2.5rem'],
       textDecoration: 'none',
       px: 3,
-      py: 2,
+      py: 1,
       border: '1px solid',
-      borderRadius: 'button',
+      borderRadius: ['default', 'small'],
+      display: 'flex',
+      alignItems: 'center',
       '& > span': {
         // hack to center the text of the button
         // https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
-        transform: ['translateY(0.07em)', 'translateY(0.1em)'],
+        transform: 'translateY(0.07em)',
         display: 'block'
       }
     },
@@ -316,7 +321,7 @@ export const theme = {
       color: 'primary',
       border: '1px solid',
       borderColor: 'primary',
-      borderRadius: 'button'
+      borderRadius: ['default', 'small']
     },
     smallSubtle: {
       cursor: 'pointer',

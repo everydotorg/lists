@@ -17,7 +17,7 @@ export const styles: Style = {
     p: [3, 6],
     border: '1px solid',
     borderColor: 'borderGray',
-    borderRadius: 'button',
+    borderRadius: ['default', 'small'],
     display: 'flex',
     '& > svg': {
       width: ['14px', '18px'],
