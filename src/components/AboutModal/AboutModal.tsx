@@ -12,6 +12,7 @@ import { useAboutModal } from 'src/hooks/useAboutModal'
 interface AboutModalProps {
   contentAnimationProps: Record<string, SpringValue<string>>
 }
+
 export const AboutModal = ({ contentAnimationProps }: AboutModalProps) => {
   const [section] = useState<Section>('about')
   const { open, setOpen } = useAboutModal()
@@ -45,7 +46,7 @@ export const AboutModal = ({ contentAnimationProps }: AboutModalProps) => {
               <Box sx={styles.contentSection}>
                 {section === 'about' && <About />}
               </Box>
-              <Brand />
+              <Brand withBorderTop />
             </AnimatedFlex>
           </AnimatedFlex>
         )

@@ -9,7 +9,9 @@ export const styles: Style = {
     label: 'brand-content',
     flex: 1,
     justifyContent: 'space-between',
-    p: [4, 6],
+    p: [4, 6]
+  },
+  withBorderTop: {
     borderTop: '1px solid',
     borderTopColor: 'borderGray'
   },

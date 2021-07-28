@@ -2,7 +2,6 @@ import { styles } from './nonProfitStyles'
 import { Text, Flex, Box, Link as RebassLink } from 'theme-ui'
 import { HomeNonProfit } from '../../Home'
 import { causeTextColor } from 'src/styles/theme'
-import { useAboutModal } from 'src/hooks/useAboutModal'
 import { useRouter } from 'next/router'
 
 type NonprofitProps = {
@@ -10,7 +9,6 @@ type NonprofitProps = {
 }
 
 export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
-  const aboutModal = useAboutModal()
   const textColor = causeTextColor(nonprofit.cause)
 
   const router = useRouter()
@@ -61,16 +59,20 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           </Text>
         </Flex>
 
-        <RebassLink
-          variant="button"
-          as="span"
-          sx={{
-            alignSelf: 'flex-start',
-            color: textColor
-          }}
-        >
-          <span>giveli.st/{nonprofit.slug}</span>
-        </RebassLink>
+        <Flex sx={styles.buttonLinkContainer}>
+          <RebassLink
+            variant="button"
+            as="span"
+            sx={{
+              alignSelf: 'flex-start',
+              color: textColor
+            }}
+          >
+            <Text as="span" sx={styles.linkText}>
+              giveli.st/{nonprofit.slug}
+            </Text>
+          </RebassLink>
+        </Flex>
       </Flex>
       <Flex
         sx={{
@@ -81,7 +83,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         <Box
           sx={{
             ...styles.image,
-            ...(aboutModal.open ? {} : { mixBlendMode: 'multiply' }), // this doesnt play nicely with backdrop
+            ...styles.imageFilters,
             backgroundImage: `url(${nonprofit.imageUrl})`
           }}
         />
