@@ -41,7 +41,7 @@ export const About = () => {
 
         <CardLink
           title="Original concept"
-          href="https://www.bettergivingstudio.com/"
+          href="https://www.bettergivingstudio.com/product-concept/givelist"
         >
           Better Giving Studio. Licensed under CC BY 4.0.
         </CardLink>

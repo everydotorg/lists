@@ -23,8 +23,15 @@ export const Navbar = ({ selected }: NavbarProps) => {
         >
           About
         </Text>
-        <Link href="mailto:contact@giveli.st" sx={styles.menuItem}>
+        <Link href="mailto:support@every.org" sx={styles.menuItem}>
           Contact
+        </Link>
+        <Link
+          href="https://www.every.org/terms"
+          target="_blank"
+          sx={styles.menuItem}
+        >
+          Terms
         </Link>
       </Flex>
       <Box sx={styles.closeContainer} onClick={() => aboutModal.setOpen(false)}>
