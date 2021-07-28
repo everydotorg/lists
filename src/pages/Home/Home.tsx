@@ -1,8 +1,8 @@
 import { Flex } from 'theme-ui'
-import { Nonprofit } from './Nonprofit'
 import { Hero } from './Hero'
 import { CampaignInfo } from 'types/CampaignInfo'
 import { styles } from './homeStyles'
+import { NonprofitList } from './NonprofitList'
 
 export type HomeNonProfit = Pick<
   CampaignInfo,
@@ -16,11 +16,7 @@ export type HomeProps = {
 export const Home = ({ nonProfits }: HomeProps) => {
   return (
     <Flex sx={styles.container}>
-      <Flex id="list" sx={styles.givelistSection}>
-        {nonProfits.map((nonprofit) => (
-          <Nonprofit nonprofit={nonprofit} key={nonprofit.slug} />
-        ))}
-      </Flex>
+      <NonprofitList nonProfits={nonProfits} sx={styles.givelistSection} />
       <Flex sx={styles.heroSection}>
         <Hero />
       </Flex>
