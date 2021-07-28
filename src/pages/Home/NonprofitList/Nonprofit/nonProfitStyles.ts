@@ -37,5 +37,9 @@ export const styles: Style = {
     borderRadius: 'small',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
+  },
+  imageFilters: {
+    filter: 'grayscale()',
+    mixBlendMode: 'multiply'
   }
 }

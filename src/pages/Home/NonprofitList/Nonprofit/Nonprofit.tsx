@@ -81,7 +81,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         <Box
           sx={{
             ...styles.image,
-            ...(aboutModal.open ? {} : { mixBlendMode: 'multiply' }), // this doesnt play nicely with backdrop
+            ...styles.imageFilters,
             backgroundImage: `url(${nonprofit.imageUrl})`
           }}
         />
