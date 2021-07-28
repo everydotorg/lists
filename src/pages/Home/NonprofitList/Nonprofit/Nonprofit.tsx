@@ -2,7 +2,6 @@ import { styles } from './nonProfitStyles'
 import { Text, Flex, Box, Link as RebassLink } from 'theme-ui'
 import { HomeNonProfit } from '../../Home'
 import { causeTextColor } from 'src/styles/theme'
-import { useAboutModal } from 'src/hooks/useAboutModal'
 import { useRouter } from 'next/router'
 
 type NonprofitProps = {
@@ -10,7 +9,6 @@ type NonprofitProps = {
 }
 
 export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
-  const aboutModal = useAboutModal()
   const textColor = causeTextColor(nonprofit.cause)
 
   const router = useRouter()
