@@ -2,7 +2,7 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   goalContainer: {
-    p: [3, 6],
+    p: [3, 4],
     border: '1px solid',
     borderColor: 'borderGray',
     borderRadius: 'small',

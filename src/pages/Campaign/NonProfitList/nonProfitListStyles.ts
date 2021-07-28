@@ -2,7 +2,7 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   container: {
-    p: [3, 6],
+    p: [3, 4],
     ':hover': {
       bg: ['inherit', 'primary'],
       '& *': {

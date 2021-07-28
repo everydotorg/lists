@@ -17,7 +17,7 @@ export const styles: Style = {
     border: '1px solid',
     borderColor: 'borderGray',
     borderRadius: 'button',
-    px: [3, 6],
+    px: [3, 4],
     py: [3, 4],
     m: [4, 6],
     mt: [4, 0]

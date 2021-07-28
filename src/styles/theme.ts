@@ -187,7 +187,7 @@ export const theme = {
 
     primarySmall: {
       variant: 'buttons.primary',
-      px: 6,
+      px: 4,
       py: 4,
       fontFamily: 'body',
       fontWeight: 'heading',
