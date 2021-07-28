@@ -5,12 +5,18 @@ import { styles } from './brandStyles'
 
 type BrandProps = {
   sx?: ThemeUIStyleObject
+  withBorderTop?: boolean
 }
 
-export const Brand = ({ sx = {} }: BrandProps) => {
+export const Brand = ({ sx = {}, withBorderTop }: BrandProps) => {
   return (
     <Flex sx={{ ...styles.brandContainer, ...sx }}>
-      <Flex sx={styles.brandContent}>
+      <Flex
+        sx={{
+          ...styles.brandContent,
+          ...(withBorderTop ? styles.withBorderTop : {})
+        }}
+      >
         <Text variant="caption" sx={styles.givelistText}>
           giveli.st
         </Text>
