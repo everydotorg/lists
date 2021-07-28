@@ -59,16 +59,20 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           </Text>
         </Flex>
 
-        <RebassLink
-          variant="button"
-          as="span"
-          sx={{
-            alignSelf: 'flex-start',
-            color: textColor
-          }}
-        >
-          <span>giveli.st/{nonprofit.slug}</span>
-        </RebassLink>
+        <Flex sx={styles.buttonLinkContainer}>
+          <RebassLink
+            variant="button"
+            as="span"
+            sx={{
+              alignSelf: 'flex-start',
+              color: textColor
+            }}
+          >
+            <Text as="span" sx={styles.linkText}>
+              giveli.st/{nonprofit.slug}
+            </Text>
+          </RebassLink>
+        </Flex>
       </Flex>
       <Flex
         sx={{

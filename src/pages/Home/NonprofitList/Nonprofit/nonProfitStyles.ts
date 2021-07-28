@@ -31,6 +31,8 @@ export const styles: Style = {
     fontSize: [3, 4],
     lineHeight: 'heading'
   },
+  buttonLinkContainer: { overflow: 'hidden', whiteSpace: 'nowrap' },
+  linkText: { overflow: 'hidden', textOverflow: 'ellipsis' },
   image: {
     minHeight: '256px',
     width: '100%',
