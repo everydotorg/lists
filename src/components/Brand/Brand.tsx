@@ -20,7 +20,7 @@ export const Brand = ({ sx = {}, withBorderTop }: BrandProps) => {
         <Text variant="caption" sx={styles.givelistText}>
           giveli.st
         </Text>
-        <Flex sx={styles.alignCenter}>
+        <Flex sx={styles.poweredBy}>
           <Text variant="caption" sx={styles.logoSpace}>
             powered by
           </Text>

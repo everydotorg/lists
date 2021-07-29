@@ -9,6 +9,7 @@ export const styles: Style = {
     label: 'brand-content',
     flex: 1,
     justifyContent: 'space-between',
+    alignItems: 'center',
     p: [4, 6]
   },
   withBorderTop: {
@@ -21,5 +22,10 @@ export const styles: Style = {
     fontWeight: 'bold'
   },
   logoSpace: { label: 'brand-logoSpace', mr: 2 },
-  alignCenter: { alignItems: 'center' }
+  poweredBy: {
+    alignItems: 'center',
+    '& > svg': {
+      width: ['45%', 'unset']
+    }
+  }
 }
