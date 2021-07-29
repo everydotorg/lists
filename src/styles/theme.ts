@@ -192,7 +192,6 @@ export const theme = {
     primarySmall: {
       variant: 'buttons.primary',
       px: 4,
-      // py: 4,
       height: ['3rem', '3.5rem'],
       fontFamily: 'body',
       fontWeight: '500',
