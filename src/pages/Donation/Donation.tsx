@@ -51,6 +51,7 @@ export const Donation = (): JSX.Element => {
   }
 
   const donateCrypto = () => {
+    gtag.pushEvent('submit_crypto_donation', {})
     const color = primaryColor.replace('#', '')
 
     window.open(

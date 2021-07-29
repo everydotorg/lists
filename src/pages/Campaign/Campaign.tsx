@@ -52,6 +52,7 @@ export const Campaign = (): JSX.Element => {
           <Button
             sx={styles.aboutButton}
             type="button"
+            id="open-about-mobile"
             variant="primaryInverted"
             onClick={() => aboutModal.setOpen(true)}
           >

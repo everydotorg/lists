@@ -8,6 +8,7 @@ import { styles } from './aboutModalStyles'
 import { useTransition, animated, config, SpringValue } from 'react-spring'
 import cubicBezier from 'bezier-easing'
 import { useAboutModal } from 'src/hooks/useAboutModal'
+import { gtag } from 'src/services/gtag'
 
 interface AboutModalProps {
   contentAnimationProps: Record<string, SpringValue<string>>
@@ -30,6 +31,11 @@ export const AboutModal = ({ contentAnimationProps }: AboutModalProps) => {
     }
   })
 
+  const closeModal = () => {
+    gtag.pushEvent('close_modal', {})
+    setOpen(false)
+  }
+
   const AnimatedFlex = animated(Flex)
 
   return ReactDOM.createPortal(
@@ -37,7 +43,7 @@ export const AboutModal = ({ contentAnimationProps }: AboutModalProps) => {
       (backdropProps, show) =>
         show && (
           <AnimatedFlex style={backdropProps} sx={styles.modalContainer}>
-            <Box sx={styles.modalBlur} onClick={() => setOpen(false)}></Box>
+            <Box sx={styles.modalBlur} onClick={closeModal}></Box>
             <AnimatedFlex
               style={contentAnimationProps}
               sx={styles.modalContent}

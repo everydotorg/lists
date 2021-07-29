@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Sponsor } from 'types/Sponsor'
 import { Expandable } from 'src/components/Expandable'
 import { styles } from './matchingStyles'
+import { gtag } from 'src/services/gtag'
 
 interface MatchingProps {
   sponsor: Sponsor
@@ -11,10 +12,14 @@ interface MatchingProps {
 export const Matching: React.FC<MatchingProps> = ({ sponsor }) => {
   const [expanded, setExpanded] = useState(false)
 
+  const toggleExpandable = () => {
+    gtag.pushEvent(`${expanded ? 'close' : 'open'}_matching`, {})
+    setExpanded((prev) => !prev)
+  }
   return (
     <Expandable
       expanded={expanded}
-      onClick={() => setExpanded((prev) => !prev)}
+      onClick={toggleExpandable}
       headerStyle={styles.header}
       descriptionStyle={styles.description}
       chevronStyle={styles.chevronDown}
