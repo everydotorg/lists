@@ -23,8 +23,8 @@ export const Navbar = ({ selected }: NavbarProps) => {
         >
           About
         </Text>
-        <Link href="mailto:support@every.org" sx={styles.menuItem}>
-          Contact
+        <Link href="https://support.every.org" sx={styles.menuItem}>
+          Support
         </Link>
         <Link
           href="https://www.every.org/terms"

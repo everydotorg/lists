@@ -29,7 +29,7 @@ export const About = () => {
           Credits
         </Text>
 
-        <CardLink title="Brought to you by every.org" href="https://every.org">
+        <CardLink title="Powered by Every.org" href="https://every.org">
           A registered 501(c)(3) nonprofit on a mission to provide free
           technologies and tools that encourage individuals to take action and
           spread generosity
