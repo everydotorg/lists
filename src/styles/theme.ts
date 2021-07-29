@@ -192,13 +192,12 @@ export const theme = {
     primarySmall: {
       variant: 'buttons.primary',
       px: 4,
-      py: 4,
+      height: ['3rem', '3.5rem'],
       fontFamily: 'body',
       fontWeight: '500',
       fontSize: [3, 4],
       lineHeight: 'body',
       letterSpacing: '-0.01em',
-      height: 'auto',
       transition: 'background .2s, color .2s, opacity .2s'
     },
     primarySmallInverted: {

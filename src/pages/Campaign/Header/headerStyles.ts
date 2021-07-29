@@ -27,7 +27,8 @@ export const styles: Style = {
     top: 0,
     right: 0,
     zIndex: [null, 1],
-    display: ['none', 'block']
+    display: ['none', 'block'],
+    lineHeight: 1
   },
   linkButton: {
     fontWeight: '400',
