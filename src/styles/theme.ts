@@ -73,6 +73,9 @@ export const theme = {
     environment: '#EDF3DD',
     environmentText: '#5E7D0F',
 
+    research: '#CEDFDB',
+    researchText: '#2F806D',
+
     // apps colors
     text: '#2E3434',
     textGray: 'rgba(46, 52, 52, 0.6)',
