@@ -30,12 +30,13 @@ export const createEveryUrl = (
   everySlug: string,
   frequency: DonationFrequency,
   amount: number,
+  crypto: boolean,
   extras = {}
 ): string => {
   const production = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
 
   const url = new URL(
-    everySlug + '/donate',
+    everySlug + '/donate' + (crypto ? '/crypto' : ''),
     production ? 'https://www.every.org' : 'https://staging.every.org'
   )
 

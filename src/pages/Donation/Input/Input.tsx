@@ -46,7 +46,9 @@ export const Input = ({
         htmlFor="donationAmount"
         variant="text.small"
       >
-        {error ? 'Please donate more than $10 USD' : 'How much to donate?'}
+        {error
+          ? 'Please donate at least $10 for efficiency'
+          : 'How much to donate?'}
       </Label>
       <Flex sx={styles.inputContainer}>
         <Flex sx={styles.currencyContainer}>
