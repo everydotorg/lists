@@ -1,23 +1,42 @@
 import { styles } from './nonProfitStyles'
-import { Text, Flex, Box, Link as RebassLink } from 'theme-ui'
+import { Box, Text, Flex, Link as RebassLink } from 'theme-ui'
 import { HomeNonProfit } from '../../Home'
-import { causeTextColor } from 'src/styles/theme'
+import { causeTextColor, theme } from 'src/styles/theme'
 import { useRouter } from 'next/router'
 
 type NonprofitProps = {
   nonprofit: HomeNonProfit
 }
 
+const mediaQuery = `@media all and (min-width: ${theme.breakpoints[0]})`
+
 export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
   const textColor = causeTextColor(nonprofit.cause)
 
   const router = useRouter()
 
+  const hoverStyles = {
+    [mediaQuery]: {
+      ':hover': {
+        borderColor: textColor
+      },
+      ':hover #nonprofit-image': {
+        filter: 'none'
+      },
+      ':hover #nonprofit-link': {
+        bg: textColor,
+        color: nonprofit.cause
+      }
+    }
+  }
+
   return (
     <Flex
       sx={{
         ...styles.container,
-        backgroundColor: nonprofit.cause
+        borderColor: nonprofit.cause,
+        backgroundColor: nonprofit.cause,
+        ...hoverStyles
       }}
       onClick={() =>
         router.push(
@@ -63,8 +82,10 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           <RebassLink
             variant="button"
             as="span"
+            id="nonprofit-link"
             sx={{
               alignSelf: 'flex-start',
+              transition: 'background .2s',
               color: textColor
             }}
           >
@@ -81,6 +102,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         }}
       >
         <Box
+          id="nonprofit-image"
           sx={{
             ...styles.image,
             ...styles.imageFilters,

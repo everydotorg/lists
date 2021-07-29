@@ -5,7 +5,9 @@ export const styles: Style = {
     p: [4, 5],
     flexDirection: ['column-reverse', 'row'],
     borderRadius: 'small',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    border: '1px solid',
+    transition: 'border .2s'
   },
   section: {
     flex: 1
@@ -42,6 +44,7 @@ export const styles: Style = {
   },
   imageFilters: {
     filter: 'grayscale()',
-    mixBlendMode: 'multiply'
+    mixBlendMode: 'multiply',
+    transition: 'filter .2s'
   }
 }
