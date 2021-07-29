@@ -22,5 +22,10 @@ export const styles: Style = {
     fontWeight: 'bold'
   },
   logoSpace: { label: 'brand-logoSpace', mr: 2 },
-  alignCenter: { alignItems: 'center' }
+  poweredBy: {
+    alignItems: 'center',
+    '& > svg': {
+      width: ['45%', 'unset']
+    }
+  }
 }
