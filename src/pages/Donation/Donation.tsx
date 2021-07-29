@@ -40,7 +40,21 @@ export const Donation = (): JSX.Element => {
     const color = primaryColor.replace('#', '')
 
     window.open(
-      createEveryUrl(slug, everySlug, frequency, donationAmount, {
+      createEveryUrl(slug, everySlug, frequency, donationAmount, false, {
+        theme_color: color,
+        theme_color_highlight: color,
+        utm_content:
+          defaultDonationAmount === 0 ? 'v2_default_blank' : 'v2_default_40'
+      }),
+      '_self'
+    )
+  }
+
+  const donateCrypto = () => {
+    const color = primaryColor.replace('#', '')
+
+    window.open(
+      createEveryUrl(slug, everySlug, frequency, donationAmount, true, {
         theme_color: color,
         theme_color_highlight: color,
         utm_content:
@@ -88,7 +102,7 @@ export const Donation = (): JSX.Element => {
         </Box>
         <Box sx={styles.donateCryptoButtonContainer}>
           <Button
-            onClick={donate}
+            onClick={donateCrypto}
             variant="primaryInverted"
             sx={{
               ...styles.donateButton
