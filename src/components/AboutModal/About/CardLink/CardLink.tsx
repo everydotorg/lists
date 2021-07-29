@@ -1,4 +1,5 @@
 import { ChevronDown } from 'src/components/ChevronDown'
+import { gtag } from 'src/services/gtag'
 import { Box, Flex, Text } from 'theme-ui'
 import { styles } from './cardLinkStyles'
 
@@ -12,8 +13,15 @@ export const CardLink: React.FC<CardLinkProps> = ({
   href,
   children
 }) => {
+  const openLink = () => {
+    gtag.pushEvent('open_link', {
+      url: href
+    })
+    window.open(href, '_blank')
+  }
+
   return (
-    <Box sx={styles.card} onClick={() => window.open(href, '_blank')}>
+    <Box sx={styles.card} onClick={openLink}>
       <Flex sx={styles.titleContainer}>
         <Text variant="regular" sx={styles.title}>
           {title}
