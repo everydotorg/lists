@@ -17,6 +17,6 @@ export type CampaignInfo = {
   nonprofits: NonProfit[]
   sponsor?: Sponsor
   defaultDonationAmount: number
-  showGoalOnListPage: boolean
-  showGoalOnThankyouPage: boolean
+  showGoalOnListPage?: boolean
+  showGoalOnThankyouPage?: boolean
 }
