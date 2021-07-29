@@ -25,6 +25,7 @@ export const Hero = () => {
         <SurveyButton />
         <Button
           variant="primaryInverted"
+          id="open-about-home"
           sx={{ borderColor: 'primary', px: 4 }}
           onClick={() => aboutModal.setOpen(true)}
         >

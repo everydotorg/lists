@@ -3,6 +3,7 @@ import { Box, Text, Flex, Link as RebassLink } from 'theme-ui'
 import { HomeNonProfit } from '../../Home'
 import { causeTextColor, theme } from 'src/styles/theme'
 import { useRouter } from 'next/router'
+import { gtag } from 'src/services/gtag'
 
 type NonprofitProps = {
   nonprofit: HomeNonProfit
@@ -28,6 +29,9 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         color: nonprofit.cause
       }
     }
+  }
+  const pushEvent = (campaign: string) => {
+    gtag.pushEvent('campaign_clicked', { campaign })
   }
 
   return (
@@ -83,6 +87,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             variant="button"
             as="span"
             id="nonprofit-link"
+            onClick={() => pushEvent(nonprofit.slug)}
             sx={{
               alignSelf: 'flex-start',
               transition: 'background .2s',

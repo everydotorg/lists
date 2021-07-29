@@ -1,5 +1,6 @@
 import { CloseIcon } from 'src/components/CloseIcon'
 import { useAboutModal } from 'src/hooks/useAboutModal'
+import { gtag } from 'src/services/gtag'
 import { Box, Flex, Text, Link } from 'theme-ui'
 import { styles } from './navbarStyles'
 
@@ -11,6 +12,11 @@ type NavbarProps = {
 
 export const Navbar = ({ selected }: NavbarProps) => {
   const aboutModal = useAboutModal()
+
+  const closeModal = () => {
+    gtag.pushEvent('close_about', {})
+    aboutModal.setOpen(false)
+  }
 
   return (
     <Flex sx={styles.navbarContainer}>
@@ -34,7 +40,7 @@ export const Navbar = ({ selected }: NavbarProps) => {
           Terms
         </Link>
       </Flex>
-      <Box sx={styles.closeContainer} onClick={() => aboutModal.setOpen(false)}>
+      <Box sx={styles.closeContainer} onClick={closeModal}>
         <CloseIcon />
       </Box>
     </Flex>

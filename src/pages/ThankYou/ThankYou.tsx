@@ -11,6 +11,7 @@ import { Brand } from 'src/components/Brand'
 import { useProgressData } from 'src/hooks/useProgressData'
 import { Goal } from 'src/components/Goal'
 import { useRouter } from 'next/router'
+import { gtag } from 'src/services/gtag'
 export const ThankYou = (): JSX.Element | null => {
   const { slug, socialShareText, name, showGoalOnThankyouPage } =
     useCampaignInfoContext()
@@ -18,6 +19,11 @@ export const ThankYou = (): JSX.Element | null => {
   const router = useRouter()
   const { showsignup } = router.query
   const shareUrl = baseUrlWithPaths(slug)
+
+  const navigateToSignup = () => {
+    gtag.pushEvent('signup', {})
+    window.open('https://www.every.org/signup', '_blank')
+  }
 
   return (
     <Box sx={styles.page}>
@@ -44,7 +50,7 @@ export const ThankYou = (): JSX.Element | null => {
             description="Save your charitable giving history. Explore, donate, and share."
             renderActions={
               <Flex sx={{ alignItems: 'flex-start' }}>
-                <Button onClick={() => console.log()} variant="secondary">
+                <Button onClick={navigateToSignup} variant="secondary">
                   Sign up to every.org
                 </Button>
               </Flex>
@@ -102,6 +108,7 @@ export const ThankYou = (): JSX.Element | null => {
           renderActions={
             <Flex sx={{ alignItems: 'flex-start' }}>
               <Link
+                id="register-interest"
                 variant="buttons.secondaryInverted"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSe0Rzl5TXdyZ64qkxVSFRbkTATJd2Gw6oeNnBnLgB50u0tw2A/viewform"
                 target="_blank"
