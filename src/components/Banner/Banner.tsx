@@ -4,6 +4,7 @@ import { DiscoverButton } from './DiscoverButton'
 import { styles } from './bannerStyles'
 import { BackExamplesButton } from './BackExamplesButton'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
+import Image from 'next/image'
 
 interface BannerProps {
   showAbout: boolean
@@ -19,7 +20,15 @@ export const Banner = ({
 
   return (
     <Box sx={styles.banner}>
-      <img src={bannerUrl} alt="campaign banner" />
+      <Image
+        src={bannerUrl}
+        alt="Campaign banner"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        placeholder="blur"
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
+      />
       {showBackExamples && <BackExamplesButton />}
       {showAbout && <AboutButton />}
       {showDiscover && <DiscoverButton />}

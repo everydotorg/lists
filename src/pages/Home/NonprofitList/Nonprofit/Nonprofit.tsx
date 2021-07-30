@@ -4,6 +4,7 @@ import { HomeNonProfit } from '../../Home'
 import { causeTextColor, theme } from 'src/styles/theme'
 import { useRouter } from 'next/router'
 import { gtag } from 'src/services/gtag'
+import Image from 'next/image'
 
 type NonprofitProps = {
   nonprofit: HomeNonProfit
@@ -21,7 +22,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
       ':hover': {
         borderColor: textColor
       },
-      ':hover #nonprofit-image': {
+      ':hover #nonprofit-image-container': {
         filter: 'none'
       },
       ':hover #nonprofit-link': {
@@ -30,8 +31,20 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
       }
     }
   }
-  const pushEvent = (campaign: string) => {
-    gtag.pushEvent('campaign_clicked', { campaign })
+
+  const toGivelist = () => {
+    gtag.pushEvent('campaign_clicked', { campaign: nonprofit.slug })
+
+    router.push(
+      {
+        pathname: '/[campaign]',
+        query: {
+          campaign: nonprofit.slug,
+          showBackToExamples: true
+        }
+      },
+      `/${nonprofit.slug}`
+    )
   }
 
   return (
@@ -42,18 +55,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         backgroundColor: nonprofit.cause,
         ...hoverStyles
       }}
-      onClick={() =>
-        router.push(
-          {
-            pathname: '/[campaign]',
-            query: {
-              campaign: nonprofit.slug,
-              showBackToExamples: true
-            }
-          },
-          `/${nonprofit.slug}`
-        )
-      }
+      onClick={toGivelist}
     >
       <Flex
         sx={{
@@ -87,7 +89,6 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             variant="button"
             as="span"
             id="nonprofit-link"
-            onClick={() => pushEvent(nonprofit.slug)}
             sx={{
               alignSelf: 'flex-start',
               transition: 'background .2s',
@@ -106,14 +107,17 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           ...styles.imageSection
         }}
       >
-        <Box
-          id="nonprofit-image"
-          sx={{
-            ...styles.image,
-            ...styles.imageFilters,
-            backgroundImage: `url(${nonprofit.imageUrl})`
-          }}
-        />
+        <Box id="nonprofit-image-container" sx={styles.imageContainer}>
+          <Image
+            src={nonprofit.imageUrl}
+            alt={nonprofit.name + ' campaign image'}
+            className="next-home-image"
+            layout="fill"
+            objectFit="cover"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
+          />
+        </Box>
       </Flex>
     </Flex>
   )

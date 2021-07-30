@@ -1,9 +1,10 @@
-import { Flex, Text, Image } from '@theme-ui/components'
+import { Flex, Text } from '@theme-ui/components'
 import { Fragment, useCallback, useState } from 'react'
 import { NonProfit as NonProfitType } from 'types/NonProfit'
 import { gtag } from 'src/services/gtag'
 import { Expandable } from 'src/components/Expandable'
 import { styles } from './nonProfitListStyles'
+import Image from 'next/image'
 
 interface NonProfitProps {
   list: NonProfitType[]
@@ -35,12 +36,20 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
             headerStyle={styles.header}
             renderTitle={
               <Flex>
-                <Image
-                  src={nonprofit.img}
-                  alt="non-profit"
-                  variant="avatar"
-                  sx={styles.avatar}
-                />
+                <Flex sx={styles.avartarContainer}>
+                  <Image
+                    quality="100"
+                    src={nonprofit.img}
+                    alt="non profit image"
+                    layout="fill"
+                    objectPosition="center"
+                    objectFit="cover"
+                    className="next-avatar"
+                    placeholder="blur"
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
+                  />
+                </Flex>
+
                 <Flex sx={styles.textContainer}>
                   <Text variant="heading">
                     <strong>{nonprofit.name}</strong>

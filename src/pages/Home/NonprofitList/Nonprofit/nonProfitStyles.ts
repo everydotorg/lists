@@ -33,18 +33,20 @@ export const styles: Style = {
     fontSize: [3, 4],
     lineHeight: 'heading'
   },
-  buttonLinkContainer: { overflow: 'hidden', whiteSpace: 'nowrap' },
-  linkText: { overflow: 'hidden', textOverflow: 'ellipsis' },
-  image: {
+  buttonLinkContainer: {
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
+  },
+  linkText: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis'
+  },
+  imageContainer: {
     minHeight: '256px',
     width: '100%',
-    borderRadius: 'small',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  },
-  imageFilters: {
+    position: 'relative',
     filter: 'grayscale()',
-    mixBlendMode: 'multiply',
-    transition: 'filter .2s'
+    transition: 'filter .2s',
+    mixBlendMode: 'multiply'
   }
 }

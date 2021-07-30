@@ -19,6 +19,19 @@ html {
   overflow: hidden;
 }
 
+.next-home-image {
+  border-radius: 12px;
+}
+
+.next-banner-mobile-image {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.next-avatar {
+  border-radius: 999px;
+}
+
 @media screen and (min-width: 56.25em) {
   html {
     font-size: 16px;

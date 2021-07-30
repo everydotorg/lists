@@ -23,9 +23,13 @@ export const styles: Style = {
   expandableChevron: {
     alignSelf: 'center'
   },
-  avatar: {
+  avartarContainer: {
+    position: 'relative',
     marginRight: [4, 7],
-    alignSelf: 'center'
+    alignSelf: 'center',
+    width: ['2.5rem', '4rem'],
+    height: ['2.5rem', '4rem'],
+    flexShrink: 0
   },
   aboutContainer: {
     backgroundColor: 'transparent'

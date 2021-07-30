@@ -3,6 +3,7 @@ import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import { styles } from './headerStyles'
 import { baseUrlWithPaths } from 'src/services/url'
+import Image from 'next/image'
 
 interface HeaderProps {
   onClickDonate: () => void
@@ -14,12 +15,18 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
 
   return (
     <>
-      <Box
-        sx={{
-          ...styles.container,
-          backgroundImage: `url(${mobileBannerUrl})`
-        }}
-      ></Box>
+      <Box sx={styles.container}>
+        <Image
+          src={mobileBannerUrl}
+          alt="Campaign mobile banner"
+          className="next-banner-mobile-image"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
+        />
+      </Box>
 
       <Box sx={styles.desktopContainer}>
         <CopyToClipboard

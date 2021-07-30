@@ -2,15 +2,11 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   container: {
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
     minHeight: '200px',
     position: 'relative',
     display: [null, 'none'],
     m: 1,
-    mb: 0,
-    borderTopLeftRadius: 'small',
-    borderTopRightRadius: 'small'
+    mb: 0
   },
   desktopContainer: {
     alignItems: 'center',
