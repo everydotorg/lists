@@ -24,8 +24,15 @@ export const CampaignLayout = ({
   showBackExamples = false,
   children
 }: CampaignLayoutProps) => {
+  const campaignTheme = {
+    ...theme,
+    colors: {
+      ...theme.colors,
+      primary: campaignInfo.primaryColor
+    }
+  }
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={campaignTheme}>
       <CampaignInfoContext.Provider value={{ ...campaignInfo }}>
         <Head>
           <script
