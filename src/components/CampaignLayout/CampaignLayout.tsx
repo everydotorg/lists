@@ -2,14 +2,11 @@ import { CampaignInfoContext } from 'src/contexts/CampaignInfoContext'
 import { Banner } from 'src/components/Banner'
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import { getDefaultAmountAbTest } from 'src/services/donation-amount-ab-test'
 import { theme } from 'src/styles/theme'
 import { Box, ThemeProvider } from 'theme-ui'
 import { CampaignInfo } from 'types/CampaignInfo'
 import { AboutModalProvider } from 'src/contexts/AboutModalContext'
 import { baseUrlWithPaths } from 'src/services/url'
-
-const defaultDonationAmount = getDefaultAmountAbTest()
 
 type CampaignLayoutProps = {
   campaignInfo: CampaignInfo
@@ -29,9 +26,7 @@ export const CampaignLayout = ({
 }: CampaignLayoutProps) => {
   return (
     <ThemeProvider theme={theme}>
-      <CampaignInfoContext.Provider
-        value={{ ...campaignInfo, defaultDonationAmount }}
-      >
+      <CampaignInfoContext.Provider value={{ ...campaignInfo }}>
         <Head>
           <script
             dangerouslySetInnerHTML={{

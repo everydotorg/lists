@@ -1,5 +1,5 @@
 import { Box, Button, Flex } from '@theme-ui/components'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Currency, currencySymbolMap } from 'types/Currency'
 import { DonationFrequency } from 'types/Frequency'
 import { Disclaimer } from './Disclaimer'
@@ -13,19 +13,13 @@ import { gtag } from 'src/services/gtag'
 import { Brand } from 'src/components/Brand'
 
 export const Donation = (): JSX.Element => {
-  const { slug, everySlug, primaryColor, defaultDonationAmount } =
-    useCampaignInfoContext()
+  const { slug, everySlug, primaryColor } = useCampaignInfoContext()
 
-  useEffect(() => {
-    gtag.pushEvent('default_donation_amount', { amount: defaultDonationAmount })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  const [donationAmount, setDonationAmount] = useState(defaultDonationAmount)
+  const [donationAmount, setDonationAmount] = useState(0)
   const [error, setError] = useState(false)
   const [currency] = useState<Currency>(Currency.USD)
   const [frequency, setFrequency] = useState<DonationFrequency>(
-    DonationFrequency.Monthly
+    DonationFrequency.OneTime
   )
 
   const currencySymbol = currencySymbolMap[currency]
@@ -42,9 +36,7 @@ export const Donation = (): JSX.Element => {
     window.open(
       createEveryUrl(slug, everySlug, frequency, donationAmount, false, {
         theme_color: color,
-        theme_color_highlight: color,
-        utm_content:
-          defaultDonationAmount === 0 ? 'v2_default_blank' : 'v2_default_40'
+        theme_color_highlight: color
       }),
       '_self'
     )
@@ -57,9 +49,7 @@ export const Donation = (): JSX.Element => {
     window.open(
       createEveryUrl(slug, everySlug, frequency, donationAmount, true, {
         theme_color: color,
-        theme_color_highlight: color,
-        utm_content:
-          defaultDonationAmount === 0 ? 'v2_default_blank' : 'v2_default_40'
+        theme_color_highlight: color
       }),
       '_self'
     )
@@ -72,6 +62,7 @@ export const Donation = (): JSX.Element => {
 
     const frequencyText =
       frequency === DonationFrequency.Monthly ? 'every month' : ''
+
     return `Donate ${currencySymbol}${donationAmount} ${currency} ${frequencyText}`
   }
 

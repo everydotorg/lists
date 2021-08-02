@@ -48,7 +48,13 @@ export const Frequency = ({
         How often?
       </Label>
       <Flex sx={styles.selectorContainer}>
-        <Input type="radio" name="frequency" id="one-time" sx={styles.input} />
+        <Input
+          type="radio"
+          name="frequency"
+          id="one-time"
+          sx={styles.input}
+          defaultChecked={frequency === DonationFrequency.OneTime}
+        />
         <Label
           id="frequency-one-time"
           onClick={() => setFrequency(DonationFrequency.OneTime)}
@@ -61,7 +67,13 @@ export const Frequency = ({
         >
           <span>One-time</span>
         </Label>
-        <Input type="radio" name="frequency" id="monthly" sx={styles.input} />
+        <Input
+          type="radio"
+          name="frequency"
+          id="monthly"
+          sx={styles.input}
+          defaultChecked={frequency === DonationFrequency.Monthly}
+        />
         <Label
           id="frequency-monthly"
           htmlFor="monthly"
