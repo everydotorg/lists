@@ -26,6 +26,8 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
+const excludedFromHomepage = ['lilbub']
+
 const Homepage = ({ nonProfits }: HomeProps) => {
   return (
     <ThemeProvider theme={theme}>
@@ -54,7 +56,11 @@ const Homepage = ({ nonProfits }: HomeProps) => {
         />
       </Head>
       <AboutModalProvider>
-        <Home nonProfits={nonProfits} />
+        <Home
+          nonProfits={nonProfits.filter(
+            (nonprofit) => !excludedFromHomepage.includes(nonprofit.slug)
+          )}
+        />
       </AboutModalProvider>
     </ThemeProvider>
   )

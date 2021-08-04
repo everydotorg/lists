@@ -9,7 +9,8 @@ export const campaigns = [
   'effectivehealthcareeverywhere',
   'endingglobalpoverty',
   'tacklingclimatechange',
-  'a-brighter-future'
+  'a-brighter-future',
+  'lilbub'
 ]
 
 export type PageProps = InferGetStaticPropsType<typeof getStaticProps>
