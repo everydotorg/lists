@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useIsMobile } from 'src/hooks/useIsMobile'
+import { shuffle } from 'src/services/utils'
 import { Flex, ThemeUIStyleObject } from 'theme-ui'
 import { HomeNonProfit } from '../Home'
 import { Nonprofit } from './Nonprofit'
@@ -10,11 +11,15 @@ type NonprofitListProps = {
 }
 
 export const NonprofitList = ({ sx, nonProfits }: NonprofitListProps) => {
+  const [nonProfitList, setNonProfitList] = useState<Array<HomeNonProfit>>([])
+
   const listRef = useRef<HTMLDivElement>(null)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const timeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const desktop = !useIsMobile()
+
+  useEffect(() => setNonProfitList(shuffle(nonProfits)), [nonProfits])
 
   const clearTimers = () => {
     if (intervalRef.current) {
@@ -48,7 +53,7 @@ export const NonprofitList = ({ sx, nonProfits }: NonprofitListProps) => {
   }, [])
 
   useEffect(() => {
-    if (listRef.current && desktop) {
+    if (listRef.current && desktop && nonProfitList.length) {
       autoscroll()
 
       return () => {
@@ -57,7 +62,7 @@ export const NonprofitList = ({ sx, nonProfits }: NonprofitListProps) => {
     }
 
     return () => null
-  }, [autoscroll, desktop])
+  }, [autoscroll, desktop, nonProfitList])
 
   const onUserInteraction = () => {
     if (desktop) {
@@ -68,7 +73,7 @@ export const NonprofitList = ({ sx, nonProfits }: NonprofitListProps) => {
 
   return (
     <Flex sx={sx} ref={listRef} onWheel={onUserInteraction}>
-      {nonProfits.map((nonprofit) => (
+      {nonProfitList.map((nonprofit) => (
         <Nonprofit nonprofit={nonprofit} key={nonprofit.slug} />
       ))}
     </Flex>
