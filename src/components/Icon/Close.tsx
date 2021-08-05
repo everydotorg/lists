@@ -1,4 +1,4 @@
-export const CloseIcon = ({}): JSX.Element => {
+export const Close = ({}): JSX.Element => {
   return (
     <svg
       viewBox="0 0 17 18"

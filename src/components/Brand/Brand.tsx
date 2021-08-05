@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Text, ThemeUIStyleObject } from 'theme-ui'
-import { EveryOrgLogo } from '../EveryOrgLogo'
+import { Icon } from '../Icon'
 import { styles } from './brandStyles'
 
 type BrandProps = {
@@ -24,7 +24,7 @@ export const Brand = ({ sx = {}, withBorderTop }: BrandProps) => {
           <Text variant="caption" sx={styles.logoSpace}>
             powered by
           </Text>
-          <EveryOrgLogo />
+          <Icon.Every />
         </Flex>
       </Flex>
     </Flex>

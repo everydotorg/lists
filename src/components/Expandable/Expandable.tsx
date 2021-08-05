@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { styles } from './expandableStyles'
 import { Flex, Box, ThemeUIStyleObject } from 'theme-ui'
-import { ChevronDown, ChevronDownProps } from '../ChevronDown'
+import { Icon, ChevronDownProps } from '../Icon'
 import { useScrollToElement } from 'src/hooks/useScrollToElement'
 import { isMobile } from 'react-device-detect'
 
@@ -94,7 +94,7 @@ export const Expandable = React.memo(
       >
         <Flex sx={headerStyle}>
           {renderTitle}
-          <ChevronDown
+          <Icon.ChevronDown
             width={20}
             height={10}
             {...chevronProps}

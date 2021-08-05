@@ -1,4 +1,4 @@
-import { CloseIcon } from 'src/components/CloseIcon'
+import { Icon } from 'src/components/Icon'
 import { useAboutModal } from 'src/hooks/useAboutModal'
 import { gtag } from 'src/services/gtag'
 import { Box, Flex, Text, Link } from 'theme-ui'
@@ -41,7 +41,7 @@ export const Navbar = ({ selected }: NavbarProps) => {
         </Link>
       </Flex>
       <Box sx={styles.closeContainer} onClick={closeModal}>
-        <CloseIcon />
+        <Icon.Close />
       </Box>
     </Flex>
   )

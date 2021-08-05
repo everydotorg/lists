@@ -1,1 +1,0 @@
-export { ArrowUpIcon } from './ArrowUpIcon'

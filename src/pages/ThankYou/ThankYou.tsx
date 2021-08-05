@@ -2,8 +2,7 @@ import { Box, Flex, Button, Text, Link } from 'theme-ui'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import { baseUrlWithPaths, facebookShare, twitterShare } from 'src/services/url'
 import { styles } from './thankYouStyles'
-import { Facebook } from 'src/components/Facebook'
-import { Twitter } from 'src/components/Twitter'
+import { Icon } from 'src/components/Icon'
 import { Divider } from 'src/components/Divider'
 import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { Card } from './Card'
@@ -79,7 +78,7 @@ export const ThankYou = (): JSX.Element | null => {
                   '& > *:not(:last-child)': { mr: 2 }
                 }}
               >
-                <Facebook
+                <Icon.Facebook
                   variant="buttons.secondaryInverted"
                   as="a"
                   id="facebook-share"
@@ -89,7 +88,7 @@ export const ThankYou = (): JSX.Element | null => {
                   height={20}
                 />
 
-                <Twitter
+                <Icon.Twitter
                   id="twitter-share"
                   width={20}
                   height={20}

@@ -1,6 +1,4 @@
-import React from 'react'
-
-export const ArrowUpIcon = () => {
+export const ArrowUp = () => {
   return (
     <svg
       width="23"

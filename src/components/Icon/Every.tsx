@@ -1,4 +1,4 @@
-export const EveryOrgLogo: React.FC = () => (
+export const Every = () => (
   <svg
     width="101"
     height="24"

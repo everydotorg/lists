@@ -1,4 +1,4 @@
-import { ChevronDown } from 'src/components/ChevronDown'
+import { Icon } from 'src/components/Icon'
 import { gtag } from 'src/services/gtag'
 import { Box, Flex, Text } from 'theme-ui'
 import { styles } from './cardLinkStyles'
@@ -27,7 +27,7 @@ export const CardLink: React.FC<CardLinkProps> = ({
           {title}
         </Text>
         <Box sx={styles.chevronContainer}>
-          <ChevronDown width={14} height={14}></ChevronDown>
+          <Icon.ChevronDown width={14} height={14}></Icon.ChevronDown>
         </Box>
       </Flex>
       <Text variant="caption">{children}</Text>

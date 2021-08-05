@@ -2,7 +2,7 @@ import { Box, Flex, Input, Label, Text } from '@theme-ui/components'
 import { DonationFrequency } from 'types/Frequency'
 import { styles } from './frequencyStyles'
 import React from 'react'
-import { ArrowUpIcon } from 'src/components/ArrowUpIcon'
+import { Icon } from 'src/components/Icon'
 import { useTransition, config } from '@react-spring/core'
 import cubicBezier from 'bezier-easing'
 import { animated } from '@react-spring/web'
@@ -92,7 +92,7 @@ export const Frequency = ({
             <AnimatedBox style={style}>
               <Box sx={styles.donationContainer}>
                 <Box sx={styles.donationContainerArrow}>
-                  <ArrowUpIcon />
+                  <Icon.ArrowUp />
                 </Box>
                 <Text as="p" variant="small" sx={styles.donationText}>
                   Monthly gifts help nonprofits focus on their mission and
