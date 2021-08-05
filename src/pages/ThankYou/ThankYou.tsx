@@ -11,6 +11,7 @@ import { useProgressData } from 'src/hooks/useProgressData'
 import { Goal } from 'src/components/Goal'
 import { useRouter } from 'next/router'
 import { gtag } from 'src/services/gtag'
+
 export const ThankYou = (): JSX.Element | null => {
   const { slug, socialShareText, name, showGoalOnThankyouPage } =
     useCampaignInfoContext()
@@ -69,6 +70,13 @@ export const ThankYou = (): JSX.Element | null => {
                 as="a"
                 variant="secondaryInverted"
                 type="button"
+                iconSize="small"
+                sx={{
+                  flexBasis: 0,
+                  flexGrow: 1,
+                  maxWidth: 'max-content',
+                  mr: 2
+                }}
               >
                 giveli.st/{slug}
               </CopyToClipboard>

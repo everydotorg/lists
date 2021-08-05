@@ -15,7 +15,12 @@ export const Twitter = ({
   return (
     <Link
       href={href}
-      sx={{ cursor: 'pointer', display: 'flex', alignItems: 'center', ...sx }}
+      sx={{
+        cursor: 'pointer',
+        display: 'flex',
+        alignItems: 'center',
+        ...sx
+      }}
       {...props}
     >
       <svg

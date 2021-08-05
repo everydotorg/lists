@@ -11,6 +11,8 @@ import { useAboutModal } from 'src/hooks/useAboutModal'
 import { MobileDonateButton } from './MobileDonateButton'
 import { Goal } from 'src/components/Goal'
 import { useProgressData } from 'src/hooks/useProgressData'
+import { CopyToClipboard } from 'src/components/CopyToClipboard'
+import { baseUrlWithPaths } from 'src/services/url'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor, showGoalOnListPage } =
@@ -58,6 +60,15 @@ export const Campaign = (): JSX.Element => {
           >
             <span>About giveli.st</span>
           </Button>
+          <CopyToClipboard
+            id="campaign-copylink"
+            text={baseUrlWithPaths(slug)}
+            sx={styles.linkButton}
+            linkCopiedStyle={styles.linkCopied}
+            variant="primarySmallInverted"
+          >
+            giveli.st/{slug}
+          </CopyToClipboard>
         </Box>
         <Brand sx={{ flex: 1 }} withBorderTop />
       </Flex>
