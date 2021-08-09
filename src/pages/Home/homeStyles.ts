@@ -14,12 +14,12 @@ export const styles: Style = {
   },
   givelistSection: {
     label: 'givelist-section',
-    '-webkit-overflow-scrolling': 'touch',
+    WebkitOverflowScrolling: 'touch',
     // Safari & Chromium
     '::-webkit-scrollbar': {
       display: 'none'
     },
-    'scrollbar-width': 'none', // firefox
+    scrollbarWidth: 'none', // firefox
     flex: [1, '57%'],
     overflow: 'auto',
     scrollBehavior: 'smooth',

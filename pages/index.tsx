@@ -6,7 +6,7 @@ import { getCampaignInfo } from 'src/services/getCampaignInfo'
 import { ThemeProvider } from 'theme-ui'
 import { theme } from 'src/styles/theme'
 import Head from 'next/head'
-import { baseUrl } from 'src/services/url'
+import { baseUrl, baseUrlWithPaths } from 'src/services/url'
 
 export const getStaticProps: GetStaticProps = async () => {
   const nonProfits = campaigns
@@ -36,23 +36,31 @@ const Homepage = ({ nonProfits }: HomeProps) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Discover, donate, and share lists of recommended nonprofits."
+          content="Discover, support, and share recommended nonprofits."
         />
 
         <meta property="og:title" content="giveli.st" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={baseUrl()} />
         <meta
+          property="og:image"
+          content={baseUrlWithPaths('social-banner.png')}
+        />
+        <meta
           property="og:description"
-          content="Discover, donate, and share lists of recommended nonprofits."
+          content="A trusted place where you can champion worthy causes via social media. Created by a nonprofit. Forever free."
         />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={baseUrl()} />
         <meta name="twitter:title" content="giveli.st" />
         <meta
+          name="twitter:image"
+          content={baseUrlWithPaths('social-banner.png')}
+        />
+        <meta
           name="twitter:description"
-          content="Discover, donate, and share lists of recommended nonprofits."
+          content="A trusted place where you can champion worthy causes via social media. Created by a nonprofit. Forever free."
         />
       </Head>
       <AboutModalProvider>
