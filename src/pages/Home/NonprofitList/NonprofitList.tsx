@@ -72,7 +72,7 @@ export const NonprofitList = ({ sx, nonProfits }: NonprofitListProps) => {
   }
 
   return (
-    <Flex sx={sx} ref={listRef} onWheel={onUserInteraction}>
+    <Flex sx={sx} ref={listRef} onWheel={onUserInteraction} className="blur">
       {nonProfitList.map((nonprofit) => (
         <Nonprofit nonprofit={nonprofit} key={nonprofit.slug} />
       ))}
