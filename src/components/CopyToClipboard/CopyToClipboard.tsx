@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Button, ButtonProps, ThemeUIStyleObject } from 'theme-ui'
 import { Icon } from '../Icon'
 import { styles } from './copyToClipboardStyles'
+import clipboardCopy from 'clipboard-copy'
 
 type CopyToClipboardProps = {
   id: string
@@ -22,7 +23,7 @@ export const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
   const [linkCopied, setLinkCopied] = useState(false)
 
   const copy = () => {
-    navigator.clipboard.writeText(text)
+    clipboardCopy(text)
     setLinkCopied(true)
     setTimeout(() => setLinkCopied(false), 2000)
   }

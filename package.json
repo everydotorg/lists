@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bezier-easing": "^2.1.0",
+    "clipboard-copy": "^4.0.1",
     "next": "11.0.1",
     "react": "17.0.2",
     "react-device-detect": "^1.17.0",
