@@ -83,7 +83,12 @@ export const Frequency = ({
             ...styles.frequencyBase
           }}
         >
-          <span>Monthly</span>
+          <Text sx={{ mr: 2 }}>Monthly</Text>
+          <Icon.Star
+            fill={
+              frequency === DonationFrequency.Monthly ? 'currentcolor' : 'none'
+            }
+          />
         </Label>
       </Flex>
       {transition(
