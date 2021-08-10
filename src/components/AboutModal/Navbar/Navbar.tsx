@@ -29,7 +29,11 @@ export const Navbar = ({ selected }: NavbarProps) => {
         >
           About
         </Text>
-        <Link href="https://support.every.org" sx={styles.menuItem}>
+        <Link
+          href="https://support.every.org"
+          target="_blank"
+          sx={styles.menuItem}
+        >
           Support
         </Link>
         <Link
