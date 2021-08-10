@@ -11,9 +11,10 @@ import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { createEveryUrl } from 'src/services/url'
 import { gtag } from 'src/services/gtag'
 import { Brand } from 'src/components/Brand'
+import { MatchLedger } from './MatchLedger'
 
 export const Donation = (): JSX.Element => {
-  const { slug, everySlug, primaryColor } = useCampaignInfoContext()
+  const { slug, everySlug, primaryColor, sponsor } = useCampaignInfoContext()
 
   const [donationAmount, setDonationAmount] = useState(0)
   const [error, setError] = useState(false)
@@ -70,14 +71,20 @@ export const Donation = (): JSX.Element => {
     <Box sx={styles.page}>
       <Flex sx={styles.container}>
         <Header />
+
         <Input
           donation={donationAmount}
           setDonation={setDonationAmount}
           currencySymbol={currencySymbol}
           error={error}
           setError={setError}
+          sponsor={sponsor}
         />
+
         <Frequency frequency={frequency} setFrequency={setFrequency} />
+
+        {sponsor && <MatchLedger sponsor={sponsor} donation={donationAmount} />}
+
         <Box sx={styles.donateButtonContainer}>
           <Button
             id="submit-donation"
@@ -92,6 +99,7 @@ export const Donation = (): JSX.Element => {
             <span>{getDonateButtonText()}</span>
           </Button>
         </Box>
+
         <Box sx={styles.donateCryptoButtonContainer}>
           <Button
             onClick={donateCrypto}
@@ -103,7 +111,9 @@ export const Donation = (): JSX.Element => {
             <span>Donate Crypto, stocks, or DAF</span>
           </Button>
         </Box>
+
         <Disclaimer />
+
         <Brand sx={{ flex: 1 }} withBorderTop />
       </Flex>
     </Box>

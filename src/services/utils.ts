@@ -10,3 +10,6 @@ export const shuffle = <T>(a: Array<T>) => {
 
   return array
 }
+
+export const calcMatching = (amount: number | undefined, threshold: number) =>
+  amount ? Math.min(amount, threshold) : 0

@@ -36,9 +36,8 @@ export const theme = {
   ],
   radii: {
     zero: 0,
-    frequency: 8,
-    small: 12,
     default: 8,
+    small: 12,
     card: 16,
     full: 9999
   },
@@ -102,32 +101,6 @@ export const theme = {
     }
   },
   forms: {
-    input: {
-      border: '1px solid',
-      borderColor: 'borderGray',
-      borderRadius: 'small',
-      outline: 'none',
-      bg: 'inputBackground',
-      fontSize: [5, 5],
-      lineHeight: 'input',
-      fontWeight: 'heading',
-      letterSpacing: '-0.02em',
-      fontFamily: 'body',
-      width: '100%',
-      py: 4,
-      px: 6,
-      ':focus': {
-        bg: 'white',
-        border: '1px solid',
-        borderColor: 'primary',
-        boxShadow: '0px 0px 0px 2px #afafaf47'
-      },
-      '::placeholder': {
-        fontSize: [4, 5],
-        opacity: 0.7,
-        fontWeight: 'body'
-      }
-    },
     select: {
       border: 'none',
       outline: 'none',

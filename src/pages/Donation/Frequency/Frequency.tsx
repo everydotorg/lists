@@ -32,7 +32,7 @@ export const Frequency = ({
       opacity: 0,
       maxHeight: '0px'
     },
-    expires: false,
+    expires: true,
     config: {
       ...config.default,
       duration: 250,

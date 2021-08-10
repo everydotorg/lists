@@ -37,7 +37,7 @@ export const styles: Style = {
     fontWeight: 'body',
     cursor: 'pointer',
     textAlign: 'center',
-    borderRadius: 'frequency',
+    borderRadius: 'default',
     transition: 'background .4s',
     alignItems: 'center',
     justifyContent: 'center',
@@ -58,7 +58,7 @@ export const styles: Style = {
       left: 0,
       border: '2px solid',
       borderColor: 'primary',
-      borderRadius: 'frequency',
+      borderRadius: 'default',
       transition: 'transform .25s cubic-bezier(.55,.08,0,1)'
     },
     //Trick to decrease the opacity of the bg and keep the content opaque
@@ -71,7 +71,7 @@ export const styles: Style = {
       left: 0,
       bg: 'primary',
       opacity: '0.1',
-      borderRadius: 'frequency',
+      borderRadius: 'default',
       transition: 'transform .25s cubic-bezier(.55,.08,0,1)'
     }
   },
@@ -80,6 +80,7 @@ export const styles: Style = {
     borderRadius: 'small',
     bg: 'backgroundGray',
     p: 4,
+    mb: [4, 6],
     position: 'relative'
   },
   donationContainerArrow: {
