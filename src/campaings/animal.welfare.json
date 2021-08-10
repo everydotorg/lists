@@ -1,13 +1,13 @@
 {
-  "slug": "endfactoryfarming",
-  "everySlug": "end.factory.farming",
-  "name": "End Factory Farming",
+  "slug": "animal.welfare",
+  "everySlug": "animal.welfare",
+  "name": "Animal Welfare",
   "primaryColor": "#34D399",
-  "imageUrl": "https://i.imgur.com/B5NCGZF.jpg",
-  "mobileBannerUrl": "https://i.imgur.com/B5NCGZF.jpg",
-  "bannerUrl": "https://i.imgur.com/UZIZxDA.jpg",
+  "imageUrl": "https://i.imgur.com/bQBzB0U.jpg",
+  "mobileBannerUrl": "https://i.imgur.com/bQBzB0U.jpg",
+  "bannerUrl": "https://i.imgur.com/bQBzB0U.jpg",
   "socialShareText": "Help end the abuse of animals raised for food by supporting these dedicated nonprofits.",
-  "previewImage": "https://i.imgur.com/B5NCGZF.jpg",
+  "previewImage": "https://i.imgur.com/bQBzB0U.jpg",
   "about": "Supporting nonprofits dedicated to ending the abuse of animals raised for food.",
   "cause": "animals",
   "fundingGoal": 50000,
@@ -39,6 +39,13 @@
       "location": "",
       "about": "We work with scientists, investors, and entrepreneurs to make groundbreaking good food a reality. We focus on clean meat and plant-based alternatives to animal products—foods that are more delicious, safer to eat, and better for the planet than their outdated counterparts.",
       "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/faja_profile/j7pfmjuvafvflihgbaf3"
+    },
+    {
+      "slug": "wildanimalinitiative",
+      "name": "Wild Animal Initiative",
+      "location": "Farmington, MN",
+      "about": "We want to make life better for wild animals.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/wzgsabl4bvjvfl6jezb1"
     }
   ]
 }

@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import { getCampaignInfo } from 'src/services/getCampaignInfo'
 
 export const campaigns = [
-  'endfactoryfarming',
+  'animal.welfare',
   'educationeverywhere',
   'antiracism',
   'lgbtq+',
