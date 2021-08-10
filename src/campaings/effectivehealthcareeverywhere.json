@@ -11,11 +11,6 @@
   "about": "Your donation will be split evenly between these five highly impactful nonprofits, that use evidence-based solutions to deliver life-changing healthcare to the places where the need is great, but access is limited.",
   "cause": "health",
   "fundingGoal": 50000,
-  "sponsor": {
-    "ratio": "1-for-1",
-    "threshold": 25,
-    "description": "Amplify your gift. We will match your generous donation dollar-for-dollar up to $25 each time until we reach $10,000 total matched! You can donate as many times as you like."
-  },
   "nonprofits": [
     {
       "slug": "sightsavers",

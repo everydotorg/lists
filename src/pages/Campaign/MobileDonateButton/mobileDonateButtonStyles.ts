@@ -6,7 +6,8 @@ export const styles: Style = {
     position: 'sticky',
     top: '1rem',
     zIndex: 5,
-    mx: [4, 6]
+    mx: [4, 6],
+    mb: [4, 6]
   },
   submitButton: {
     width: '100%'

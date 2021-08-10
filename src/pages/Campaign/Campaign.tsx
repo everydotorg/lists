@@ -27,6 +27,7 @@ export const Campaign = (): JSX.Element => {
     <Box as="main" sx={styles.page}>
       <Flex sx={styles.container}>
         <Header onClickDonate={goToDonation} />
+
         <Flex sx={styles.campaignInfo}>
           <Text sx={styles.campaignTitle} as="h1" variant="h1">
             {name}
@@ -35,20 +36,21 @@ export const Campaign = (): JSX.Element => {
             {about}
           </Text>
         </Flex>
+
         {progress && showGoalOnListPage && (
           <Goal progress={progress} sx={styles.progressGoal} />
         )}
+
         <MobileDonateButton onClick={goToDonation} />
-        {sponsor && (
-          <>
-            <Matching sponsor={sponsor} />
-          </>
-        )}
+
+        {sponsor && <Matching sponsor={sponsor} />}
+
         {nonprofits && (
           <Box sx={styles.nonprofitsContainer}>
             <NonProfitList list={nonprofits} />
           </Box>
         )}
+
         <Box sx={styles.aboutButtonContainer}>
           <Divider space={0} color="borderGray" />
           <Button

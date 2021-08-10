@@ -19,8 +19,8 @@ export const styles: Style = {
     borderRadius: 'small',
     px: [3, 4],
     py: [3, 4],
-    m: [4, 6],
-    mt: [4, 0]
+    mx: [4, 6],
+    mb: [4, 6]
   },
   matchingTitle: {
     color: 'text',

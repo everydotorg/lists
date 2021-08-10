@@ -16,6 +16,7 @@ export const Matching: React.FC<MatchingProps> = ({ sponsor }) => {
     gtag.pushEvent(`${expanded ? 'close' : 'open'}_matching`, {})
     setExpanded((prev) => !prev)
   }
+
   return (
     <Expandable
       expanded={expanded}
