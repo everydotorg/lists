@@ -192,6 +192,6 @@ export const styles: Style = {
     border: '1px solid',
     borderColor: 'borderGray',
     boxShadow: '0px 8px 32px -16px rgba(46, 52, 52, 0.2)',
-    zIndex: 999
+    zIndex: 1
   }
 }

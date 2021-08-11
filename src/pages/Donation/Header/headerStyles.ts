@@ -12,13 +12,22 @@ export const styles: Style = {
     alignItems: 'flex-start'
   },
   closeBox: {
+    position: 'fixed',
+    bg: 'white',
+    top: 0,
+    right: 0,
+    m: [4, 6],
+    zIndex: 5,
     cursor: 'pointer',
     color: 'primary',
-    p: [3, 6],
+    height: ['3rem', '3.5rem'],
+    width: ['3rem', '3.5rem'],
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     border: '1px solid',
     borderColor: 'borderGray',
     borderRadius: ['default', 'small'],
-    display: 'flex',
     '& > svg': {
       width: ['14px', '18px'],
       height: ['14px', '18px']
