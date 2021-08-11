@@ -14,11 +14,11 @@ export const Hero = () => {
       </Flex>
       <Flex sx={styles.textContainer}>
         <Text as="h1" variant="h1">
-          Discover, donate, and share lists of recommended nonprofits.
+          Discover, support, and share recommended nonprofits.
         </Text>
         <Text variant="small">
-          Created by a nonprofit. Forever free. A trusted place you can champion
-          amazing nonprofits via social media.
+          A trusted place where you can champion worthy causes via social media.
+          Created by a nonprofit. Forever free.
         </Text>
       </Flex>
       <Flex sx={styles.buttonsContainer}>
