@@ -2,7 +2,7 @@ import { Style } from 'types/Style'
 
 export const styles: Style = {
   discoverContainer: {
-    m: [2, 4],
+    m: 6,
     alignSelf: 'flex-end'
   },
   discoverButton: {

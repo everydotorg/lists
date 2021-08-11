@@ -6,17 +6,15 @@ export const AboutButton = () => {
   const aboutModal = useAboutModal()
 
   return (
-    <>
-      <Flex sx={styles.aboutContainer}>
-        <Button
-          id="open-about"
-          variant="primarySmallInverted"
-          sx={styles.aboutButton}
-          onClick={() => aboutModal.setOpen(true)}
-        >
-          <span>About giveli.st</span>
-        </Button>
-      </Flex>
-    </>
+    <Flex sx={styles.aboutContainer}>
+      <Button
+        id="open-about"
+        variant="primarySmallInverted"
+        sx={styles.aboutButton}
+        onClick={() => aboutModal.setOpen(true)}
+      >
+        <span>About giveli.st</span>
+      </Button>
+    </Flex>
   )
 }

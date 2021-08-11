@@ -5,7 +5,7 @@ export const styles: Style = {
     position: 'absolute',
     top: 0,
     left: 0,
-    m: [2, 4],
+    m: 6,
     alignSelf: 'flex-start'
   },
   backExamplesButton: {

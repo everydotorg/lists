@@ -9,6 +9,7 @@ export const DiscoverButton = () => {
     gtag.pushEvent('back_home', {
       origin: 'discover more'
     })
+
   return (
     <Flex sx={styles.discoverContainer}>
       <Link href="/">
