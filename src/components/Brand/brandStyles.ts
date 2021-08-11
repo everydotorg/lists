@@ -24,6 +24,7 @@ export const styles: Style = {
   logoSpace: { label: 'brand-logoSpace', mr: 2 },
   poweredBy: {
     alignItems: 'center',
+    justifyContent: 'flex-end',
     '& > svg': {
       width: ['45%', 'unset']
     }
