@@ -31,7 +31,9 @@ export const Donation = (): JSX.Element => {
     }
 
     const color = primaryColor.replace('#', '')
-
+    gtag.pushEvent('donate_submit', {
+      amount: donationAmount
+    })
     window.open(
       createEveryUrl(slug, everySlug, frequency, donationAmount, false, {
         theme_color: color,
