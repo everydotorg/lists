@@ -23,7 +23,9 @@ export const styles: Style = {
   },
   donateButtonContainer: {
     px: [4, 6],
-    mt: [7, 9]
+    mt: [7, 9],
+    position: 'sticky',
+    bottom: [4, 6]
   },
   donateCryptoButtonContainer: {
     mt: [2, 3],
