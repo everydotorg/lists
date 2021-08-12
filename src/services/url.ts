@@ -9,6 +9,7 @@ export const baseUrl = () => {
     return window.location.origin
   }
 
+  // Fallback
   const base = process.env.NEXT_PUBLIC_VERCEL_URL
 
   const hasProtocol = base?.includes('http')

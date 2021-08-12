@@ -11,14 +11,21 @@ import { useProgressData } from 'src/hooks/useProgressData'
 import { Goal } from 'src/components/Goal'
 import { useRouter } from 'next/router'
 import { gtag } from 'src/services/gtag'
+import { useEffect, useState } from 'react'
 
 export const ThankYou = (): JSX.Element | null => {
   const { slug, socialShareText, name, showGoalOnThankyouPage } =
     useCampaignInfoContext()
   const progress = useProgressData()
   const router = useRouter()
+
   const { showsignup } = router.query
-  const shareUrl = baseUrlWithPaths(slug)
+
+  const [shareUrl, setShareUrl] = useState('')
+
+  useEffect(() => {
+    setShareUrl(baseUrlWithPaths(slug))
+  }, [slug])
 
   const navigateToSignup = () => {
     gtag.pushEvent('signup', {})
