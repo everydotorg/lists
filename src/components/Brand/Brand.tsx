@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Text, ThemeUIStyleObject } from 'theme-ui'
+import { Flex, Link, Text, ThemeUIStyleObject } from 'theme-ui'
 import { Icon } from '../Icon'
 import { styles } from './brandStyles'
 
@@ -24,7 +24,9 @@ export const Brand = ({ sx = {}, withBorderTop }: BrandProps) => {
           <Text variant="caption" sx={styles.logoSpace}>
             powered by
           </Text>
-          <Icon.Every />
+          <Link sx={styles.everyLink} href="https://every.org" target="_blank">
+            <Icon.Every />
+          </Link>
         </Flex>
       </Flex>
     </Flex>

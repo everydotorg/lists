@@ -28,5 +28,9 @@ export const styles: Style = {
     '& > svg': {
       width: ['45%', 'unset']
     }
+  },
+  everyLink: {
+    height: ['auto', 'auto'],
+    display: 'flex'
   }
 }

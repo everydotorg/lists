@@ -1,11 +1,15 @@
 export const Every = () => (
   <svg
+    role="img"
+    aria-label="Every.org - Your trusted network for doing good"
     width="101"
     height="24"
     viewBox="0 0 101 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <title id="everyorg-title">Every.org</title>
+    <desc id="everyorg-desc">Your trusted network for doing good.</desc>
     <path
       d="M20.3791 8.98106C20.3791 3.87375 16.1928 0 10.8164 0C4.80259 0 0 5.17224 0 11.578C0 18.4815 5.39759 24 12.6652 24C19.9329 24 26.4355 18.1353 26.9455 10.4527H23.6304C23.0141 16.2092 18.2328 20.624 12.6652 20.624C7.31013 20.624 3.3363 16.6204 3.3363 11.578C3.3363 7.03337 6.65138 3.37601 10.8164 3.37601C14.3015 3.37601 17.0428 5.79981 17.0428 8.98106C17.0428 11.6213 15.1728 13.8287 12.6865 13.8287V17.2047C17.0853 17.2047 20.3791 13.4608 20.3791 8.98106Z"
       fill="#2BD7B0"
