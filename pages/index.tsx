@@ -8,8 +8,11 @@ import { theme } from 'src/styles/theme'
 import Head from 'next/head'
 import { baseUrl, baseUrlWithPaths } from 'src/services/url'
 
+const excludedFromHomepage = ['lilbub']
+
 export const getStaticProps: GetStaticProps = async () => {
   const nonProfits = campaigns
+    .filter((campaign) => !excludedFromHomepage.includes(campaign))
     .map((campaign) => getCampaignInfo(campaign))
     .map((info) => ({
       slug: info.slug,
@@ -25,8 +28,6 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   }
 }
-
-const excludedFromHomepage = ['lilbub']
 
 const Homepage = ({ nonProfits }: HomeProps) => {
   return (
@@ -64,11 +65,7 @@ const Homepage = ({ nonProfits }: HomeProps) => {
         />
       </Head>
       <AboutModalProvider>
-        <Home
-          nonProfits={nonProfits.filter(
-            (nonprofit) => !excludedFromHomepage.includes(nonprofit.slug)
-          )}
-        />
+        <Home nonProfits={nonProfits} />
       </AboutModalProvider>
     </ThemeProvider>
   )
