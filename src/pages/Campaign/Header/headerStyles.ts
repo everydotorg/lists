@@ -4,9 +4,7 @@ export const styles: Style = {
   container: {
     minHeight: '200px',
     position: 'relative',
-    display: [null, 'none'],
-    m: 1,
-    mb: 0
+    display: [null, 'none']
   },
   desktopContainer: {
     alignItems: 'center',

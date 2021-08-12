@@ -19,7 +19,6 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
         <Image
           src={mobileBannerUrl}
           alt="Campaign mobile banner"
-          className="next-banner-mobile-image"
           layout="fill"
           objectFit="cover"
           objectPosition="center"
