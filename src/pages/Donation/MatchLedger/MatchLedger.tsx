@@ -19,15 +19,15 @@ export const MatchLedger = ({ donation, sponsor }: MatchLedgerProps) => {
     <Box sx={styles.stack}>
       <Flex sx={styles.line}>
         <Text>Your donation</Text>
-        <Text>$ {donationAmount}.00 USD</Text>
+        <Text>$ {donationAmount}</Text>
       </Flex>
       <Flex sx={styles.line}>
-        <Text>Matched donation</Text>
-        <Text>$ {matchedDonation}.00 USD</Text>
+        <Text>Match amount</Text>
+        <Text>$ {matchedDonation}</Text>
       </Flex>
       <Flex sx={{ ...styles.line, color: 'text' }}>
-        <Text>Total donation</Text>
-        <Text>$ {totalDonation}.00 USD</Text>
+        <Text>Total gift</Text>
+        <Text>$ {totalDonation}</Text>
       </Flex>
     </Box>
   )
