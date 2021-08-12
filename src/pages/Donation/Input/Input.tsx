@@ -11,6 +11,8 @@ import cubicBezier from 'bezier-easing'
 
 const amountsToAdd = [20, 40, 80, 200, 500]
 
+const forbiddenSymbols = ['.', ',', '+', '-']
+
 type InputProps = {
   donation: number
   setDonation: React.Dispatch<React.SetStateAction<number>>
@@ -102,8 +104,16 @@ export const Input = ({
             value={donation ? donation : undefined}
             id="donationAmount"
             type="number"
+            onKeyDown={(event) => {
+              if (forbiddenSymbols.includes(event.key)) {
+                event.preventDefault()
+              }
+            }}
             onChange={inputChange}
+            pattern="[0-9]*"
+            inputMode="numeric"
             min={0}
+            step={1}
             sx={{
               ...styles.input,
               ...styles.inputNumber,
