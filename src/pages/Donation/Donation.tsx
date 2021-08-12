@@ -25,8 +25,6 @@ export const Donation = (): JSX.Element => {
 
   const currencySymbol = currencySymbolMap[currency]
 
-  const disabled = donationAmount <= 0
-
   const donate = () => {
     if (donationAmount < 10) {
       return setError(true)
@@ -90,11 +88,7 @@ export const Donation = (): JSX.Element => {
             id="submit-donation"
             onClick={donate}
             variant="primary"
-            sx={{
-              ...styles.donateButton,
-              ...(disabled ? styles.donateButtonDisabled : {})
-            }}
-            disabled={disabled}
+            sx={styles.donateButton}
           >
             <span>{getDonateButtonText()}</span>
           </Button>
@@ -104,9 +98,7 @@ export const Donation = (): JSX.Element => {
           <Button
             onClick={donateCrypto}
             variant="primaryInverted"
-            sx={{
-              ...styles.donateButton
-            }}
+            sx={styles.donateButton}
           >
             <span>Donate Crypto, stocks, or DAF</span>
           </Button>

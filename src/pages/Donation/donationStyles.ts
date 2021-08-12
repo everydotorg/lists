@@ -3,7 +3,6 @@ import { Style } from 'types/Style'
 export const styles: Style = {
   page: {
     label: 'page',
-
     display: ['flex', 'grid'],
     gridTemplateColumns: [null, '1fr'],
     gridTemplateRows: [null, '1fr max-content'],
@@ -34,9 +33,5 @@ export const styles: Style = {
   donateButton: {
     width: '100%',
     opacity: 1
-  },
-  donateButtonDisabled: {
-    cursor: 'default',
-    opacity: 0.8
   }
 }
