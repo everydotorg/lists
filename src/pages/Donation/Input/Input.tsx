@@ -72,7 +72,7 @@ export const Input = ({
       amount: amount,
       value: donation + amount
     })
-
+    setError(false)
     setDonation((prev) => prev + amount)
   }
 
