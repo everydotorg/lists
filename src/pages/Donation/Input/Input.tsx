@@ -1,4 +1,4 @@
-import { Box, Label, Flex, Input as ThemeInput, Text } from 'theme-ui'
+import { Box, Label, Flex, Input as ThemeInput, Text, Link } from 'theme-ui'
 import { styles } from './inputStyles'
 import { gtag } from 'src/services/gtag'
 import React, { useRef, useState } from 'react'
@@ -8,6 +8,7 @@ import { Sponsor } from 'types/Sponsor'
 import { calcMatching } from 'src/services/utils'
 import { useTransition, config, animated } from 'react-spring'
 import cubicBezier from 'bezier-easing'
+import { matchingMailto } from 'src/services/url'
 
 const amountsToAdd = [20, 40, 80, 200, 500]
 
@@ -20,6 +21,7 @@ type InputProps = {
   error: boolean
   setError: React.Dispatch<React.SetStateAction<boolean>>
   sponsor: Sponsor | undefined
+  campaign: string
 }
 
 export const Input = ({
@@ -28,7 +30,8 @@ export const Input = ({
   currencySymbol,
   error,
   setError,
-  sponsor
+  sponsor,
+  campaign
 }: InputProps): JSX.Element => {
   const [matchExpanded, setMatchExpanded] = useState(false)
 
@@ -160,7 +163,10 @@ export const Input = ({
                   sx={styles.expandableBox}
                   ref={expandableRef}
                 >
-                  <Text>{sponsor.description}</Text>
+                  <Text>
+                    {sponsor.description} Want to donate and increase the match
+                    pool? <Link href={matchingMailto(campaign)}>Email us.</Link>
+                  </Text>
                 </AnimatedBox>
               )
           )}

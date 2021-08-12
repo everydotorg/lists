@@ -78,3 +78,16 @@ export const twitterShare = (u: string, text: string): string => {
 
   return url.href
 }
+
+export const matchingMailto = (campaign: string) =>
+  [
+    'mailto:team@every.org',
+    '?',
+    'subject=',
+    'I would like to donate matching dollars',
+    '&',
+    'body=',
+    `Hello, I was looking at ${baseUrlWithPaths(
+      campaign
+    )} and was interested in matching`
+  ].join('')

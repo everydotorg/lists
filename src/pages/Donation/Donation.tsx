@@ -77,6 +77,7 @@ export const Donation = (): JSX.Element => {
           error={error}
           setError={setError}
           sponsor={sponsor}
+          campaign={slug}
         />
 
         <Frequency frequency={frequency} setFrequency={setFrequency} />

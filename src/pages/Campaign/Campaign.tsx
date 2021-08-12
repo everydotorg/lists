@@ -43,7 +43,7 @@ export const Campaign = (): JSX.Element => {
 
         <MobileDonateButton onClick={goToDonation} />
 
-        {sponsor && <Matching sponsor={sponsor} />}
+        {sponsor && <Matching sponsor={sponsor} campaign={slug} />}
 
         {nonprofits && (
           <Box sx={styles.nonprofitsContainer}>

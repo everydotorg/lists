@@ -1,15 +1,17 @@
-import { Text, Flex } from '@theme-ui/components'
+import { Link, Text, Flex } from '@theme-ui/components'
 import { useState } from 'react'
 import { Sponsor } from 'types/Sponsor'
 import { Expandable } from 'src/components/Expandable'
 import { styles } from './matchingStyles'
 import { gtag } from 'src/services/gtag'
+import { matchingMailto } from 'src/services/url'
 
 interface MatchingProps {
   sponsor: Sponsor
+  campaign: string
 }
 
-export const Matching: React.FC<MatchingProps> = ({ sponsor }) => {
+export const Matching = ({ sponsor, campaign }: MatchingProps) => {
   const [expanded, setExpanded] = useState(false)
 
   const toggleExpandable = () => {
@@ -36,7 +38,8 @@ export const Matching: React.FC<MatchingProps> = ({ sponsor }) => {
       }
       renderDescription={
         <Text as="p" variant="small" sx={styles.matchingDescription}>
-          {sponsor.description}
+          {sponsor.description} Want to donate and increase the match pool?{' '}
+          <Link href={matchingMailto(campaign)}>Email us.</Link>
         </Text>
       }
     />
