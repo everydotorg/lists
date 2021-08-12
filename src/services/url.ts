@@ -5,6 +5,10 @@ interface Obj {
 }
 
 export const baseUrl = () => {
+  if (typeof window !== 'undefined') {
+    return window.location.origin
+  }
+
   const base = process.env.NEXT_PUBLIC_VERCEL_URL
 
   const hasProtocol = base?.includes('http')
