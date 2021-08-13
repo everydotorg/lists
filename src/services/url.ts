@@ -55,6 +55,7 @@ export const createEveryUrl = ({
   const commonQueryParams = {
     no_exit: 1,
     share_info: 1,
+    utm_source: 'givelist',
     ...extras
   }
 

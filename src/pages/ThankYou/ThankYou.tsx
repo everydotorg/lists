@@ -29,7 +29,7 @@ export const ThankYou = (): JSX.Element | null => {
 
   const navigateToSignup = () => {
     gtag.pushEvent('signup', {})
-    window.open('https://www.every.org/signup', '_blank')
+    window.open('https://www.every.org/signup?utm_source=givelist', '_blank')
   }
 
   return (
