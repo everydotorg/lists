@@ -24,7 +24,11 @@ export const Brand = ({ sx = {}, withBorderTop }: BrandProps) => {
           <Text variant="caption" sx={styles.logoSpace}>
             powered by
           </Text>
-          <Link sx={styles.everyLink} href="https://every.org" target="_blank">
+          <Link
+            sx={styles.everyLink}
+            href="https://every.org?utm_source=givelist"
+            target="_blank"
+          >
             <Icon.Every />
           </Link>
         </Flex>

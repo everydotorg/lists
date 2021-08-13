@@ -33,11 +33,14 @@ export const AlternativeDonation = () => {
         <Link onClick={donateCrypto} variant="regular">
           Crypto
         </Link>
-        <Link href="https://www.every.org/donate-stock" variant="regular">
+        <Link
+          href="https://www.every.org/donate-stock?utm_source=givelist"
+          variant="regular"
+        >
           Stocks
         </Link>
         <Link
-          href="https://support.every.org/hc/en-us/articles/360059998953-How-can-I-donate-using-a-Donor-Advised-Fund-DAF-"
+          href="https://support.every.org/hc/en-us/articles/360059998953-How-can-I-donate-using-a-Donor-Advised-Fund-DAF-?utm_source=givelist"
           variant="regular"
         >
           DAF
