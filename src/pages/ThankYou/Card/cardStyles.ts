@@ -15,18 +15,8 @@ export const styles: Style = {
   containerColor: {
     color: 'primary',
     position: 'relative',
-    bg: 'transparent',
-    '&::after': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      bg: 'primary',
-      opacity: '0.1',
-      borderRadius: 'small'
-    },
+    bg: 'primaryBg',
+    borderRadius: 'small',
     '& > *': {
       zIndex: 1
     }

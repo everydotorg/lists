@@ -6,10 +6,10 @@ export const styles: Style = {
     py: 4,
     bg: 'primary',
     borderRadius: ['default', 'small'],
-    transition: 'opacity .2s',
+    transition: 'background .2s',
     justifyContent: ['center', 'space-between'],
     ':hover': {
-      opacity: 0.8
+      bg: 'primaryHover'
     },
     alignItems: 'center',
     height: '100%',

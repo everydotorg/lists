@@ -7,6 +7,7 @@ import { Box, ThemeProvider } from 'theme-ui'
 import { CampaignInfo } from 'types/CampaignInfo'
 import { AboutModalProvider } from 'src/contexts/AboutModalContext'
 import { baseUrlWithPaths } from 'src/services/url'
+import Color from 'color'
 
 type CampaignLayoutProps = {
   campaignInfo: CampaignInfo
@@ -24,11 +25,15 @@ export const CampaignLayout = ({
   showBackExamples = false,
   children
 }: CampaignLayoutProps) => {
+  const color = new Color(campaignInfo.primaryColor, 'hex')
+
   const campaignTheme = {
     ...theme,
     colors: {
       ...theme.colors,
-      primary: campaignInfo.primaryColor
+      primary: color.hex(),
+      primaryHover: color.darken(0.2).hex(),
+      primaryBg: color.alpha(0.1).hsl().string()
     }
   }
   return (

@@ -98,19 +98,8 @@ export const styles: Style = {
     alignItems: 'center',
     color: 'primary',
     lineHeight: 1.5,
-
-    // Trick to decrease the opacity of the bg and keep the content opaque
-    '&::after': {
-      content: '""',
-      width: '100%',
-      height: '100%',
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      bg: 'primary',
-      opacity: '0.1',
-      borderRadius: 'small'
-    },
+    bg: 'primaryBg',
+    borderRadius: 'small',
     '& > span': {
       display: 'block',
       transform: ['translateY(0.07em)', 'translateY(0.1em)']

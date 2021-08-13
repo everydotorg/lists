@@ -79,6 +79,8 @@ export const theme = {
     text: '#2E3434',
     textGray: 'rgba(46, 52, 52, 0.6)',
     primary: '#00A37F',
+    primaryHover: '#2F806D',
+    primaryBg: '#E6F6F2',
     divider: '#DBDBDB',
     background: '#FFF',
     inputBackground: '#FFF',
@@ -125,7 +127,7 @@ export const theme = {
       justifyContent: 'center',
       height: ['3rem', '3.5rem'],
       '&:hover': {
-        opacity: '0.85'
+        bg: 'primaryHover'
       },
       '&:active': {
         outline: 'none',
@@ -134,7 +136,7 @@ export const theme = {
       '&:focus': {
         outline: 'none'
       },
-      transition: 'opacity .2s',
+      transition: 'background .2s',
       '& > span': {
         // hack to center the text of the button
         // https://iamvdo.me/en/blog/css-font-metrics-line-height-and-vertical-align
@@ -181,7 +183,10 @@ export const theme = {
       bg: 'white',
       color: 'primary',
       border: '1px solid',
-      borderColor: 'borderGray'
+      borderColor: 'borderGray',
+      '&:hover': {
+        opacity: '0.85'
+      }
     },
     primaryInverted: {
       variant: 'buttons.primary',
@@ -189,7 +194,11 @@ export const theme = {
       background: 'white',
       border: '1px solid',
       borderColor: 'borderGray',
-      fontWeight: '500'
+      fontWeight: '500',
+      transition: 'opacity .2s',
+      '&:hover': {
+        opacity: '0.85'
+      }
     }
   },
   text: {
