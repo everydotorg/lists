@@ -17,10 +17,6 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <script
-            async
-            src={'https://www.googletagmanager.com/gtag/js?id=GTM-PTXWSQK'}
-          />
-          <script
             dangerouslySetInnerHTML={{
               __html: `
               ;(function (w, d, s, l, i) {
