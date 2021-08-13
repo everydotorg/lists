@@ -1,0 +1,1 @@
+export { AlternativeDonation } from './AlternativeDonation'

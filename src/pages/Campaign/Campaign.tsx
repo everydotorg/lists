@@ -13,6 +13,7 @@ import { Goal } from 'src/components/Goal'
 import { useProgressData } from 'src/hooks/useProgressData'
 import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { baseUrlWithPaths } from 'src/services/url'
+import { AlternativeDonation } from 'src/components/AlternativeDonation'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor, showGoalOnListPage } =
@@ -72,6 +73,7 @@ export const Campaign = (): JSX.Element => {
             giveli.st/{slug}
           </CopyToClipboard>
         </Box>
+        <AlternativeDonation />
         <Brand sx={{ flex: 1 }} withBorderTop />
       </Flex>
     </Box>

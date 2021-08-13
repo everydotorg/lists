@@ -12,6 +12,7 @@ import { createEveryUrl } from 'src/services/url'
 import { gtag } from 'src/services/gtag'
 import { Brand } from 'src/components/Brand'
 import { MatchLedger } from './MatchLedger'
+import { AlternativeDonation } from 'src/components/AlternativeDonation'
 
 export const Donation = (): JSX.Element => {
   const { slug, everySlug, primaryColor, sponsor } = useCampaignInfoContext()
@@ -35,22 +36,16 @@ export const Donation = (): JSX.Element => {
       amount: donationAmount
     })
     window.open(
-      createEveryUrl(slug, everySlug, frequency, donationAmount, false, {
-        theme_color: color,
-        theme_color_highlight: color
-      }),
-      '_self'
-    )
-  }
-
-  const donateCrypto = () => {
-    gtag.pushEvent('submit_crypto_donation', {})
-    const color = primaryColor.replace('#', '')
-
-    window.open(
-      createEveryUrl(slug, everySlug, frequency, donationAmount, true, {
-        theme_color: color,
-        theme_color_highlight: color
+      createEveryUrl({
+        slug,
+        everySlug,
+        frequency,
+        amount: donationAmount,
+        crypto: false,
+        extras: {
+          theme_color: color,
+          theme_color_highlight: color
+        }
       }),
       '_self'
     )
@@ -97,18 +92,8 @@ export const Donation = (): JSX.Element => {
           </Button>
         </Box>
 
-        <Box sx={styles.donateCryptoButtonContainer}>
-          <Button
-            onClick={donateCrypto}
-            variant="primaryInverted"
-            sx={styles.donateButton}
-          >
-            <span>Donate Crypto, stocks, or DAF</span>
-          </Button>
-        </Box>
-
         <Disclaimer />
-
+        <AlternativeDonation />
         <Brand sx={{ flex: 1 }} withBorderTop />
       </Flex>
     </Box>

@@ -263,6 +263,14 @@ export const theme = {
     }
   },
   links: {
+    regular: {
+      cursor: 'pointer',
+      height: 'auto',
+      color: 'primary',
+      fontWeight: 400,
+      fontSize: [2, 3],
+      textDecoration: 'none'
+    },
     button: {
       cursor: 'pointer',
       letterSpacing: '-0.01em',

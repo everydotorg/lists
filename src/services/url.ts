@@ -30,29 +30,42 @@ export const objectToParams = (object: Obj): string => {
   return params.toString()
 }
 
-export const createEveryUrl = (
-  slug: string,
-  everySlug: string,
-  frequency: DonationFrequency,
-  amount: number,
-  crypto: boolean,
+type EveryUrl = {
+  slug: string
+  everySlug: string
+  extras: Record<string, string>
+  frequency?: DonationFrequency
+  amount?: number
+  crypto: boolean
+}
+export const createEveryUrl = ({
+  slug,
+  everySlug,
+  frequency,
+  amount,
+  crypto,
   extras = {}
-): string => {
+}: EveryUrl): string => {
   const production = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
 
   const url = new URL(
     everySlug + '/donate' + (crypto ? '/crypto' : ''),
     production ? 'https://www.every.org' : 'https://staging.every.org'
   )
-
-  url.search = objectToParams({
-    frequency,
-    amount,
+  const commonQueryParams = {
     no_exit: 1,
     share_info: 1,
-    success_url: baseUrlWithPaths(slug, 'thank-you'),
     ...extras
-  })
+  }
+
+  url.search = crypto
+    ? objectToParams(commonQueryParams)
+    : objectToParams({
+        frequency,
+        amount,
+        success_url: baseUrlWithPaths(slug, 'thank-you'),
+        ...commonQueryParams
+      })
 
   return url.href
 }
