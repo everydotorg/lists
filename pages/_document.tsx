@@ -38,14 +38,6 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
-          <iframe
-            title="googletags"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PTXWSQK"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-
           <Main />
           <NextScript />
         </body>
