@@ -7,12 +7,12 @@ import { styles } from './headerStyles'
 import { useRouter } from 'next/router'
 
 export const Header = (): JSX.Element => {
-  const { name } = useCampaignInfoContext()
+  const { name, slug } = useCampaignInfoContext()
   const router = useRouter()
 
   const closeDonatePage = () => {
     gtag.pushEvent(`donate_close`, {})
-    router.back()
+    router.push('/' + slug)
   }
 
   return (
