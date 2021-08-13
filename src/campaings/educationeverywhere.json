@@ -1,0 +1,49 @@
+{
+  "slug": "educationeverywhere",
+  "everySlug": "education.everywhere",
+  "name": "Education Everywhere",
+  "primaryColor": "#00A37F",
+  "imageUrl": "https://i.imgur.com/CRHLfBz.png",
+  "mobileBannerUrl": "https://i.imgur.com/CRHLfBz.png",
+  "bannerUrl": "https://i.imgur.com/qhyPRRh.jpg",
+  "socialShareText": "Support these nonprofits striving to improve education for children around the world with evidence-based solutions.",
+  "previewImage": "https://i.imgur.com/CRHLfBz.png",
+  "about": "Support these nonprofits striving to improve education for children around the world with evidence-based solutions.",
+  "cause": "education",
+  "fundingGoal": 50000,
+  "sponsor": {
+    "ratio": "1-for-1",
+    "threshold": 25,
+    "description": "Amplify your gift! Generous donors will match you dollar-for-dollar up to $25 each time until we reach $10,000 total matched."
+  },
+  "nonprofits": [
+    {
+      "slug": "tarl",
+      "name": "Teaching at the Right Level (TaRL Africa)",
+      "location": "Africa",
+      "about": "Supports governments across Africa to adapt and scale up an evidence-based approach to improving students’ foundational skills.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/lsozljmajdbt9k91fren"
+    },
+    {
+      "slug": "ign",
+      "name": "Iodine Global Network",
+      "location": "Ottawa, ON, Canada",
+      "about": "Dedicated to the sustainable elimination of iodine deficiency worldwide.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/dj3ctnh9nucjwy54quhb"
+    },
+    {
+      "slug": "ei",
+      "name": "Educational Initiatives",
+      "location": "Bengaluru, India",
+      "about": "Supporting students and teachers with affordable, accessible tech to improve educational outcomes.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/mimfnrvmvqxubojkimxm"
+    },
+    {
+      "slug": "codecrew",
+      "name": "Code Crew",
+      "location": "Memphis, TN",
+      "about": "To empower and mentor those most underrepresented in tech, to be tech innovators through hands-on computer science training.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/jvlivnr3nax9w1cggsml"
+    }
+  ]
+}

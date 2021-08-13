@@ -1,0 +1,44 @@
+{
+  "slug": "a-brighter-future",
+  "everySlug": "stem.future",
+  "name": "Science and Technology for a Brighter Future",
+  "primaryColor": "#00A37F",
+  "mobileBannerUrl": "https://i.imgur.com/O0fNKAr.png",
+  "imageUrl": "https://i.imgur.com/O0fNKAr.png",
+  "bannerUrl": "https://i.imgur.com/M4VVTWt.jpg",
+  "socialShareText": "Solving some of the world's biggest challenges with cutting-edge research and policy.",
+  "previewImage": "https://i.imgur.com/O0fNKAr.png",
+  "about": "Solving some of the world's biggest challenges with cutting-edge research and policy.",
+  "cause": "research",
+  "fundingGoal": 50000,
+  "nonprofits": [
+    {
+      "slug": "nti",
+      "name": "Nuclear Threat Initiative",
+      "location": "",
+      "about": "Building a Safer World.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/yeoyfjlwcgw7tc2op8kn"
+    },
+    {
+      "slug": "usonainstitute",
+      "name": "Usona Institute",
+      "location": "Fitchburg, WI",
+      "about": "Usona is dedicated to furthering the understanding of the therapeutic effects of consciousness-expanding medicines.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/lyxqug4axll5xdqtd1t5"
+    },
+    {
+      "slug": "centerforhealthsecurity",
+      "name": "Center for Health Security",
+      "location": "Baltimore, MD",
+      "about": "CHS at Johns Hopkins advances policy, science and technology to protect people’s health from epidemics and disasters.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/iavd4gmx7tyxghvgivaq"
+    },
+    {
+      "slug": "chai",
+      "name": "The Center for Human-Compatible AI",
+      "location": "Berkeley, CA",
+      "about": "Academic research centre at UC Berkeley that carries out technical & advocacy work to help ensure the safety of AI systems",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/m4ecnx3yl2ylcf2gdfw6"
+    }
+  ]
+}

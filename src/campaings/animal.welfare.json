@@ -1,0 +1,51 @@
+{
+  "slug": "animal.welfare",
+  "everySlug": "animal.welfare",
+  "name": "Animal Welfare",
+  "primaryColor": "#00A37F",
+  "imageUrl": "https://i.imgur.com/bQBzB0U.jpg",
+  "mobileBannerUrl": "https://i.imgur.com/bQBzB0U.jpg",
+  "bannerUrl": "https://i.imgur.com/bQBzB0U.jpg",
+  "socialShareText": "Help end the abuse of animals raised for food by supporting these dedicated nonprofits.",
+  "previewImage": "https://i.imgur.com/bQBzB0U.jpg",
+  "about": "Help end the abuse of animals raised for food by supporting these dedicated nonprofits.",
+  "cause": "animals",
+  "fundingGoal": 50000,
+  "nonprofits": [
+    {
+      "slug": "thehumaneleague",
+      "name": "The Human League",
+      "location": "Rockville, MD",
+      "about": "International nonprofit ending the abuse of animals raised for food.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/faja_profile/s6cwebbnv283e86qwkfh"
+    },
+    {
+      "slug": "globalfoodpartners",
+      "name": "Global Food Partners Inc",
+      "location": "Washington, DC",
+      "about": "We work with businesses to implement and maintain high animal welfare and responsible sourcing policies.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/d3sdcot78tb0h5ovzgwu"
+    },
+    {
+      "slug": "albertschweitzerfoundation",
+      "name": "Albert Schweitzer Foundation",
+      "location": "Berlin, Germany",
+      "about": "The Albert Schweitzer Foundation works to eliminate cruel farming practices in Europe.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/zjee7iomkpax9bn0xa15"
+    },
+    {
+      "slug": "gfi",
+      "name": "The Good Food Institute",
+      "location": "",
+      "about": "We work with scientists, investors, and entrepreneurs to make groundbreaking good food a reality. We focus on clean meat and plant-based alternatives to animal products—foods that are more delicious, safer to eat, and better for the planet than their outdated counterparts.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/faja_profile/j7pfmjuvafvflihgbaf3"
+    },
+    {
+      "slug": "wildanimalinitiative",
+      "name": "Wild Animal Initiative",
+      "location": "Farmington, MN",
+      "about": "We want to make life better for wild animals.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_256,h_256,dpr_1/c_crop,ar_256:256/q_auto,f_auto,fl_progressive/profile_pics/wzgsabl4bvjvfl6jezb1"
+    }
+  ]
+}
