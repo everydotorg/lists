@@ -8,7 +8,7 @@ closes #_(issue id)_
 
 ## Type of change
 
-_Please delete options that do not applied_
+<!--- Please delete options that do not applied --->
 
 - Bug fix (non-breaking change which fixes an issue)
 - New feature (non-breaking change which adds functionality)
@@ -28,12 +28,12 @@ Briefly describe the root cause and analysis of the problem.
 
 Upload a screenshot
 
-## How can be tested?
+## How to test?
 
 Quick step list of how this issue can be reproduced
 
 ## Tested on:
-_Please delete options that do not applied_
+<!--- Please delete options that do not applied  --->
 ### Desktop
 
 - Chrome
