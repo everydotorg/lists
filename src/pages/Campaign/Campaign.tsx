@@ -73,8 +73,10 @@ export const Campaign = (): JSX.Element => {
             giveli.st/{slug}
           </CopyToClipboard>
         </Box>
-        <AlternativeDonation />
-        <Brand sx={{ flex: 1 }} withBorderTop />
+        <Flex sx={styles.footer}>
+          <AlternativeDonation />
+          <Brand withBorderTop />
+        </Flex>
       </Flex>
     </Box>
   )

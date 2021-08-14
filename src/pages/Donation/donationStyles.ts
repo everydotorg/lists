@@ -33,5 +33,11 @@ export const styles: Style = {
   donateButton: {
     width: '100%',
     opacity: 1
+  },
+  footer: {
+    label: 'campaign-footer',
+    flex: 1,
+    justifyContent: 'flex-end',
+    flexDirection: 'column'
   }
 }

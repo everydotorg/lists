@@ -62,9 +62,10 @@ export const styles: Style = {
     },
     mb: [6, 9]
   },
-  footerContainer: {
-    label: 'footer-container',
+  footer: {
+    label: 'campaign-footer',
     flex: 1,
-    alignItems: 'flex-end'
+    justifyContent: 'flex-end',
+    flexDirection: 'column'
   }
 }
