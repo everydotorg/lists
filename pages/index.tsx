@@ -1,8 +1,7 @@
 import { GetStaticProps } from 'next'
-import { campaigns } from 'src/campaings/ssr'
 import { AboutModalProvider } from 'src/contexts/AboutModalContext'
 import { Home, HomeProps } from 'src/pages/Home'
-import { getCampaignInfo } from 'src/services/getCampaignInfo'
+import { getCampaignInfo, getCampaignSlugs } from 'src/services/getCampaignInfo'
 import { ThemeProvider } from 'theme-ui'
 import { theme } from 'src/styles/theme'
 import Head from 'next/head'
@@ -11,7 +10,7 @@ import { baseUrl, baseUrlWithPaths } from 'src/services/url'
 const excludedFromHomepage = ['lilbub']
 
 export const getStaticProps: GetStaticProps = async () => {
-  const nonProfits = campaigns
+  const nonProfits = getCampaignSlugs()
     .filter((campaign) => !excludedFromHomepage.includes(campaign))
     .map((campaign) => getCampaignInfo(campaign))
     .map((info) => ({

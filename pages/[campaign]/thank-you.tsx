@@ -1,8 +1,8 @@
 import { ThankYou } from 'src/pages/ThankYou'
 import { CampaignLayout } from 'src/components/CampaignLayout'
-import { PageProps } from 'src/campaings/ssr'
+import { PageProps } from 'src/campaigns/ssr'
 
-export { getStaticProps, getStaticPaths } from 'src/campaings/ssr'
+export { getStaticProps, getStaticPaths } from 'src/campaigns/ssr'
 
 const ThankYouPage = ({ campaignInfo }: PageProps) => {
   return (
