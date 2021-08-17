@@ -19,8 +19,11 @@ export const getCampaignSlugs = () => {
 }
 
 export const getCampaignInfo = (campaignSlug: string): CampaignInfo => {
-  const campaign =
-    campaigns.find((c) => c.slug === campaignSlug) || campaigns[0]
+  const campaign = campaigns.find((c) => c.slug === campaignSlug)
+
+  if (!campaign) {
+    throw new Error('Campaign not found')
+  }
 
   const campaignJsonFile = path.join(
     process.cwd(),
