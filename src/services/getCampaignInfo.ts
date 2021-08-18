@@ -3,9 +3,9 @@ import fs from 'fs'
 import { CampaignInfo } from 'types/CampaignInfo'
 
 const campaigns = [
-  { json: 'animal.welfare', slug: 'animal' },
+  { json: 'animal.welfare', slug: 'animals' },
   { json: 'educationeverywhere', slug: 'education' },
-  { json: 'antiracism', slug: 'racism' },
+  { json: 'antiracism', slug: 'antiracism' },
   { json: 'lgbtq+', slug: 'lgbtq' },
   { json: 'effectivehealthcareeverywhere', slug: 'health' },
   { json: 'endingglobalpoverty', slug: 'poverty' },
