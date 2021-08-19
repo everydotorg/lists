@@ -98,7 +98,7 @@ export const ThankYou = (): JSX.Element | null => {
                   as="a"
                   id="facebook-share"
                   href={facebookShare(shareUrl, socialShareText)}
-                  target="__blank"
+                  target="_blank"
                   width={20}
                   height={20}
                 />
@@ -107,7 +107,7 @@ export const ThankYou = (): JSX.Element | null => {
                   id="twitter-share"
                   width={20}
                   height={20}
-                  target="__blank"
+                  target="_blank"
                   variant="buttons.secondaryInverted"
                   href={twitterShare(shareUrl, socialShareText)}
                 />
@@ -126,6 +126,7 @@ export const ThankYou = (): JSX.Element | null => {
                 variant="buttons.secondaryInverted"
                 href="https://docs.google.com/forms/d/e/1FAIpQLSe0Rzl5TXdyZ64qkxVSFRbkTATJd2Gw6oeNnBnLgB50u0tw2A/viewform"
                 target="_blank"
+                rel="noopener"
               >
                 <span>Begin survey</span>
               </Link>

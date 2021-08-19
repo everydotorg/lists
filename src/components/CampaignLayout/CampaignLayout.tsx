@@ -40,12 +40,15 @@ export const CampaignLayout = ({
     <ThemeProvider theme={campaignTheme}>
       <CampaignInfoContext.Provider value={{ ...campaignInfo }}>
         <Head>
-          <title>{campaignInfo.name}</title>
+          <title>{campaignInfo.name} | giveli.st</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="description" content={campaignInfo.socialShareText} />
 
           {/* og */}
-          <meta property="og:title" content={campaignInfo.name} />
+          <meta
+            property="og:title"
+            content={campaignInfo.name + ' | giveli.st'}
+          />
           <meta property="og:type" content="website" />
           <meta
             property="og:url"
@@ -63,7 +66,10 @@ export const CampaignLayout = ({
             name="twitter:url"
             content={baseUrlWithPaths(campaignInfo.slug)}
           />
-          <meta name="twitter:title" content={campaignInfo.name} />
+          <meta
+            name="twitter:title"
+            content={campaignInfo.name + ' | giveli.st'}
+          />
           <meta
             name="twitter:description"
             content={campaignInfo.socialShareText}

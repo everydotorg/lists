@@ -39,7 +39,10 @@ const Homepage = ({ nonProfits }: HomeProps) => {
           content="Discover, support, and share recommended nonprofits."
         />
 
-        <meta property="og:title" content="giveli.st" />
+        <meta
+          property="og:title"
+          content="giveli.st | Discover, support and share recommended nonprofits"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={baseUrl()} />
         <meta
@@ -53,7 +56,10 @@ const Homepage = ({ nonProfits }: HomeProps) => {
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={baseUrl()} />
-        <meta name="twitter:title" content="giveli.st" />
+        <meta
+          name="twitter:title"
+          content="giveli.st | Discover, support and share recommended nonprofits"
+        />
         <meta
           name="twitter:image"
           content={baseUrlWithPaths('social-banner.png')}

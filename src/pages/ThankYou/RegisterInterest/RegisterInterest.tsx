@@ -24,6 +24,7 @@ export const RegisterInterest = (): JSX.Element => {
         id="register-interest"
         href={FORM_LINK}
         target="_blank"
+        rel="noopener"
         onClick={registerUserInterest}
         sx={styles.button}
         variant="buttons.primaryInverted"

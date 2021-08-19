@@ -1,4 +1,11 @@
-# https://www.robotstxt.org/robotstxt.html
+Host: https://giveli.st
+
+Sitemap: https://giveli.st/sitemap.xml
+
 User-agent: *
 Allow: /*
+
+Disallow: /*/donate
+Disallow: /*/thank-you
 Disallow: /api/*
+
