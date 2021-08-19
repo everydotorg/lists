@@ -19,7 +19,8 @@ export const styles: Style = {
   givelistText: {
     label: 'brand-givelistText',
     color: 'text',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textDecoration: 'none'
   },
   logoSpace: { label: 'brand-logoSpace', mr: 2 },
   poweredBy: {
