@@ -11,7 +11,7 @@ export const styles: Style = {
     },
     '& > svg': {
       flexShrink: 0,
-      mr: [2, 3, 4]
+      ml: [2, 3, 4]
     }
   }
 }

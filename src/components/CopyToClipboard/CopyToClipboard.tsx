@@ -41,8 +41,12 @@ export const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
       {...props}
       onClick={copy}
     >
-      <Icon.Link width={svgSize} height={svgSize} />
       <span>{linkCopied ? 'Link copied' : children}</span>
+      {linkCopied ? (
+        <Icon.Check width={svgSize} height={svgSize} />
+      ) : (
+        <Icon.Link width={svgSize} height={svgSize} />
+      )}
     </Button>
   )
 }
