@@ -6,6 +6,7 @@ import { Link } from './Link'
 import { Twitter } from './Twitter'
 import { Facebook } from './Facebook'
 import { Star } from './Star'
+import { Check } from './Check'
 
 export const Icon = {
   ArrowUp,
@@ -15,7 +16,8 @@ export const Icon = {
   Facebook,
   Link,
   Twitter,
-  Star
+  Star,
+  Check
 }
 
 export type { ChevronDownProps } from './ChevronDown'
