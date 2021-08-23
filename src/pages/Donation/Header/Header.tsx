@@ -12,7 +12,17 @@ export const Header = (): JSX.Element => {
 
   const closeDonatePage = () => {
     gtag.pushEvent(`donate_close`, {})
-    router.push('/' + slug)
+    const { showBackToExamples } = router.query
+    router.push(
+      {
+        pathname: '/[campaign]',
+        query: {
+          campaign: slug,
+          showBackToExamples
+        }
+      },
+      `/${slug}`
+    )
   }
 
   return (
