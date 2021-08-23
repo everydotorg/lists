@@ -49,7 +49,7 @@ export const Campaign = (): JSX.Element => {
         {nonprofits && (
           <Box sx={styles.nonprofitsContainer}>
             <Box sx={styles.nonprofitsTitleContainer}>
-              <Text variant="small" sx={styles.nonprofitsTitle}>
+              <Text variant="caption" sx={styles.nonprofitsTitle}>
                 Your donation will be <strong>split evenly</strong> between
                 these 501(c)(3) charities
               </Text>

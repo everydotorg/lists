@@ -221,7 +221,7 @@ export const theme = {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: [3, 5],
+      fontSize: [3, 4],
       letterSpacing: '-0.01em'
     },
     caption: {
@@ -239,6 +239,10 @@ export const theme = {
       lineHeight: ['body', 'heading'],
       letterSpacing: ['-0.005em', '-0.01em'],
       color: 'textGray'
+    },
+    medium: {
+      variant: 'text.small',
+      fontSize: [3, '1.125rem']
     },
     input: {
       fontSize: [5, 5],
