@@ -30,14 +30,14 @@ export const Matching = ({ sponsor, campaign }: MatchingProps) => {
       space={2}
       renderTitle={
         <Flex>
-          <Text variant="small" sx={styles.matchingTitle}>
-            Your donation will be <strong>Matched {sponsor.ratio}</strong> up to{' '}
+          <Text variant="caption" sx={styles.matchingTitle}>
+            Your donation will be <strong>matched</strong> up to{' '}
             <strong>${sponsor.threshold}</strong>
           </Text>
         </Flex>
       }
       renderDescription={
-        <Text as="p" variant="small" sx={styles.matchingDescription}>
+        <Text as="p" variant="caption" sx={styles.matchingDescription}>
           {sponsor.description} Want to donate and increase the match pool?{' '}
           <Link href={matchingMailto(campaign)}>Email us.</Link>
         </Text>

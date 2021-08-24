@@ -54,7 +54,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                   <Text variant="heading">
                     <strong>{nonprofit.name}</strong>
                   </Text>
-                  <Text variant="small" sx={styles.location}>
+                  <Text variant="medium" sx={styles.location}>
                     {nonprofit.location}
                   </Text>
                 </Flex>
@@ -63,7 +63,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
             descriptionStyle={styles.aboutContainer}
             chevronStyle={styles.expandableChevron}
             renderDescription={
-              <Text variant="small" sx={styles.aboutText}>
+              <Text variant="medium" sx={styles.aboutText}>
                 {nonprofit.about}
               </Text>
             }

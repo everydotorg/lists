@@ -43,6 +43,15 @@ export const styles: Style = {
     m: [4, 6],
     mt: [0, 0]
   },
+  nonprofitsTitleContainer: {
+    label: 'nonprofits-TitleContainer',
+    p: [3, 4]
+  },
+  nonprofitsTitle: {
+    label: 'nonprofits-Title',
+    color: 'text',
+    lineHeight: ['20px', '32px']
+  },
   nonprofitsContainer: {
     border: '1px solid',
     borderColor: 'borderGray',
