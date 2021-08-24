@@ -31,7 +31,7 @@ export const Matching = ({ sponsor, campaign }: MatchingProps) => {
       renderTitle={
         <Flex>
           <Text variant="caption" sx={styles.matchingTitle}>
-            Your donation will be <strong>Matched {sponsor.ratio}</strong> up to{' '}
+            Your donation will be <strong>matched</strong> up to{' '}
             <strong>${sponsor.threshold}</strong>
           </Text>
         </Flex>
