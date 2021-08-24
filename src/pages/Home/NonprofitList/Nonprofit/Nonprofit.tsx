@@ -40,7 +40,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         pathname: '/[campaign]',
         query: {
           campaign: nonprofit.slug,
-          showBackToExamples: true
+          showBackToList: true
         }
       },
       `/${nonprofit.slug}`

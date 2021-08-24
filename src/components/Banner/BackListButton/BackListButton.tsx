@@ -1,25 +1,25 @@
 import React from 'react'
 import Link from 'next/link'
 import { Flex, Button } from 'theme-ui'
-import { styles } from './backExamplesButtonStyles'
+import { styles } from './backListButtonStyles'
 import { gtag } from 'src/services/gtag'
 
-export const BackExamplesButton = () => {
+export const BackListButton = () => {
   const pushEvent = () => {
     gtag.pushEvent('back_home', {
-      origin: 'back to examples'
+      origin: 'back to list'
     })
   }
 
   return (
-    <Flex sx={styles.backExamplesContainer}>
+    <Flex sx={styles.backListContainer}>
       <Link href="/">
         <Button
           onClick={pushEvent}
           variant="primarySmallInverted"
-          sx={styles.backExamplesButton}
+          sx={styles.backListButton}
         >
-          <span>Back to examples</span>
+          <span>Back</span>
         </Button>
       </Link>
     </Flex>

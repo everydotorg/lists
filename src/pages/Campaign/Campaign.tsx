@@ -23,13 +23,13 @@ export const Campaign = (): JSX.Element => {
   const progress = useProgressData()
 
   const goToDonation = () => {
-    const { showBackToExamples } = router.query
+    const { showBackToList } = router.query
     router.push(
       {
         pathname: '/[campaign]/donate',
         query: {
           campaign: slug,
-          showBackToExamples
+          showBackToList
         }
       },
       `/${slug}/donate`

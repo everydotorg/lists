@@ -7,11 +7,11 @@ export { getStaticProps, getStaticPaths } from 'src/campaigns/ssr'
 
 const CampaignPage = ({ campaignInfo }: PageProps) => {
   const router = useRouter()
-  const { showBackToExamples } = router.query
+  const { showBackToList } = router.query
   return (
     <CampaignLayout
       campaignInfo={campaignInfo}
-      showBackExamples={Boolean(showBackToExamples)}
+      showBackList={Boolean(showBackToList)}
     >
       <Campaign />
     </CampaignLayout>
