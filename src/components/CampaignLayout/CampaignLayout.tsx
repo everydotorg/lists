@@ -13,7 +13,7 @@ type CampaignLayoutProps = {
   campaignInfo: CampaignInfo
   showAbout?: boolean
   showDiscover?: boolean
-  showBackExamples?: boolean
+  showBackList?: boolean
   children: ReactNode
 }
 
@@ -22,7 +22,7 @@ export const CampaignLayout = ({
   campaignInfo,
   showAbout = true,
   showDiscover = false,
-  showBackExamples = false,
+  showBackList = false,
   children
 }: CampaignLayoutProps) => {
   const color = new Color(campaignInfo.primaryColor, 'hex')
@@ -87,7 +87,7 @@ export const CampaignLayout = ({
             <Banner
               showAbout={showAbout}
               showDiscover={showDiscover}
-              showBackExamples={showBackExamples}
+              showBackList={showBackList}
             />
             {children}
           </AboutModalProvider>

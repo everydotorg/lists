@@ -22,7 +22,19 @@ export const Campaign = (): JSX.Element => {
   const aboutModal = useAboutModal()
   const progress = useProgressData()
 
-  const goToDonation = () => router.push(`/${slug}/donate`)
+  const goToDonation = () => {
+    const { showBackToList } = router.query
+    router.push(
+      {
+        pathname: '/[campaign]/donate',
+        query: {
+          campaign: slug,
+          showBackToList
+        }
+      },
+      `/${slug}/donate`
+    )
+  }
 
   return (
     <Box as="main" sx={styles.page}>
