@@ -8,17 +8,23 @@ export const About = () => {
     <>
       <Box sx={styles.textContainer}>
         <Text variant="regular" sx={styles.text}>
-          With so many worthy causes and nonprofits, it’s daunting for most
-          people to know where to direct their charitable giving. Givelist aims
-          to address this challenge by providing people with a platform to
-          highlight the nonprofits they love, share them with their communities
-          online, and have the ability to donate to a list of recommended
-          nonprofits all in one place.
+          Givelist provides people with a platform to highlight the nonprofits
+          they love, share them with their communities online, and have the
+          ability to donate to a list of recommended nonprofits all in one
+          place.
         </Text>
 
         <Text variant="regular" sx={styles.text}>
-          Givelist handles the entire giving experience, from payment step, tax
-          receipt, and payout to each of the nonprofits.
+          If you use a bank account, then 100% of your donation reaches
+          nonprofits. Your gift will be evenly split among all the nonprofits on
+          the list. This can be more efficient than making many small donations
+          directly by avoiding transaction fees.
+        </Text>
+
+        <Text variant="regular" sx={styles.text}>
+          Givelist and Every.org handle the entire giving experience, from
+          payment step, tax receipt, and payout to each of the nonprofits, all
+          at no cost.
         </Text>
       </Box>
 
