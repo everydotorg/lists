@@ -1,0 +1,96 @@
+{
+  "everySlug": "afghanistan.relief",
+  "name": "Afghanistan Humanitarian Aid",
+  "primaryColor": "#00A37F",
+  "mobileBannerUrl": "https://i.imgur.com/UWjSLUv.jpg",
+  "imageUrl": "https://i.imgur.com/UWjSLUv.jpg",
+  "bannerUrl": "https://i.imgur.com/UWjSLUv.jpg",
+  "socialShareText": "Support emergency aid and humanitarian efforts on the ground in Afghanistan and across the globe for Afghan refugees.",
+  "previewImage": "https://i.imgur.com/UWjSLUv.jpg",
+  "about": "Support emergency aid and humanitarian efforts on the ground in Afghanistan and across the globe for Afghan refugees.",
+  "cause": "humans",
+  "sponsor": {
+    "ratio": "1-for-1",
+    "threshold": 80,
+    "description": "Amplify your gift! Generous donors will match you dollar-for-dollar up to $80 each time until we reach $20,000 total matched."
+  },
+  "nonprofits": [
+    {
+      "slug": "irc",
+      "name": "International Rescue Committee",
+      "location": "New York, NY",
+      "about": "IRC responds to the world’s worst humanitarian crises & helps people to survive, recover & gain control of their future.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/m4py1igjmt6ufvbkebzt"
+    },
+    {
+      "slug": "women-for-afghan-women",
+      "name": "Women for Afghan Women",
+      "location": "New York, NY",
+      "about": "Founded in 2001, Women for Afghan Women (WAW) is the largest Afghan women’s rights organization, globally, with over 850 full-time staff operating centers, programs, and services aimed at empowering Afghan women in the United States and Afghanistan.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/iguedomblehoeshb4zlc"
+    },
+    {
+      "slug": "savethechildren",
+      "name": "Save the Children",
+      "location": "Fairfield, CT",
+      "about": "Giving children in the U.S. and around the world a healthy start in life, the opportunity to learn and protection from harm.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/upgjik8krgrqfn8cassh"
+    },
+    {
+      "slug": "refugeerights",
+      "name": "International Refugee Assistance Project: IRAP",
+      "location": "New York, NY",
+      "about": "Provides legal advocacy for refugees and displaced people in need of a safe place to call home.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/irap_ejmmb5"
+    },
+    {
+      "slug": "unrefugees",
+      "name": "USA for UNHCR",
+      "location": "Washington, DC",
+      "about": "USA for UNHCR protects refugees and empowers them with hope and opportunity.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/vlqxgvl2mbvb2ekr9yfa"
+    },
+    {
+      "slug": "preemptivelove",
+      "name": "Preemptive Love Coalition",
+      "location": "New York, NY",
+      "about": "Providing relief, jobs, & community on the frontlines of conflict. To heal all that's tearing us apart. To end war.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/rrzuheuskjmeoldvcu5v"
+    },
+    {
+      "slug": "nooneleft",
+      "name": "No One Left Behind",
+      "location": "Merrifield, VA",
+      "about": "To save and support America's Afghan and Iraqi wartime allies.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/glewmarsdxzs58idnj9t"
+    },
+    {
+      "slug": "central-asia-institute",
+      "name": "Central Asia Institute",
+      "location": "Bozeman, MT",
+      "about": "CAI is an international NGO promoting education & literacy, especially for girls, in remote areas of Pakistan, Afghanistan & Tajikistan.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/m7e9azwplnlfbdqwxhl3"
+    },
+    {
+      "slug": "sola-afghanistan",
+      "name": "School of Leadership, Afghanistan",
+      "location": "Boston, MA",
+      "about": "To foster a new leadership generation in Afghanistan by enabling educational opportunity, and promoting in-country, senior management positions for that leadership, especially for Afghan women.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/d3dbueougnsuywwegiyx"
+    },
+    {
+      "slug": "keeping-our-promise-inc",
+      "name": "Keeping Our Promise",
+      "location": "Pittsford, NY",
+      "about": "A comprehensive resettlement program for our wartime allies.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/mtczpvhysluxffnozpcq"
+    },
+    {
+      "slug": "afghanaid.afghanistan",
+      "name": "Afghanaid",
+      "location": "",
+      "about": "A global charity working with Afghans to give basic services to poor communities.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/qjpq7i4r9pgkk61vzom5"
+    }
+  ]
+}
