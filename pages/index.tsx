@@ -29,45 +29,30 @@ export const getStaticProps: GetStaticProps = async () => {
 }
 
 const Homepage = ({ nonProfits }: HomeProps) => {
+  const title =
+    'giveli.st • Discover, donate, and share recommended lists of nonprofits.'
+
+  const description =
+    'A trusted place where you can champion worthy causes. Created by a nonprofit. Forever free.'
+
+  const url = baseUrl()
+
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>giveli.st</title>
+        <title>{title}</title>
+        <link rel="canonical" href={url} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Discover, support, and share recommended nonprofits."
-        />
-
-        <meta
-          property="og:title"
-          content="giveli.st | Discover, support and share recommended nonprofits"
-        />
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={baseUrl()} />
+        <meta property="og:url" content={url} />
         <meta
           property="og:image"
           content={baseUrlWithPaths('social-banner.png')}
         />
-        <meta
-          property="og:description"
-          content="A trusted place where you can champion worthy causes via social media. Created by a nonprofit. Forever free."
-        />
-
+        <meta property="og:description" content={description} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content={baseUrl()} />
-        <meta
-          name="twitter:title"
-          content="giveli.st | Discover, support and share recommended nonprofits"
-        />
-        <meta
-          name="twitter:image"
-          content={baseUrlWithPaths('social-banner.png')}
-        />
-        <meta
-          name="twitter:description"
-          content="A trusted place where you can champion worthy causes via social media. Created by a nonprofit. Forever free."
-        />
       </Head>
       <AboutModalProvider>
         <Home nonProfits={nonProfits} />

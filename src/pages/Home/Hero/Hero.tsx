@@ -17,8 +17,8 @@ export const Hero = () => {
           Discover, support, and share recommended nonprofits.
         </Text>
         <Text variant="small">
-          A trusted place where you can champion worthy causes via social media.
-          Created by a nonprofit. Forever free.
+          A trusted place where you can champion worthy causes. Created by a
+          nonprofit. Forever free.
         </Text>
       </Flex>
       <Flex sx={styles.buttonsContainer}>

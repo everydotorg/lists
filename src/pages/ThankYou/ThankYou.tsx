@@ -41,7 +41,7 @@ export const ThankYou = (): JSX.Element | null => {
         <Text variant="title">{name}</Text>
         <Text variant="caption" sx={{ mt: 2 }}>
           A tax deductable reciept was sent to your email. Your donation to this
-          givelist is powered by every.org - a registererd 501(c)(3) nonprofit
+          givelist is powered by Every.org - a registered 501(c)(3) nonprofit
           dedicated to providing free tools that encourage individuals to take
           action and spread generosity.{' '}
         </Text>
@@ -53,7 +53,7 @@ export const ThankYou = (): JSX.Element | null => {
       <Flex sx={styles.cardList}>
         {Boolean(showsignup) && (
           <Card
-            title="Claim your free every.org account"
+            title="Claim your free Every.org account"
             description="Save your charitable giving history. Explore, donate, and share."
             renderActions={
               <Flex sx={{ alignItems: 'flex-start' }}>
@@ -65,8 +65,8 @@ export const ThankYou = (): JSX.Element | null => {
           />
         )}
         <Card
-          title="Share this Givelist"
-          description="This Givelist supports nonprofits dedicated to ending the abuse of animals raised for food."
+          title={`Share giveli.st/${slug}`}
+          description="Turn this moment into a movement by texting or emailing friends, setting your link in bio, and sharing to social media."
           renderActions={
             <Flex
               sx={{ alignItems: 'center', justifyContent: 'space-between' }}

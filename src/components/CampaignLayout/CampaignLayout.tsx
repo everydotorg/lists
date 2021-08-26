@@ -25,7 +25,10 @@ export const CampaignLayout = ({
   showBackList = false,
   children
 }: CampaignLayoutProps) => {
-  const color = new Color(campaignInfo.primaryColor, 'hex')
+  const { primaryColor, slug, socialShareText, name, previewImage } =
+    campaignInfo
+
+  const color = new Color(primaryColor, 'hex')
 
   const campaignTheme = {
     ...theme,
@@ -36,45 +39,24 @@ export const CampaignLayout = ({
       primaryBg: color.alpha(0.1).hsl().string()
     }
   }
+
+  const url = baseUrlWithPaths(campaignInfo.slug)
+  const title = `${name} • giveli.st/${slug}`
+
   return (
     <ThemeProvider theme={campaignTheme}>
       <CampaignInfoContext.Provider value={{ ...campaignInfo }}>
         <Head>
-          <title>{campaignInfo.name} | giveli.st</title>
+          <title>{title}</title>
+          <link rel="canonical" href={url} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="description" content={campaignInfo.socialShareText} />
-
-          {/* og */}
-          <meta
-            property="og:title"
-            content={campaignInfo.name + ' | giveli.st'}
-          />
+          <meta name="description" content={socialShareText} />
+          <meta property="og:title" content={title} />
           <meta property="og:type" content="website" />
-          <meta
-            property="og:url"
-            content={baseUrlWithPaths(campaignInfo.slug)}
-          />
-          <meta
-            property="og:description"
-            content={campaignInfo.socialShareText}
-          />
-          <meta property="og:image" content={campaignInfo.previewImage} />
-
-          {/* Twitter */}
+          <meta property="og:url" content={url} />
+          <meta property="og:description" content={socialShareText} />
+          <meta property="og:image" content={previewImage} />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:url"
-            content={baseUrlWithPaths(campaignInfo.slug)}
-          />
-          <meta
-            name="twitter:title"
-            content={campaignInfo.name + ' | giveli.st'}
-          />
-          <meta
-            name="twitter:description"
-            content={campaignInfo.socialShareText}
-          />
-          <meta name="twitter:image" content={campaignInfo.previewImage} />
         </Head>
         <Box
           sx={{
