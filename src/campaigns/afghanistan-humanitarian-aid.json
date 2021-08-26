@@ -11,8 +11,8 @@
   "cause": "humans",
   "sponsor": {
     "ratio": "1-for-1",
-    "threshold": 25,
-    "description": "Amplify your gift! Generous donors will match you dollar-for-dollar up to $25 each time until we reach $20,000 total matched."
+    "threshold": 80,
+    "description": "Amplify your gift! Generous donors will match you dollar-for-dollar up to $80 each time until we reach $20,000 total matched."
   },
   "nonprofits": [
     {
