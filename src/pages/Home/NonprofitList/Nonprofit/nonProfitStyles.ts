@@ -7,6 +7,7 @@ export const styles: Style = {
     borderRadius: 'small',
     cursor: 'pointer',
     border: '1px solid',
+    borderColor: 'borderGray',
     transition: 'border .2s'
   },
   section: {
@@ -21,13 +22,13 @@ export const styles: Style = {
   },
   imageSection: {
     mb: [4, 0],
-    ml: [0, 5]
+    ml: [0, 5],
+    display: 'grid',
+    gridTemplateRows: '1fr max-content',
+    gridTemplateColumns: '1fr'
   },
   textContainer: {
-    flexDirection: 'column',
-    '& > :not(:last-child)': {
-      mb: 2
-    }
+    flexDirection: 'column'
   },
   aboutText: {
     fontSize: [3, 4],
@@ -47,6 +48,24 @@ export const styles: Style = {
     position: 'relative',
     filter: 'grayscale()',
     transition: 'filter .2s',
-    mixBlendMode: 'multiply'
+    mixBlendMode: 'multiply',
+    gridRow: '1 / -1',
+    gridColumn: '1 / -1'
+  },
+  logosSection: {
+    label: 'logos-container',
+    gridColumn: '1 / -1',
+    gridRow: '1 / -1',
+    flexWrap: 'wrap',
+    alignSelf: 'end',
+    justifyContent: 'flex-end'
+  },
+  logoContainer: {
+    zIndex: 10,
+    overflow: 'hidden',
+    height: '24px',
+    mx: 1,
+    mb: 2,
+    mt: 0
   }
 }

@@ -1,13 +1,7 @@
 import { Progress, Flex, Text, ThemeUIStyleObject } from 'theme-ui'
 import { Progress as ProgressType } from 'types/Progress'
 import { styles } from './goalStyles'
-
-const formatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-  minimumFractionDigits: 0,
-  maximumFractionDigits: 0
-})
+import { currencyFormatter } from 'src/services/utils'
 
 interface InfoProps {
   value: string
@@ -36,8 +30,11 @@ export const Goal = ({ progress, sx = {} }: GoalProps) => {
         value={progress.donated}
       />
       <Flex>
-        <Info value={formatter.format(progress.donated)} label="donated" />
-        <Info value={formatter.format(progress.goal)} label="goal" />
+        <Info
+          value={currencyFormatter.format(progress.donated)}
+          label="donated"
+        />
+        <Info value={currencyFormatter.format(progress.goal)} label="goal" />
       </Flex>
     </Flex>
   )

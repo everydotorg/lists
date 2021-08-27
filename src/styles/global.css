@@ -27,6 +27,10 @@ html {
   border-radius: 12px;
 }
 
+.next-home-nonprofit-logo {
+  border-radius: 100%;
+}
+
 .next-avatar {
   border-radius: 999px;
 }

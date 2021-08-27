@@ -53,28 +53,6 @@ export const theme = {
     body: 1.5
   },
   colors: {
-    // causes colors
-    justice: '#E3F0F1',
-    justiceText: '#2F7074',
-
-    animals: '#FAEDE0',
-    animalsText: '#AC6B28',
-
-    education: '#EBF1F8',
-    educationText: '#4D6B8E',
-
-    humans: '#FBF2E2',
-    humansText: '#A47929',
-
-    health: '#F8E9F1',
-    healthText: '#944C75',
-
-    environment: '#EDF3DD',
-    environmentText: '#5E7D0F',
-
-    research: '#CEDFDB',
-    researchText: '#2F806D',
-
     // apps colors
     text: '#2E3434',
     textGray: 'rgba(46, 52, 52, 0.6)',
@@ -296,7 +274,7 @@ export const theme = {
       px: 3,
       py: 1,
       border: '1px solid',
-      borderRadius: ['default', 'small'],
+      borderRadius: 'default',
       display: 'flex',
       alignItems: 'center',
       '& > span': {
@@ -379,5 +357,3 @@ export const theme = {
     }
   }
 }
-
-export const causeTextColor = (cause: string) => cause + 'Text'

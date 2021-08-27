@@ -13,3 +13,10 @@ export const shuffle = <T>(a: Array<T>) => {
 
 export const calcMatching = (amount: number | undefined, threshold: number) =>
   amount ? Math.min(amount, threshold) : 0
+
+export const currencyFormatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0
+})

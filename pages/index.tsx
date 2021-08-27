@@ -18,7 +18,9 @@ export const getStaticProps: GetStaticProps = async () => {
       name: info.name,
       imageUrl: info.imageUrl,
       about: info.about,
-      cause: info.cause
+      cause: info.cause,
+      nonprofits: info.nonprofits,
+      sponsor: info.sponsor ? info.sponsor : null
     }))
 
   return {
