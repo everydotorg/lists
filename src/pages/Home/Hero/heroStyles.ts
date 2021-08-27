@@ -28,12 +28,6 @@ export const styles: Style = {
   },
   readMoreButton: {
     borderColor: 'primary',
-    px: 4,
-    bg: 'primaryBg',
-    transition: 'background .2s',
-    ':hover': {
-      bg: 'primary',
-      color: 'white'
-    }
+    px: 4
   }
 }

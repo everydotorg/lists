@@ -170,13 +170,14 @@ export const theme = {
     primaryInverted: {
       variant: 'buttons.primary',
       color: 'primary',
-      background: 'white',
       border: '1px solid',
       borderColor: 'borderGray',
       fontWeight: '500',
-      transition: 'opacity .2s',
-      '&:hover': {
-        opacity: '0.85'
+      bg: 'primaryBg',
+      transition: 'background .2s',
+      ':hover': {
+        bg: 'primary',
+        color: 'white'
       }
     }
   },
