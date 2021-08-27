@@ -79,7 +79,7 @@ export const ThankYou = (): JSX.Element | null => {
           inverted
         ></Card>
         <Card
-          title={`Share giveli.st/${slug}`}
+          title={`Share this Givelist`}
           description="Turn this moment into a movement by texting or emailing friends, setting your link in bio, and sharing to social media."
           renderActions={
             <Flex
