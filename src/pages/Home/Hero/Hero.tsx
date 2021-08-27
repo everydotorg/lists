@@ -3,6 +3,7 @@ import { Brand } from 'src/components/Brand'
 import { Button, Flex, Text } from 'theme-ui'
 import { SurveyButton } from './SurveyButton'
 import { useAboutModal } from 'src/hooks/useAboutModal'
+import { Tagline } from 'pages'
 
 export const Hero = () => {
   const aboutModal = useAboutModal()
@@ -14,7 +15,7 @@ export const Hero = () => {
       </Flex>
       <Flex sx={styles.textContainer}>
         <Text as="h1" variant="h1">
-          Discover, support, and share recommended nonprofits.
+          {Tagline}
         </Text>
         <Text variant="small">
           A trusted place where you can champion worthy causes. Created by a

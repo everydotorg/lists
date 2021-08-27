@@ -28,9 +28,11 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
+export const Tagline =
+  'Discover, donate, and share recommended lists of nonprofits.'
+
 const Homepage = ({ nonProfits }: HomeProps) => {
-  const title =
-    'giveli.st • Discover, donate, and share recommended lists of nonprofits.'
+  const title = `giveli.st • ${Tagline}`
 
   const description =
     'A trusted place where you can champion worthy causes. Created by a nonprofit. Forever free.'
