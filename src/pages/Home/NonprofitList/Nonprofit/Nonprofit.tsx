@@ -79,12 +79,14 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
                 lineHeight: '20px'
               }}
             >
-              {nonprofit.nonprofits?.length} nonprofits
+              <strong>{nonprofit.nonprofits?.length}</strong> nonprofits
             </Text>
             {nonprofit.sponsor ? (
               <Text sx={{ fontSize: 2, lineHeight: '20px' }}>
-                Matching up to{' '}
-                {currencyFormatter.format(nonprofit.sponsor.upTo)}
+                <strong>
+                  {currencyFormatter.format(nonprofit.sponsor.upTo)}
+                </strong>{' '}
+                in matching
               </Text>
             ) : null}
           </Flex>
