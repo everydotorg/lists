@@ -36,7 +36,7 @@ export const ThankYou = (): JSX.Element | null => {
 
   const smsLink = () => {
     return isIOS
-      ? `sms://;?&body=${encodeURI(socialShareText)}`
+      ? `sms://;&body=${encodeURI(socialShareText)}`
       : `sms:?body=${socialShareText}`
   }
 
