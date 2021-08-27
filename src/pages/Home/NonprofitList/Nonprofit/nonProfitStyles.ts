@@ -56,7 +56,7 @@ export const styles: Style = {
     label: 'logos-container',
     gridColumn: '1 / -1',
     gridRow: '1 / -1',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap-reverse',
     alignSelf: 'end',
     justifyContent: 'flex-end'
   },
