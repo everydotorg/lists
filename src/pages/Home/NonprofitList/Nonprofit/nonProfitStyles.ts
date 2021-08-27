@@ -31,7 +31,7 @@ export const styles: Style = {
     flexDirection: 'column'
   },
   aboutText: {
-    fontSize: [3, 4],
+    fontSize: 3,
     lineHeight: 'heading'
   },
   buttonLinkContainer: {
