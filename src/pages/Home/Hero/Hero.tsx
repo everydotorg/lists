@@ -27,16 +27,7 @@ export const Hero = () => {
         <Button
           variant="primaryInverted"
           id="open-about-home"
-          sx={{
-            borderColor: 'primary',
-            px: 4,
-            bg: 'primaryBg',
-            transition: 'background .2s',
-            ':hover': {
-              bg: 'primary',
-              color: 'white'
-            }
-          }}
+          sx={styles.readMoreButton}
           onClick={() => aboutModal.setOpen(true)}
         >
           <span>Read more about giveli.st</span>

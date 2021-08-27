@@ -25,5 +25,15 @@ export const styles: Style = {
     '& > :not(:last-child)': {
       mb: 2
     }
+  },
+  readMoreButton: {
+    borderColor: 'primary',
+    px: 4,
+    bg: 'primaryBg',
+    transition: 'background .2s',
+    ':hover': {
+      bg: 'primary',
+      color: 'white'
+    }
   }
 }
