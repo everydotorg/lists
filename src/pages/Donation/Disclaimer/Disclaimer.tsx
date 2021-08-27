@@ -14,7 +14,8 @@ export const Disclaimer: React.FC = () => {
         variant="caption"
         sx={{ color: 'textGray', textAlign: 'center' }}
       >
-        You will be redirected to Every.org to complete your donation.
+        You will be redirected to Every.org, a tax-exempt 501(c)(3) charity, to
+        complete your donation.
       </Text>
     </Box>
   )

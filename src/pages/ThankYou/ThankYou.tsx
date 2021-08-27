@@ -12,6 +12,7 @@ import { Goal } from 'src/components/Goal'
 import { useRouter } from 'next/router'
 import { gtag } from 'src/services/gtag'
 import { useEffect, useState } from 'react'
+import { everyOrgDescription } from 'src/components/AboutModal/About/About'
 
 export const ThankYou = (): JSX.Element | null => {
   const { slug, socialShareText, name, showGoalOnThankyouPage } =
@@ -40,10 +41,8 @@ export const ThankYou = (): JSX.Element | null => {
         </Text>
         <Text variant="title">{name}</Text>
         <Text variant="caption" sx={{ mt: 2 }}>
-          A tax deductable reciept was sent to your email. Your donation to this
-          givelist is powered by Every.org - a registered 501(c)(3) nonprofit
-          dedicated to providing free tools that encourage individuals to take
-          action and spread generosity.{' '}
+          A reciept was sent to your email. Your donation to this Givelist is
+          powered by Every.org - a {everyOrgDescription}
         </Text>
         {progress && showGoalOnThankyouPage && (
           <Goal progress={progress} sx={styles.progressGoal} />

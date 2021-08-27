@@ -3,6 +3,9 @@ import { Divider } from 'src/components/Divider'
 import { Box, Text } from 'theme-ui'
 import { CardLink } from './CardLink/CardLink'
 
+export const everyOrgDescription =
+  '501(c)(3) charity building an accessible giving infrastructure to help every person and organization do more good.'
+
 export const About = () => {
   return (
     <>
@@ -39,8 +42,7 @@ export const About = () => {
           title="Powered by Every.org"
           href="https://every.org?utm_source=givelist"
         >
-          A registered 501(c)(3) charity building an accessible giving
-          infrastructure to help every person and organization do more good
+          A {everyOrgDescription}
         </CardLink>
 
         <CardLink title="Made by p22.studio" href="https://p22.studio">
