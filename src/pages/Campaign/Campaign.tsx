@@ -62,7 +62,8 @@ export const Campaign = (): JSX.Element => {
           <Box sx={styles.nonprofitsContainer}>
             <Box sx={styles.nonprofitsTitleContainer}>
               <Text variant="caption" sx={styles.nonprofitsTitle}>
-                All donations are <strong>split evenly</strong> between:
+                Donation <strong>split evenly</strong> between{' '}
+                {nonprofits.length} charities:
               </Text>
             </Box>
             <NonProfitList list={nonprofits} />
