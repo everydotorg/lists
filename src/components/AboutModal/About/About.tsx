@@ -39,9 +39,8 @@ export const About = () => {
           title="Powered by Every.org"
           href="https://every.org?utm_source=givelist"
         >
-          A registered 501(c)(3) nonprofit on a mission to provide free
-          technologies and tools that encourage individuals to take action and
-          spread generosity
+          A registered 501(c)(3) charity building an accessible giving
+          infrastructure to help every person and organization do more good
         </CardLink>
 
         <CardLink title="Made by p22.studio" href="https://p22.studio">
