@@ -108,7 +108,7 @@ export const ThankYou = (): JSX.Element | null => {
                 }}
               >
                 <Link
-                  href={`mailto:?body=${socialShareText}`}
+                  href={`mailto:?subject=We need your help&body=${socialShareText}`}
                   variant="buttons.secondaryInverted"
                 >
                   <Text>Email</Text>
