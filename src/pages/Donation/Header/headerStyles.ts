@@ -31,6 +31,10 @@ export const styles: Style = {
     '& > svg': {
       width: ['14px', '18px'],
       height: ['14px', '18px']
+    },
+    transition: 'background .2s',
+    ':hover': {
+      bg: 'primaryBg'
     }
   },
   header: {

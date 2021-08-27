@@ -184,8 +184,9 @@ export const theme = {
       color: 'primary',
       border: '1px solid',
       borderColor: 'borderGray',
+      transition: 'background .2s',
       '&:hover': {
-        opacity: '0.85'
+        bg: 'primaryBg'
       }
     },
     primaryInverted: {

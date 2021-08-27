@@ -24,7 +24,6 @@ export const Matching = ({ sponsor, campaign }: MatchingProps) => {
       expanded={expanded}
       onClick={toggleExpandable}
       headerStyle={styles.header}
-      descriptionStyle={styles.description}
       chevronStyle={styles.chevronDown}
       containerStyle={styles.container}
       space={2}

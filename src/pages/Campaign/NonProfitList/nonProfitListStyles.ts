@@ -4,10 +4,7 @@ export const styles: Style = {
   container: {
     p: [3, 4],
     ':hover': {
-      bg: ['inherit', 'primary'],
-      '& *': {
-        color: [null, 'white']
-      }
+      bg: ['inherit', 'primaryBg']
     },
     transition: 'background .2s ease'
   },
@@ -40,6 +37,7 @@ export const styles: Style = {
     color: 'text'
   },
   location: {
+    mt: [1, 2],
     color: 'textGray'
   }
 }
