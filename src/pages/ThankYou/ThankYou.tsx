@@ -13,6 +13,7 @@ import { useRouter } from 'next/router'
 import { gtag } from 'src/services/gtag'
 import { useEffect, useState } from 'react'
 import { everyOrgDescription } from 'src/components/AboutModal/About/About'
+import { isIOS } from 'react-device-detect'
 
 export const ThankYou = (): JSX.Element | null => {
   const { slug, socialShareText, name, showGoalOnThankyouPage } =
@@ -31,6 +32,12 @@ export const ThankYou = (): JSX.Element | null => {
   const navigateToSignup = () => {
     gtag.pushEvent('signup', {})
     window.open('https://www.every.org/signup?utm_source=givelist', '_blank')
+  }
+
+  const smsLink = () => {
+    return isIOS
+      ? `sms:&body=${socialShareText}`
+      : `sms:?body=${socialShareText}`
   }
 
   return (
@@ -64,6 +71,14 @@ export const ThankYou = (): JSX.Element | null => {
           />
         )}
         <Card
+          description="
+          A tax deductable reciept was sent to your email. Your donation to this
+          givelist is powered by Every.org - a registered 501(c)(3) nonprofit
+          dedicated to providing free tools that encourage individuals to take
+          action and spread generosity."
+          inverted
+        ></Card>
+        <Card
           title={`Share giveli.st/${slug}`}
           description="Turn this moment into a movement by texting or emailing friends, setting your link in bio, and sharing to social media."
           renderActions={
@@ -92,6 +107,15 @@ export const ThankYou = (): JSX.Element | null => {
                   '& > *:not(:last-child)': { mr: 2 }
                 }}
               >
+                <Link
+                  href={`mailto:?body=${socialShareText}`}
+                  variant="buttons.secondaryInverted"
+                >
+                  <Text>Email</Text>
+                </Link>
+                <Link href={smsLink()} variant="buttons.secondaryInverted">
+                  <Text>SMS</Text>
+                </Link>
                 <Icon.Facebook
                   variant="buttons.secondaryInverted"
                   as="a"

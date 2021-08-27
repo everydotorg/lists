@@ -21,9 +21,9 @@ export const styles: Style = {
       zIndex: 1
     }
   },
-  titleText: { color: 'inherit' },
+  titleText: { color: 'inherit', mb: 2 },
   descriptionText: {
-    fontSize: ['0.875rem', '1.125rem'],
-    mb: [3, 6]
+    fontSize: ['0.875rem', '1rem'],
+    color: 'textGray'
   }
 }

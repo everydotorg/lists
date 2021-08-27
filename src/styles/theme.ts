@@ -158,7 +158,7 @@ export const theme = {
     },
     secondaryInverted: {
       variant: 'buttons.secondary',
-      bg: 'white',
+      bg: 'primaryBg',
       color: 'primary',
 
       '&:hover': {
