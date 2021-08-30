@@ -6,8 +6,7 @@ export const styles: Style = {
     flexDirection: ['column-reverse', 'row'],
     borderRadius: 'small',
     cursor: 'pointer',
-    border: '1px solid',
-    borderColor: 'borderGray',
+    border: '1.5px solid',
     transition: 'border .2s'
   },
   section: {

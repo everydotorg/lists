@@ -55,6 +55,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
     <Flex
       sx={{
         ...styles.container,
+        borderColor: causeColor.pastel40,
         ...hoverStyles
       }}
       onClick={toGivelist}
