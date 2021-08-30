@@ -11,8 +11,8 @@
   "cause": "humans",
   "sponsor": {
     "ratio": "1-for-1",
-    "threshold": 80,
-    "description": "Amplify your gift! Generous donors will match you dollar-for-dollar up to $80 each time until we reach $20,000 total matched."
+    "threshold": 100,
+    "description": "Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 each time until we reach $50,000 total matched."
   },
   "nonprofits": [
     {
@@ -79,11 +79,11 @@
       "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/d3dbueougnsuywwegiyx"
     },
     {
-      "slug": "keeping-our-promise-inc",
-      "name": "Keeping Our Promise",
-      "location": "Pittsford, NY",
-      "about": "A comprehensive resettlement program for our wartime allies.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/mtczpvhysluxffnozpcq"
+      "slug": "emergencyusa",
+      "name": "Emergency USA",
+      "location": "New York, NY",
+      "about": "Since 1994 EMERGENCY teams have provided free high-quality medical care and assistance to over 8 million people in over 17 different countries.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/lob7j41sewokxs8bgukd"
     },
     {
       "slug": "afghanaid.afghanistan",
