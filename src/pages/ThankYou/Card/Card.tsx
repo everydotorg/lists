@@ -3,9 +3,9 @@ import { Text, Flex } from 'theme-ui'
 import { styles } from './cardStyles'
 
 interface CardProps {
-  title: string
+  title?: string
   description: string
-  renderActions: React.ReactNode
+  renderActions?: React.ReactNode
   inverted?: boolean
 }
 export const Card = ({
@@ -21,10 +21,19 @@ export const Card = ({
         ...(inverted ? styles.containerInvertedColor : styles.containerColor)
       }}
     >
-      <Text sx={styles.titleText} variant="small">
-        <strong>{title}</strong>
+      {title && (
+        <Text sx={styles.titleText} variant="small">
+          <strong>{title}</strong>
+        </Text>
+      )}
+      <Text
+        sx={{
+          ...styles.descriptionText,
+          mb: Boolean(renderActions) ? [3, 6] : [0, 0]
+        }}
+      >
+        {description}
       </Text>
-      <Text sx={styles.descriptionText}>{description}</Text>
       {renderActions}
     </Flex>
   )

@@ -64,7 +64,15 @@ export const ThankYou = (): JSX.Element | null => {
           />
         )}
         <Card
-          title={`Share giveli.st/${slug}`}
+          description="
+          A tax deductable reciept was sent to your email. Your donation to this
+          givelist is powered by Every.org - a registered 501(c)(3) nonprofit
+          dedicated to providing free tools that encourage individuals to take
+          action and spread generosity."
+          inverted
+        ></Card>
+        <Card
+          title={`Share this Givelist`}
           description="Turn this moment into a movement by texting or emailing friends, setting your link in bio, and sharing to social media."
           renderActions={
             <Flex
@@ -92,6 +100,12 @@ export const ThankYou = (): JSX.Element | null => {
                   '& > *:not(:last-child)': { mr: 2 }
                 }}
               >
+                <Link
+                  href={`mailto:?subject=Please support ${name}&body=${socialShareText} ${shareUrl}`}
+                  variant="buttons.secondaryInverted"
+                >
+                  <Text>Email</Text>
+                </Link>
                 <Icon.Facebook
                   variant="buttons.secondaryInverted"
                   as="a"
