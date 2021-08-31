@@ -3,11 +3,7 @@ import { Style } from 'types/Style'
 export const styles: Style = {
   header: {
     alignItems: 'center',
-    justifyContent: 'space-between',
-    bg: 'white'
-  },
-  description: {
-    backgroundColor: 'white'
+    justifyContent: 'space-between'
   },
   chevronDown: {
     p: 0,
@@ -20,7 +16,11 @@ export const styles: Style = {
     px: [3, 4],
     py: [3, 4],
     mx: [4, 6],
-    mb: [4, 6]
+    mb: [4, 6],
+    transition: 'background .2s',
+    ':hover': {
+      bg: 'primaryBg'
+    }
   },
   matchingTitle: {
     color: 'text',

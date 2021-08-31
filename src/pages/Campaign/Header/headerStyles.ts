@@ -25,19 +25,9 @@ export const styles: Style = {
     lineHeight: 1
   },
   linkButton: {
-    fontWeight: '400',
-    ':hover': {
-      opacity: 1,
-      bg: 'primary',
-      color: 'white'
-    }
+    fontWeight: '400'
   },
   linkCopied: {
-    color: 'primary',
-    cursor: 'unset',
-    ':hover': {
-      bg: 'white',
-      opacity: 1
-    }
+    cursor: 'unset'
   }
 }
