@@ -108,8 +108,8 @@ export const styles: Style = {
       transform: ['translateY(0.07em)', 'translateY(0.1em)']
     },
     ':hover': {
-      transform: 'scale(1.05)',
-      boxShadow: '0 1.5px 0px rgba(0, 0, 0, 0.25)'
+      transform: [null, 'scale(1.05)'],
+      boxShadow: [null, '0 1.5px 0px rgba(0, 0, 0, 0.25)']
     },
     ':active': {
       transform: 'scale(1)',
