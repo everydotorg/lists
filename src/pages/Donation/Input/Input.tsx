@@ -10,7 +10,7 @@ import { useTransition, config, animated } from 'react-spring'
 import cubicBezier from 'bezier-easing'
 import { matchingMailto } from 'src/services/url'
 
-const amountsToAdd = [20, 40, 80, 200, 500]
+const amountsToAdd = [20, 40, 100, 200, 500]
 
 const forbiddenSymbols = ['.', ',', '+', '-']
 
