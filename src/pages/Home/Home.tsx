@@ -6,7 +6,7 @@ import { NonprofitList } from './NonprofitList'
 
 export type HomeNonProfit = Pick<
   CampaignInfo,
-  'slug' | 'name' | 'about' | 'imageUrl' | 'cause'
+  'slug' | 'name' | 'about' | 'imageUrl' | 'cause' | 'nonprofits' | 'sponsor'
 >
 
 export type HomeProps = {

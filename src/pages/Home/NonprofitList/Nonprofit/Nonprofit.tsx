@@ -1,10 +1,12 @@
 import { styles } from './nonProfitStyles'
 import { Box, Text, Flex, Link as RebassLink } from 'theme-ui'
 import { HomeNonProfit } from '../../Home'
-import { causeTextColor, theme } from 'src/styles/theme'
+import { theme } from 'src/styles/theme'
 import { useRouter } from 'next/router'
 import { gtag } from 'src/services/gtag'
 import Image from 'next/image'
+import { causeCategoryPalette } from 'src/styles/causeCategoryPalette'
+import { currencyFormatter } from 'src/services/utils'
 
 type NonprofitProps = {
   nonprofit: HomeNonProfit
@@ -13,21 +15,21 @@ type NonprofitProps = {
 const mediaQuery = `@media all and (min-width: ${theme.breakpoints[0]})`
 
 export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
-  const textColor = causeTextColor(nonprofit.cause)
+  const causeColor = causeCategoryPalette[nonprofit.cause]
 
   const router = useRouter()
 
   const hoverStyles = {
     [mediaQuery]: {
       ':hover': {
-        borderColor: textColor
+        borderColor: causeColor.extraDark
       },
       ':hover #nonprofit-image-container': {
         filter: 'none'
       },
       ':hover #nonprofit-link': {
-        bg: textColor,
-        color: nonprofit.cause
+        bg: causeColor.extraDark,
+        color: causeColor.pastel20
       }
     }
   }
@@ -47,12 +49,13 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
     )
   }
 
+  const causeNonprofitLogos = nonprofit.nonprofits?.map((n) => n.img)
+
   return (
     <Flex
       sx={{
         ...styles.container,
-        borderColor: nonprofit.cause,
-        backgroundColor: nonprofit.cause,
+        borderColor: causeColor.pastel40,
         ...hoverStyles
       }}
       onClick={toGivelist}
@@ -61,24 +64,36 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         sx={{
           ...styles.section,
           ...styles.infoSection,
-          color: textColor
+          color: causeColor.extraDark
         }}
       >
         <Flex sx={styles.textContainer}>
-          <Text
-            variant="title"
-            sx={{
-              color: textColor
-            }}
-          >
+          <Text variant="title" sx={{ color: causeColor.extraDark }}>
             {nonprofit.name}
           </Text>
+          <Flex sx={{ mt: 2, mb: 6 }}>
+            <Text
+              sx={{
+                color: causeColor.extraDark,
+                mr: 6,
+                fontSize: 2,
+                lineHeight: '20px'
+              }}
+            >
+              <strong>{nonprofit.nonprofits?.length}</strong> nonprofits
+            </Text>
+            {nonprofit.sponsor ? (
+              <Text sx={{ fontSize: 2, lineHeight: '20px' }}>
+                <strong>
+                  {currencyFormatter.format(nonprofit.sponsor.upTo)}
+                </strong>{' '}
+                in matching
+              </Text>
+            ) : null}
+          </Flex>
           <Text
             variant="regular"
-            sx={{
-              ...styles.aboutText,
-              color: textColor
-            }}
+            sx={{ ...styles.aboutText, color: causeColor.extraDark }}
           >
             {nonprofit.about}
           </Text>
@@ -92,7 +107,8 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             sx={{
               alignSelf: 'flex-start',
               transition: 'background .2s',
-              color: textColor
+              color: causeColor.extraDark,
+              bg: causeColor.pastel20
             }}
           >
             <Text as="span" sx={styles.linkText}>
@@ -101,7 +117,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           </RebassLink>
         </Flex>
       </Flex>
-      <Flex
+      <Box
         sx={{
           ...styles.section,
           ...styles.imageSection
@@ -118,7 +134,22 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
           />
         </Box>
-      </Flex>
+        <Flex sx={styles.logosSection}>
+          {causeNonprofitLogos?.map((imgUrl) => (
+            <Box sx={styles.logoContainer}>
+              <Image
+                src={imgUrl}
+                className="next-home-nonprofit-logo"
+                width={24}
+                height={24}
+                objectFit="cover"
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
+              />
+            </Box>
+          ))}
+        </Flex>
+      </Box>
     </Flex>
   )
 }

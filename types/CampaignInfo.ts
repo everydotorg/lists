@@ -1,3 +1,4 @@
+import { Cause } from './Cause'
 import { NonProfit } from './NonProfit'
 import { Sponsor } from './Sponsor'
 
@@ -13,7 +14,7 @@ export type CampaignInfo = {
   previewImage: string
   about: string
   fundingGoal: number
-  cause: string
+  cause: Cause
   nonprofits: NonProfit[]
   sponsor?: Sponsor
   showGoalOnListPage?: boolean

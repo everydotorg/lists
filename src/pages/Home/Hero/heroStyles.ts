@@ -25,5 +25,9 @@ export const styles: Style = {
     '& > :not(:last-child)': {
       mb: 2
     }
+  },
+  readMoreButton: {
+    borderColor: 'primary',
+    px: 4
   }
 }
