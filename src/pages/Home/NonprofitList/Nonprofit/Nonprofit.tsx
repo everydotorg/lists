@@ -144,6 +144,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
                 height={24}
                 objectFit="cover"
                 placeholder="blur"
+                priority
                 blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
               />
             </Box>
