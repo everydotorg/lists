@@ -100,9 +100,20 @@ export const styles: Style = {
     lineHeight: 1.5,
     bg: 'primaryBg',
     borderRadius: 'small',
+    transition: 'box-shadow .4s, transform .4s',
+    transitionTimingFunction: 'cubic-bezier(0.39, 0.58, 0.57, 1)',
+    backfaceVisibility: 'hidden',
     '& > span': {
       display: 'block',
       transform: ['translateY(0.07em)', 'translateY(0.1em)']
+    },
+    ':hover': {
+      transform: 'scale(1.05)',
+      boxShadow: '0 1.5px 0px rgba(0, 0, 0, 0.25)'
+    },
+    ':active': {
+      transform: 'scale(1)',
+      boxShadow: 'none'
     }
   },
 

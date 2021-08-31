@@ -24,10 +24,10 @@ export const Frequency = ({
           id="one-time"
           sx={styles.input}
           defaultChecked={frequency === DonationFrequency.OneTime}
+          onChange={() => setFrequency(DonationFrequency.OneTime)}
         />
         <Label
           id="frequency-one-time"
-          onClick={() => setFrequency(DonationFrequency.OneTime)}
           htmlFor="one-time"
           variant="text.small"
           sx={{
@@ -43,11 +43,11 @@ export const Frequency = ({
           id="monthly"
           sx={styles.input}
           defaultChecked={frequency === DonationFrequency.Monthly}
+          onChange={() => setFrequency(DonationFrequency.Monthly)}
         />
         <Label
           id="frequency-monthly"
           htmlFor="monthly"
-          onClick={() => setFrequency(DonationFrequency.Monthly)}
           variant="text.small"
           sx={{
             ...styles.frequencyBase
