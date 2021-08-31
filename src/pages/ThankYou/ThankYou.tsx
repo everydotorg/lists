@@ -40,10 +40,6 @@ export const ThankYou = (): JSX.Element | null => {
           Thank you for supporting:
         </Text>
         <Text variant="title">{name}</Text>
-        <Text variant="caption" sx={{ mt: 2 }}>
-          A reciept was sent to your email. Your donation to this Givelist is
-          powered by Every.org - a {everyOrgDescription}
-        </Text>
         {progress && showGoalOnThankyouPage && (
           <Goal progress={progress} sx={styles.progressGoal} />
         )}
@@ -64,11 +60,8 @@ export const ThankYou = (): JSX.Element | null => {
           />
         )}
         <Card
-          description="
-          A tax deductable reciept was sent to your email. Your donation to this
-          givelist is powered by Every.org - a registered 501(c)(3) nonprofit
-          dedicated to providing free tools that encourage individuals to take
-          action and spread generosity."
+          description={`A reciept was sent to your email. Your donation to this Givelist is
+          powered by Every.org - a ${everyOrgDescription}`}
           inverted
         ></Card>
         <Card
