@@ -72,7 +72,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
               <Flex>
                 <Flex sx={styles.avartarContainer}>
                   <Image
-                    quality="100"
+                    quality="75"
                     src={nonprofit.img}
                     sizes="(max-width: 900px) 2.5rem, 4rem"
                     alt="non profit image"

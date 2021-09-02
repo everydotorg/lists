@@ -23,6 +23,7 @@ export const Banner = ({
       <Image
         src={bannerUrl}
         sizes="57vw"
+        quality={60}
         alt="Campaign banner"
         layout="fill"
         objectFit="cover"

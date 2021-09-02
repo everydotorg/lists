@@ -18,6 +18,7 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
       <Box sx={styles.container}>
         <Image
           src={mobileBannerUrl}
+          quality={60}
           sizes="100vw"
           alt="Campaign mobile banner"
           layout="fill"
