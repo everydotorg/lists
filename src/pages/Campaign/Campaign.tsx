@@ -45,7 +45,7 @@ export const Campaign = (): JSX.Element => {
           <Text sx={styles.campaignTitle} as="h1" variant="h1">
             {name}
           </Text>
-          <Text sx={styles.aboutText} variant="small">
+          <Text as="h2" sx={styles.aboutText} variant="small">
             {about}
           </Text>
         </Flex>
