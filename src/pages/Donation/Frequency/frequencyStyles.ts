@@ -46,7 +46,6 @@ export const styles: Style = {
       transform: 'translateY(0.07em)'
     }
   },
-
   selectedFrequency: {
     position: 'relative',
     '&::before': {
