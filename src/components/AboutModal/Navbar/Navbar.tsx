@@ -30,7 +30,7 @@ export const Navbar = ({ selected }: NavbarProps) => {
           About
         </Text>
         <Link
-          href="https://support.every.org?utm_source=givelist"
+          href="https://support.every.org/hc/en-us/sections/4406332582803-Givelist?utm_source=givelist"
           target="_blank"
           sx={styles.menuItem}
         >
