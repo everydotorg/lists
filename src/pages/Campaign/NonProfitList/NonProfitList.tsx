@@ -80,8 +80,6 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                     objectPosition="center"
                     objectFit="cover"
                     className="next-avatar"
-                    placeholder="blur"
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
                     priority
                   />
                 </Flex>
