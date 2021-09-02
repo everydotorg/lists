@@ -126,6 +126,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         <Box id="nonprofit-image-container" sx={styles.imageContainer}>
           <Image
             src={nonprofit.imageUrl}
+            sizes="(max-width: 900px) 100vw, 20vw"
             alt={nonprofit.name + ' campaign image'}
             className="next-home-image"
             layout="fill"

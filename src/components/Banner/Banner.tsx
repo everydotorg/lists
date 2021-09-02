@@ -22,6 +22,7 @@ export const Banner = ({
     <Box sx={styles.banner}>
       <Image
         src={bannerUrl}
+        sizes="57vw"
         alt="Campaign banner"
         layout="fill"
         objectFit="cover"

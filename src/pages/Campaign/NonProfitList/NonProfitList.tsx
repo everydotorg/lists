@@ -74,6 +74,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                   <Image
                     quality="100"
                     src={nonprofit.img}
+                    sizes="(max-width: 900px) 2.5rem, 4rem"
                     alt="non profit image"
                     layout="fill"
                     objectPosition="center"
