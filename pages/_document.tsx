@@ -16,6 +16,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="shortcut icon" href="/favicon.ico"></link>
           <script
             dangerouslySetInnerHTML={{
               __html: `
