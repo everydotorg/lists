@@ -1,10 +1,11 @@
-import { Flex, Text } from '@theme-ui/components'
+import { Box, Button, Flex, Text } from '@theme-ui/components'
 import { Fragment, useCallback, useState } from 'react'
 import { NonProfit as NonProfitType } from 'types/NonProfit'
 import { gtag } from 'src/services/gtag'
 import { Expandable } from 'src/components/Expandable'
 import { styles } from './nonProfitListStyles'
 import Image from 'next/image'
+import { useAboutModal } from 'src/hooks/useAboutModal'
 
 interface NonProfitProps {
   list: NonProfitType[]
@@ -12,11 +13,17 @@ interface NonProfitProps {
 
 export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
   const [expandedSlug, setExpandedSlug] = useState<string | null>(null)
+  const aboutModal = useAboutModal()
 
   const handleClick = (slug: string) =>
     setExpandedSlug((curr) => {
       return curr === slug ? null : slug
     })
+
+  const openAbout = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.stopPropagation()
+    aboutModal.setOpen(true)
+  }
 
   const pushAnalyticEvent = useCallback((name: string, expanded: boolean) => {
     gtag.pushEvent(`${expanded ? 'open' : 'close'}_nonprofit`, {
@@ -26,6 +33,33 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
 
   return (
     <>
+      <Expandable
+        id="info"
+        expanded={expandedSlug === 'info'}
+        onClick={() => handleClick('info')}
+        containerStyle={styles.container}
+        headerStyle={styles.header}
+        descriptionStyle={styles.aboutContainer}
+        chevronStyle={styles.expandableChevron}
+        renderTitle={
+          <Text variant="caption" sx={styles.nonprofitsTitle}>
+            Donation <strong>split evenly</strong> between{' '}
+            <strong>{list.length}</strong> charities:
+          </Text>
+        }
+        renderDescription={
+          <Box>
+            <Text as="p" variant="caption" sx={{ color: 'text', my: [4, 6] }}>
+              Your donation is made to Every.org, a tax-exempt US 501(c)(3)
+              charity that grants funds to these 11 charities on your behalf,
+              without taking any cut of the donation.
+            </Text>
+            <Button onClick={openAbout} variant="gray">
+              Learn more
+            </Button>
+          </Box>
+        }
+      />
       {list.map((nonprofit) => (
         <Fragment key={nonprofit.slug}>
           <Expandable

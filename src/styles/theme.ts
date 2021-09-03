@@ -179,6 +179,23 @@ export const theme = {
         bg: 'primary',
         color: 'white'
       }
+    },
+    gray: {
+      variant: 'buttons.primarySmall',
+      bg: 'backgroundGray',
+      color: 'text',
+      borderRadius: 'default',
+      height: 'auto',
+      width: 'max-content',
+      px: 4,
+      py: 2,
+      fontSize: 3,
+      border: '1px solid transparent',
+      transition: 'border .2s',
+      ':hover': {
+        borderColor: 'text',
+        bg: 'backgroundGray'
+      }
     }
   },
   text: {
