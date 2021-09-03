@@ -129,6 +129,8 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             src={nonprofit.imageUrl}
             sizes="(max-width: 900px) 100vw, 20vw"
             loader={cloudinaryLoader}
+            // disable lazy loading from next/image and user browser's built-in
+            loading="eager"
             alt={nonprofit.name + ' campaign image'}
             className="next-home-image"
             layout="fill"
@@ -143,11 +145,12 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
               <Image
                 src={imgUrl}
                 loader={cloudinaryLoader}
+                // disable lazy loading from next/image and user browser's built-in
+                loading="eager"
                 className="next-home-nonprofit-logo"
                 width={24}
                 height={24}
                 objectFit="cover"
-                priority
               />
             </Box>
           ))}

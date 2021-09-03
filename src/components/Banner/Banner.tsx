@@ -24,6 +24,8 @@ export const Banner = ({
       <Image
         src={bannerUrl}
         loader={cloudinaryLoader}
+        // disable lazy loading from next/image and user browser's built-in
+        loading="eager"
         sizes="57vw"
         quality={60}
         alt="Campaign banner"

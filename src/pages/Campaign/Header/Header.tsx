@@ -21,6 +21,8 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
           src={mobileBannerUrl}
           quality={60}
           loader={cloudinaryLoader}
+          // disable lazy loading from next/image and user browser's built-in
+          loading="eager"
           sizes="100vw"
           alt="Campaign mobile banner"
           layout="fill"

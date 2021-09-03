@@ -77,12 +77,13 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                     src={nonprofit.img}
                     sizes="(max-width: 900px) 2.5rem, 4rem"
                     loader={cloudinaryLoader}
+                    // disable lazy loading from next/image and user browser's built-in
+                    loading="eager"
                     alt="non profit image"
                     layout="fill"
                     objectPosition="center"
                     objectFit="cover"
                     className="next-avatar"
-                    priority
                   />
                 </Flex>
 
