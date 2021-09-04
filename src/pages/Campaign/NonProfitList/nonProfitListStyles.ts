@@ -8,6 +8,11 @@ export const styles: Style = {
     },
     transition: 'background .2s ease'
   },
+  nonprofitsTitle: {
+    label: 'nonprofits-Title',
+    color: 'text',
+    lineHeight: ['20px', '32px']
+  },
   header: {
     label: 'nonprofit-item',
     alignItems: 'start',
