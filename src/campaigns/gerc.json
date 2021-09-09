@@ -1,0 +1,77 @@
+{
+  "everySlug": "globalemergencyresponse",
+  "name": "Global Emergency Response",
+  "primaryColor": "#00A37F",
+  "imageUrl": "https://i.imgur.com/USeRKLU.jpeg",
+  "mobileBannerUrl": "https://i.imgur.com/pRmukIW.jpg",
+  "bannerUrl": "https://i.imgur.com/USeRKLU.jpeg",
+  "socialShareText": "The Global Emergency Response Coalition is a lifesaving humanitarian alliance made up of eight leading U.S.-based international aid organizations. When disaster strikes, the Coalition mobilizes to help children and families in urgent need. By working together, we can increase awareness and funds to deliver emergency relief quickly and efficiently to save lives and help rebuild communities.",
+  "previewImage": "https://i.imgur.com/USeRKLU.jpeg",
+  "about": "The Global Emergency Response Coalition is a lifesaving humanitarian alliance made up of eight leading U.S.-based international aid organizations. When disaster strikes, the Coalition mobilizes to help children and families in urgent need. By working together, we can increase awareness and funds to deliver emergency relief quickly and efficiently to save lives and help rebuild communities.",
+  "cause": "humans",
+  "fundingGoal": 50000,
+  "sponsor": {
+    "ratio": "1-for-1",
+    "threshold": 100,
+    "upTo": 10000,
+    "description": "Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 each time until we reach $10,000 total matched."
+  },
+  "nonprofits": [
+    {
+      "slug": "care",
+      "name": "CARE",
+      "location": "Atlanta, GA",
+      "about": "Fights global poverty by empowering girls and women.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/uy2u0sizbe4ze1dvafbz"
+    },
+    {
+      "slug": "international-medical-corps",
+      "name": "International Medical Corps",
+      "location": "Los Angeles, CA",
+      "about": "We help people in crisis by providing emergency health services, and then promote self-reliance through training.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/zwxuhjjxmrayjwbfceg9"
+    },
+    {
+      "slug": "irc",
+      "name": "International Rescue Committee",
+      "location": "New York, NY",
+      "about": "IRC responds to the world’s worst humanitarian crises & helps people to survive, recover & gain control of their future.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/m4py1igjmt6ufvbkebzt"
+    },
+    {
+      "slug": "mercy-corps",
+      "name": "Mercy Corps",
+      "location": "Portland, OR",
+      "about": "Empowering people to recover from crisis, build better lives and transform their communities for good.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/yoxzgi03fkpgkcb1wpvp"
+    },
+    {
+      "slug": "oxfam-america",
+      "name": "Oxfam America",
+      "location": "Boston, MA",
+      "about": "Oxfam is a global organization working to end the injustice of poverty. We help people build better futures for themselves, hold the powerful accountable, and save lives in disasters. Our mission is to tackle the root causes of poverty and create lasting solutions.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/oxfam_syuxvd"
+    },
+    {
+      "slug": "planusa",
+      "name": "Plan International USA",
+      "location": "Warwick, RI",
+      "about": "We strive for a just world that advances children’s rights and equality for girls.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/unnamed_shpkxt"
+    },
+    {
+      "slug": "savethechildren",
+      "name": "Save the Children",
+      "location": "Fairfield, CT",
+      "about": "Giving children in the U.S. and around the world a healthy start in life, the opportunity to learn and protection from harm.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/r8wffq4odqlyloy1fu8p"
+    },
+    {
+      "slug": "world-vision",
+      "name": "World Vision",
+      "location": "Federal Way, WA",
+      "about": "Dedicated to working with children, families, and communities worldwide to reach their potential by tackling poverty & injustice.",
+      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/xtzbsgh4bwo1f2km7crf"
+    }
+  ]
+}

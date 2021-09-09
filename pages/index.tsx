@@ -7,7 +7,7 @@ import { theme } from 'src/styles/theme'
 import Head from 'next/head'
 import { baseUrl, baseUrlWithPaths } from 'src/services/url'
 
-const excludedFromHomepage = ['lilbub']
+const excludedFromHomepage = ['lilbub', 'gerc']
 
 export const getStaticProps: GetStaticProps = async () => {
   const nonProfits = getCampaignSlugs()

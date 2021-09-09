@@ -12,7 +12,8 @@ const campaigns = [
   { json: 'tacklingclimatechange', slug: 'climate' },
   { json: 'a-brighter-future', slug: 'science' },
   { json: 'lilbub', slug: 'lilbub' },
-  { json: 'afghanistan-humanitarian-aid', slug: 'afghanistan' }
+  { json: 'afghanistan-humanitarian-aid', slug: 'afghanistan' },
+  { json: 'gerc', slug: 'gerc' }
 ]
 
 export const getCampaignSlugs = () => {
