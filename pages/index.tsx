@@ -1,39 +1,29 @@
-import { GetStaticProps } from 'next'
+import Head from 'next/head'
+import { campaigns } from 'src/campaigns'
 import { AboutModalProvider } from 'src/contexts/AboutModalContext'
 import { Home, HomeProps } from 'src/pages/Home'
-import { getCampaignInfo, getCampaignSlugs } from 'src/services/getCampaignInfo'
-import { ThemeProvider } from 'theme-ui'
-import { theme } from 'src/styles/theme'
-import Head from 'next/head'
 import { baseUrl, baseUrlWithPaths } from 'src/services/url'
+import { theme } from 'src/styles/theme'
+import { ThemeProvider } from 'theme-ui'
 
 const excludedFromHomepage = ['lilbub', 'gerc']
 
-export const getStaticProps: GetStaticProps = async () => {
-  const nonProfits = getCampaignSlugs()
-    .filter((campaign) => !excludedFromHomepage.includes(campaign))
-    .map((campaign) => getCampaignInfo(campaign))
-    .map((info) => ({
-      slug: info.slug,
-      name: info.name,
-      imageUrl: info.imageUrl,
-      about: info.about,
-      cause: info.cause,
-      nonprofits: info.nonprofits,
-      sponsor: info.sponsor ? info.sponsor : null
-    }))
-
-  return {
-    props: {
-      nonProfits
-    }
-  }
-}
+const nonProfits: HomeProps['nonProfits'] = campaigns
+  .filter((campaign) => !excludedFromHomepage.includes(campaign.everySlug))
+  .map((info) => ({
+    slug: info.everySlug,
+    name: info.name,
+    imageUrl: info.imageUrl,
+    about: info.about,
+    cause: info.cause,
+    nonprofits: info.nonprofits,
+    sponsor: info.sponsor ? info.sponsor : undefined
+  }))
 
 export const Tagline =
   'Discover, donate, and share recommended lists of nonprofits.'
 
-const Homepage = ({ nonProfits }: HomeProps) => {
+const Homepage = () => {
   const title = `giveli.st • ${Tagline}`
 
   const description =

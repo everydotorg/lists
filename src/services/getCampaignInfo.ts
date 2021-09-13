@@ -1,8 +1,8 @@
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
 import { CampaignInfo } from 'types/CampaignInfo'
 
-const campaigns = [
+export const campaigns = [
   { json: 'animal.welfare', slug: 'animals' },
   { json: 'educationeverywhere', slug: 'education' },
   { json: 'antiracism', slug: 'antiracism' },
