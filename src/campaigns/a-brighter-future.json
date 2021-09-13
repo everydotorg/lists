@@ -2,11 +2,11 @@
   "everySlug": "stem.future",
   "name": "Science and Technology for a Brighter Future",
   "primaryColor": "#00A37F",
-  "mobileBannerUrl": "https://i.imgur.com/O0fNKAr.png",
-  "imageUrl": "https://i.imgur.com/O0fNKAr.png",
-  "bannerUrl": "https://i.imgur.com/M4VVTWt.jpg",
+  "mobileBannerUrl": "p22/image/upload/Givelist/O0fNKAr_hixwqn",
+  "imageUrl": "p22/image/upload/Givelist/O0fNKAr_hixwqn",
+  "bannerUrl": "p22/image/upload/Givelist/M4VVTWt_weptu4",
   "socialShareText": "Solving some of the world's biggest challenges with cutting-edge research and policy.",
-  "previewImage": "https://i.imgur.com/O0fNKAr.png",
+  "previewImage": "p22/image/upload/Givelist/O0fNKAr_hixwqn",
   "about": "Solving some of the world's biggest challenges with cutting-edge research and policy.",
   "cause": "research",
   "fundingGoal": 50000,
@@ -16,28 +16,28 @@
       "name": "Nuclear Threat Initiative",
       "location": "",
       "about": "A nonprofit global security organization focused on transforming international security by driving systemic solutions to nuclear and biological threats imperiling humanity. NTI designs innovative threat-reduction projects that show governments the way and build momentum and support for action.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/yeoyfjlwcgw7tc2op8kn"
+      "img": "everydotorg/image/upload/faja_profile/yeoyfjlwcgw7tc2op8kn"
     },
     {
       "slug": "usonainstitute",
       "name": "Usona Institute",
       "location": "Madison, WI",
       "about": "Usona Institute conducts and supports pre-clinical and clinical research to further the understanding of the therapeutic effects of psilocybin and other consciousness-expanding medicines. Their focus is on alleviating depression and anxiety in people for whom current medical treatments fall short in offering relief and a better quality of life.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/lyxqug4axll5xdqtd1t5"
+      "img": "everydotorg/image/upload/profile_pics/lyxqug4axll5xdqtd1t5"
     },
     {
       "slug": "centerforhealthsecurity",
       "name": "Center for Health Security",
       "location": "Baltimore, MD",
       "about": "The Johns Hopkins Center for Health Security works to protect people’s health from the consequences of epidemics and disasters. They explore how new policy approaches, scientific advances, and technological innovations can strengthen health security and save lives.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/iavd4gmx7tyxghvgivaq"
+      "img": "everydotorg/image/upload/profile_pics/iavd4gmx7tyxghvgivaq"
     },
     {
       "slug": "chai",
       "name": "The Center for Human-Compatible AI",
       "location": "Berkeley, CA",
       "about": "One of the few academic research centres focused solely on the safety of advanced AI. CHAI is a multi-institution research group based at UC Berkeley, with academic affiliates at a variety of other universities. They work on developing the fundamentals of safe AI which is beneficial to humans and understanding the complexities of the potential risks.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/m4ecnx3yl2ylcf2gdfw6"
+      "img": "everydotorg/image/upload/profile_pics/m4ecnx3yl2ylcf2gdfw6"
     }
   ]
 }

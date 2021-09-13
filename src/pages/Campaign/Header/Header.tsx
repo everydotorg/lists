@@ -1,16 +1,17 @@
-import { Box, Button } from 'theme-ui'
+import Image from 'next/image'
 import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
-import { styles } from './headerStyles'
+import { cloudinaryLoader } from 'src/services/cloudinaryLoader'
 import { baseUrlWithPaths } from 'src/services/url'
-import Image from 'next/image'
+import { Box, Button } from 'theme-ui'
+import { styles } from './headerStyles'
 
 interface HeaderProps {
   onClickDonate: () => void
 }
 
 export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
-  const { mobileBannerUrl, slug } = useCampaignInfoContext()
+  const { slug, mobileBannerUrl } = useCampaignInfoContext()
   const shareUrl = baseUrlWithPaths(slug)
 
   return (
@@ -19,6 +20,7 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
         <Image
           src={mobileBannerUrl}
           quality={60}
+          loader={cloudinaryLoader}
           sizes="100vw"
           alt="Campaign mobile banner"
           layout="fill"

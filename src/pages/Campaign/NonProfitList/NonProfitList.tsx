@@ -1,11 +1,12 @@
 import { Box, Button, Flex, Text } from '@theme-ui/components'
-import { Fragment, useCallback, useState } from 'react'
-import { NonProfit as NonProfitType } from 'types/NonProfit'
-import { gtag } from 'src/services/gtag'
-import { Expandable } from 'src/components/Expandable'
-import { styles } from './nonProfitListStyles'
 import Image from 'next/image'
+import { Fragment, useCallback, useState } from 'react'
+import { Expandable } from 'src/components/Expandable'
 import { useAboutModal } from 'src/hooks/useAboutModal'
+import { cloudinaryLoader } from 'src/services/cloudinaryLoader'
+import { gtag } from 'src/services/gtag'
+import { NonProfit as NonProfitType } from 'types/NonProfit'
+import { styles } from './nonProfitListStyles'
 
 interface NonProfitProps {
   list: NonProfitType[]
@@ -75,6 +76,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                     quality="75"
                     src={nonprofit.img}
                     sizes="(max-width: 900px) 2.5rem, 4rem"
+                    loader={cloudinaryLoader}
                     alt="non profit image"
                     layout="fill"
                     objectPosition="center"

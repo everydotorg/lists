@@ -2,11 +2,11 @@
   "everySlug": "climate.change",
   "name": "Tackling Climate Change",
   "primaryColor": "#00A37F",
-  "mobileBannerUrl": "https://i.imgur.com/VZmTFlI.png",
-  "imageUrl": "https://i.imgur.com/VZmTFlI.png",
-  "bannerUrl": "https://i.imgur.com/rmWCIyd.jpg",
+  "mobileBannerUrl": "p22/image/upload/Givelist/VZmTFlI_x4hrze",
+  "imageUrl": "p22/image/upload/Givelist/VZmTFlI_x4hrze",
+  "bannerUrl": "p22/image/upload/Givelist/rmWCIyd_athspo",
   "socialShareText": "Support nonprofits taking action towards a more prosperous planet. Your donation will help fund research leveraging science and technology for positive change.",
-  "previewImage": "https://i.imgur.com/VZmTFlI.png",
+  "previewImage": "p22/image/upload/Givelist/VZmTFlI_x4hrze",
   "about": "Support nonprofits taking action towards a more prosperous planet. Your donation will help fund research leveraging science and technology for positive change.",
   "cause": "environment",
   "sponsor": {
@@ -21,28 +21,28 @@
       "name": "Clean Air Task Force",
       "location": "Boston, MA",
       "about": "Catalyzing resilient solutions, scaled to meet the climate challenge.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/faja_profile/uqm96xaxu1w7mvyoi4hp"
+      "img": "everydotorg/image/upload/faja_profile/uqm96xaxu1w7mvyoi4hp"
     },
     {
       "slug": "carbon180",
       "name": "Carbon 180",
       "location": "Oakland, CA",
       "about": "A new breed of climate-focused NGO working to build a world that removes more carbon than it emits.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/yqmdokygvmt3p5st8d7i"
+      "img": "everydotorg/image/upload/profile_pics/yqmdokygvmt3p5st8d7i"
     },
     {
       "slug": "terra-praxis",
       "name": "Terra Praxis",
       "location": "London, UK",
       "about": "TerraPraxis designs and implements strategies that leverage science, technology and energy innovation for a prosperous planet.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/xwxybozipxyjsgoiz36k"
+      "img": "everydotorg/image/upload/profile_pics/xwxybozipxyjsgoiz36k"
     },
     {
       "slug": "silverlining",
       "name": "Silverlining INC",
       "location": "Washington, DC",
       "about": "Dedicated to ensuring that society has sufficient options to address near-term climate risk.",
-      "img": "https://res.cloudinary.com/everydotorg/image/upload/c_lfill,w_128,h_128,dpr_1/c_crop,ar_128:128/q_auto,f_auto,fl_progressive/profile_pics/ssr4akwohdpt1eb3p7sn"
+      "img": "everydotorg/image/upload/profile_pics/ssr4akwohdpt1eb3p7sn"
     }
   ]
 }

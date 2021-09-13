@@ -1,12 +1,13 @@
-import { styles } from './nonProfitStyles'
-import { Box, Text, Flex, Link as RebassLink } from 'theme-ui'
-import { HomeNonProfit } from '../../Home'
-import { theme } from 'src/styles/theme'
-import { useRouter } from 'next/router'
-import { gtag } from 'src/services/gtag'
 import Image from 'next/image'
-import { causeCategoryPalette } from 'src/styles/causeCategoryPalette'
+import { useRouter } from 'next/router'
+import { cloudinaryLoader } from 'src/services/cloudinaryLoader'
+import { gtag } from 'src/services/gtag'
 import { currencyFormatter } from 'src/services/utils'
+import { causeCategoryPalette } from 'src/styles/causeCategoryPalette'
+import { theme } from 'src/styles/theme'
+import { Box, Flex, Link as RebassLink, Text } from 'theme-ui'
+import { HomeNonProfit } from '../../Home'
+import { styles } from './nonProfitStyles'
 
 type NonprofitProps = {
   nonprofit: HomeNonProfit
@@ -127,6 +128,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           <Image
             src={nonprofit.imageUrl}
             sizes="(max-width: 900px) 100vw, 20vw"
+            loader={cloudinaryLoader}
             alt={nonprofit.name + ' campaign image'}
             className="next-home-image"
             layout="fill"
@@ -140,6 +142,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             <Box sx={styles.logoContainer}>
               <Image
                 src={imgUrl}
+                loader={cloudinaryLoader}
                 className="next-home-nonprofit-logo"
                 width={24}
                 height={24}
