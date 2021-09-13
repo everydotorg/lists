@@ -8,10 +8,10 @@ import { ThemeProvider } from 'theme-ui'
 
 const excludedFromHomepage = ['lilbub', 'gerc']
 
-const nonProfits: HomeProps['nonProfits'] = campaigns
-  .filter((campaign) => !excludedFromHomepage.includes(campaign.everySlug))
+const nonProfits: HomeProps['nonProfits'] = Object.values(campaigns)
+  .filter((campaign) => !excludedFromHomepage.includes(campaign.slug))
   .map((info) => ({
-    slug: info.everySlug,
+    slug: info.slug,
     name: info.name,
     imageUrl: info.imageUrl,
     about: info.about,

@@ -32,21 +32,16 @@ export type CampaignJson = {
   showGoalOnThankyouPage?: boolean
 }
 
-const transform = (raw: CampaignJson): CampaignInfo => ({
-  slug: raw.everySlug,
-  ...raw
-})
-
-export const campaigns: CampaignInfo[] = [
-  transform(animals as CampaignJson),
-  transform(education as CampaignJson),
-  transform(antiracism as CampaignJson),
-  transform(lgbtq as CampaignJson),
-  transform(health as CampaignJson),
-  transform(poverty as CampaignJson),
-  transform(climate as CampaignJson),
-  transform(science as CampaignJson),
-  transform(lilbub as CampaignJson),
-  transform(afghanistan as CampaignJson),
-  transform(gerc as CampaignJson)
-]
+export const campaigns: Record<string, CampaignInfo> = {
+  animals: { slug: 'animals', ...(animals as CampaignJson) },
+  education: { slug: 'education', ...(education as CampaignJson) },
+  antiracism: { slug: 'antiracism', ...(antiracism as CampaignJson) },
+  lgbtq: { slug: 'lgbtq', ...(lgbtq as CampaignJson) },
+  health: { slug: 'health', ...(health as CampaignJson) },
+  poverty: { slug: 'poverty', ...(poverty as CampaignJson) },
+  climate: { slug: 'climate', ...(climate as CampaignJson) },
+  science: { slug: 'science', ...(science as CampaignJson) },
+  lilbub: { slug: 'lilbub', ...(lilbub as CampaignJson) },
+  afghanistan: { slug: 'afghanistan', ...(afghanistan as CampaignJson) },
+  gerc: { slug: 'gerc', ...(gerc as CampaignJson) }
+}
