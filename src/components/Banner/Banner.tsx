@@ -1,10 +1,10 @@
 import { Box } from '@theme-ui/components'
-import { AboutButton } from './AboutButton'
-import { DiscoverButton } from './DiscoverButton'
-import { styles } from './bannerStyles'
-import { BackListButton } from './BackListButton'
-import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
 import Image from 'next/image'
+import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
+import { AboutButton } from './AboutButton'
+import { BackListButton } from './BackListButton'
+import { styles } from './bannerStyles'
+import { DiscoverButton } from './DiscoverButton'
 
 interface BannerProps {
   showAbout: boolean
@@ -22,6 +22,10 @@ export const Banner = ({
     <Box sx={styles.banner}>
       <Image
         src={bannerUrl}
+        sizes="57vw"
+        quality={45}
+        // disable lazy loading from next/image and user browser's built-in
+        loading="eager"
         alt="Campaign banner"
         layout="fill"
         objectFit="cover"

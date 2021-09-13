@@ -1,11 +1,11 @@
 import { Box, Button, Flex, Text } from '@theme-ui/components'
-import { Fragment, useCallback, useState } from 'react'
-import { NonProfit as NonProfitType } from 'types/NonProfit'
-import { gtag } from 'src/services/gtag'
-import { Expandable } from 'src/components/Expandable'
-import { styles } from './nonProfitListStyles'
 import Image from 'next/image'
+import { Fragment, useCallback, useState } from 'react'
+import { Expandable } from 'src/components/Expandable'
 import { useAboutModal } from 'src/hooks/useAboutModal'
+import { gtag } from 'src/services/gtag'
+import { NonProfit as NonProfitType } from 'types/NonProfit'
+import { styles } from './nonProfitListStyles'
 
 interface NonProfitProps {
   list: NonProfitType[]
@@ -72,15 +72,16 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
               <Flex>
                 <Flex sx={styles.avartarContainer}>
                   <Image
-                    quality="100"
                     src={nonprofit.img}
+                    quality={45}
+                    sizes="(max-width: 900px) 2.5rem, 4rem"
+                    // disable lazy loading from next/image and user browser's built-in
+                    loading="eager"
                     alt="non profit image"
                     layout="fill"
                     objectPosition="center"
                     objectFit="cover"
                     className="next-avatar"
-                    placeholder="blur"
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
                   />
                 </Flex>
 

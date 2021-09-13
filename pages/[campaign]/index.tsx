@@ -1,9 +1,9 @@
-import { Campaign } from 'src/pages/Campaign'
-import { CampaignLayout } from 'src/components/CampaignLayout'
-import { PageProps } from 'src/campaigns/ssr'
 import { useRouter } from 'next/router'
+import { PageProps } from 'src/campaigns/ssr'
+import { CampaignLayout } from 'src/components/CampaignLayout'
+import { Campaign } from 'src/pages/Campaign'
 
-export { getStaticProps, getStaticPaths } from 'src/campaigns/ssr'
+export { getStaticPaths, getStaticProps } from 'src/campaigns/ssr'
 
 const CampaignPage = ({ campaignInfo }: PageProps) => {
   const router = useRouter()

@@ -1,12 +1,12 @@
-import { styles } from './nonProfitStyles'
-import { Box, Text, Flex, Link as RebassLink } from 'theme-ui'
-import { HomeNonProfit } from '../../Home'
-import { theme } from 'src/styles/theme'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { gtag } from 'src/services/gtag'
-import Image from 'next/image'
-import { causeCategoryPalette } from 'src/styles/causeCategoryPalette'
 import { currencyFormatter } from 'src/services/utils'
+import { causeCategoryPalette } from 'src/styles/causeCategoryPalette'
+import { theme } from 'src/styles/theme'
+import { Box, Flex, Link as RebassLink, Text } from 'theme-ui'
+import { HomeNonProfit } from '../../Home'
+import { styles } from './nonProfitStyles'
 
 type NonprofitProps = {
   nonprofit: HomeNonProfit
@@ -126,6 +126,10 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         <Box id="nonprofit-image-container" sx={styles.imageContainer}>
           <Image
             src={nonprofit.imageUrl}
+            quality={45}
+            sizes="(max-width: 900px) 100vw, 20vw"
+            // disable lazy loading from next/image and user browser's built-in
+            loading="eager"
             alt={nonprofit.name + ' campaign image'}
             className="next-home-image"
             layout="fill"
@@ -139,12 +143,13 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             <Box sx={styles.logoContainer}>
               <Image
                 src={imgUrl}
+                quality={45}
+                // disable lazy loading from next/image and user browser's built-in
+                loading="eager"
                 className="next-home-nonprofit-logo"
                 width={24}
                 height={24}
                 objectFit="cover"
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
               />
             </Box>
           ))}
