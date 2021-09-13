@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { CopyToClipboard } from 'src/components/CopyToClipboard'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
-import { cloudinaryLoader } from 'src/services/cloudinaryLoader'
 import { baseUrlWithPaths } from 'src/services/url'
 import { Box, Button } from 'theme-ui'
 import { styles } from './headerStyles'
@@ -20,7 +19,6 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
         <Image
           src={mobileBannerUrl}
           quality={60}
-          loader={cloudinaryLoader}
           // disable lazy loading from next/image and user browser's built-in
           loading="eager"
           sizes="100vw"

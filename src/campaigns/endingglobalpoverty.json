@@ -2,11 +2,11 @@
   "everySlug": "global.poverty",
   "name": "Ending Global Poverty",
   "primaryColor": "#00A37F",
-  "imageUrl": "p22/image/upload/Givelist/7jFmKyk_ngshm2",
-  "mobileBannerUrl": "p22/image/upload/Givelist/7jFmKyk_ngshm2",
-  "bannerUrl": "p22/image/upload/Givelist/I4cOW0I_x3uv2d",
+  "imageUrl": "profile_pics/yzepzkskqkira8wdfwe6",
+  "mobileBannerUrl": "profile_pics/yzepzkskqkira8wdfwe6",
+  "bannerUrl": "profile_pics/yzepzkskqkira8wdfwe6",
   "socialShareText": "Help the four nonprofits on this Givelist address the challenges of global poverty. Backed by $10,000 of matched funding, your donation is amplified and directed to those most in need.",
-  "previewImage": "p22/image/upload/Givelist/7jFmKyk_ngshm2",
+  "previewImage": "profile_pics/yzepzkskqkira8wdfwe6",
   "about": "Help the four nonprofits on this Givelist address the challenges of global poverty. Backed by $10,000 of matched funding, your donation is amplified and directed to those most in need.",
   "cause": "humans",
   "fundingGoal": 50000,
@@ -22,28 +22,28 @@
       "name": "New Incentives",
       "location": "Walnut, CA",
       "about": "We use cash transfers to increase immunization rates in Nigeria.",
-      "img": "everydotorg/image/upload/profile_pics/newnvy0rlvxdz3yx300o"
+      "img": "profile_pics/newnvy0rlvxdz3yx300o"
     },
     {
       "slug": "givedirectly",
       "name": "Give Directly",
       "location": "New York, NY",
       "about": "Delivering unconditional cash directly to the world's poorest households via secure mobile transfers.",
-      "img": "everydotorg/image/upload/faja_profile/rdbzfnryksvqzdjeqtka"
+      "img": "faja_profile/rdbzfnryksvqzdjeqtka"
     },
     {
       "slug": "strongminds",
       "name": "Strong Minds",
       "location": "Maplewood, NJ",
       "about": "Provides life-changing mental health services to low-income Africans using an innovative community-based approach.",
-      "img": "everydotorg/image/upload/faja_profile/ilcto5hg7fmz5rv9bwq9"
+      "img": "faja_profile/ilcto5hg7fmz5rv9bwq9"
     },
     {
       "slug": "lifeyoucansave",
       "name": "The Life You Can Save",
       "location": "Bainbridge is, WA",
       "about": "We inspire effective giving in the fight against extreme poverty.",
-      "img": "everydotorg/image/upload/faja_profile/diucwv9fg2rxaqv8nquc"
+      "img": "faja_profile/diucwv9fg2rxaqv8nquc"
     }
   ]
 }

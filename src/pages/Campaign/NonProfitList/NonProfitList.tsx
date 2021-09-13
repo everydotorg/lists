@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Fragment, useCallback, useState } from 'react'
 import { Expandable } from 'src/components/Expandable'
 import { useAboutModal } from 'src/hooks/useAboutModal'
-import { cloudinaryLoader } from 'src/services/cloudinaryLoader'
 import { gtag } from 'src/services/gtag'
 import { NonProfit as NonProfitType } from 'types/NonProfit'
 import { styles } from './nonProfitListStyles'
@@ -76,7 +75,6 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                     quality="75"
                     src={nonprofit.img}
                     sizes="(max-width: 900px) 2.5rem, 4rem"
-                    loader={cloudinaryLoader}
                     // disable lazy loading from next/image and user browser's built-in
                     loading="eager"
                     alt="non profit image"

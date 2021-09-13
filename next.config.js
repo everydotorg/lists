@@ -1,3 +1,7 @@
 module.exports = {
-  reactStrictMode: true
+  reactStrictMode: true,
+  images: {
+    loader: 'cloudinary',
+    path: 'https://res.cloudinary.com/everydotorg/image/upload/'
+  }
 }

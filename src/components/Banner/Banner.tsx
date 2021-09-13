@@ -1,7 +1,6 @@
 import { Box } from '@theme-ui/components'
 import Image from 'next/image'
 import { useCampaignInfoContext } from 'src/hooks/useCampaignInfoContext'
-import { cloudinaryLoader } from 'src/services/cloudinaryLoader'
 import { AboutButton } from './AboutButton'
 import { BackListButton } from './BackListButton'
 import { styles } from './bannerStyles'
@@ -23,7 +22,6 @@ export const Banner = ({
     <Box sx={styles.banner}>
       <Image
         src={bannerUrl}
-        loader={cloudinaryLoader}
         // disable lazy loading from next/image and user browser's built-in
         loading="eager"
         sizes="57vw"

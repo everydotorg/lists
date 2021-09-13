@@ -2,11 +2,11 @@
   "everySlug": "antiracism",
   "name": "Anti-Racism and Justice for All",
   "primaryColor": "#00A37F",
-  "imageUrl": "p22/image/upload/Givelist/6TOK5hs_nfrqir",
-  "mobileBannerUrl": "p22/image/upload/Givelist/6TOK5hs_nfrqir",
-  "bannerUrl": "p22/image/upload/Givelist/yLyHmCA_kaippj",
+  "imageUrl": "profile_pics/o2swz724omln63shpijs",
+  "mobileBannerUrl": "profile_pics/o2swz724omln63shpijs",
+  "bannerUrl": "profile_pics/o2swz724omln63shpijs",
   "socialShareText": "Your donation will be split evenly between these groups working tirelessly to fight racism and promote justice for all.",
-  "previewImage": "p22/image/upload/Givelist/6TOK5hs_nfrqir",
+  "previewImage": "profile_pics/o2swz724omln63shpijs",
   "about": "Your donation will be split evenly between these groups working tirelessly to fight racism and promote justice for all.",
   "cause": "justice",
   "fundingGoal": 50000,
@@ -22,49 +22,49 @@
       "name": "NDN Collective",
       "location": "Rapid City, SD",
       "about": "NDN Collective is an Indigenous-led organization dedicated to building Indigenous power.",
-      "img": "everydotorg/image/upload/profile_pics/zwkyjvedqob5k7vc3nit"
+      "img": "profile_pics/zwkyjvedqob5k7vc3nit"
     },
     {
       "slug": "aapf",
       "name": "African American Policy Forum",
       "location": "University Heights, OH",
       "about": "The intersectional think tank behind #SayHerName and #BlackGirlsMatter. Led by Kimberlé Crenshaw.",
-      "img": "everydotorg/image/upload/profile_pics/pam5iinmtk4bwohlwb5i"
+      "img": "profile_pics/pam5iinmtk4bwohlwb5i"
     },
     {
       "slug": "EJI",
       "name": "Equal Justice Initiative",
       "location": "Montgomery, OH",
       "about": "EJI is committed to ending mass incarceration in the US and challenging racial and economic injustice.",
-      "img": "everydotorg/image/upload/faja_profile/eji_kdsj1q"
+      "img": "faja_profile/eji_kdsj1q"
     },
     {
       "slug": "blackandbrownfounders",
       "name": "Black & Brown Founders",
       "location": "San Francisco, CA",
       "about": "Giving Black & Latinx entrepreneurs knowledge, tools and tactics to launch startups without relying on venture capital.",
-      "img": "everydotorg/image/upload/profile_pics/jnyyqs4c6deey5xriq8b"
+      "img": "profile_pics/jnyyqs4c6deey5xriq8b"
     },
     {
       "slug": "alp",
       "name": "Audre Lorde Project",
       "location": "New York, NY",
       "about": "Community organizing center for LGBTSTGNC People of Color.",
-      "img": "everydotorg/image/upload/faja_profile/orrxiitz7knfqk47jytq"
+      "img": "faja_profile/orrxiitz7knfqk47jytq"
     },
     {
       "slug": "aajc",
       "name": "Asian Americans Advancing Justice - AAJC",
       "location": "Washington D.C, DC",
       "about": "Advance civil and human rights for Asian Americans and to build and promote a fair and equitable society for all.",
-      "img": "everydotorg/image/upload/faja_profile/och7scywvxtcn6nhygdx"
+      "img": "faja_profile/och7scywvxtcn6nhygdx"
     },
     {
       "slug": "540wmain",
       "name": "540 WMain",
       "location": "Rochester, NY",
       "about": "A virtual non-profit organization & antiracist education brand that promotes justice for all.",
-      "img": "everydotorg/image/upload/profile_pics/zlp47evyyinbr4faz3jd"
+      "img": "profile_pics/zlp47evyyinbr4faz3jd"
     }
   ]
 }

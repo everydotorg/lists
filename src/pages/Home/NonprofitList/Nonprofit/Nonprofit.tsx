@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { cloudinaryLoader } from 'src/services/cloudinaryLoader'
 import { gtag } from 'src/services/gtag'
 import { currencyFormatter } from 'src/services/utils'
 import { causeCategoryPalette } from 'src/styles/causeCategoryPalette'
@@ -128,7 +127,6 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           <Image
             src={nonprofit.imageUrl}
             sizes="(max-width: 900px) 100vw, 20vw"
-            loader={cloudinaryLoader}
             // disable lazy loading from next/image and user browser's built-in
             loading="eager"
             alt={nonprofit.name + ' campaign image'}
@@ -144,7 +142,6 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             <Box sx={styles.logoContainer}>
               <Image
                 src={imgUrl}
-                loader={cloudinaryLoader}
                 // disable lazy loading from next/image and user browser's built-in
                 loading="eager"
                 className="next-home-nonprofit-logo"
