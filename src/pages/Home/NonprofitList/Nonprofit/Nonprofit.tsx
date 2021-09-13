@@ -126,6 +126,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         <Box id="nonprofit-image-container" sx={styles.imageContainer}>
           <Image
             src={nonprofit.imageUrl}
+            quality={45}
             sizes="(max-width: 900px) 100vw, 20vw"
             // disable lazy loading from next/image and user browser's built-in
             loading="eager"
@@ -142,6 +143,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             <Box sx={styles.logoContainer}>
               <Image
                 src={imgUrl}
+                quality={45}
                 // disable lazy loading from next/image and user browser's built-in
                 loading="eager"
                 className="next-home-nonprofit-logo"

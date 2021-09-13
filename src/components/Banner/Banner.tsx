@@ -22,10 +22,10 @@ export const Banner = ({
     <Box sx={styles.banner}>
       <Image
         src={bannerUrl}
+        sizes="57vw"
+        quality={45}
         // disable lazy loading from next/image and user browser's built-in
         loading="eager"
-        sizes="57vw"
-        quality={60}
         alt="Campaign banner"
         layout="fill"
         objectFit="cover"

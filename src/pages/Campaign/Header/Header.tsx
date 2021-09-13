@@ -18,10 +18,10 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
       <Box sx={styles.container}>
         <Image
           src={mobileBannerUrl}
-          quality={60}
+          quality={45}
+          sizes="100vw"
           // disable lazy loading from next/image and user browser's built-in
           loading="eager"
-          sizes="100vw"
           alt="Campaign mobile banner"
           layout="fill"
           objectFit="cover"

@@ -72,8 +72,8 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
               <Flex>
                 <Flex sx={styles.avartarContainer}>
                   <Image
-                    quality="75"
                     src={nonprofit.img}
+                    quality={45}
                     sizes="(max-width: 900px) 2.5rem, 4rem"
                     // disable lazy loading from next/image and user browser's built-in
                     loading="eager"
