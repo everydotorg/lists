@@ -37,7 +37,7 @@ export const theme = {
   radii: {
     zero: 0,
     default: 8,
-    small: 12,
+    small: 8,
     card: 16,
     full: 9999
   },
