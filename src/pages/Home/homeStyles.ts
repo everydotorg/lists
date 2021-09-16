@@ -8,7 +8,7 @@ export const styles: Style = {
   },
   heroSection: {
     label: 'hero-section',
-    flex: [1, '50%', '43%'],
+    flex: [1, '50%', '33%'],
     flexBasis: 'auto',
     flexDirection: 'column'
   },
