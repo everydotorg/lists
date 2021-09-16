@@ -124,8 +124,6 @@ export const theme = {
     },
     secondary: {
       variant: 'buttons.primary',
-      border: '1px solid',
-      borderColor: 'primary',
       py: 2,
       px: 3,
       fontSize: [2, 3],
