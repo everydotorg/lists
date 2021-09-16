@@ -71,13 +71,12 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
           <Text variant="title" sx={{ color: causeColor.extraDark }}>
             {nonprofit.name}
           </Text>
-          <Flex sx={{ mt: 2, mb: 6 }}>
+          <Flex sx={{ mt: 2, mb: 4 }}>
             <Text
               sx={{
                 color: causeColor.extraDark,
                 mr: 6,
-                fontSize: 2,
-                lineHeight: '20px'
+                fontSize: 2
               }}
             >
               <strong>{nonprofit.nonprofits?.length}</strong> nonprofits
