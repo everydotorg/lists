@@ -36,10 +36,10 @@ export const ThankYou = (): JSX.Element | null => {
   return (
     <Box sx={styles.page}>
       <Flex sx={styles.header}>
-        <Text variant="title" sx={{ color: 'textGray', fontWeight: '400' }}>
+        <Text variant="heading" sx={{ color: 'textGray', fontWeight: '400' }}>
           Thank you for supporting:
         </Text>
-        <Text variant="title">{name}</Text>
+        <Text variant="heading">{name}</Text>
         {progress && showGoalOnThankyouPage && (
           <Goal progress={progress} sx={styles.progressGoal} />
         )}

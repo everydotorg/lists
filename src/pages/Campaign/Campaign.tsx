@@ -45,7 +45,7 @@ export const Campaign = (): JSX.Element => {
           <Text sx={styles.campaignTitle} as="h1" variant="h1">
             {name}
           </Text>
-          <Text as="h2" sx={styles.aboutText} variant="small">
+          <Text as="h2" sx={styles.aboutText} variant="regular">
             {about}
           </Text>
         </Flex>
@@ -70,7 +70,7 @@ export const Campaign = (): JSX.Element => {
             sx={styles.aboutButton}
             type="button"
             id="open-about-mobile"
-            variant="primaryInverted"
+            variant="primarySmallInverted"
             onClick={() => aboutModal.setOpen(true)}
           >
             <span>About giveli.st</span>
