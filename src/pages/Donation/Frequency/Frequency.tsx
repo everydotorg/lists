@@ -65,7 +65,7 @@ export const Frequency = ({
         <Box sx={styles.donationContainerArrow}>
           <Icon.ArrowUp />
         </Box>
-        <Text as="p" variant="small" sx={styles.donationText}>
+        <Text as="p" variant="regular" sx={styles.donationText}>
           Monthly gifts help nonprofits focus on their mission and long-term
           impact, not fundraising.
         </Text>
