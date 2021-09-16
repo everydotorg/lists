@@ -8,11 +8,11 @@ export const styles: Style = {
     flex: 1,
     px: [4, 6],
     mt: [11, 6],
-    mb: [2, 6],
+    mb: [4, 2, 2],
     flexDirection: 'column',
     justifyContent: 'flex-end',
     '& > :not(:last-child)': {
-      mb: 1
+      mb: 2
     }
   },
   buttonsContainer: {
