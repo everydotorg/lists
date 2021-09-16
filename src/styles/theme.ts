@@ -201,7 +201,7 @@ export const theme = {
   text: {
     title: {
       fontFamily: 'body',
-      lineHeight: 'body',
+      lineHeight: 'heading',
       fontWeight: 'heading',
       fontSize: [3, 5],
       letterSpacing: '-0.015em'
