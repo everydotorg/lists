@@ -209,7 +209,6 @@ export const theme = {
       fontWeight: 'body',
       lineHeight: 'heading',
       fontSize: [3, 3, 4],
-      // letterSpacing: ['-0.01em', '-0.015em'],
       color: 'text'
     },
     heading: {
@@ -289,7 +288,6 @@ export const theme = {
       textDecoration: 'none',
       px: 3,
       py: 1,
-      // border: '1px solid',
       borderRadius: 'default',
       display: 'flex',
       alignItems: 'center',

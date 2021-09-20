@@ -100,7 +100,7 @@ export const styles: Style = {
     lineHeight: 1.5,
     bg: 'primaryBg',
     borderRadius: 'small',
-    transition: 'box-shadow .4s, transform .4s',
+    transition: 'color .2s, background .2s',
     transitionTimingFunction: 'cubic-bezier(0.39, 0.58, 0.57, 1)',
     backfaceVisibility: 'hidden',
     '& > span': {
