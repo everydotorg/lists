@@ -6,7 +6,7 @@ export const styles: Style = {
     height: '100%',
     display: 'flex',
     flexDirection: 'column',
-    flex: [null, '50%', '43%']
+    flex: [null, '50%', '33%']
   },
   header: {
     p: [3, 6],

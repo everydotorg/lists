@@ -37,7 +37,7 @@ export const theme = {
   radii: {
     zero: 0,
     default: 8,
-    small: 12,
+    small: 8,
     card: 16,
     full: 9999
   },
@@ -55,7 +55,7 @@ export const theme = {
   colors: {
     // apps colors
     text: '#2E3434',
-    textGray: 'rgba(46, 52, 52, 0.6)',
+    textGray: 'rgba(46, 52, 52, 0.8)',
     primary: '#00A37F',
     primaryHover: '#2F806D',
     primaryBg: '#E6F6F2',
@@ -124,8 +124,6 @@ export const theme = {
     },
     secondary: {
       variant: 'buttons.primary',
-      border: '1px solid',
-      borderColor: 'primary',
       py: 2,
       px: 3,
       fontSize: [2, 3],
@@ -170,7 +168,7 @@ export const theme = {
     primaryInverted: {
       variant: 'buttons.primary',
       color: 'primary',
-      border: '1px solid',
+      // border: '1px solid',
       borderColor: 'borderGray',
       fontWeight: '500',
       bg: 'primaryBg',
@@ -201,24 +199,23 @@ export const theme = {
   text: {
     title: {
       fontFamily: 'body',
-      lineHeight: 'body',
+      lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: [3, 5],
+      fontSize: [3, 4, 5],
       letterSpacing: '-0.015em'
     },
     regular: {
       fontFamily: 'body',
       fontWeight: 'body',
-      lineHeight: 'body',
-      fontSize: [3, 4],
-      letterSpacing: ['-0.01em', '-0.015em'],
+      lineHeight: 'heading',
+      fontSize: [3, 3, 4],
       color: 'text'
     },
     heading: {
       fontFamily: 'heading',
       lineHeight: 'heading',
       fontWeight: 'heading',
-      fontSize: [3, 4],
+      fontSize: [3, 4, 4],
       letterSpacing: '-0.01em'
     },
     caption: {
@@ -233,7 +230,7 @@ export const theme = {
       fontFamily: 'body',
       fontWeight: 'body',
       fontSize: [3, 4],
-      lineHeight: ['body', 'heading'],
+      lineHeight: ['body'],
       letterSpacing: ['-0.005em', '-0.01em'],
       color: 'textGray'
     },
@@ -265,8 +262,8 @@ export const theme = {
       color: 'text'
     },
     h1: {
-      fontSize: [6, 7],
-      lineHeight: ['heading', 'input'],
+      fontSize: [6, 6, 7],
+      lineHeight: [1],
       letterSpacing: '-0.015em',
       fontWeight: 'bold',
       color: 'text'
@@ -291,7 +288,6 @@ export const theme = {
       textDecoration: 'none',
       px: 3,
       py: 1,
-      border: '1px solid',
       borderRadius: 'default',
       display: 'flex',
       alignItems: 'center',

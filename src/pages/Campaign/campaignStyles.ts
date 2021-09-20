@@ -4,7 +4,7 @@ export const styles: Style = {
   page: {
     display: ['flex', 'block'],
     flexDirection: ['column', 'unset'],
-    flex: [null, '50%', '43%']
+    flex: [null, '50%', '33%']
   },
   container: {
     flexDirection: 'column',

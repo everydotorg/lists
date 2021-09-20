@@ -7,7 +7,7 @@ export const styles: Style = {
     gridTemplateColumns: [null, '1fr'],
     gridTemplateRows: [null, '1fr max-content'],
     flexDirection: ['column', 'unset'],
-    flex: [1, '50%', '43%']
+    flex: [1, '50%', '33%']
   },
   container: {
     flexDirection: 'column',

@@ -64,6 +64,6 @@ export const causeCategoryPalette: {
     medium: '#61B29F',
     light: '#8AC8B9',
     pastel40: '#C8E8E1',
-    pastel20: '#CEDFDB'
+    pastel20: '#E0F1E7'
   }
 }

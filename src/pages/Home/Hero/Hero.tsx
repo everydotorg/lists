@@ -17,7 +17,7 @@ export const Hero = () => {
         <Text as="h1" variant="h1">
           {Tagline}
         </Text>
-        <Text variant="small">
+        <Text variant="regular">
           A trusted place where you can champion worthy causes. Created by a
           nonprofit. Forever free.
         </Text>

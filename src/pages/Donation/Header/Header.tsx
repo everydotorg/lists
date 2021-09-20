@@ -28,10 +28,10 @@ export const Header = (): JSX.Element => {
   return (
     <Flex sx={styles.headerContainer}>
       <Flex sx={styles.firstLine}>
-        <Text variant="title" sx={styles.header}>
+        <Text variant="heading" sx={styles.header}>
           Donate to:
         </Text>
-        <Text variant="title">{name}</Text>
+        <Text variant="heading">{name}</Text>
       </Flex>
       <Box id="close-donation" sx={styles.closeBox} onClick={closeDonatePage}>
         <Icon.Close />
