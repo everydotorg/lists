@@ -130,7 +130,7 @@ export const ThankYou = (): JSX.Element | null => {
               <Link
                 id="register-interest"
                 variant="buttons.secondaryInverted"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSe0Rzl5TXdyZ64qkxVSFRbkTATJd2Gw6oeNnBnLgB50u0tw2A/viewform"
+                href="https://forms.gle/dWCGgbm7NX4Ln8BP7"
                 target="_blank"
                 rel="noopener"
               >
