@@ -11,8 +11,7 @@ export const styles: Style = {
   },
   container: {
     flexDirection: 'column',
-    overflow: 'auto',
-    height: ['100%', 'unset'],
+    overflow: ['unset', 'auto'],
     flex: ['1', 'unset']
   },
   header: {

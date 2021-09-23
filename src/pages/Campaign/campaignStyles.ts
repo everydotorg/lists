@@ -8,8 +8,8 @@ export const styles: Style = {
   },
   container: {
     flexDirection: 'column',
-    overflow: 'auto',
-    height: '100%',
+    overflow: ['unset', 'auto'],
+    height: ['unset', '100%'],
     flex: ['1', 'unset']
   },
   campaignInfo: {
