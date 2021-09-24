@@ -62,7 +62,7 @@ export const styles: Style = {
   logoContainer: {
     zIndex: 10,
     overflow: 'hidden',
-    height: '24px',
+    height: '32px',
     mx: 1,
     mb: 2,
     mt: 0
