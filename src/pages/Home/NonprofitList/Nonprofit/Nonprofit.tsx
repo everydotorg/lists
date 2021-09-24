@@ -146,8 +146,8 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
                 // disable lazy loading from next/image and user browser's built-in
                 loading="eager"
                 className="next-home-nonprofit-logo"
-                width={24}
-                height={24}
+                width={32}
+                height={32}
                 objectFit="cover"
               />
             </Box>
