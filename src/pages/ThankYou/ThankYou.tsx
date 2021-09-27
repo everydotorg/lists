@@ -14,7 +14,7 @@ import { gtag } from 'src/services/gtag'
 import { useEffect, useState } from 'react'
 import { everyOrgDescription } from 'src/components/AboutModal/About/About'
 
-export const ThankYou = (): JSX.Element | null => {
+export const ThankYou = () => {
   const { slug, socialShareText, name, showGoalOnThankyouPage } =
     useCampaignInfoContext()
   const progress = useProgressData()
@@ -93,12 +93,15 @@ export const ThankYou = (): JSX.Element | null => {
                   '& > *:not(:last-child)': { mr: 2 }
                 }}
               >
-                <Link
-                  href={`mailto:?subject=Please support ${name}&body=${socialShareText} ${shareUrl}`}
+                <Icon.Envelope
                   variant="buttons.secondaryInverted"
-                >
-                  <Text>Email</Text>
-                </Link>
+                  as="a"
+                  id="email-share"
+                  href={`mailto:?subject=Please support ${name}&body=${socialShareText} ${shareUrl}`}
+                  target="_blank"
+                  width={20}
+                  height={20}
+                />
                 <Icon.Facebook
                   variant="buttons.secondaryInverted"
                   as="a"
@@ -108,7 +111,6 @@ export const ThankYou = (): JSX.Element | null => {
                   width={20}
                   height={20}
                 />
-
                 <Icon.Twitter
                   id="twitter-share"
                   width={20}

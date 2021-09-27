@@ -7,11 +7,13 @@ import { Twitter } from './Twitter'
 import { Facebook } from './Facebook'
 import { Star } from './Star'
 import { Check } from './Check'
+import { Envelope } from './Envelope'
 
 export const Icon = {
   ArrowUp,
   ChevronDown,
   Close,
+  Envelope,
   Every,
   Facebook,
   Link,

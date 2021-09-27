@@ -5,17 +5,18 @@ type CheckProps = {
 export const Check = ({ width = 17, height = 12 }: CheckProps) => {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      viewBox="0 0 17 12"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
     >
       <path
-        d="M16 1L5.85915 11L1 6.20833"
-        stroke="currentcolor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M5 13l4 4L19 7"
       />
     </svg>
   )

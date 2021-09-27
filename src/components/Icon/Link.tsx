@@ -4,23 +4,22 @@ type LinkProps = {
   stroke?: string
 }
 
-export const Link = ({
-  width = 24,
-  height = 24,
-  stroke = 'currentcolor'
-}: LinkProps) => {
+export const Link = ({ width = 24, height = 24 }: LinkProps) => {
   return (
     <svg
+      xmlns="http://www.w3.org/2000/svg"
       width={width}
       height={height}
-      fill={stroke}
-      viewBox="0 0 1024 1024"
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
     >
-      <path d="M704 230h180c6.6 0 12-5.4 12-12 0-16.4-7.4-32-20-42.6l-154.2-128.4c-9.8-8.2-28.4-14.8-41.2-14.8-8.2 0-14.8 6.6-14.8 14.8V192c0.2 21 17.2 38 38.2 38z" />
-      <path d="M614 192V32H352c-35.2 0-64 28.8-64 64v672c0 35.2 28.8 64 64 64h480c35.2 0 64-28.8 64-64V282h-192c-49.6 0-90-40.4-90-90z" />
-      <path d="M232 824V160H192c-35.2 0-64 28.8-64 64v704c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-40H296c-35.2 0-64-28.8-64-64z" />
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"
+      />
     </svg>
   )
 }
