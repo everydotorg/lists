@@ -25,18 +25,25 @@
       "img": "profile_pics/lsozljmajdbt9k91fren"
     },
     {
+      "slug": "cristo-rey-network",
+      "name": "Cristo Rey Network",
+      "location": "Chicago, IL",
+      "about": "Strengthening the competence, confidence, and aspiration of students from economically-disadvantaged families, empowering them to build fulfilling lives that advance the common good.",
+      "img": "faja_profile/rsj1or65d5bft2nirqkg"
+    },
+    {
+      "slug": "teach-for-all",
+      "name": "Teach For All",
+      "location": "New York, NY",
+      "about": "Developing collective leadership to ensure all children have the opportunity to fulfill their potential..",
+      "img": "faja_profile/gvuhhmfrcss0pottqoyj"
+    },
+    {
       "slug": "ign",
       "name": "Iodine Global Network",
       "location": "Ottawa, ON, Canada",
       "about": "Our vision is a world where all people attain optimal iodine nutrition and children can reach their full cognitive potential. According to the World Health Organization, iodine deficiency is the world’s most prevalent, yet easily preventable, cause of brain damage in children. Nearly 50 million people have stunted cognitive and motor development as a result. Severe stunting can be as bad as a loss of 15 IQ points, meaning children who don't get enough iodine struggle at school and in later life. The solution is simple and has already been implemented in many countries: national level fortification of salt with iodine. IGN works with governments to implement such programs. Despite not being directly related to schools, removing this barrier to healthy development is one of the cheapest and easiest ways to include children's educational outcomes.",
       "img": "profile_pics/dj3ctnh9nucjwy54quhb"
-    },
-    {
-      "slug": "ei",
-      "name": "Educational Initiatives",
-      "location": "Bengaluru, India",
-      "about": "Supporting students and teachers with affordable, accessible tech to improve educational outcomes.",
-      "img": "profile_pics/mimfnrvmvqxubojkimxm"
     },
     {
       "slug": "codecrew",
