@@ -10,6 +10,12 @@
   "about": "Help these nonprofits inspire and engage all to end discrimination against LGBTQ+ Citizens and realize fundamental fairness and equality.",
   "cause": "humans",
   "fundingGoal": 50000,
+  "sponsor": {
+    "ratio": "1-for-1",
+    "threshold": 100,
+    "upTo": 10000,
+    "description": "Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 each time until we reach $10,000 total matched."
+  },
   "nonprofits": [
     {
       "slug": "transemergencyfund",
