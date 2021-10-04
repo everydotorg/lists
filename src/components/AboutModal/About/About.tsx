@@ -45,6 +45,14 @@ export const About = () => {
           A {everyOrgDescription}
         </CardLink>
 
+        <CardLink
+          title="Supported by Gates Foundation"
+          href="https://www.gatesfoundation.org/our-work/programs/global-policy-and-advocacy/philanthropic-partnerships"
+        >
+          Supported by the BMGF Philanthropic Partnerships group, to inspire and
+          enable more informed and intentional generosity by all.
+        </CardLink>
+
         <CardLink title="Made by p22.studio" href="https://p22.studio">
           A digital design and development studio.
         </CardLink>
