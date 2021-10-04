@@ -17,6 +17,8 @@ type CampaignLayoutProps = {
   children: ReactNode
 }
 
+const cloudinaryUrl = 'https://res.cloudinary.com/everydotorg/image/upload/'
+
 // @TODO: delete
 export const CampaignLayout = ({
   campaignInfo,
@@ -55,7 +57,10 @@ export const CampaignLayout = ({
           <meta property="og:type" content="website" />
           <meta property="og:url" content={url} />
           <meta property="og:description" content={socialShareText} />
-          <meta property="og:image" content={previewImage} />
+          <meta
+            property="og:image"
+            content={`${cloudinaryUrl}${previewImage}`}
+          />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <Box
