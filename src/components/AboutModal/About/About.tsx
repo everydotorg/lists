@@ -4,7 +4,7 @@ import { Box, Text } from 'theme-ui'
 import { CardLink } from './CardLink/CardLink'
 
 export const everyOrgDescription =
-  '501(c)(3) charity building accessible giving infrastructure to help every person and organization do more good.'
+  '501(c)(3) charity building accessible giving infrastructure to help every person and organization use technology for good.'
 
 export const About = () => {
   return (
