@@ -34,11 +34,6 @@ export const styles: Style = {
     mt: 6,
     width: '100%'
   },
-  linkButton: {
-    display: ['flex', 'none'],
-    width: '100%',
-    mt: 4
-  },
   progressGoal: {
     m: [4, 6],
     mt: [0, 0]

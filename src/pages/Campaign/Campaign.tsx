@@ -1,3 +1,4 @@
+import React from 'react'
 import { Button, Flex, Text, Box } from '@theme-ui/components'
 import { Header } from './Header'
 import { styles } from './campaignStyles'
@@ -11,13 +12,13 @@ import { useAboutModal } from 'src/hooks/useAboutModal'
 import { MobileDonateButton } from './MobileDonateButton'
 import { Goal } from 'src/components/Goal'
 import { useProgressData } from 'src/hooks/useProgressData'
-import { CopyToClipboard } from 'src/components/CopyToClipboard'
-import { baseUrlWithPaths } from 'src/services/url'
 import { AlternativeDonation } from 'src/components/AlternativeDonation'
+import { ShareCard } from 'src/components/ShareCard'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor, showGoalOnListPage } =
     useCampaignInfoContext()
+
   const router = useRouter()
   const aboutModal = useAboutModal()
   const progress = useProgressData()
@@ -75,16 +76,12 @@ export const Campaign = (): JSX.Element => {
           >
             <span>About giveli.st</span>
           </Button>
-          <CopyToClipboard
-            id="campaign-copylink"
-            text={baseUrlWithPaths(slug)}
-            sx={styles.linkButton}
-            linkCopiedStyle={styles.linkCopied}
-            variant="primarySmallInverted"
-          >
-            giveli.st/{slug}
-          </CopyToClipboard>
         </Box>
+
+        <Box sx={{ mx: [4, 6], mb: [6, 9] }}>
+          <ShareCard />
+        </Box>
+
         <Flex sx={styles.footer}>
           <AlternativeDonation />
           <Brand withBorderTop />

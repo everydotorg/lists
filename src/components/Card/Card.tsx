@@ -2,12 +2,13 @@ import React from 'react'
 import { Text, Flex } from 'theme-ui'
 import { styles } from './cardStyles'
 
-interface CardProps {
+type CardProps = {
   title?: string
   description: string
   renderActions?: React.ReactNode
   inverted?: boolean
 }
+
 export const Card = ({
   title,
   description,

@@ -7,7 +7,8 @@ export const styles: Style = {
     overflow: 'hidden',
     '& > span': {
       overflow: 'hidden',
-      textOverflow: 'ellipsis'
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap'
     },
     '& > svg': {
       flexShrink: 0,
