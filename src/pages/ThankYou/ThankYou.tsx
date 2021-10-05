@@ -52,7 +52,7 @@ export const ThankYou = () => {
         )}
 
         <Card
-          description={`A reciept was sent to your email. Your donation to this Givelist is
+          description={`A receipt was sent to your email. Your donation to this Givelist is
           powered by Every.org - a ${everyOrgDescription}`}
           inverted
         ></Card>
