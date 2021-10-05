@@ -51,8 +51,8 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
           <Box>
             <Text as="p" variant="caption" sx={{ color: 'text', my: [4, 6] }}>
               Your donation is made to Every.org, a tax-exempt US 501(c)(3)
-              charity that grants funds to these 11 charities on your behalf,
-              without taking any cut of the donation.
+              charity that grants funds to these {list.length} charities on your
+              behalf, without taking any cut of the donation.
             </Text>
             <Button onClick={openAbout} variant="gray">
               Learn more
