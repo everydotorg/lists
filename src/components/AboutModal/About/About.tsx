@@ -4,7 +4,7 @@ import { Box, Text } from 'theme-ui'
 import { CardLink } from './CardLink/CardLink'
 
 export const everyOrgDescription =
-  '501(c)(3) charity building an accessible giving infrastructure to help every person and organization do more good.'
+  '501(c)(3) charity building accessible giving infrastructure to help every person and organization use technology for good.'
 
 export const About = () => {
   return (
@@ -43,6 +43,14 @@ export const About = () => {
           href="https://every.org?utm_source=givelist"
         >
           A {everyOrgDescription}
+        </CardLink>
+
+        <CardLink
+          title="Supported by Gates Foundation"
+          href="https://www.gatesfoundation.org/our-work/programs/global-policy-and-advocacy/philanthropic-partnerships"
+        >
+          Supported by the BMGF Philanthropic Partnerships group, to inspire and
+          enable more informed and intentional generosity by all.
         </CardLink>
 
         <CardLink title="Made by p22.studio" href="https://p22.studio">
