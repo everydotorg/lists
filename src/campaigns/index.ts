@@ -11,6 +11,8 @@ import { default as health } from './effectivehealthcareeverywhere.json'
 import { default as poverty } from './endingglobalpoverty.json'
 import { default as gerc } from './gerc.json'
 import { default as lgbtq } from './lgbtq+.json'
+import { default as mads } from './mads.json'
+import { default as bubsworld } from './bubsworld.json'
 import { default as lilbub } from './lilbub.json'
 import { default as climate } from './tacklingclimatechange.json'
 
@@ -41,6 +43,8 @@ export const campaigns: Record<string, CampaignInfo> = {
   poverty: { slug: 'poverty', ...(poverty as CampaignJson) },
   climate: { slug: 'climate', ...(climate as CampaignJson) },
   science: { slug: 'science', ...(science as CampaignJson) },
+  mads: { slug: 'mads', ...(mads as CampaignJson) },
+  bubsworld: { slug: 'bubsworld', ...(bubsworld as CampaignJson) },
   lilbub: { slug: 'lilbub', ...(lilbub as CampaignJson) },
   afghanistan: { slug: 'afghanistan', ...(afghanistan as CampaignJson) },
   gerc: { slug: 'gerc', ...(gerc as CampaignJson) }

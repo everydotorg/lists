@@ -21,10 +21,6 @@ export const styles: Style = {
   campaignTitle: {
     mb: [2, 4]
   },
-  aboutText: {
-    color: 'textGray',
-    lineHeight: 1.5
-  },
   aboutButtonContainer: {
     mx: 4,
     display: [null, 'none'],

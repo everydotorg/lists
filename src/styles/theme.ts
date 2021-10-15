@@ -142,7 +142,6 @@ export const theme = {
         color: 'white'
       }
     },
-
     primarySmall: {
       variant: 'buttons.primary',
       px: 4,
@@ -194,6 +193,20 @@ export const theme = {
         borderColor: 'text',
         bg: 'backgroundGray'
       }
+    },
+    link: {
+      cursor: 'pointer',
+      fontFamily: 'body',
+      fontSize: [3, 3, 4],
+      lineHeight: 'heading',
+      fontWeight: 500,
+      outline: 'none',
+      bg: 'unset',
+      color: 'primary',
+      borderRadius: 'none',
+      width: 'max-content',
+      p: 0,
+      m: 0
     }
   },
   text: {

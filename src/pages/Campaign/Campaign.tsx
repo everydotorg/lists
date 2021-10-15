@@ -14,6 +14,7 @@ import { Goal } from 'src/components/Goal'
 import { useProgressData } from 'src/hooks/useProgressData'
 import { AlternativeDonation } from 'src/components/AlternativeDonation'
 import { ShareCard } from 'src/components/ShareCard'
+import { ReadMore } from './ReadMore'
 
 export const Campaign = (): JSX.Element => {
   const { slug, name, about, nonprofits, sponsor, showGoalOnListPage } =
@@ -46,9 +47,8 @@ export const Campaign = (): JSX.Element => {
           <Text sx={styles.campaignTitle} as="h1" variant="h1">
             {name}
           </Text>
-          <Text as="h2" sx={styles.aboutText} variant="regular">
-            {about}
-          </Text>
+
+          <ReadMore text={about} />
         </Flex>
 
         {progress && showGoalOnListPage && (
