@@ -6,7 +6,7 @@ import { baseUrl, baseUrlWithPaths } from 'src/services/url'
 import { theme } from 'src/styles/theme'
 import { ThemeProvider } from 'theme-ui'
 
-const excludedFromHomepage = ['lilbub', 'bubsworld', 'mads', 'gerc']
+const excludedFromHomepage = ['lilbub', 'bubsworld', 'mads', 'fff', 'gerc']
 
 const nonProfits: HomeProps['nonProfits'] = Object.values(campaigns)
   .filter((campaign) => !excludedFromHomepage.includes(campaign.slug))
