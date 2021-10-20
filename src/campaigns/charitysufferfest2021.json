@@ -26,25 +26,11 @@
       "img": "profile_pics/dksow8sez3mrxrrkmzlw"
     },
     {
-      "slug": "cleanaircatf",
-      "name": "Clean Air Task Force",
-      "location": "Boston, MA",
-      "about": "Catalyzing resilient solutions, scaled to meet the climate challenge.",
-      "img": "faja_profile/uqm96xaxu1w7mvyoi4hp"
-    },
-    {
-      "slug": "carbon180",
-      "name": "Carbon180",
-      "location": "Washington, DC",
-      "about": "A new breed of climate-focused NGO working to build a world that removes more carbon than it emits.",
-      "img": "profile_pics/yqmdokygvmt3p5st8d7i"
-    },
-    {
-      "slug": "terra-praxis",
-      "name": "TerraPraxis",
-      "location": "London, UK",
-      "about": "TerraPraxis designs and implements strategies that leverage science, technology and energy innovation for a prosperous planet.",
-      "img": "profile_pics/xwxybozipxyjsgoiz36k"
+      "slug": "climate.change.fund",
+      "name": "Climate Change Fund",
+      "location": "New York, NY",
+      "about": "Supporting highly-impactful, evidence-based solutions to the triple challenge of climate change, air pollution and energy poverty.",
+      "img": "profile_pics/wmkvoumgfdwhnzo6l1wz"
     }
   ]
 }
