@@ -6,10 +6,20 @@ import { baseUrl, baseUrlWithPaths } from 'src/services/url'
 import { theme } from 'src/styles/theme'
 import { ThemeProvider } from 'theme-ui'
 
-const excludedFromHomepage = ['lilbub', 'bubsworld', 'mads', 'fff', 'gerc']
+const showOnHomepage = new Set([
+  'poverty',
+  'lgbtq',
+  'education',
+  'health',
+  'afghanistan',
+  'animals',
+  'antiracism',
+  'science',
+  'climate'
+])
 
 const nonProfits: HomeProps['nonProfits'] = Object.values(campaigns)
-  .filter((campaign) => !excludedFromHomepage.includes(campaign.slug))
+  .filter((campaign) => showOnHomepage.has(campaign.slug))
   .map((info) => ({
     slug: info.slug,
     name: info.name,
