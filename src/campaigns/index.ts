@@ -39,7 +39,10 @@ export type CampaignJson = {
 export const campaigns: Record<string, CampaignInfo> = {
   animals: { slug: 'animals', ...(animals as CampaignJson) },
   education: { slug: 'education', ...(education as CampaignJson) },
-  charitysufferfest2021: { slug: 'charitysufferfest2021', ...(charitysufferfest2021 as CampaignJson) },
+  charitysufferfest2021: {
+    slug: 'charitysufferfest2021',
+    ...(charitysufferfest2021 as CampaignJson)
+  },
   antiracism: { slug: 'antiracism', ...(antiracism as CampaignJson) },
   lgbtq: { slug: 'lgbtq', ...(lgbtq as CampaignJson) },
   health: { slug: 'health', ...(health as CampaignJson) },
