@@ -7,6 +7,7 @@ import { default as afghanistan } from './afghanistan-humanitarian-aid.json'
 import { default as animals } from './animal.welfare.json'
 import { default as antiracism } from './antiracism.json'
 import { default as education } from './educationeverywhere.json'
+import { default as charitysufferfest2021 } from './charitysufferfest2021.json'
 import { default as health } from './effectivehealthcareeverywhere.json'
 import { default as poverty } from './endingglobalpoverty.json'
 import { default as gerc } from './gerc.json'
@@ -38,6 +39,7 @@ export type CampaignJson = {
 export const campaigns: Record<string, CampaignInfo> = {
   animals: { slug: 'animals', ...(animals as CampaignJson) },
   education: { slug: 'education', ...(education as CampaignJson) },
+  charitysufferfest2021: { slug: 'charitysufferfest2021', ...(charitysufferfest2021 as CampaignJson) },
   antiracism: { slug: 'antiracism', ...(antiracism as CampaignJson) },
   lgbtq: { slug: 'lgbtq', ...(lgbtq as CampaignJson) },
   health: { slug: 'health', ...(health as CampaignJson) },
