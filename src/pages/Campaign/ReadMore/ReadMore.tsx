@@ -1,51 +1,56 @@
 import { Text, Button } from 'theme-ui'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useResponsiveValue } from '@theme-ui/match-media'
+import { styles } from './readMoreStyles'
 
-const WORD_COUNT = 50
-
-const trimtext = (text: string) => {
-  const words = text.split(' ')
-
-  if (words.length < WORD_COUNT) {
-    return [undefined, text]
-  }
-
-  return [words.slice(0, WORD_COUNT).join(' ').concat('...'), text]
-}
-
-const H2: React.FC = ({ children }) => (
-  <Text as="h2" sx={{ color: 'textGray', lineHeight: 1.5 }} variant="regular">
-    {children}
-  </Text>
-)
-
-type ReadMoreProps = {
-  text: string
-}
-
-export const ReadMore = ({ text }: ReadMoreProps) => {
+export const ReadMore: React.FC = ({ children }) => {
   const [expanded, setExpanded] = useState(false)
+  const [overflows, setOverflows] = useState(false)
 
-  const [preview, full] = trimtext(text)
+  const expandableRef = useRef<HTMLHeadingElement>(null)
 
-  if (preview === undefined) {
-    return <H2>{full}</H2>
-  }
+  const clamp = useResponsiveValue(['4', '6', '6'])
+
+  const overflowHeight = useResponsiveValue(
+    // clamp (lines) * font-size * line-height
+    [4 * 16 * 1.5, 6 * 16 * 1.5, 6 * 20 * 1.5]
+  )
+
+  useEffect(() => {
+    const el = expandableRef.current
+
+    if (el) {
+      setOverflows(el.scrollHeight > overflowHeight)
+    }
+  }, [overflowHeight])
 
   return (
     <>
-      <H2>{expanded ? full : preview}</H2>
-
-      <Button
-        variant="link"
-        onClick={() => setExpanded((prev) => !prev)}
+      <Text
+        ref={expandableRef}
+        as="h2"
         sx={{
-          mt: 2,
-          fontSize: [2, 2, 3]
+          color: 'textGray',
+          // clamp "as number" because if it's actually a number, theme-ui interprets it as px
+          ...styles.expandable(overflows, expanded, clamp as unknown as number)
         }}
+        variant="regular"
       >
-        {expanded ? 'Show less' : 'Show more'}
-      </Button>
+        {children}
+      </Text>
+
+      {overflows && (
+        <Button
+          variant="link"
+          onClick={() => setExpanded((prev) => !prev)}
+          sx={{
+            mt: 2,
+            fontSize: [2, 2, 3]
+          }}
+        >
+          {expanded ? 'Show less' : 'Show more'}
+        </Button>
+      )}
     </>
   )
 }

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@theme-ui/match-media": "^0.11.3",
     "bezier-easing": "^2.1.0",
     "clipboard-copy": "^4.0.1",
     "color": "^4.0.1",

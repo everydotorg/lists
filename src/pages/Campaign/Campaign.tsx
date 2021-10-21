@@ -48,7 +48,7 @@ export const Campaign = (): JSX.Element => {
             {name}
           </Text>
 
-          <ReadMore text={about} />
+          <ReadMore>{about}</ReadMore>
         </Flex>
 
         {progress && showGoalOnListPage && (
