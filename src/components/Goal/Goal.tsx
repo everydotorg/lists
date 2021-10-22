@@ -24,12 +24,10 @@ interface GoalProps {
 export const Goal = ({ progress, sx = {} }: GoalProps) => {
   return (
     <Flex sx={{ ...styles.goalContainer, ...sx }}>
-      <Progress
-        sx={styles.progressBar}
-        max={progress.goal}
-        value={progress.donated}
-      />
-      <Flex>
+      <Flex sx={styles.progressBar}>
+        <Progress max={progress.goal} value={progress.donated} />
+      </Flex>
+      <Flex sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
         <Info
           value={currencyFormatter.format(progress.donated)}
           label="donated"

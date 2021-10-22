@@ -9,11 +9,14 @@ export const styles: Style = {
     flexDirection: 'column'
   },
   progressBar: {
-    height: ['12px', '24px'],
-    bg: 'transparent',
     position: 'relative',
     mb: [3, 6],
-    '&:after': {
+    '& > progress': {
+      height: ['12px', '24px'],
+      bg: 'transparent',
+      position: 'relative'
+    },
+    '&::before': {
       content: '""',
       width: '100%',
       height: '100%',
@@ -22,9 +25,10 @@ export const styles: Style = {
       left: 0,
       opacity: 0.2,
       bg: 'primary',
-      zIndex: 1
+      zIndex: 1,
+      borderRadius: '100px'
     }
   },
-  legend: { flexDirection: 'column', flex: 1 },
+  legend: { flexDirection: 'column' },
   legendValue: { color: 'primary' }
 }
