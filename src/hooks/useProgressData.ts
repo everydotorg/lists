@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { getProgressData } from 'src/services/campaignData'
 import { Progress } from 'types/Progress'
 import { useCampaignInfoContext } from './useCampaignInfoContext'
@@ -11,7 +11,7 @@ export const useProgressData = () => {
     const fetchData = async () => {
       const data = await getProgressData(everySlug)
       setProgress({
-        goal: fundingGoal,
+        goal: fundingGoal || 0,
         ...data
       })
     }

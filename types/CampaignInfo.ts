@@ -4,6 +4,7 @@ import { Sponsor } from './Sponsor'
 
 export type CampaignInfo = {
   slug: string
+  showOnHomepage?: true
   everySlug: string
   name: string
   primaryColor: string
@@ -13,7 +14,7 @@ export type CampaignInfo = {
   socialShareText: string
   previewImage: string
   about: string
-  fundingGoal: number
+  fundingGoal?: number
   cause: Cause
   nonprofits: NonProfit[]
   sponsor?: Sponsor
