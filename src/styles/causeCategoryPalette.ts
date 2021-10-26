@@ -10,7 +10,7 @@ export const causeCategoryPalette: {
     readonly pastel20: string
   }
 } = {
-  animals: {
+  ANIMALS: {
     extraDark: '#A2611E',
     dark: '#D49350',
     medium: '#DE9D5A',
@@ -18,7 +18,7 @@ export const causeCategoryPalette: {
     pastel40: '#F6DCC1',
     pastel20: '#FAEDE0'
   },
-  education: {
+  EDUCATION: {
     extraDark: '#577598',
     dark: '#7593B6',
     medium: '#89A7CA',
@@ -26,7 +26,7 @@ export const causeCategoryPalette: {
     pastel40: '#D8E4F2',
     pastel20: '#EBF1F8'
   },
-  environment: {
+  ENVIRONMENT: {
     extraDark: '#5E7D10',
     dark: '#86A537',
     medium: '#9AB94B',
@@ -34,7 +34,7 @@ export const causeCategoryPalette: {
     pastel40: '#DBE7BB',
     pastel20: '#EDF3DD'
   },
-  health: {
+  HEALTH: {
     extraDark: '#9E567F',
     dark: '#BC749D',
     medium: '#D088B1',
@@ -42,7 +42,7 @@ export const causeCategoryPalette: {
     pastel40: '#F0D3E4',
     pastel20: '#F8E9F1'
   },
-  justice: {
+  HUMAN_AND_CIVIL_RIGHTS: {
     extraDark: '#397A7E',
     dark: '#57989C',
     medium: '#6BACB0',
@@ -50,7 +50,7 @@ export const causeCategoryPalette: {
     pastel40: '#C8E2E3',
     pastel20: '#E3F0F1'
   },
-  humans: {
+  HUMAN_SERVICES: {
     extraDark: '#906515',
     dark: '#CCA151',
     medium: '#E0B565',
@@ -58,7 +58,7 @@ export const causeCategoryPalette: {
     pastel40: '#F7E5C5',
     pastel20: '#FBF2E2'
   },
-  research: {
+  RESEARCH_AND_PUBLIC_POLICY: {
     extraDark: '#2F806D',
     dark: '#59A593',
     medium: '#61B29F',

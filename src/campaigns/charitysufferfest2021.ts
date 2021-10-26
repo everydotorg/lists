@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const charitysufferfest2021: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const charitysufferfest2021: LocalCampaignInfo = {
   slug: 'charitysufferfest2021',
   everySlug: 'charitysufferfest2021',
   name: 'Charity Sufferfest 2021',
@@ -12,7 +12,7 @@ export const charitysufferfest2021: CampaignInfo = {
   previewImage: 'v1634685420/charitysufferfest2021_pdomu7',
   about:
     'For every mile completed on my ride, $1 will be donated to this list. Join me in supporting charities!',
-  cause: 'health',
+  cause: 'HEALTH',
   fundingGoal: 50000,
   nonprofits: [
     {

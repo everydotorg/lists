@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const gerc: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const gerc: LocalCampaignInfo = {
   slug: 'gerc',
   everySlug: 'globalemergencyresponse',
   name: 'Global Emergency Response',
@@ -12,7 +12,7 @@ export const gerc: CampaignInfo = {
   previewImage: 'profile_pics/fh4udjgxqllqcdewgbhx',
   about:
     'The Global Emergency Response Coalition is a lifesaving humanitarian alliance made up of eight leading U.S.-based international aid organizations. When disaster strikes, the Coalition mobilizes to help children and families in urgent need. By working together, we can increase awareness and funds to deliver emergency relief quickly and efficiently to save lives and help rebuild communities.',
-  cause: 'humans',
+  cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
   sponsor: {
     ratio: '1-for-1',

@@ -32,7 +32,7 @@ export const objectToParams = (object: Obj): string => {
 
 type EveryUrl = {
   slug: string
-  everySlug: string
+  everySlug?: string
   extras: Record<string, string>
   frequency?: DonationFrequency
   amount?: number

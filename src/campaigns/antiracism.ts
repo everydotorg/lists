@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const antiracism: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const antiracism: LocalCampaignInfo = {
   showOnHomepage: true,
   slug: 'antiracism',
   everySlug: 'antiracism',
@@ -13,7 +13,7 @@ export const antiracism: CampaignInfo = {
   previewImage: 'profile_pics/v5hmpbturtf1ojxer3gq',
   about:
     'Your donation will be split evenly between these groups working tirelessly to fight racism and promote justice for all.',
-  cause: 'justice',
+  cause: 'HUMAN_AND_CIVIL_RIGHTS',
   fundingGoal: 50000,
   sponsor: {
     ratio: '1-for-1',

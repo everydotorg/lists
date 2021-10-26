@@ -1,43 +1,31 @@
-const EVERY_BASE_URL = 'https://partners.every.org/v0.2/nonprofit/'
-// const EVERY_STAGING_BASE_URL =
-//   'https://partners-staging.every.org/v0.2/nonprofit/'
+import { campaigns } from 'src/campaigns'
+import { CampaignInfo } from 'types/CampaignInfo'
+import { getGivelistData } from './every'
 
-type EveryResponse = {
-  message: string
-  data: {
-    supporterCount: number
-    fundMetadata: {
-      donationChargesCount: number
-      endorserNonprofitsCount: number
-      allTimeRaised: {
-        currency: string
-        amount: string
+export const getCampaignData = async (slug: string) => {
+  const campaignInfo = campaigns[slug]
+
+  // If we don't have an every slug, we don't want to get data from the API
+  if (campaignInfo && !('everySlug' in campaignInfo)) {
+    return {
+      props: {
+        campaignInfo: {
+          ...campaignInfo,
+          // These values normally come from the API
+          givers: 0,
+          donated: 0
+        } as CampaignInfo
       }
     }
   }
-} & { [x: string]: unknown }
 
-const getNonprofitInfo = async (slug: string): Promise<EveryResponse> => {
-  // const production = process.env.NEXT_PUBLIC_VERCEL_ENV === 'production'
-  // const everyUrl = production ? EVERY_BASE_URL : EVERY_STAGING_BASE_URL
-
-  // EVERY STAGING IS NOT RETRIEVING ANYTHING FOR THIS ENDPOINT. WE CHANGED TEMPORARILY TO TEST SOME CHANGES
-  // BEFORE MOVING TO PRODUCTION. IT SHOULDNT BE A PROBLEM TO USE PRODUCTION ON THIS PARTICULAR ENDPOINT
-
-  const everyUrl = EVERY_BASE_URL
-
-  const response = await fetch(everyUrl + slug)
-
-  const every = await response.json()
-
-  return every
-}
-
-export const getProgressData = async (slug: string) => {
-  const every = await getNonprofitInfo(slug)
+  // if we have no local campaignInfo try getting by slug from the every.org API
+  const everySlug = campaignInfo ? campaignInfo.everySlug : slug
+  const everyListData = await getGivelistData(everySlug)
 
   return {
-    donated: parseFloat(every?.data?.fundMetadata?.allTimeRaised?.amount ?? 0),
-    givers: every?.data?.fundMetadata?.donationChargesCount ?? 0
-  }
+    ...everyListData,
+    // apply any local overrides
+    ...campaignInfo
+  } as CampaignInfo
 }

@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const education: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const education: LocalCampaignInfo = {
   showOnHomepage: true,
   slug: 'education',
   everySlug: 'education.everywhere',
@@ -13,7 +13,7 @@ export const education: CampaignInfo = {
   previewImage: 'profile_pics/fuxuka8wmpllqgheuarw',
   about:
     'Support these nonprofits striving to improve education for children around the world with evidence-based solutions.',
-  cause: 'education',
+  cause: 'EDUCATION',
   fundingGoal: 50000,
   sponsor: {
     ratio: '1-for-1',

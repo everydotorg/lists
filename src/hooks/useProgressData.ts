@@ -1,26 +1,18 @@
-import { useEffect, useState } from 'react'
-import { getProgressData } from 'src/services/campaignData'
 import { Progress } from 'types/Progress'
 import { useCampaignInfoContext } from './useCampaignInfoContext'
 
 export const useProgressData = () => {
-  const { everySlug, fundingGoal } = useCampaignInfoContext()
-  const [progress, setProgress] = useState<Progress | null>(null)
+  const { fundingGoal, donated, givers } = useCampaignInfoContext()
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await getProgressData(everySlug)
-      setProgress({
-        goal: fundingGoal || 0,
-        ...data
-      })
-    }
+  if (!fundingGoal || donated === undefined || givers === undefined) {
+    return
+  }
 
-    // slug and fundingGoal will be undefined till the .json request is fullfilled
-    if (everySlug && fundingGoal) {
-      fetchData()
-    }
-  }, [everySlug, fundingGoal])
+  const progress = {
+    goal: fundingGoal,
+    donated,
+    givers
+  } as Progress
 
   return progress
 }

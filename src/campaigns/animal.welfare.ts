@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const animals: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const animals: LocalCampaignInfo = {
   showOnHomepage: true,
   slug: 'animals',
   everySlug: 'animal.welfare',
@@ -13,7 +13,7 @@ export const animals: CampaignInfo = {
   previewImage: 'profile_pics/fzzktcwasfcaj9wxhdxd',
   about:
     'Help end cruel factory farming practices, make life better for wild animals, and transform our food systems.',
-  cause: 'animals',
+  cause: 'ANIMALS',
   fundingGoal: 50000,
   nonprofits: [
     {

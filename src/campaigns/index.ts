@@ -1,4 +1,4 @@
-import { CampaignInfo } from 'types/CampaignInfo'
+import { LocalCampaignInfo } from 'types/CampaignInfo'
 import { science } from './a-brighter-future'
 import { afghanistan } from './afghanistan-humanitarian-aid'
 import { animals } from './animal.welfare'
@@ -15,9 +15,10 @@ import { juzzy } from './juzzy'
 import { lgbtq } from './lgbtq'
 import { lilbub } from './lilbub'
 import { mads } from './mads'
+import { partial } from './partial'
 import { climate } from './tacklingclimatechange'
 
-export const campaigns: Record<string, CampaignInfo> = {
+export const campaigns: Record<string, LocalCampaignInfo> = {
   animals,
   education,
   charitysufferfest2021,
@@ -26,6 +27,7 @@ export const campaigns: Record<string, CampaignInfo> = {
   health,
   poverty,
   climate,
+  partial,
   science,
   mads,
   juzzy,

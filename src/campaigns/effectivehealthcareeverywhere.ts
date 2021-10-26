@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const health: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const health: LocalCampaignInfo = {
   showOnHomepage: true,
   slug: 'health',
   everySlug: 'healthcare.everywhere',
@@ -13,7 +13,7 @@ export const health: CampaignInfo = {
   previewImage: 'profile_pics/fgskqelhkhjogggylkr6',
   about:
     'Your donation will support the work of five groups that deliver life-changing solutions to places where healthcare is highly needed and access is limited.',
-  cause: 'health',
+  cause: 'HEALTH',
   fundingGoal: 50000,
   nonprofits: [
     {

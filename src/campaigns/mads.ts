@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const mads: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const mads: LocalCampaignInfo = {
   slug: 'mads',
   everySlug: 'mads-nyc',
   name: "Maddy's list",
@@ -12,7 +12,7 @@ export const mads: CampaignInfo = {
   previewImage: 'profile_pics/x3hbubkio4lthohj73td',
   about:
     'So excited about making my first Givelist! Here are a few charities that I think are doing great work in NYC. Grateful for every donation as every little bit counts!',
-  cause: 'animals',
+  cause: 'ANIMALS',
   sponsor: {
     ratio: '1-for-1',
     threshold: 20,
