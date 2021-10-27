@@ -47,7 +47,11 @@ const Homepage = ({ nonProfits }: { nonProfits: CampaignInfo[] }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const promises = Object.values(campaigns)
     .filter((campaign) => campaign.showOnHomepage && campaign.slug)
-    .map((campaign) => getCampaignData(campaign.slug as string))
+    .map((campaign) =>
+      getCampaignData(campaign.slug as string).then(
+        ({ campaignInfo }) => campaignInfo
+      )
+    )
 
   return {
     props: {

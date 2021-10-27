@@ -1,5 +1,9 @@
 import { campaigns } from 'src/campaigns'
-import { CampaignInfo } from 'types/CampaignInfo'
+import {
+  BaseLocalCampaignInfo,
+  CampaignInfo,
+  LocalCampaignInfo
+} from 'types/CampaignInfo'
 import { getGivelistData } from './every'
 
 export const getCampaignData = async (
@@ -8,24 +12,35 @@ export const getCampaignData = async (
 ) => {
   const campaignInfo = campaigns[slug]
 
-  if (campaignInfo) {
-    // If we don't have an every slug, we don't want to get data from the API
-    const hasEverySlug = 'everySlug' in campaignInfo
-    // If the data is complete we don't need to get any from the API
-    const isComplete = isCompleteCampaign(campaignInfo)
-    // If we need goal data we need to get it from the API
-    const needGoalData =
-      includeGoalData &&
-      (campaignInfo?.showGoalOnListPage || campaignInfo?.showGoalOnThankyouPage)
-
-    if (!hasEverySlug || (!needGoalData && isComplete)) {
-      return { campaignInfo: campaignInfo as CampaignInfo, fromApi: false }
-    }
+  if (!campaignInfo) {
+    // If we have no local info, try getting it all from Every.org API
+    return withEdoData(slug)
   }
 
-  // if we have no local campaignInfo try getting by slug from the every.org API
-  const everySlug = campaignInfo ? campaignInfo.everySlug : slug
-  const everyListData = await getGivelistData(everySlug)
+  // We have local info but we might still need more from Every.org API
+  if ('everySlug' in campaignInfo) {
+    // campaignInfo is type BaseLocalCampaignInfo because it has everySlug
+
+    // If local info isn't complete we need to get the rest from Every.org API
+    if (!isCompleteCampaign(campaignInfo))
+      return withEdoData(slug, campaignInfo)
+
+    // If we need goal data, get it from Every.org API
+    const showGoal =
+      campaignInfo.showGoalOnListPage || campaignInfo.showGoalOnThankyouPage
+    if (includeGoalData && showGoal) return withEdoData(slug, campaignInfo)
+  }
+
+  // return local data without hitting Every.org API
+  return { campaignInfo: campaignInfo as CampaignInfo, fromApi: false }
+}
+
+const withEdoData = async (
+  slug: string,
+  campaignInfo?: BaseLocalCampaignInfo
+) => {
+  // use everySlug from campaignInfo if available - the slug on Every.org might be different to ours
+  const everyListData = await getGivelistData(campaignInfo?.everySlug || slug)
 
   return {
     campaignInfo: {
@@ -37,7 +52,7 @@ export const getCampaignData = async (
   }
 }
 
-const requiredKeys: Array<keyof CampaignInfo> = [
+const requiredKeys: Array<keyof LocalCampaignInfo> = [
   'slug',
   'name',
   'primaryColor',
@@ -51,7 +66,9 @@ const requiredKeys: Array<keyof CampaignInfo> = [
   'nonprofits'
 ]
 
-export const isCompleteCampaign = (campaignInfo: Partial<CampaignInfo>) => {
+export const isCompleteCampaign = (
+  campaignInfo: Partial<LocalCampaignInfo>
+) => {
   for (const key of requiredKeys) {
     if (!(key in campaignInfo)) return false
   }

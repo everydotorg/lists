@@ -20,7 +20,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   try {
     const { campaignInfo, fromApi } = await getCampaignData(campaign, true)
-    console.log({ fromApi })
     return {
       props: { campaignInfo },
       revalidate: fromApi ? 60 * 3 : undefined // 3 mins
