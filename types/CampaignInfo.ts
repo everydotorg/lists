@@ -32,9 +32,10 @@ export type FullLocalCampaignInfo = Omit<
 
 // With everySlug all other props are optional because the can be looked up in Every.org API
 export type BaseLocalCampaignInfo = Partial<
-  Omit<CampaignInfo, 'donated' | 'givers'>
+  Omit<CampaignInfo, 'donated' | 'givers' | 'nonprofits'>
 > & {
   everySlug: string
+  nonprofits: Array<Partial<NonProfit> & { slug: string }>
 }
 
 // When we provide CampaignInfo locally it must be either full or contain an everySlug

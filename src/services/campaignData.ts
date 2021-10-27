@@ -42,11 +42,36 @@ const withEdoData = async (
   // use everySlug from campaignInfo if available - the slug on Every.org might be different to ours
   const everyListData = await getGivelistData(campaignInfo?.everySlug || slug)
 
+  const nonprofits = []
+  // Go through each nonprofit in our local data and merge with Every.org data
+  if (campaignInfo?.nonprofits) {
+    for (const nonprofit of campaignInfo.nonprofits) {
+      const edoNonprofit = everyListData.nonprofits.find(
+        ({ slug }) => slug === nonprofit.slug
+      )
+      if (edoNonprofit) {
+        nonprofits.push({
+          ...edoNonprofit,
+          ...nonprofit
+        })
+      }
+    }
+  }
+  // Add any nonprofits from Every.org that weren't in local data
+  for (const nonprofit of everyListData.nonprofits) {
+    const inList = nonprofits.some(({ slug }) => slug === nonprofit.slug)
+    if (!inList) {
+      nonprofits.push(nonprofit)
+    }
+  }
+
   return {
     campaignInfo: {
       ...everyListData,
       // apply any local overrides
-      ...campaignInfo
+      ...campaignInfo,
+      // add merged nonprofits
+      nonprofits
     } as CampaignInfo,
     fromApi: true
   }
