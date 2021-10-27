@@ -4,6 +4,7 @@ import {
   CampaignInfo,
   LocalCampaignInfo
 } from 'types/CampaignInfo'
+import { NonProfit } from 'types/NonProfit'
 import { getGivelistData } from './every'
 
 export const getCampaignData = async (
@@ -91,11 +92,25 @@ const requiredKeys: Array<keyof LocalCampaignInfo> = [
   'nonprofits'
 ]
 
+const missingKeys = (campaignInfo: Partial<LocalCampaignInfo>) =>
+  requiredKeys.some((key) => !(key in campaignInfo))
+
+const requiredNonprofitKeys: Array<keyof NonProfit> = [
+  'name',
+  'location',
+  'about',
+  'img'
+]
+
+const missingNonprofitKeys = (nonprofit: Partial<NonProfit>) =>
+  requiredNonprofitKeys.some((key) => !(key in nonprofit))
+
 export const isCompleteCampaign = (
   campaignInfo: Partial<LocalCampaignInfo>
 ) => {
-  for (const key of requiredKeys) {
-    if (!(key in campaignInfo)) return false
-  }
+  // not complete if required keys are missing
+  if (missingKeys(campaignInfo)) return false
+  // not complete if some nonprofits are missing keys
+  if (campaignInfo.nonprofits?.some(missingNonprofitKeys)) return false
   return true
 }
