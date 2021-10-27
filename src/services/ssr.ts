@@ -19,10 +19,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const campaign = params.campaign as string
 
   try {
-    const campaignInfo = await getCampaignData(campaign)
+    const { campaignInfo, fromApi } = await getCampaignData(campaign, true)
+    console.log({ fromApi })
     return {
       props: { campaignInfo },
-      revalidate: 60 * 3 // 3 mins
+      revalidate: fromApi ? 60 * 3 : undefined // 3 mins
     }
   } catch (e) {
     console.error(e)
