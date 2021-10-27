@@ -5,7 +5,7 @@ import {
   LocalCampaignInfo
 } from 'types/CampaignInfo'
 import { NonProfit } from 'types/NonProfit'
-import { getGivelistData } from './every'
+import { getGivelistData, getNonprofitData } from './every'
 
 export const getCampaignData = async (
   slug: string,
@@ -30,6 +30,14 @@ export const getCampaignData = async (
     const showGoal =
       campaignInfo.showGoalOnListPage || campaignInfo.showGoalOnThankyouPage
     if (includeGoalData && showGoal) return withEdoData(slug, campaignInfo)
+  }
+
+  // Check all nonProfits have complete data
+  for (let index = 0; index < campaignInfo.nonprofits.length; index++) {
+    const nonprofit = campaignInfo.nonprofits[index]
+    if (missingNonprofitKeys(nonprofit)) {
+      campaignInfo.nonprofits[index] = await getNonprofitData(nonprofit.slug)
+    }
   }
 
   // return local data without hitting Every.org API

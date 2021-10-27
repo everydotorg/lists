@@ -1,4 +1,5 @@
 import { CampaignInfo } from 'types/CampaignInfo'
+import { NonProfit } from 'types/NonProfit'
 
 const EVERY_API = 'https://partners.every.org/v0.2'
 interface EdoNonprofit {
@@ -49,5 +50,24 @@ export const getGivelistData = async (slug: string): Promise<CampaignInfo> => {
         img: logoCloudinaryId
       })
     )
+  }
+}
+
+export const getNonprofitData = async (slug: string): Promise<NonProfit> => {
+  const everyListData = await fetch(
+    `${EVERY_API}/nonprofit/${slug}?apiKey=givelist`
+  ).then((res) => res.json())
+
+  if (everyListData?.data?.nonprofit?.type !== 'NONPROFIT')
+    throw new Error('Not Found')
+
+  const { nonprofit } = everyListData.data
+
+  return {
+    slug: nonprofit.primarySlug,
+    name: nonprofit.name,
+    location: nonprofit.locationAddress,
+    about: nonprofit.description,
+    img: nonprofit.logoCloudinaryId
   }
 }
