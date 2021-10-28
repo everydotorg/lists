@@ -1,20 +1,22 @@
 import { Box, Button, Flex } from '@theme-ui/components'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
+import { AlternativeDonation } from 'src/components/AlternativeDonation'
+import { Brand } from 'src/components/Brand'
+import { gtag } from 'src/services/gtag'
+import { createEveryUrl } from 'src/services/url'
 import { Currency, currencySymbolMap } from 'types/Currency'
 import { DonationFrequency } from 'types/Frequency'
+import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { Disclaimer } from './Disclaimer'
+import { styles } from './donationStyles'
 import { Frequency } from './Frequency'
 import { Header } from './Header'
 import { Input } from './Input'
-import { styles } from './donationStyles'
-import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
-import { Brand } from 'src/components/Brand'
 import { MatchLedger } from './MatchLedger'
-import { AlternativeDonation } from 'src/components/AlternativeDonation'
-import { useRouter } from 'next/router'
 
 export const Donation = (): JSX.Element => {
-  const { slug, sponsor } = useCampaignInfoContext()
+  const { slug, everySlug, primaryColor, sponsor } = useCampaignInfoContext()
 
   const [donationAmount, setDonationAmount] = useState(0)
   const [error, setError] = useState(false)
@@ -26,7 +28,36 @@ export const Donation = (): JSX.Element => {
 
   const currencySymbol = currencySymbolMap[currency]
 
-  const donate = () => route.push('/donation-flow-demo')
+  const donate = () => {
+    // Lists with no everySlug can't receive donations - they are demos
+    if (!everySlug) {
+      route.push('/donation-flow-demo')
+      return
+    }
+
+    if (donationAmount < 10) {
+      return setError(true)
+    }
+
+    const color = primaryColor.replace('#', '')
+    gtag.pushEvent('donate_submit', {
+      amount: donationAmount
+    })
+    window.open(
+      createEveryUrl({
+        slug,
+        everySlug,
+        frequency,
+        amount: donationAmount,
+        crypto: false,
+        extras: {
+          theme_color: color,
+          theme_color_highlight: color
+        }
+      }),
+      '_self'
+    )
+  }
 
   const getDonateButtonText = () => {
     if (!donationAmount || donationAmount === 0) {
