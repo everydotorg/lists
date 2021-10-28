@@ -8,14 +8,13 @@ import { Header } from './Header'
 import { Input } from './Input'
 import { styles } from './donationStyles'
 import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
-import { createEveryUrl } from 'src/services/url'
-import { gtag } from 'src/services/gtag'
 import { Brand } from 'src/components/Brand'
 import { MatchLedger } from './MatchLedger'
 import { AlternativeDonation } from 'src/components/AlternativeDonation'
+import { useRouter } from 'next/router'
 
 export const Donation = (): JSX.Element => {
-  const { slug, everySlug, primaryColor, sponsor } = useCampaignInfoContext()
+  const { slug, sponsor } = useCampaignInfoContext()
 
   const [donationAmount, setDonationAmount] = useState(0)
   const [error, setError] = useState(false)
@@ -23,33 +22,11 @@ export const Donation = (): JSX.Element => {
   const [frequency, setFrequency] = useState<DonationFrequency>(
     DonationFrequency.OneTime
   )
+  const route = useRouter()
 
   const currencySymbol = currencySymbolMap[currency]
 
-  const donate = () => {
-    if (donationAmount < 10) {
-      return setError(true)
-    }
-
-    const color = primaryColor.replace('#', '')
-    gtag.pushEvent('donate_submit', {
-      amount: donationAmount
-    })
-    window.open(
-      createEveryUrl({
-        slug,
-        everySlug,
-        frequency,
-        amount: donationAmount,
-        crypto: false,
-        extras: {
-          theme_color: color,
-          theme_color_highlight: color
-        }
-      }),
-      '_self'
-    )
-  }
+  const donate = () => route.push('/donation-flow-demo')
 
   const getDonateButtonText = () => {
     if (!donationAmount || donationAmount === 0) {
