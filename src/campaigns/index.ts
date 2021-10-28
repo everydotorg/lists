@@ -16,8 +16,6 @@ import { juzzy } from './juzzy'
 import { lgbtq } from './lgbtq'
 import { lilbub } from './lilbub'
 import { mads } from './mads'
-import { bubsworldPartial } from './partial'
-import { reorder } from './reorder-nonprofits'
 import { climate } from './tacklingclimatechange'
 
 export const campaigns: Record<string, LocalCampaignInfo> = {
@@ -38,7 +36,5 @@ export const campaigns: Record<string, LocalCampaignInfo> = {
   bubsworld,
   lilbub,
   afghanistan,
-  gerc,
-  bubsworldPartial,
-  reorder
+  gerc
 }
