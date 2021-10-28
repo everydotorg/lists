@@ -5,6 +5,7 @@ import { animals } from './animal.welfare'
 import { antiracism } from './antiracism'
 import { bubsworld } from './bubsworld'
 import { charitysufferfest2021 } from './charitysufferfest2021'
+import { demoCampaigns } from './demos'
 import { desmondisamazing } from './desmondisamazing'
 import { education } from './educationeverywhere'
 import { health } from './effectivehealthcareeverywhere'
@@ -15,11 +16,10 @@ import { juzzy } from './juzzy'
 import { lgbtq } from './lgbtq'
 import { lilbub } from './lilbub'
 import { mads } from './mads'
-import { bubsworldPartial } from './partial'
-import { reorder } from './reorder-nonprofits'
 import { climate } from './tacklingclimatechange'
 
 export const campaigns: Record<string, LocalCampaignInfo> = {
+  ...demoCampaigns,
   animals,
   education,
   charitysufferfest2021,
@@ -36,7 +36,5 @@ export const campaigns: Record<string, LocalCampaignInfo> = {
   bubsworld,
   lilbub,
   afghanistan,
-  gerc,
-  bubsworldPartial,
-  reorder
+  gerc
 }

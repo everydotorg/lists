@@ -1,18 +1,19 @@
 import { Box, Button, Flex } from '@theme-ui/components'
+import { useRouter } from 'next/router'
 import { useState } from 'react'
+import { AlternativeDonation } from 'src/components/AlternativeDonation'
+import { Brand } from 'src/components/Brand'
+import { gtag } from 'src/services/gtag'
+import { createEveryUrl } from 'src/services/url'
 import { Currency, currencySymbolMap } from 'types/Currency'
 import { DonationFrequency } from 'types/Frequency'
+import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
 import { Disclaimer } from './Disclaimer'
+import { styles } from './donationStyles'
 import { Frequency } from './Frequency'
 import { Header } from './Header'
 import { Input } from './Input'
-import { styles } from './donationStyles'
-import { useCampaignInfoContext } from '../../hooks/useCampaignInfoContext'
-import { createEveryUrl } from 'src/services/url'
-import { gtag } from 'src/services/gtag'
-import { Brand } from 'src/components/Brand'
 import { MatchLedger } from './MatchLedger'
-import { AlternativeDonation } from 'src/components/AlternativeDonation'
 
 export const Donation = (): JSX.Element => {
   const { slug, everySlug, primaryColor, sponsor } = useCampaignInfoContext()
@@ -23,10 +24,17 @@ export const Donation = (): JSX.Element => {
   const [frequency, setFrequency] = useState<DonationFrequency>(
     DonationFrequency.OneTime
   )
+  const route = useRouter()
 
   const currencySymbol = currencySymbolMap[currency]
 
   const donate = () => {
+    // Lists with no everySlug can't receive donations - they are demos
+    if (!everySlug) {
+      route.push('/donation-flow-demo')
+      return
+    }
+
     if (donationAmount < 10) {
       return setError(true)
     }

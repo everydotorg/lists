@@ -1,6 +1,6 @@
 // All data from bubsworld list on Every.org escept name and non-profit locations
 
-import { LocalCampaignInfo } from '../../types/CampaignInfo'
+import { LocalCampaignInfo } from '../../../types/CampaignInfo'
 export const bubsworldPartial: LocalCampaignInfo = {
   slug: 'bubsworldPartial',
   everySlug: 'bubsworld',
