@@ -1,4 +1,6 @@
 {
+  "showOnHomepage": true,
+  "slug": "health",
   "everySlug": "healthcare.everywhere",
   "name": "Effective Healthcare Everywhere",
   "primaryColor": "#00A37F",

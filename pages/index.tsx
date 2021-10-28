@@ -6,20 +6,8 @@ import { baseUrl, baseUrlWithPaths } from 'src/services/url'
 import { theme } from 'src/styles/theme'
 import { ThemeProvider } from 'theme-ui'
 
-const showOnHomepage = new Set([
-  'poverty',
-  'lgbtq',
-  'education',
-  'health',
-  'afghanistan',
-  'animals',
-  'antiracism',
-  'science',
-  'climate'
-])
-
 const nonProfits: HomeProps['nonProfits'] = Object.values(campaigns)
-  .filter((campaign) => showOnHomepage.has(campaign.slug))
+  .filter((campaign) => campaign.showOnHomepage)
   .map((info) => ({
     slug: info.slug,
     name: info.name,

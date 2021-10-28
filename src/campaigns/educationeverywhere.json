@@ -1,4 +1,6 @@
 {
+  "showOnHomepage": true,
+  "slug": "education",
   "everySlug": "education.everywhere",
   "name": "Education Everywhere",
   "primaryColor": "#00A37F",

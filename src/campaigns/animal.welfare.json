@@ -1,4 +1,6 @@
 {
+  "showOnHomepage": true,
+  "slug": "animals",
   "everySlug": "animal.welfare",
   "name": "Animal Welfare",
   "primaryColor": "#00A37F",

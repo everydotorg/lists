@@ -1,4 +1,6 @@
 {
+  "showOnHomepage": true,
+  "slug": "poverty",
   "everySlug": "global.poverty",
   "name": "Ending Global Poverty",
   "primaryColor": "#00A37F",
