@@ -20,7 +20,7 @@ const Header = () => {
         zIndex: 1
       }}
     >
-      <Text sx={{ fontSize: ['2.25rem', '2.25rem'] }} variant="title">
+      <Text sx={{ fontSize: ['1.25rem', '2.25rem'] }} variant="title">
         #fallgivingchallenge
       </Text>
       <Button variant="landingChallenge" onClick={() => null}>
@@ -35,23 +35,16 @@ const Amount = ({ title, amount, big = false }: AmountProps) => (
   <Flex
     sx={{
       flexDirection: 'column',
-      gap: 6,
+      gap: [3, 6],
       alignItems: 'center',
       justifyContent: 'center'
     }}
   >
-    <Text
-      sx={{
-        fontSize: '2.5rem',
-        lineHeight: '48px'
-      }}
-    >
-      {title}
-    </Text>
+    <Text sx={styles.smallText}>{title}</Text>
     <Text
       sx={{
         ...styles.borderedText,
-        fontSize: big ? 10 : '3rem',
+        fontSize: big ? [9, 10] : ['2rem', '3rem'],
         lineHeight: 1,
         fontWeight: 'bold'
       }}
@@ -62,7 +55,7 @@ const Amount = ({ title, amount, big = false }: AmountProps) => (
 )
 
 const ArrowDown = () => (
-  <Box sx={{ pb: 12 }}>
+  <Box sx={{ pb: [10, 12] }}>
     <Icon.BigArrowDown />
   </Box>
 )
@@ -71,13 +64,18 @@ export const FallGivingChallenge = () => {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <Box as="main" sx={{ bg: 'landingChallenge', color: 'white' }}>
+      <Box as="main" sx={{ bg: 'landingChallenge', color: 'white', pt: 12 }}>
         <Text sx={styles.heading} as="h1">
           Every donation matched this November 2021
         </Text>
         <Flex as="section" sx={styles.section}>
           <ArrowDown />
-          <Flex sx={{ flexDirection: 'column', gap: 7 }}>
+          <Flex
+            sx={{
+              flexDirection: 'column',
+              '& > *:not(:last-child)': { mb: [4, 7] }
+            }}
+          >
             <Text sx={styles.borderedText}>
               This november, all donations made via Givelist will be{' '}
               <strong>matched 1:1</strong> up to <strong>$100</strong> while
@@ -96,15 +94,7 @@ export const FallGivingChallenge = () => {
 
         <Flex sx={styles.section} as="section">
           <ArrowDown />
-          <Button
-            variant="landingChallenge"
-            sx={{
-              p: 7,
-              fontSize: ['3rem', '3rem'],
-              lineHeight: 1,
-              borderRadius: ['24px', '24px']
-            }}
-          >
+          <Button variant="landingChallenge" sx={styles.bigButton}>
             Create your own givelist
           </Button>
           <Text
@@ -128,7 +118,7 @@ export const FallGivingChallenge = () => {
             Starting November 1, your donation made to any Givelist will be
             matched 1:1 up to $100.
           </Text>
-          <Flex sx={{ gap: 7, mb: 10 }}>
+          <Flex sx={{ '& > *:not(:last-child)': { mr: [4, 7] }, mb: 10 }}>
             <Amount title="You" amount="$100" />
             <Amount title="Us" amount="$100" />
           </Flex>
@@ -173,7 +163,7 @@ export const FallGivingChallenge = () => {
                 display: 'block'
               },
               '& > span:first-of-type': {
-                mb: 7
+                mb: [4, 7]
               }
             }}
           >
@@ -196,16 +186,7 @@ export const FallGivingChallenge = () => {
 
         <Flex as="section" sx={styles.section}>
           <ArrowDown />
-          <Button
-            variant="landingChallenge"
-            sx={{
-              p: 7,
-              fontSize: ['3rem', '3rem'],
-              lineHeight: 1,
-              borderRadius: ['24px', '24px'],
-              fontWeight: 'bold'
-            }}
-          >
+          <Button variant="landingChallenge" sx={styles.bigButton}>
             Discover more givelists
           </Button>
         </Flex>

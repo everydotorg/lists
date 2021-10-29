@@ -181,8 +181,8 @@ export const theme = {
     landingChallenge: {
       variant: 'buttons.primary',
       color: 'landingChallenge',
-      py: 4,
-      px: 6,
+      py: [2, 4],
+      px: [3, 6],
       height: 'auto',
       bg: 'white',
       ':hover': {
