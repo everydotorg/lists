@@ -1,6 +1,6 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const science: LocalCampaignInfo = {
-  showOnHomepage: true,
+  // showOnHomepage: true,
   slug: 'science',
   everySlug: 'stem.future',
   name: 'Science and Technology for a Brighter Future',

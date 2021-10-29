@@ -1,6 +1,6 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const education: LocalCampaignInfo = {
-  showOnHomepage: true,
+  // showOnHomepage: true,
   slug: 'education',
   everySlug: 'education.everywhere',
   name: 'Education Everywhere',

@@ -1,6 +1,6 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const health: LocalCampaignInfo = {
-  showOnHomepage: true,
+  // showOnHomepage: true,
   slug: 'health',
   everySlug: 'healthcare.everywhere',
   name: 'Effective Healthcare Everywhere',

@@ -1,6 +1,6 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const lgbtq: LocalCampaignInfo = {
-  showOnHomepage: true,
+  // showOnHomepage: true,
   slug: 'lgbtq',
   everySlug: 'lgbtq.rights',
   name: 'LGBTQ+ Rights',

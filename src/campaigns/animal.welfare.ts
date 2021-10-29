@@ -1,6 +1,6 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const animals: LocalCampaignInfo = {
-  showOnHomepage: true,
+  // showOnHomepage: true,
   slug: 'animals',
   everySlug: 'animal.welfare',
   name: 'Animal Welfare',
