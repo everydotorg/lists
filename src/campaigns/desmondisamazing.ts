@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const desmondisamazing: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const desmondisamazing: LocalCampaignInfo = {
   slug: 'desmondisamazing',
   everySlug: 'desmondisamazing',
   name: "Desmond's Amazing Recomendations",
@@ -10,7 +10,7 @@ export const desmondisamazing: CampaignInfo = {
   socialShareText: 'Here are some amazing organizations to support.',
   previewImage: 'profile_pics/q6eudgruppekhouizgvl',
   about: 'Here are some amazing organizations to support.',
-  cause: 'humans',
+  cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
   sponsor: {
     ratio: '1-for-1',

@@ -1,10 +1,11 @@
-import { CampaignInfo } from 'types/CampaignInfo'
+import { LocalCampaignInfo } from 'types/CampaignInfo'
 import { science } from './a-brighter-future'
 import { afghanistan } from './afghanistan-humanitarian-aid'
 import { animals } from './animal.welfare'
 import { antiracism } from './antiracism'
 import { bubsworld } from './bubsworld'
 import { charitysufferfest2021 } from './charitysufferfest2021'
+import { demoCampaigns } from './demos'
 import { desmondisamazing } from './desmondisamazing'
 import { education } from './educationeverywhere'
 import { health } from './effectivehealthcareeverywhere'
@@ -17,7 +18,8 @@ import { lilbub } from './lilbub'
 import { mads } from './mads'
 import { climate } from './tacklingclimatechange'
 
-export const campaigns: Record<string, CampaignInfo> = {
+export const campaigns: Record<string, LocalCampaignInfo> = {
+  ...demoCampaigns,
   animals,
   education,
   charitysufferfest2021,

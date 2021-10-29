@@ -1,27 +1,18 @@
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
 import { campaigns } from 'src/campaigns'
 import { AboutModalProvider } from 'src/contexts/AboutModalContext'
-import { Home, HomeProps } from 'src/pages/Home'
+import { Home } from 'src/pages/Home'
+import { getCampaignData } from 'src/services/campaignData'
 import { baseUrl, baseUrlWithPaths } from 'src/services/url'
 import { theme } from 'src/styles/theme'
 import { ThemeProvider } from 'theme-ui'
-
-const nonProfits: HomeProps['nonProfits'] = Object.values(campaigns)
-  .filter((campaign) => campaign.showOnHomepage)
-  .map((info) => ({
-    slug: info.slug,
-    name: info.name,
-    imageUrl: info.imageUrl,
-    about: info.about,
-    cause: info.cause,
-    nonprofits: info.nonprofits,
-    sponsor: info.sponsor ? info.sponsor : undefined
-  }))
+import { CampaignInfo } from 'types/CampaignInfo'
 
 export const Tagline =
   'Discover, donate, and share recommended lists of nonprofits.'
 
-const Homepage = () => {
+const Homepage = ({ nonProfits }: { nonProfits: CampaignInfo[] }) => {
   const title = `giveli.st • ${Tagline}`
 
   const description =
@@ -51,6 +42,22 @@ const Homepage = () => {
       </AboutModalProvider>
     </ThemeProvider>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const promises = Object.values(campaigns)
+    .filter((campaign) => campaign.showOnHomepage && campaign.slug)
+    .map((campaign) =>
+      getCampaignData(campaign.slug as string).then(
+        ({ campaignInfo }) => campaignInfo
+      )
+    )
+
+  return {
+    props: {
+      nonProfits: await Promise.all(promises)
+    }
+  }
 }
 
 export default Homepage

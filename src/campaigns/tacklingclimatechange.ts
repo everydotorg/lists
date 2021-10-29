@@ -1,6 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const climate: CampaignInfo = {
-  showOnHomepage: true,
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const climate: LocalCampaignInfo = {
   slug: 'climate',
   everySlug: 'climate.change',
   name: 'Tackling Climate Change',
@@ -13,7 +12,7 @@ export const climate: CampaignInfo = {
   previewImage: 'profile_pics/at3edcaykopoigfwbpzt',
   about:
     'Support nonprofits taking action towards a more prosperous planet. Your donation will help fund research leveraging science and technology for positive change.',
-  cause: 'environment',
+  cause: 'ENVIRONMENT',
   sponsor: {
     ratio: '1-for-1',
     threshold: 100,

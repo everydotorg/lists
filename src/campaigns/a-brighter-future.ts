@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const science: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const science: LocalCampaignInfo = {
   showOnHomepage: true,
   slug: 'science',
   everySlug: 'stem.future',
@@ -13,7 +13,7 @@ export const science: CampaignInfo = {
   previewImage: 'profile_pics/gqweg2y77qepoxwdacmz',
   about:
     "Solving some of the world's biggest challenges with cutting-edge research and policy.",
-  cause: 'research',
+  cause: 'RESEARCH_AND_PUBLIC_POLICY',
   fundingGoal: 50000,
   nonprofits: [
     {

@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const lgbtq: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const lgbtq: LocalCampaignInfo = {
   showOnHomepage: true,
   slug: 'lgbtq',
   everySlug: 'lgbtq.rights',
@@ -13,7 +13,7 @@ export const lgbtq: CampaignInfo = {
   previewImage: 'profile_pics/c2pxtbknjmc8n8idjkul',
   about:
     'Help these nonprofits inspire and engage all to end discrimination against LGBTQ+ Citizens and realize fundamental fairness and equality.',
-  cause: 'humans',
+  cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
   sponsor: {
     ratio: '1-for-1',

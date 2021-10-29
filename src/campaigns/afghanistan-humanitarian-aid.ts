@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const afghanistan: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const afghanistan: LocalCampaignInfo = {
   showOnHomepage: true,
   slug: 'afghanistan',
   everySlug: 'afghanistan.relief',
@@ -14,7 +14,7 @@ export const afghanistan: CampaignInfo = {
     'https://res.cloudinary.com/f_auto,c_limit,w_1200,q_60/profile_pics/jzv76lj9kxxz7u1txdp4',
   about:
     'Support humanitarian efforts on the ground in Afghanistan and across the globe for Afghan refugees.',
-  cause: 'humans',
+  cause: 'HUMAN_SERVICES',
   sponsor: {
     ratio: '1-for-1',
     threshold: 100,

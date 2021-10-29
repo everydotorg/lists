@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const juzzy: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const juzzy: LocalCampaignInfo = {
   slug: 'juzzy',
   everySlug: 'juzzy',
   name: "Justyn's Givelist",
@@ -10,7 +10,7 @@ export const juzzy: CampaignInfo = {
   socialShareText: 'Here are some great organizations to support.',
   previewImage: 'profile_pics/ifuwttx6srrgdheczt3r',
   about: 'Here are some great organizations to support.',
-  cause: 'humans',
+  cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
   sponsor: {
     ratio: '1-for-1',

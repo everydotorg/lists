@@ -1,18 +1,14 @@
-import { LocalCampaignInfo } from '../../types/CampaignInfo'
-export const animals: LocalCampaignInfo = {
-  showOnHomepage: true,
-  slug: 'animals',
-  everySlug: 'animal.welfare',
-  name: 'Animal Welfare',
+import { LocalCampaignInfo } from '../../../types/CampaignInfo'
+export const demo: LocalCampaignInfo = {
+  slug: 'demo',
+  name: 'Demo List',
   primaryColor: '#00A37F',
   imageUrl: 'profile_pics/fzzktcwasfcaj9wxhdxd',
   mobileBannerUrl: 'profile_pics/fzzktcwasfcaj9wxhdxd',
   bannerUrl: 'profile_pics/fzzktcwasfcaj9wxhdxd',
-  socialShareText:
-    'Help end the abuse of animals raised for food by supporting these dedicated nonprofits.',
+  socialShareText: 'Help demo givelist.',
   previewImage: 'profile_pics/fzzktcwasfcaj9wxhdxd',
-  about:
-    'Help end cruel factory farming practices, make life better for wild animals, and transform our food systems.',
+  about: 'Help demo givelist.',
   cause: 'ANIMALS',
   fundingGoal: 50000,
   nonprofits: [

@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const fff: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const fff: LocalCampaignInfo = {
   slug: 'fff',
   everySlug: 'fff',
   name: 'The 3F Intitative',
@@ -12,7 +12,7 @@ export const fff: CampaignInfo = {
   previewImage: 'profile_pics/vsgc9buyuzny1sf34zob',
   about:
     'This initiative aims to write this neglected kingdom of life into conservation and agricultural policy frameworks, protect it under international and domestic law, and unlock crucial funding for mycological research, surveys and educational programs. We are unthinkable without Fungi.',
-  cause: 'environment',
+  cause: 'ENVIRONMENT',
   sponsor: {
     ratio: '1-for-1',
     threshold: 100,

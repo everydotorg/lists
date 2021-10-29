@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const lilbub: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const lilbub: LocalCampaignInfo = {
   slug: 'lilbub',
   everySlug: 'lilbub',
   name: 'Lil BUB’s 10th Birthday',
@@ -12,7 +12,7 @@ export const lilbub: CampaignInfo = {
   previewImage: '2_June_birthday_BUB_B_pu92a9',
   about:
     'To celebrate Lil BUB’s 10th BUBirthday, we are raising money for special needs pets. Your single contribution will benefit these five amazing 501(c)(3) charities close to BUB’s heart!',
-  cause: 'animals',
+  cause: 'ANIMALS',
   fundingGoal: 60000,
   showGoalOnThankyouPage: true,
   nonprofits: [

@@ -1,5 +1,5 @@
-import { CampaignInfo } from '../../types/CampaignInfo'
-export const poverty: CampaignInfo = {
+import { LocalCampaignInfo } from '../../types/CampaignInfo'
+export const poverty: LocalCampaignInfo = {
   showOnHomepage: true,
   slug: 'poverty',
   everySlug: 'global.poverty',
@@ -13,7 +13,7 @@ export const poverty: CampaignInfo = {
   previewImage: 'profile_pics/tt8w3ikpmtiau7xv5ije',
   about:
     'Help the four nonprofits on this Givelist address the challenges of global poverty. Backed by $10,000 of matched funding, your donation is amplified and directed to those most in need.',
-  cause: 'humans',
+  cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
   sponsor: {
     ratio: '1-for-1',
