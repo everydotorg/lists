@@ -24,10 +24,10 @@ export const kimbramusic: LocalCampaignInfo = {
       slug: 'so-they-can'
     },
     {
-      slug: 'women-for-afghan-women',
+      slug: 'women-for-afghan-women'
     },
     {
-      slug: 'tirzah',
+      slug: 'tirzah'
     }
   ]
 }
