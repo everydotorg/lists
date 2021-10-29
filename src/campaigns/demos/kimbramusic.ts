@@ -3,12 +3,12 @@ export const kimbramusic: LocalCampaignInfo = {
   slug: 'kimbramusic',
   name: "Demo - Kimbra's list",
   primaryColor: '#F9932D',
-  mobileBannerUrl: 'profile_pics/r2yneklaqgwmn7oagw2t',
-  imageUrl: 'profile_pics/r2yneklaqgwmn7oagw2t',
-  bannerUrl: 'profile_pics/r2yneklaqgwmn7oagw2t',
+  mobileBannerUrl: 'profile_pics/m55ejevkilies4mjuzfw',
+  imageUrl: 'profile_pics/m55ejevkilies4mjuzfw',
+  bannerUrl: 'profile_pics/m55ejevkilies4mjuzfw',
   socialShareText:
     'So excited about making my first Givelist! Here are a few charities that I think are doing great work. Grateful for every donation as every little bit counts!',
-  previewImage: 'profile_pics/r2yneklaqgwmn7oagw2t',
+  previewImage: 'profile_pics/m55ejevkilies4mjuzfw',
   about:
     'So excited about making my first Givelist! Here are a few charities that I think are doing great work. Grateful for every donation as every little bit counts!',
   cause: 'HUMAN_AND_CIVIL_RIGHTS',
