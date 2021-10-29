@@ -132,7 +132,11 @@ export const FallGivingChallenge = () => {
           >
             A donor can support multiple Givelist's and nonprofits. The first
             donation they make to each of those nonprofits will be matched.{' '}
-            <Link sx={{ textDecoration: 'underline', color: 'currentcolor' }}>
+            <Link
+              href="https://www.every.org/terms?utm_source=givelist"
+              target="_blank"
+              sx={{ textDecoration: 'underline', color: 'currentcolor' }}
+            >
               Review the full terms and conditions here
             </Link>
           </Text>
@@ -146,7 +150,11 @@ export const FallGivingChallenge = () => {
             help amplify grassroots giving. If you would like to contribute to
             future campaigns like <strong>#FallGivingChallenge</strong>, you can
             donate at 
-            <Link sx={{ textDecoration: 'underline', color: 'currentcolor' }}>
+            <Link
+              href="https://every.org/matching"
+              target="_blank"
+              sx={{ textDecoration: 'underline', color: 'currentcolor' }}
+            >
               every.org/matching
             </Link>
           </Text>
@@ -186,9 +194,13 @@ export const FallGivingChallenge = () => {
 
         <Flex as="section" sx={styles.section}>
           <ArrowDown />
-          <Button variant="landingChallenge" sx={styles.bigButton}>
+          <Link
+            href="https://giveli.st"
+            variant="buttons.landingChallenge"
+            sx={styles.bigButton}
+          >
             Discover more givelists
-          </Button>
+          </Link>
         </Flex>
       </Box>
     </ThemeProvider>
