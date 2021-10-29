@@ -1,6 +1,6 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const afghanistan: LocalCampaignInfo = {
-  // showOnHomepage: true,
+  showOnHomepage: true,
   slug: 'afghanistan',
   everySlug: 'afghanistan.relief',
   name: 'Afghanistan Humanitarian Aid',

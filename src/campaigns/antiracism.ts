@@ -1,6 +1,6 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const antiracism: LocalCampaignInfo = {
-  // showOnHomepage: true,
+  showOnHomepage: true,
   slug: 'antiracism',
   everySlug: 'antiracism',
   name: 'Anti-Racism and Justice for All',

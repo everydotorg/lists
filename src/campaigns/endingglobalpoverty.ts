@@ -1,6 +1,6 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const poverty: LocalCampaignInfo = {
-  // showOnHomepage: true,
+  showOnHomepage: true,
   slug: 'poverty',
   everySlug: 'global.poverty',
   name: 'Ending Global Poverty',
