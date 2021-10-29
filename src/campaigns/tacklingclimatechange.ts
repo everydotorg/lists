@@ -1,6 +1,7 @@
 import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const climate: LocalCampaignInfo = {
   slug: 'climate',
+  showOnHomepage: true,
   everySlug: 'climate.change',
   name: 'Tackling Climate Change',
   primaryColor: '#00A37F',
