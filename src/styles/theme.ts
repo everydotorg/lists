@@ -70,7 +70,8 @@ export const theme = {
     muted: '#EEEEEE',
     progressBg: '#EAEDED',
     error: '#EF4444',
-    borderGray: '#CCCCCC'
+    borderGray: '#CCCCCC',
+    landingChallenge: '#D95C35'
   },
   images: {
     avatar: {
@@ -175,6 +176,17 @@ export const theme = {
       ':hover': {
         bg: 'primary',
         color: 'white'
+      }
+    },
+    landingChallenge: {
+      variant: 'buttons.primary',
+      color: 'landingChallenge',
+      py: [2, 4],
+      px: [3, 6],
+      height: 'auto',
+      bg: 'white',
+      ':hover': {
+        bg: '#fff6ee'
       }
     },
     gray: {

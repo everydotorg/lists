@@ -1,4 +1,5 @@
 import { ArrowUp } from './ArrowUp'
+import { BigArrowDown } from './BigArrowDown'
 import { ChevronDown } from './ChevronDown'
 import { Close } from './Close'
 import { Every } from './Every'
@@ -12,6 +13,7 @@ import { DotsHorizontal } from './DotsHorizontal'
 
 export const Icon = {
   ArrowUp,
+  BigArrowDown,
   Check,
   ChevronDown,
   Close,
