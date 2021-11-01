@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Icon } from 'src/components/Icon'
 import { theme } from 'src/styles/theme'
 import { Box, Button, Flex, Link, Text, ThemeProvider } from 'theme-ui'
@@ -63,6 +64,19 @@ const ArrowDown = () => (
 export const FallGivingChallenge = () => {
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <meta property="og:title" content="#FallGivingChallenge 🍁🍁🍁" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/everydotorg/image/upload/c_lfill,h_500/q_auto,f_auto,fl_progressive/profile_pics/q3qqtt1vwlkgqtkowtci"
+        />
+        <meta
+          property="og:description"
+          content="Help give away $250,000 this November! Your first donation to each Givelist will be matched 1:1 up to $100."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <Header />
       <Box as="main" sx={{ bg: 'landingChallenge', color: 'white', pt: 12 }}>
         <Text sx={styles.heading} as="h1">
@@ -115,7 +129,7 @@ export const FallGivingChallenge = () => {
         <Flex sx={styles.section} as="section">
           <ArrowDown />
           <Text sx={styles.title}>
-            Starting November 1, your donation made to any Givelist will be
+            Starting November 1, your fisrt donation to each Givelist will be
             matched 1:1 up to $100.
           </Text>
           <Flex sx={{ '& > *:not(:last-child)': { mr: [4, 7] }, mb: 10 }}>
