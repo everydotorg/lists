@@ -133,7 +133,7 @@ export const FallGivingChallenge = () => {
         <Flex sx={styles.section} as="section">
           <ArrowDown />
           <Text sx={styles.title}>
-            Starting November 1, your fisrt donation to each Givelist will be
+            Starting November 1, your first donation to each Givelist will be
             matched 1:1 up to $100.
           </Text>
           <Flex sx={{ '& > *:not(:last-child)': { mr: [4, 7] }, mb: 10 }}>

@@ -17,10 +17,10 @@ export const poverty: LocalCampaignInfo = {
   fundingGoal: 50000,
   sponsor: {
     ratio: '1-for-1',
-    threshold: 20,
+    threshold: 100,
     upTo: 10000,
     description:
-      'Amplify your gift! Generous donors will match you dollar-for-dollar up to $20 each time until we reach $10,000 total matched.'
+      'Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 each time until we reach $10,000 total matched.'
   },
   nonprofits: [
     {
