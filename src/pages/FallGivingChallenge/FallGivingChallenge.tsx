@@ -21,7 +21,7 @@ const Header = () => {
       }}
     >
       <Text sx={{ fontSize: ['1.25rem', '2.25rem'] }} variant="title">
-        #fallgivingchallenge
+        #FallGivingChallenge
       </Text>
       <Button variant="landingChallenge" onClick={() => null}>
         Create Givelist
