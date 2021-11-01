@@ -77,8 +77,8 @@ export const FallGivingChallenge = () => {
             }}
           >
             <Text sx={styles.borderedText}>
-              This november, all donations made via Givelist will be{' '}
-              <strong>matched 1:1</strong> up to <strong>$100</strong> while
+              This November, donations made via Givelist will be{' '}
+              <strong>matched 1:1</strong> up to <strong>$100</strong> per list while
               funds last!
             </Text>
             <Text sx={styles.borderedText}>
