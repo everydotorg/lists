@@ -67,6 +67,7 @@ export const FallGivingChallenge = () => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
+        <title>#FallGivingChallenge</title>
         <meta property="og:title" content="#FallGivingChallenge 🍁🍁🍁" />
         <meta property="og:type" content="website" />
         <meta
