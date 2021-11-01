@@ -24,9 +24,11 @@ const Header = () => {
       <Text sx={{ fontSize: ['1.25rem', '2.25rem'] }} variant="title">
         #FallGivingChallenge
       </Text>
-      <Button variant="landingChallenge" onClick={() => null}>
-        Explore lists
-      </Button>
+      <Link href="/">
+        <Button variant="landingChallenge" onClick={() => null}>
+          Explore lists
+        </Button>
+      </Link>
     </Flex>
   )
 }
@@ -73,7 +75,7 @@ export const FallGivingChallenge = () => {
         />
         <meta
           property="og:description"
-          content="Help give away $250,000 this November! Your first donation to each Givelist will be matched 1:1 up to $100."
+          content="Help give away $250,000 to charity this November! Your first donation to each Givelist will be matched 1:1 up to $100, while funds last."
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -108,9 +110,11 @@ export const FallGivingChallenge = () => {
 
         <Flex sx={styles.section} as="section">
           <ArrowDown />
-          <Button variant="landingChallenge" sx={styles.bigButton}>
-            Create your own Givelist
-          </Button>
+          <Link href="https://forms.gle/dWCGgbm7NX4Ln8BP7" target="_blank">
+            <Button variant="landingChallenge" sx={styles.bigButton}>
+              Create your own Givelist
+            </Button>
+          </Link>
           <Text
             sx={{
               fontSize: '24px',
@@ -209,7 +213,7 @@ export const FallGivingChallenge = () => {
         <Flex as="section" sx={styles.section}>
           <ArrowDown />
           <Link
-            href="https://giveli.st"
+            href="/"
             variant="buttons.landingChallenge"
             sx={styles.bigButton}
           >
