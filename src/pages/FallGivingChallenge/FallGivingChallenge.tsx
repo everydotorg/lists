@@ -1,6 +1,6 @@
-import { Box, Flex, Text, Button, ThemeProvider, Link } from 'theme-ui'
-import { theme } from 'src/styles/theme'
 import { Icon } from 'src/components/Icon'
+import { theme } from 'src/styles/theme'
+import { Box, Button, Flex, Link, Text, ThemeProvider } from 'theme-ui'
 import { styles } from './fallGivingChallengeStyles'
 
 const Header = () => {
@@ -78,8 +78,8 @@ export const FallGivingChallenge = () => {
           >
             <Text sx={styles.borderedText}>
               This November, donations made via Givelist will be{' '}
-              <strong>matched 1:1</strong> up to <strong>$100</strong> per list while
-              funds last!
+              <strong>matched 1:1</strong> up to <strong>$100</strong> per list
+              while funds last!
             </Text>
             <Text sx={styles.borderedText}>
               We are hoping to give away <strong>$250,000</strong> before the
