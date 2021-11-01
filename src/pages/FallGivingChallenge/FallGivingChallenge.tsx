@@ -86,7 +86,7 @@ export const FallGivingChallenge = () => {
               end of <strong>November</strong> and we need your help.
             </Text>
             <Text sx={styles.borderedText}>
-              Create and share you own Givelist, help us spread the word and
+              Create and share your own Givelist, help us spread the word and
               raise as much money for as many nonprofits as we can this fall!
             </Text>
           </Flex>
