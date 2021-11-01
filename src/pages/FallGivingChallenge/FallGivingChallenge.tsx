@@ -24,7 +24,7 @@ const Header = () => {
         #FallGivingChallenge
       </Text>
       <Button variant="landingChallenge" onClick={() => null}>
-        Create Givelist
+        Explore lists
       </Button>
     </Flex>
   )
@@ -66,7 +66,7 @@ export const FallGivingChallenge = () => {
       <Header />
       <Box as="main" sx={{ bg: 'landingChallenge', color: 'white', pt: 12 }}>
         <Text sx={styles.heading} as="h1">
-          Every donation matched this November 2021
+          Your donation matched this November 2021
         </Text>
         <Flex as="section" sx={styles.section}>
           <ArrowDown />
@@ -95,7 +95,7 @@ export const FallGivingChallenge = () => {
         <Flex sx={styles.section} as="section">
           <ArrowDown />
           <Button variant="landingChallenge" sx={styles.bigButton}>
-            Create your own givelist
+            Create your own Givelist
           </Button>
           <Text
             sx={{
@@ -133,7 +133,7 @@ export const FallGivingChallenge = () => {
             A donor can support multiple Givelist's and nonprofits. The first
             donation they make to each of those nonprofits will be matched.{' '}
             <Link
-              href="https://www.every.org/terms?utm_source=givelist"
+              href="https://docs.google.com/document/d/1bAd84goPWn8YgQry8vfgugNs9gBy9NQYZHXW2jDgTkM"
               target="_blank"
               sx={{ textDecoration: 'underline', color: 'currentcolor' }}
             >
@@ -199,7 +199,7 @@ export const FallGivingChallenge = () => {
             variant="buttons.landingChallenge"
             sx={styles.bigButton}
           >
-            Discover more givelists
+            Discover more Givelists
           </Link>
         </Flex>
       </Box>
