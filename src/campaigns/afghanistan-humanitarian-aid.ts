@@ -20,7 +20,7 @@ export const afghanistan: LocalCampaignInfo = {
     threshold: 100,
     // upTo: 50000,
     description:
-      'Amplify your gift! This November, each donor on Givelist will be matched up to $100 while funds.'
+      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $350,000 total matched.'
   },
   nonprofits: [
     {

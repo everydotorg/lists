@@ -94,7 +94,7 @@ export const FallGivingChallenge = () => {
             }}
           >
             <Text sx={styles.borderedText}>
-              This November, your first donation made via Givelist will be{' '}
+              This November, donations made via Givelist will be{' '}
               <strong>matched 1:1</strong> up to <strong>$100</strong> while
               funds last!
             </Text>
@@ -134,8 +134,8 @@ export const FallGivingChallenge = () => {
         <Flex sx={styles.section} as="section">
           <ArrowDown />
           <Text sx={styles.title}>
-            This November, your first donation to Givelist will be matched 1:1
-            up to $100.
+            This November, your first donation to each Givelist will be matched
+            1:1 up to $100.
           </Text>
           <Flex sx={{ '& > *:not(:last-child)': { mr: [4, 7] }, mb: 10 }}>
             <Amount title="You" amount="$100" />
@@ -149,12 +149,13 @@ export const FallGivingChallenge = () => {
               mt: 10
             }}
           >
-            Only the first donation a donor makes to a Givelist will be matched.
-            If someone makes two $50 donations, then only the first $50 would be
+            A donor can give to as many Givelist's as they want and be matched
+            up to $100 per list, while funds last. If someone makes two $50
+            donations to the same list, then only the first $50 would be
             matched. If someone makes a $1000 donation, then only the first $100
             is matched.{' '}
             <Link
-              href="https://docs.google.com/document/d/1BAv0TNIQOwzwNCEytvRUiS_O6MdbIauUoCL2jkxSZVE"
+              href="https://docs.google.com/document/d/1bAd84goPWn8YgQry8vfgugNs9gBy9NQYZHXW2jDgTkM"
               target="_blank"
               sx={{ textDecoration: 'underline', color: 'currentcolor' }}
             >

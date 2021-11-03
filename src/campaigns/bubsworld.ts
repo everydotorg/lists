@@ -20,7 +20,7 @@ export const bubsworld: LocalCampaignInfo = {
     threshold: 100,
     upTo: 50000,
     description:
-      'Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 each time until we reach $50,000 total matched.'
+      'Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 until we reach $50,000 total matched.'
   },
   nonprofits: [
     {
