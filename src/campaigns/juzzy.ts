@@ -17,7 +17,7 @@ export const juzzy: LocalCampaignInfo = {
     threshold: 100,
     upTo: 2000,
     description:
-      'Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 each time until we reach $2,000 total matched.'
+      'Amplify your gift! This November, each donor on Givelist will be matched up to $100 while funds.'
   },
   nonprofits: [
     {

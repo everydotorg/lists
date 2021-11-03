@@ -19,7 +19,7 @@ export const climate: LocalCampaignInfo = {
     threshold: 100,
     upTo: 10000,
     description:
-      'Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 each time until we reach $10,000 total matched.'
+      'Amplify your gift! This November, each donor on Givelist will be matched up to $100 while funds.'
   },
   nonprofits: [
     {

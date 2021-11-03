@@ -76,7 +76,7 @@ export const FallGivingChallenge = () => {
         />
         <meta
           property="og:description"
-          content="Help give away $250,000 to charity this November! Your first donation to each Givelist will be matched 1:1 up to $100, while funds last."
+          content="Help give away $350,000 to charity this November! Your first donation made via Givelist will be matched 1:1 up to $100, while funds last."
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -94,17 +94,17 @@ export const FallGivingChallenge = () => {
             }}
           >
             <Text sx={styles.borderedText}>
-              This November, donations made via Givelist will be{' '}
-              <strong>matched 1:1</strong> up to <strong>$100</strong> per list
-              while funds last!
+              This November, your first donation made via Givelist will be{' '}
+              <strong>matched 1:1</strong> up to <strong>$100</strong> while
+              funds last!
             </Text>
             <Text sx={styles.borderedText}>
-              We are hoping to give away <strong>$250,000</strong> before the
+              We are hoping to give away <strong>$350,000</strong> before the
               end of <strong>November</strong> and we need your help.
             </Text>
             <Text sx={styles.borderedText}>
               Create and share your own Givelist, help us spread the word and
-              raise as much money for as many nonprofits as we can this fall!
+              raise as much money for as many charities as we can this fall!
             </Text>
           </Flex>
         </Flex>
@@ -134,8 +134,8 @@ export const FallGivingChallenge = () => {
         <Flex sx={styles.section} as="section">
           <ArrowDown />
           <Text sx={styles.title}>
-            Starting November 1, your first donation to each Givelist will be
-            matched 1:1 up to $100.
+            This November, your first donation to Givelist will be matched 1:1
+            up to $100.
           </Text>
           <Flex sx={{ '& > *:not(:last-child)': { mr: [4, 7] }, mb: 10 }}>
             <Amount title="You" amount="$100" />
@@ -149,10 +149,12 @@ export const FallGivingChallenge = () => {
               mt: 10
             }}
           >
-            A donor can support multiple Givelist's and nonprofits. The first
-            donation they make to each of those nonprofits will be matched.{' '}
+            Only the first donation a donor makes to a Givelist will be matched.
+            If someone makes two $50 donations, then only the first $50 would be
+            matched. If someone makes a $1000 donation, then only the first $100
+            is matched.{' '}
             <Link
-              href="https://docs.google.com/document/d/1bAd84goPWn8YgQry8vfgugNs9gBy9NQYZHXW2jDgTkM"
+              href="https://docs.google.com/document/d/1BAv0TNIQOwzwNCEytvRUiS_O6MdbIauUoCL2jkxSZVE"
               target="_blank"
               sx={{ textDecoration: 'underline', color: 'currentcolor' }}
             >
@@ -205,8 +207,7 @@ export const FallGivingChallenge = () => {
               apply. For all donations using a bank account, 100% reaches
               nonprofits. Other payment methods have varying third party fees,
               usually 2.2% + $0.30 for Visa, Mastercard, or PayPal and if
-              applicable 2.25% for disbursements through Network for Good. See
-              more details at third party fees
+              applicable 2.25% for disbursements through Network for Good.
             </Text>
           </Box>
         </Flex>

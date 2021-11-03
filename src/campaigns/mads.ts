@@ -18,7 +18,7 @@ export const mads: LocalCampaignInfo = {
     threshold: 20,
     upTo: 2000,
     description:
-      'Amplify your gift! All donations are matched dollar-for-dollar up to $20 each time until we reach $2,000 total matched.'
+      'Amplify your gift! This November, each donor on Givelist will be matched up to $100 while funds.'
   },
   nonprofits: [
     {
