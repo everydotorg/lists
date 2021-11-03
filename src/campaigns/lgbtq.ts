@@ -18,7 +18,7 @@ export const lgbtq: LocalCampaignInfo = {
   sponsor: {
     ratio: '1-for-1',
     threshold: 100,
-    upTo: 10000,
+    // upTo: 10000,
     description:
       'Amplify your gift! This November, each donor on Givelist will be matched up to $100 while funds.'
   },

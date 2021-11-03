@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       campaignInfo.sponsor = {
         ratio: '1-for-1',
         threshold: 100,
-        upTo: 250000,
+        // upTo: 250000,
         description:
           'Amplify your gift! This November, each donor on Givelist will be matched up to $100 while funds.'
       }

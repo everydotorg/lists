@@ -18,7 +18,7 @@ export const afghanistan: LocalCampaignInfo = {
   sponsor: {
     ratio: '1-for-1',
     threshold: 100,
-    upTo: 50000,
+    // upTo: 50000,
     description:
       'Amplify your gift! This November, each donor on Givelist will be matched up to $100 while funds.'
   },

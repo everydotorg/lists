@@ -15,7 +15,7 @@ export const kimbramusic: LocalCampaignInfo = {
   sponsor: {
     ratio: '1-for-1',
     threshold: 100,
-    upTo: 5000,
+    // upTo: 5000,
     description:
       'Amplify your gift! All donations are matched dollar-for-dollar up to $100 each time until we reach $5,000 total matched.'
   },
