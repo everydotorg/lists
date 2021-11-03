@@ -81,7 +81,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             >
               <strong>{nonprofit.nonprofits?.length}</strong> nonprofits
             </Text>
-            {nonprofit.sponsor ? (
+            {nonprofit.sponsor?.upTo ? (
               <Text sx={{ fontSize: 2, lineHeight: '20px' }}>
                 <strong>
                   {currencyFormatter.format(nonprofit.sponsor.upTo)}
