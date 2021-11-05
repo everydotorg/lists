@@ -9,10 +9,10 @@ export const poverty: LocalCampaignInfo = {
   mobileBannerUrl: 'profile_pics/tt8w3ikpmtiau7xv5ije',
   bannerUrl: 'profile_pics/tt8w3ikpmtiau7xv5ije',
   socialShareText:
-    'Help the four nonprofits on this Givelist address the challenges of global poverty. Backed by $10,000 of matched funding, your donation is amplified and directed to those most in need.',
+    'Help the four nonprofits on this Givelist address the challenges of global poverty. Backed by matched funding, your donation is amplified and directed to those most in need.',
   previewImage: 'profile_pics/tt8w3ikpmtiau7xv5ije',
   about:
-    'Help the four nonprofits on this Givelist address the challenges of global poverty. Backed by $10,000 of matched funding, your donation is amplified and directed to those most in need.',
+    'Help the four nonprofits on this Givelist address the challenges of global poverty. Backed by matched funding, your donation is amplified and directed to those most in need.',
   cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
   sponsor: {
@@ -20,7 +20,7 @@ export const poverty: LocalCampaignInfo = {
     threshold: 100,
     // upTo: 10000,
     description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $375,000 total matched.'
+      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $475,000 total matched.'
   },
   nonprofits: [
     {

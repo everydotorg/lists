@@ -17,7 +17,7 @@ export const kimbramusic: LocalCampaignInfo = {
     threshold: 100,
     // upTo: 5000,
     description:
-      'Amplify your gift! All donations are matched dollar-for-dollar up to $100 each time until we reach $5,000 total matched.'
+      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $475,000 total matched.'
   },
   nonprofits: [
     {
