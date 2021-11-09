@@ -16,19 +16,21 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
   return (
     <>
       <Box sx={styles.container}>
-        <Image
-          src={mobileBannerUrl}
-          quality={45}
-          sizes="100vw"
-          // disable lazy loading from next/image and user browser's built-in
-          loading="eager"
-          alt="Campaign mobile banner"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          placeholder="blur"
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
-        />
+        {mobileBannerUrl && (
+          <Image
+            src={mobileBannerUrl}
+            quality={45}
+            sizes="100vw"
+            // disable lazy loading from next/image and user browser's built-in
+            loading="eager"
+            alt="Campaign mobile banner"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
+          />
+        )}
       </Box>
 
       <Box sx={styles.desktopContainer}>

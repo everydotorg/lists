@@ -123,19 +123,21 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         }}
       >
         <Box id="nonprofit-image-container" sx={styles.imageContainer}>
-          <Image
-            src={nonprofit.imageUrl}
-            quality={45}
-            sizes="(max-width: 900px) 100vw, 20vw"
-            // disable lazy loading from next/image and user browser's built-in
-            loading="eager"
-            alt={nonprofit.name + ' campaign image'}
-            className="next-home-image"
-            layout="fill"
-            objectFit="cover"
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
-          />
+          {nonprofit.imageUrl && (
+            <Image
+              src={nonprofit.imageUrl}
+              quality={45}
+              sizes="(max-width: 900px) 100vw, 20vw"
+              // disable lazy loading from next/image and user browser's built-in
+              loading="eager"
+              alt={nonprofit.name + ' campaign image'}
+              className="next-home-image"
+              layout="fill"
+              objectFit="cover"
+              placeholder="blur"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
+            />
+          )}
         </Box>
         <Flex sx={styles.logosSection}>
           {causeNonprofitLogos?.map((imgUrl) => (

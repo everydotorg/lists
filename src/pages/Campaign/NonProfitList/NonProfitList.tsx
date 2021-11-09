@@ -71,18 +71,20 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
             renderTitle={
               <Flex>
                 <Flex sx={styles.avartarContainer}>
-                  <Image
-                    src={nonprofit.img}
-                    quality={45}
-                    sizes="(max-width: 900px) 2.5rem, 4rem"
-                    // disable lazy loading from next/image and user browser's built-in
-                    loading="eager"
-                    alt="non profit image"
-                    layout="fill"
-                    objectPosition="center"
-                    objectFit="cover"
-                    className="next-avatar"
-                  />
+                  {nonprofit.img && (
+                    <Image
+                      src={nonprofit.img}
+                      quality={45}
+                      sizes="(max-width: 900px) 2.5rem, 4rem"
+                      // disable lazy loading from next/image and user browser's built-in
+                      loading="eager"
+                      alt="non profit image"
+                      layout="fill"
+                      objectPosition="center"
+                      objectFit="cover"
+                      className="next-avatar"
+                    />
+                  )}
                 </Flex>
 
                 <Flex sx={styles.textContainer}>

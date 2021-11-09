@@ -20,19 +20,21 @@ export const Banner = ({
 
   return (
     <Box sx={styles.banner}>
-      <Image
-        src={bannerUrl}
-        sizes="57vw"
-        quality={45}
-        // disable lazy loading from next/image and user browser's built-in
-        loading="eager"
-        alt="Campaign banner"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        placeholder="blur"
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
-      />
+      {bannerUrl && (
+        <Image
+          src={bannerUrl}
+          sizes="57vw"
+          quality={45}
+          // disable lazy loading from next/image and user browser's built-in
+          loading="eager"
+          alt="Campaign banner"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mO0LQUAAPUAtNYN+AkAAAAASUVORK5CYII="
+        />
+      )}
       {showBackList && <BackListButton />}
       {showAbout && <AboutButton />}
       {showDiscover && <DiscoverButton />}
