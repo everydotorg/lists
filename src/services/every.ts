@@ -2,6 +2,7 @@ import { CampaignInfo } from 'types/CampaignInfo'
 import { NonProfit } from 'types/NonProfit'
 
 const EVERY_API = 'https://partners.every.org/v0.2'
+
 interface EdoNonprofit {
   primarySlug: string
   name: string
@@ -15,7 +16,8 @@ export const getGivelistData = async (slug: string): Promise<CampaignInfo> => {
     `${EVERY_API}/nonprofit/${slug}?apiKey=givelist`
   ).then((res) => res.json())
 
-  if (everyListData?.data?.nonprofit?.type !== 'LIST')
+  // lilbub givelist has type = 'FUND', make an exception
+  if (everyListData?.data?.nonprofit?.type !== 'LIST' && slug !== 'lilbub')
     throw new Error('Not Found')
 
   const { nonprofit, endorsedNonprofits, fundMetadata } = everyListData.data

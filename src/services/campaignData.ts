@@ -29,6 +29,7 @@ export const getCampaignData = async (
     // If we need goal data, get it from Every.org API
     const showGoal =
       campaignInfo.showGoalOnListPage || campaignInfo.showGoalOnThankyouPage
+
     if (includeGoalData && showGoal) return withEdoData(slug, campaignInfo)
   }
 
@@ -52,6 +53,7 @@ const withEdoData = async (
   const everyListData = await getGivelistData(campaignInfo?.everySlug || slug)
 
   const nonprofits = []
+
   // Go through each nonprofit in our local data and merge with Every.org data
   if (campaignInfo?.nonprofits) {
     for (const nonprofit of campaignInfo.nonprofits) {
@@ -66,6 +68,7 @@ const withEdoData = async (
       }
     }
   }
+
   // Add any nonprofits from Every.org that weren't in local data
   for (const nonprofit of everyListData.nonprofits) {
     const inList = nonprofits.some(({ slug }) => slug === nonprofit.slug)
