@@ -18,7 +18,7 @@ export const mads: LocalCampaignInfo = {
     threshold: 20,
     // upTo: 2000,
     description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $475,000 total matched.'
+      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $525,000 total matched.'
   },
   nonprofits: [
     {

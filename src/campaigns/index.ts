@@ -15,6 +15,8 @@ import { gerc } from './gerc'
 import { juzzy } from './juzzy'
 import { lgbtq } from './lgbtq'
 import { lilbub } from './lilbub'
+import { puppylove } from './puppylove'
+import { nativeamerican } from './nativeamerican'
 import { mads } from './mads'
 import { climate } from './tacklingclimatechange'
 
@@ -35,6 +37,8 @@ export const campaigns: Record<string, LocalCampaignInfo> = {
   fff,
   bubsworld,
   lilbub,
+  puppylove,
+  nativeamerican,
   afghanistan,
   gerc
 }
