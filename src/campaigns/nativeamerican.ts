@@ -21,22 +21,27 @@ export const nativeamerican: LocalCampaignInfo = {
   },
   nonprofits: [
     {
-      slug: 'nativeconnections'
+      slug: 'nativeconnections',
+      location: 'Phoenix, AZ'
     },
     {
-      slug: 'native-american-rights-fund'
+      slug: 'native-american-rights-fund',
+      location: 'Boulder, CO'
     },
     {
-      slug: 'nativepartnership'
+      slug: 'nativepartnership',
+      location: 'Addison, TX'
     },
     {
-      slug: 'firstnations'
+      slug: 'firstnations',
+      location: 'Longmont, CO'
     },
     {
       slug: 'ndncollective'
     },
     {
-      slug: 'boardingschoolhealing'
+      slug: 'boardingschoolhealing',
+      location: 'Minneapolis, MN'
     }
   ]
 }
