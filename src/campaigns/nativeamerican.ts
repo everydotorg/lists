@@ -17,7 +17,7 @@ export const nativeamerican: LocalCampaignInfo = {
     threshold: 100,
     // upTo: 5000,
     description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $525,000 total matched.'
+      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
   },
   nonprofits: [
     {

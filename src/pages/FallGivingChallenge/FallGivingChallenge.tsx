@@ -76,7 +76,7 @@ export const FallGivingChallenge = () => {
         />
         <meta
           property="og:description"
-          content="Help give away $525,000 to charity this November! Your first donation made via Givelist will be matched 1:1 up to $100, while funds last."
+          content="Help give away $600,000 to charity this November! Your first donation made via Givelist will be matched 1:1 up to $100, while funds last."
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -99,7 +99,7 @@ export const FallGivingChallenge = () => {
               funds last!
             </Text>
             <Text sx={styles.borderedText}>
-              We are hoping to give away <strong>$525,000</strong> before the
+              We are hoping to give away <strong>$600,000</strong> before the
               end of <strong>November</strong> and we need your help.
             </Text>
             <Text sx={styles.borderedText}>
