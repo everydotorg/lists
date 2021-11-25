@@ -21,7 +21,6 @@ export const getCampaignData = async (
   // We have local info but we might still need more from Every.org API
   if ('everySlug' in campaignInfo) {
     // campaignInfo is type BaseLocalCampaignInfo because it has everySlug
-
     // If local info isn't complete we need to get the rest from Every.org API
     if (!isCompleteCampaign(campaignInfo))
       return withEdoData(slug, campaignInfo)
@@ -33,11 +32,18 @@ export const getCampaignData = async (
     if (includeGoalData && showGoal) return withEdoData(slug, campaignInfo)
   }
 
-  // Check all nonProfits have complete data
+  // Check all nonProfits have complete data, merge with local state
   for (let index = 0; index < campaignInfo.nonprofits.length; index++) {
     const nonprofit = campaignInfo.nonprofits[index]
+
     if (missingNonprofitKeys(nonprofit)) {
-      campaignInfo.nonprofits[index] = await getNonprofitData(nonprofit.slug)
+      const edoData = await getNonprofitData(nonprofit.slug)
+
+      campaignInfo.nonprofits[index] = {
+        ...edoData,
+        ...nonprofit
+        // apply local overrides
+      }
     }
   }
 
@@ -60,6 +66,7 @@ const withEdoData = async (
       const edoNonprofit = everyListData.nonprofits.find(
         ({ slug }) => slug === nonprofit.slug
       )
+
       if (edoNonprofit) {
         nonprofits.push({
           ...edoNonprofit,
@@ -121,7 +128,9 @@ export const isCompleteCampaign = (
 ) => {
   // not complete if required keys are missing
   if (missingKeys(campaignInfo)) return false
+
   // not complete if some nonprofits are missing keys
   if (campaignInfo.nonprofits?.some(missingNonprofitKeys)) return false
+
   return true
 }
