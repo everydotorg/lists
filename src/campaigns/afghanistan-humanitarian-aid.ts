@@ -15,13 +15,6 @@ export const afghanistan: LocalCampaignInfo = {
   about:
     'Support humanitarian efforts on the ground in Afghanistan and across the globe for Afghan refugees.',
   cause: 'HUMAN_SERVICES',
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 50000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'irc',

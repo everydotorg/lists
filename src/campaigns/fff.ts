@@ -13,13 +13,6 @@ export const fff: LocalCampaignInfo = {
   about:
     'This initiative aims to write this neglected kingdom of life into conservation and agricultural policy frameworks, protect it under international and domestic law, and unlock crucial funding for mycological research, surveys and educational programs. We are unthinkable without Fungi.',
   cause: 'ENVIRONMENT',
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 10000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'ffungi',

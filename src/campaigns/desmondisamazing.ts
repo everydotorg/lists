@@ -12,13 +12,6 @@ export const desmondisamazing: LocalCampaignInfo = {
   about: 'Here are some amazing organizations to support.',
   cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 5000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'ali-forney-center',

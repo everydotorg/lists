@@ -15,13 +15,6 @@ export const lgbtq: LocalCampaignInfo = {
     'Help these nonprofits inspire and engage all to end discrimination against LGBTQ+ Citizens and realize fundamental fairness and equality.',
   cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 10000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'transemergencyfund',

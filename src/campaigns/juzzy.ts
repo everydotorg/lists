@@ -12,13 +12,6 @@ export const juzzy: LocalCampaignInfo = {
   about: 'Here are some great organizations to support.',
   cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 2000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'oxfam-america',

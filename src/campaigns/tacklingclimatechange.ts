@@ -14,13 +14,6 @@ export const climate: LocalCampaignInfo = {
   about:
     'Support nonprofits taking action towards a more prosperous planet. Your donation will help fund research leveraging science and technology for positive change.',
   cause: 'ENVIRONMENT',
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 10000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'cleanaircatf',
