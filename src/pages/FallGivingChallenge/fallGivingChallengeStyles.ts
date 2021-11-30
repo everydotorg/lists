@@ -27,7 +27,10 @@ export const styles: Record<string, ThemeUIStyleObject> = {
     width: 'min(100%, 1150px)',
     margin: '0 auto',
     py: [10, 12],
-    px: [4, 7]
+    px: [4, 7],
+    '& > span': {
+      display: 'block'
+    }
   },
   title: {
     fontSize: ['2rem', '3rem'],

@@ -15,13 +15,6 @@ export const bubsworld: LocalCampaignInfo = {
   cause: 'ANIMALS',
   fundingGoal: 25000,
   showGoalOnThankyouPage: true,
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    upTo: 50000,
-    description:
-      'Amplify your gift! Generous donors will match you dollar-for-dollar up to $100 until we reach $50,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'lilbubsbigfund',

@@ -15,13 +15,6 @@ export const antiracism: LocalCampaignInfo = {
     'Your donation will be split evenly between these groups working tirelessly to fight racism and promote justice for all.',
   cause: 'HUMAN_AND_CIVIL_RIGHTS',
   fundingGoal: 50000,
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // // upTo: 10000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'ndncollective',

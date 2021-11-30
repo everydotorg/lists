@@ -15,13 +15,6 @@ export const education: LocalCampaignInfo = {
     'Support these nonprofits striving to improve education for children around the world with evidence-based solutions.',
   cause: 'EDUCATION',
   fundingGoal: 50000,
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 10000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'tarl',

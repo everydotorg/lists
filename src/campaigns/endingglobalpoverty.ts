@@ -15,13 +15,6 @@ export const poverty: LocalCampaignInfo = {
     'Help the four nonprofits on this Givelist address the challenges of global poverty. Backed by matched funding, your donation is amplified and directed to those most in need.',
   cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 10000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'newincentives',

@@ -14,13 +14,6 @@ export const gerc: LocalCampaignInfo = {
     'The Global Emergency Response Coalition is a lifesaving humanitarian alliance made up of eight leading U.S.-based international aid organizations. When disaster strikes, the Coalition mobilizes to help children and families in urgent need. By working together, we can increase awareness and funds to deliver emergency relief quickly and efficiently to save lives and help rebuild communities.',
   cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
-  sponsor: {
-    ratio: '1-for-1',
-    threshold: 100,
-    // upTo: 10000,
-    description:
-      'Amplify your gift this November! Generous donors will match you dollar-for-dollar up to $100 on any list, until we reach $600,000 total matched.'
-  },
   nonprofits: [
     {
       slug: 'care',

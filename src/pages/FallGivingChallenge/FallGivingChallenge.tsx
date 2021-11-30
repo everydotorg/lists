@@ -83,7 +83,8 @@ export const FallGivingChallenge = () => {
       <Header />
       <Box as="main" sx={{ bg: 'landingChallenge', color: 'white', pt: 12 }}>
         <Text sx={styles.heading} as="h1">
-          Your donation matched this November 2021
+          <span>Match ended!</span>
+          <span>Over 1.7M raised for nonprofits</span>
         </Text>
         <Flex as="section" sx={styles.section}>
           <ArrowDown />
