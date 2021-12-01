@@ -76,15 +76,15 @@ export const FallGivingChallenge = () => {
         />
         <meta
           property="og:description"
-          content="Help give away $600,000 to charity this November! Your first donation made via Givelist will be matched 1:1 up to $100, while funds last."
+          content="This campaign has now closed. Thanks to everyone for donating over 1.9M during the #FallGivingChallenge!"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Header />
       <Box as="main" sx={{ bg: 'landingChallenge', color: 'white', pt: 12 }}>
         <Text sx={styles.heading} as="h1">
-          <span>Match ended!</span>
-          <span>Over 1.7M raised for nonprofits</span>
+          <span>Thanks to everyone for donating!</span>
+          <span>Over 1.9M has been raised for nonprofits</span>
         </Text>
         <Flex as="section" sx={styles.section}>
           <ArrowDown />
@@ -95,17 +95,17 @@ export const FallGivingChallenge = () => {
             }}
           >
             <Text sx={styles.borderedText}>
-              This November, donations made via Givelist will be{' '}
-              <strong>matched 1:1</strong> up to <strong>$100</strong> while
-              funds last!
+              During the month of November <strong>$620,000</strong> in matching
+              from generous donors was used to amplify <strong>9,316</strong>{' '}
+              individual gifts!
             </Text>
             <Text sx={styles.borderedText}>
-              We are hoping to give away <strong>$600,000</strong> before the
-              end of <strong>November</strong> and we need your help.
+              Supporting <strong>1,294</strong> nonprofits with over{' '}
+              <strong>1.9M</strong> total raised for good causes.
             </Text>
             <Text sx={styles.borderedText}>
-              Create and share your own Givelist, help us spread the word and
-              raise as much money for as many charities as we can this fall!
+              You can still create your own Givelist for free, to continue to
+              raise money for your favourite charities.
             </Text>
           </Flex>
         </Flex>
@@ -135,8 +135,8 @@ export const FallGivingChallenge = () => {
         <Flex sx={styles.section} as="section">
           <ArrowDown />
           <Text sx={styles.title}>
-            This November, your first donation to each Givelist will be matched
-            1:1 up to $100.
+            How it worked, in November 2021 all first donations to each Givelist
+            were matched 1:1 up to $100.
           </Text>
           <Flex sx={{ '& > *:not(:last-child)': { mr: [4, 7] }, mb: 10 }}>
             <Amount title="You" amount="$100" />
@@ -150,11 +150,11 @@ export const FallGivingChallenge = () => {
               mt: 10
             }}
           >
-            A donor can give to as many Givelist's as they want and be matched
-            up to $100 per list, while funds last. If someone makes two $50
-            donations to the same list, then only the first $50 would be
-            matched. If someone makes a $1000 donation, then only the first $100
-            is matched.{' '}
+            Thanks again to all of our generous Donors and to everyone who
+            donated to a Givelist or to a nonprofit via Every.org during out
+            #FallGivingChallenge. We could not be more proud of what we were
+            able to achieve together with all of your help. We hope to continue
+            this spirit of giving into the holiday season and beyond!{' '}
             <Link
               href="https://docs.google.com/document/d/1bAd84goPWn8YgQry8vfgugNs9gBy9NQYZHXW2jDgTkM"
               target="_blank"
