@@ -83,8 +83,8 @@ export const FallGivingChallenge = () => {
       <Header />
       <Box as="main" sx={{ bg: 'landingChallenge', color: 'white', pt: 12 }}>
         <Text sx={styles.heading} as="h1">
-          <span>Thanks to everyone for donating!</span>
-          <span>Over 1.9M has been raised for nonprofits</span>
+          <span>Thank you everyone!</span>
+          <span>Together we raised over 1.9M for nonprofits</span>
         </Text>
         <Flex as="section" sx={styles.section}>
           <ArrowDown />
@@ -100,7 +100,7 @@ export const FallGivingChallenge = () => {
               individual gifts!
             </Text>
             <Text sx={styles.borderedText}>
-              Supporting <strong>1,294</strong> nonprofits with over{' '}
+              These gifts supported <strong>1,294</strong> nonprofits with over{' '}
               <strong>1.9M</strong> total raised for good causes.
             </Text>
             <Text sx={styles.borderedText}>
@@ -151,7 +151,7 @@ export const FallGivingChallenge = () => {
             }}
           >
             Thanks again to all of our generous Donors and to everyone who
-            donated to a Givelist or to a nonprofit via Every.org during out
+            donated to a Givelist or to a nonprofit via Every.org during the
             #FallGivingChallenge. We could not be more proud of what we were
             able to achieve together with all of your help. We hope to continue
             this spirit of giving into the holiday season and beyond!{' '}
