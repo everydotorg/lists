@@ -18,6 +18,7 @@ import { lilbub } from './lilbub'
 import { puppylove } from './puppylove'
 import { nativeamerican } from './nativeamerican'
 import { mads } from './mads'
+import { brendas } from './brendas-list'
 import { climate } from './tacklingclimatechange'
 
 export const campaigns: Record<string, LocalCampaignInfo> = {
@@ -36,6 +37,7 @@ export const campaigns: Record<string, LocalCampaignInfo> = {
   desmondisamazing,
   fff,
   bubsworld,
+  brendas,
   lilbub,
   puppylove,
   nativeamerican,
