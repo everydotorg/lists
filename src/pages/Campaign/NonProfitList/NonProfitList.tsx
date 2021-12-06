@@ -4,6 +4,7 @@ import { Fragment, useCallback, useState } from 'react'
 import { Expandable } from 'src/components/Expandable'
 import { useAboutModal } from 'src/hooks/useAboutModal'
 import { gtag } from 'src/services/gtag'
+import { displayLocation } from 'src/services/location'
 import { NonProfit as NonProfitType } from 'types/NonProfit'
 import { styles } from './nonProfitListStyles'
 
@@ -92,7 +93,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                     <strong>{nonprofit.name}</strong>
                   </Text>
                   <Text variant="medium" sx={styles.location}>
-                    {nonprofit.location}
+                    {nonprofit.location && displayLocation(nonprofit.location)}
                   </Text>
                 </Flex>
               </Flex>
