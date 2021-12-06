@@ -84,7 +84,7 @@ function titleize(str: string) {
 
 /**
  * Converts a nonprofit's locationAddress string from our Nonprofit datasets to
- * a consistent, human-readable form.
+ * a consistent, human-readable form
  *
  * Heuristics decided and justified here:
  * https://github.com/everydotorg/every.org/issues/1534

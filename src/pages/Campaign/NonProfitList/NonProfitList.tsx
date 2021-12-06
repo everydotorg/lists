@@ -93,7 +93,7 @@ export const NonProfitList: React.FC<NonProfitProps> = ({ list }) => {
                     <strong>{nonprofit.name}</strong>
                   </Text>
                   <Text variant="medium" sx={styles.location}>
-                    {displayLocation(nonprofit.location)}
+                    {nonprofit.location && displayLocation(nonprofit.location)}
                   </Text>
                 </Flex>
               </Flex>
