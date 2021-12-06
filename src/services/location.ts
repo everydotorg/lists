@@ -79,12 +79,12 @@ const COUNTRY_NAME_REGEX = /^[a-z &]+/i
 const MAX_COUNTRY_NAME_LENGTH = 22
 
 function titleize(str: string) {
-  return str.toLowerCase().replace(/(?:^|\s|-)\S/g, (x) => x.toUpperCase())
+  return str.toLowerCase().replace(/(?:^|\s|-|\.)\S/g, (x) => x.toUpperCase())
 }
 
 /**
  * Converts a nonprofit's locationAddress string from our Nonprofit datasets to
- * a consistent, human-readable form
+ * a consistent, human-readable form.
  *
  * Heuristics decided and justified here:
  * https://github.com/everydotorg/every.org/issues/1534
