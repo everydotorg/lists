@@ -104,7 +104,7 @@ export const FallGivingChallenge = () => {
               <strong>1.9M</strong> total raised for good causes.
             </Text>
             <Text sx={styles.borderedText}>
-              You can still create your own Givelist for free, to continue to
+              You can still create your own giveli.st for free, to continue to
               raise money for your favourite charities.
             </Text>
           </Flex>
@@ -126,7 +126,7 @@ export const FallGivingChallenge = () => {
               mt: 10
             }}
           >
-            We will make you your very own Givelist with a unique link you can
+            We will make you your very own giveli.st with a unique link you can
             share with your friends and followers to use to encourage them to
             donate to your recommended nonprofits.
           </Text>
@@ -151,7 +151,7 @@ export const FallGivingChallenge = () => {
             }}
           >
             Thanks again to all of our generous Donors and to everyone who
-            donated to a Givelist or to a nonprofit via Every.org during the
+            donated to a giveli.st or to a nonprofit via Every.org during the
             #FallGivingChallenge. We could not be more proud of what we were
             able to achieve together with all of your help. We hope to continue
             this spirit of giving into the holiday season and beyond!{' '}
@@ -199,7 +199,7 @@ export const FallGivingChallenge = () => {
             }}
           >
             <Text>
-              Givelist is created by Every.org, a nonprofit building accessible
+              giveli.st is created by Every.org, a nonprofit building accessible
               giving infrastructure supported entirely by donors including
               Camp.org and Gates Foundation; we do not charge any platform fees
               of our own, and 100% of the matching funds will go to nonprofits.

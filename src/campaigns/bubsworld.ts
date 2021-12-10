@@ -11,7 +11,7 @@ export const bubsworld: LocalCampaignInfo = {
     'Lil BUB’s Better World Fundraiser raises money for four organizations very close to BUB’s heart by investing in our planet, our children, our pets, and our future.',
   previewImage: 'profile_pics/ipxxsfqxtt6skku7vh1z',
   about:
-    "Investing In Our Planet, Our Children, Our Pets, and Our Future: Lil BUB taught us that our differences are what make us who we are and that our planet needs love and attention as do the animals and pets that rely on it. We are launching this Givelist Campaign in her honor by raising funds for organizations doing the work that Lil BUB believes in: Sycamore Land Trust for land preservation, Power of Zero to help prevent bullying in schools, Milo's Sanctuary for the care of homeless pets with special needs, and our own Lil BUB's Big FUND, whose mission it is to bring these causes together.",
+    "Investing In Our Planet, Our Children, Our Pets, and Our Future: Lil BUB taught us that our differences are what make us who we are and that our planet needs love and attention as do the animals and pets that rely on it. We are launching this giveli.st Campaign in her honor by raising funds for organizations doing the work that Lil BUB believes in: Sycamore Land Trust for land preservation, Power of Zero to help prevent bullying in schools, Milo's Sanctuary for the care of homeless pets with special needs, and our own Lil BUB's Big FUND, whose mission it is to bring these causes together.",
   cause: 'ANIMALS',
   fundingGoal: 25000,
   showGoalOnThankyouPage: true,
