@@ -52,7 +52,7 @@ export const ThankYou = () => {
         )}
 
         <Card
-          description={`A receipt was sent to your email. Your donation to this Givelist is
+          description={`A receipt was sent to your email. Your donation to this giveli.st is
           powered by Every.org - a ${everyOrgDescription}`}
           inverted
         ></Card>
@@ -61,7 +61,7 @@ export const ThankYou = () => {
 
         <Card
           title="Want to make your own Givelist?"
-          description="Take a 3 minute survey to help us shape the best Givelist experience for you."
+          description="Take a 3 minute survey to help us shape the best giveli.st experience for you."
           renderActions={
             <Flex sx={{ alignItems: 'flex-start' }}>
               <Link

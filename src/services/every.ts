@@ -16,7 +16,7 @@ export const getGivelistData = async (slug: string): Promise<CampaignInfo> => {
     `${EVERY_API}/nonprofit/${slug}?apiKey=givelist`
   ).then((res) => res.json())
 
-  // lilbub givelist has type = 'FUND', make an exception
+  // lilbub giveli.st has type = 'FUND', make an exception
   if (everyListData?.data?.nonprofit?.type !== 'LIST' && slug !== 'lilbub')
     throw new Error('Not Found')
 
