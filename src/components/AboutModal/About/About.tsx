@@ -11,10 +11,9 @@ export const About = () => {
     <>
       <Box sx={styles.textContainer}>
         <Text variant="regular" sx={styles.text}>
-          giveli.st provides people with a platform to highlight the nonprofits
-          they love, share them with their communities online, and have the
-          ability to donate to a list of recommended nonprofits all in one
-          place.
+          People can use giveli.st to highlight the nonprofits they love, share
+          them with their communities online, and have the ability to donate to
+          a list of recommended nonprofits all in one place.
         </Text>
 
         <Text variant="regular" sx={styles.text}>
@@ -25,9 +24,8 @@ export const About = () => {
         </Text>
 
         <Text variant="regular" sx={styles.text}>
-          giveli.st and Every.org handle the entire giving experience, from
-          payment step, tax receipt, and payout to each of the nonprofits, all
-          at no cost.
+          Every.org handles the entire giving experience, from payment step, tax
+          receipt, and payout to each of the nonprofits, all at no cost.
         </Text>
       </Box>
 
