@@ -27,8 +27,7 @@ export const CampaignLayout = ({
   showBackList = false,
   children
 }: CampaignLayoutProps) => {
-  const { primaryColor, slug, socialShareText, name, previewImage } =
-    campaignInfo
+  const { primaryColor, socialShareText, name, previewImage } = campaignInfo
 
   const color = new Color(primaryColor, 'hex')
 
