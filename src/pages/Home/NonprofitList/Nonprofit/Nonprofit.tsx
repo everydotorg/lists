@@ -111,7 +111,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             }}
           >
             <Text as="span" sx={styles.linkText}>
-              every.org/f/{nonprofit.slug}
+              every.org/lists/{nonprofit.slug}
             </Text>
           </RebassLink>
         </Flex>

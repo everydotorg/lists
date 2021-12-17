@@ -42,7 +42,7 @@ export const ShareCard = () => {
               mr: 2
             }}
           >
-            every.org/f/{slug}
+            every.org/lists/{slug}
           </CopyToClipboard>
           <Flex
             sx={{

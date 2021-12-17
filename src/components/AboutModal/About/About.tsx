@@ -11,7 +11,7 @@ export const About = () => {
     <>
       <Box sx={styles.textContainer}>
         <Text variant="regular" sx={styles.text}>
-          People can use Every.org lists to highlight the nonprofits they love,
+          People can use Every.org Lists to highlight the nonprofits they love,
           share them with their communities online, and have the ability to
           donate to a list of recommended nonprofits all in one place.
         </Text>
