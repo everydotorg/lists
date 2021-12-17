@@ -18,7 +18,7 @@ export const DiscoverButton = () => {
           variant="primarySmallInverted"
           sx={styles.discoverButton}
         >
-          <span>Discover more Givelists</span>
+          <span>Discover more lists</span>
         </Button>
       </Link>
     </Flex>

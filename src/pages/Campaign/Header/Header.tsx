@@ -41,7 +41,7 @@ export const Header = ({ onClickDonate }: HeaderProps): JSX.Element => {
           linkCopiedStyle={styles.linkCopied}
           variant="primarySmallInverted"
         >
-          giveli.st/{slug}
+          every.org/f/{slug}
         </CopyToClipboard>
       </Box>
       <Button

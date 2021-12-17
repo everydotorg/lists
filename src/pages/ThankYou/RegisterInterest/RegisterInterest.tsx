@@ -13,13 +13,7 @@ export const RegisterInterest = (): JSX.Element => {
 
   return (
     <Box sx={styles.container}>
-      <Text variant="regular">
-        Want to make your own list of nonprofits?{' '}
-        <Text sx={styles.lightText}>
-          Register your interest and we will let you know as soon as the
-          Giveli.st creator is ready to try out!
-        </Text>
-      </Text>
+      <Text variant="regular">Want to make your own list of nonprofits?</Text>
       <Link
         id="register-interest"
         href={FORM_LINK}
@@ -29,7 +23,7 @@ export const RegisterInterest = (): JSX.Element => {
         sx={styles.button}
         variant="buttons.primaryInverted"
       >
-        <span>{interestRegistered ? 'Thank you!' : 'Register Interest'}</span>
+        <span>{interestRegistered ? 'Thank you!' : 'Create your own'}</span>
       </Link>
     </Box>
   )

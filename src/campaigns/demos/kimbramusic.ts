@@ -7,10 +7,10 @@ export const kimbramusic: LocalCampaignInfo = {
   imageUrl: 'profile_pics/m55ejevkilies4mjuzfw',
   bannerUrl: 'profile_pics/m55ejevkilies4mjuzfw',
   socialShareText:
-    'So excited about making my first Givelist! Here are a few charities that I think are doing great work. Grateful for every donation as every little bit counts!',
+    'So excited about making my first list! Here are a few charities that I think are doing great work. Grateful for every donation as every little bit counts!',
   previewImage: 'profile_pics/m55ejevkilies4mjuzfw',
   about:
-    'So excited about making my first Givelist! Here are a few charities that I think are doing great work. Grateful for every donation as every little bit counts!',
+    'So excited about making my first list! Here are a few charities that I think are doing great work. Grateful for every donation as every little bit counts!',
   cause: 'HUMAN_AND_CIVIL_RIGHTS',
   sponsor: {
     ratio: '1-for-1',

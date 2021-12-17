@@ -21,7 +21,7 @@ export const ThankYou = () => {
 
   const navigateToSignup = () => {
     gtag.pushEvent('signup', {})
-    window.open('https://www.every.org/signup?utm_source=givelist', '_blank')
+    window.open('https://www.every.org/signup?utm_source=list', '_blank')
   }
 
   return (
@@ -52,7 +52,7 @@ export const ThankYou = () => {
         )}
 
         <Card
-          description={`A receipt was sent to your email. Your donation to this giveli.st is
+          description={`A receipt was sent to your email. Your donation to this list is
           powered by Every.org - a ${everyOrgDescription}`}
           inverted
         ></Card>
@@ -60,8 +60,8 @@ export const ThankYou = () => {
         <ShareCard />
 
         <Card
-          title="Want to make your own Givelist?"
-          description="Take a 3 minute survey to help us shape the best giveli.st experience for you."
+          title="Want to make your own list?"
+          description="Take a 3 minute survey to help us shape the best Every.org List experience for you."
           renderActions={
             <Flex sx={{ alignItems: 'flex-start' }}>
               <Link

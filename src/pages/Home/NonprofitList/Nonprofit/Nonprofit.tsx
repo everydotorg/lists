@@ -34,7 +34,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
     }
   }
 
-  const toGivelist = () => {
+  const toList = () => {
     gtag.pushEvent('campaign_clicked', { campaign: nonprofit.slug })
 
     router.push(
@@ -58,7 +58,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
         borderColor: causeColor.pastel40,
         ...hoverStyles
       }}
-      onClick={toGivelist}
+      onClick={toList}
     >
       <Flex
         sx={{
@@ -111,7 +111,7 @@ export const Nonprofit = ({ nonprofit }: NonprofitProps) => {
             }}
           >
             <Text as="span" sx={styles.linkText}>
-              giveli.st/{nonprofit.slug}
+              every.org/f/{nonprofit.slug}
             </Text>
           </RebassLink>
         </Flex>

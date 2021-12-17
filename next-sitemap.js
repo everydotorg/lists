@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://giveli.st',
+  siteUrl: 'https://www.every.org/lists',
   generateRobotsTxt: false,
   exclude: ['/*/donate', '/*/thank-you']
 }

@@ -24,7 +24,7 @@ export const ShareCard = () => {
 
   return (
     <Card
-      title={`Share this Givelist`}
+      title={`Share this list`}
       description="Turn this moment into a movement by texting or emailing friends, setting your link in bio, and sharing to social media."
       renderActions={
         <Flex sx={{ alignItems: 'center', justifyContent: 'space-between' }}>
@@ -42,7 +42,7 @@ export const ShareCard = () => {
               mr: 2
             }}
           >
-            giveli.st/{slug}
+            every.org/f/{slug}
           </CopyToClipboard>
           <Flex
             sx={{

@@ -8,10 +8,10 @@ export const mads: LocalCampaignInfo = {
   imageUrl: 'profile_pics/x3hbubkio4lthohj73td',
   bannerUrl: 'profile_pics/x3hbubkio4lthohj73td',
   socialShareText:
-    'So excited about making my first Givelist! Here are a few charities that I think are doing great work in NYC. Grateful for every donation as every little bit counts!',
+    'So excited about making my first list! Here are a few charities that I think are doing great work in NYC. Grateful for every donation as every little bit counts!',
   previewImage: 'profile_pics/x3hbubkio4lthohj73td',
   about:
-    'So excited about making my first Givelist! Here are a few charities that I think are doing great work in NYC. Grateful for every donation as every little bit counts!',
+    'So excited about making my first list! Here are a few charities that I think are doing great work in NYC. Grateful for every donation as every little bit counts!',
   cause: 'ANIMALS',
   nonprofits: [
     {

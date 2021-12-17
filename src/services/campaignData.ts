@@ -5,7 +5,7 @@ import {
   LocalCampaignInfo
 } from 'types/CampaignInfo'
 import { NonProfit } from 'types/NonProfit'
-import { getGivelistData, getNonprofitData } from './every'
+import { getListData, getNonprofitData } from './every'
 
 export const getCampaignData = async (
   slug: string,
@@ -56,7 +56,7 @@ const withEdoData = async (
   campaignInfo?: BaseLocalCampaignInfo
 ) => {
   // use everySlug from campaignInfo if available - the slug on Every.org might be different to ours
-  const everyListData = await getGivelistData(campaignInfo?.everySlug || slug)
+  const everyListData = await getListData(campaignInfo?.everySlug || slug)
 
   const nonprofits = []
 

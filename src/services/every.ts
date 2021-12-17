@@ -11,12 +11,12 @@ interface EdoNonprofit {
   logoCloudinaryId: string
 }
 
-export const getGivelistData = async (slug: string): Promise<CampaignInfo> => {
+export const getListData = async (slug: string): Promise<CampaignInfo> => {
   const everyListData = await fetch(
-    `${EVERY_API}/nonprofit/${slug}?apiKey=givelist`
+    `${EVERY_API}/nonprofit/${slug}?apiKey=list`
   ).then((res) => res.json())
 
-  // lilbub giveli.st has type = 'FUND', make an exception
+  // lilbub has type = 'FUND', make an exception
   if (everyListData?.data?.nonprofit?.type !== 'LIST' && slug !== 'lilbub')
     throw new Error('Not Found')
 
@@ -57,7 +57,7 @@ export const getGivelistData = async (slug: string): Promise<CampaignInfo> => {
 
 export const getNonprofitData = async (slug: string): Promise<NonProfit> => {
   const everyListData = await fetch(
-    `${EVERY_API}/nonprofit/${slug}?apiKey=givelist`
+    `${EVERY_API}/nonprofit/${slug}?apiKey=list`
   ).then((res) => res.json())
 
   if (everyListData?.data?.nonprofit?.type !== 'NONPROFIT')

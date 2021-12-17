@@ -16,8 +16,8 @@ export const styles: Style = {
     borderTop: '1px solid',
     borderTopColor: 'borderGray'
   },
-  givelistText: {
-    label: 'brand-givelistText',
+  listText: {
+    label: 'brand-listText',
     color: 'text',
     fontWeight: 'bold',
     textDecoration: 'none'

@@ -43,7 +43,7 @@ export const CampaignLayout = ({
   }
 
   const url = baseUrlWithPaths(campaignInfo.slug)
-  const title = `${name} • giveli.st/${slug}`
+  const title = `${name} | Every.org`
 
   return (
     <ThemeProvider theme={campaignTheme}>
