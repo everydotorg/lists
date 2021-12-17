@@ -13,7 +13,7 @@ interface EdoNonprofit {
 
 export const getListData = async (slug: string): Promise<CampaignInfo> => {
   const everyListData = await fetch(
-    `${EVERY_API}/nonprofit/${slug}?apiKey=list`
+    `${EVERY_API}/nonprofit/${slug}?apiKey=givelist`
   ).then((res) => res.json())
 
   // lilbub has type = 'FUND', make an exception
@@ -57,7 +57,7 @@ export const getListData = async (slug: string): Promise<CampaignInfo> => {
 
 export const getNonprofitData = async (slug: string): Promise<NonProfit> => {
   const everyListData = await fetch(
-    `${EVERY_API}/nonprofit/${slug}?apiKey=list`
+    `${EVERY_API}/nonprofit/${slug}?apiKey=givelist`
   ).then((res) => res.json())
 
   if (everyListData?.data?.nonprofit?.type !== 'NONPROFIT')
