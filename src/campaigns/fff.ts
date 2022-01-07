@@ -2,7 +2,7 @@ import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const fff: LocalCampaignInfo = {
   slug: 'fff',
   everySlug: 'fff',
-  name: 'The 3F Intitative',
+  name: 'The 3F Initiative',
   primaryColor: '#00A37F',
   mobileBannerUrl: 'profile_pics/vsgc9buyuzny1sf34zob',
   imageUrl: 'profile_pics/vsgc9buyuzny1sf34zob',
