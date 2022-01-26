@@ -11,9 +11,9 @@ export const About = () => {
     <>
       <Box sx={styles.textContainer}>
         <Text variant="regular" sx={styles.text}>
-          People can use giveli.st to highlight the nonprofits they love, share
-          them with their communities online, and have the ability to donate to
-          a list of recommended nonprofits all in one place.
+          People can create a list on Every.org to highlight the nonprofits they
+          love, share them with their communities online, and have the ability
+          to donate to a list of recommended nonprofits all in one place.
         </Text>
 
         <Text variant="regular" sx={styles.text}>
@@ -38,7 +38,7 @@ export const About = () => {
 
         <CardLink
           title="Powered by Every.org"
-          href="https://every.org?utm_source=givelist"
+          href="https://every.org?utm_source=list"
         >
           A {everyOrgDescription}
         </CardLink>
@@ -57,7 +57,7 @@ export const About = () => {
 
         <CardLink
           title="Original concept"
-          href="https://www.bettergivingstudio.com/product-concept/givelist"
+          href="https://www.bettergivingstudio.com/product-concept/list"
         >
           Better Giving Studio. Licensed under CC BY 4.0.
         </CardLink>

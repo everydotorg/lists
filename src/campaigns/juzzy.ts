@@ -2,7 +2,7 @@ import { LocalCampaignInfo } from '../../types/CampaignInfo'
 export const juzzy: LocalCampaignInfo = {
   slug: 'juzzy',
   everySlug: 'juzzy',
-  name: "Justyn's Givelist",
+  name: "Justyn's list",
   primaryColor: '#F9932D',
   imageUrl: 'profile_pics/ifuwttx6srrgdheczt3r',
   mobileBannerUrl: 'profile_pics/ifuwttx6srrgdheczt3r',

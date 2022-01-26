@@ -34,13 +34,13 @@ export const AlternativeDonation = () => {
           Crypto
         </Link>
         <Link
-          href="https://www.every.org/donate-stock?utm_source=givelist"
+          href="https://www.every.org/donate-stock?utm_source=list"
           variant="regular"
         >
           Stocks
         </Link>
         <Link
-          href="https://support.every.org/hc/en-us/articles/360059998953-How-can-I-donate-using-a-Donor-Advised-Fund-DAF-?utm_source=givelist"
+          href="https://support.every.org/hc/en-us/articles/360059998953-How-can-I-donate-using-a-Donor-Advised-Fund-DAF-?utm_source=list"
           variant="regular"
         >
           DAF

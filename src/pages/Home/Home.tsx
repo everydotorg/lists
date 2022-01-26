@@ -16,7 +16,7 @@ export type HomeProps = {
 export const Home = ({ nonProfits }: HomeProps) => {
   return (
     <Flex sx={styles.container}>
-      <NonprofitList nonProfits={nonProfits} sx={styles.givelistSection} />
+      <NonprofitList nonProfits={nonProfits} sx={styles.listSection} />
       <Flex sx={styles.heroSection}>
         <Hero />
       </Flex>

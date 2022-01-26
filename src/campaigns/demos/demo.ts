@@ -6,9 +6,9 @@ export const demo: LocalCampaignInfo = {
   imageUrl: 'profile_pics/fzzktcwasfcaj9wxhdxd',
   mobileBannerUrl: 'profile_pics/fzzktcwasfcaj9wxhdxd',
   bannerUrl: 'profile_pics/fzzktcwasfcaj9wxhdxd',
-  socialShareText: 'Help demo givelist.',
+  socialShareText: 'Help demo list.',
   previewImage: 'profile_pics/fzzktcwasfcaj9wxhdxd',
-  about: 'Help demo givelist.',
+  about: 'Help demo list.',
   cause: 'ANIMALS',
   fundingGoal: 50000,
   nonprofits: [

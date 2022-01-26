@@ -15,7 +15,7 @@ export const Error404 = () => {
           Please check that the url is from an active campaign
         </Text>
         <Link href="/">
-          <Button>Discover more Givelists</Button>
+          <Button>Discover more lists</Button>
         </Link>
       </Flex>
     </ThemeProvider>

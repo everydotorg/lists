@@ -1,1 +1,0 @@
-export { FallGivingChallenge } from './FallGivingChallenge'

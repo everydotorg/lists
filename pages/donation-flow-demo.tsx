@@ -35,7 +35,7 @@ const DemoDonation = () => {
           }
         }}
       >
-        <Text>Hello! This giveli.st is just for demonstration purposes.</Text>
+        <Text>Hello! This list is just for demonstration purposes.</Text>
         <Text>
           {' '}
           To turn it into a live fundraiser that can raise money for the

@@ -16,13 +16,12 @@ export const styles: Style = {
     borderTop: '1px solid',
     borderTopColor: 'borderGray'
   },
-  givelistText: {
-    label: 'brand-givelistText',
+  listText: {
+    label: 'brand-listText',
     color: 'text',
     fontWeight: 'bold',
     textDecoration: 'none'
   },
-  logoSpace: { label: 'brand-logoSpace', mr: 2 },
   poweredBy: {
     alignItems: 'center',
     justifyContent: 'flex-end',

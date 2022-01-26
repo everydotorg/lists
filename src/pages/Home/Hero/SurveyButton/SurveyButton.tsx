@@ -11,7 +11,7 @@ export const SurveyButton = () => {
     >
       <Flex sx={styles.container}>
         <Text variant="regular" sx={styles.text}>
-          Apply to create your own
+          Create your own
         </Text>
         <Text variant="regular" sx={styles.caption}>
           3 min survey

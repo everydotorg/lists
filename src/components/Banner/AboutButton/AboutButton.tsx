@@ -13,7 +13,7 @@ export const AboutButton = () => {
         sx={styles.aboutButton}
         onClick={() => aboutModal.setOpen(true)}
       >
-        <span>About giveli.st</span>
+        <span>About</span>
       </Button>
     </Flex>
   )

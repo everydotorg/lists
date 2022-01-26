@@ -1,5 +1,5 @@
 {
-  "name": "givelist",
+  "name": "list",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -31,13 +31,11 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
-    "next-sitemap": "^1.6.157",
     "prettier": "^2.2.1",
     "typescript": "4.3.5"
   },
   "scripts": {
     "build": "next build",
-    "postbuild": "next-sitemap",
     "start": "next dev",
     "lint": "eslint \"./**/*.{js,jsx,json,ts,tsx}\"",
     "lint:fix": "eslint \"./**/*.{js,jsx,json,ts,tsx}\" --fix",

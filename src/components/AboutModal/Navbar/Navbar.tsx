@@ -30,21 +30,21 @@ export const Navbar = ({ selected }: NavbarProps) => {
           About
         </Text>
         <Link
-          href="https://support.every.org/hc/en-us/sections/4406332582803-Givelist?utm_source=givelist"
+          href="https://support.every.org/hc/en-us/sections/4406332582803-List?utm_source=list"
           target="_blank"
           sx={styles.menuItem}
         >
           Support
         </Link>
         <Link
-          href="https://www.every.org/terms?utm_source=givelist"
+          href="https://www.every.org/terms?utm_source=list"
           target="_blank"
           sx={styles.menuItem}
         >
           Terms
         </Link>
         <Link
-          href="https://www.every.org/privacy?utm_source=givelist"
+          href="https://www.every.org/privacy?utm_source=list"
           target="_blank"
           sx={styles.menuItem}
         >

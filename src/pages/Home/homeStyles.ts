@@ -12,8 +12,8 @@ export const styles: Style = {
     flexBasis: 'auto',
     flexDirection: 'column'
   },
-  givelistSection: {
-    label: 'givelist-section',
+  listSection: {
+    label: 'list-section',
     WebkitOverflowScrolling: 'touch',
     // Safari & Chromium
     '::-webkit-scrollbar': {

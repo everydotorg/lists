@@ -27,8 +27,7 @@ export const CampaignLayout = ({
   showBackList = false,
   children
 }: CampaignLayoutProps) => {
-  const { primaryColor, slug, socialShareText, name, previewImage } =
-    campaignInfo
+  const { primaryColor, socialShareText, name, previewImage } = campaignInfo
 
   const color = new Color(primaryColor, 'hex')
 
@@ -43,7 +42,7 @@ export const CampaignLayout = ({
   }
 
   const url = baseUrlWithPaths(campaignInfo.slug)
-  const title = `${name} • giveli.st/${slug}`
+  const title = `${name} | Every.org`
 
   return (
     <ThemeProvider theme={campaignTheme}>

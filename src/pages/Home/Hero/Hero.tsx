@@ -30,7 +30,7 @@ export const Hero = () => {
           sx={styles.readMoreButton}
           onClick={() => aboutModal.setOpen(true)}
         >
-          <span>Read more about giveli.st</span>
+          <span>Read more</span>
         </Button>
       </Flex>
     </>

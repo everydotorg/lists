@@ -9,10 +9,10 @@ export const poverty: LocalCampaignInfo = {
   mobileBannerUrl: 'profile_pics/tt8w3ikpmtiau7xv5ije',
   bannerUrl: 'profile_pics/tt8w3ikpmtiau7xv5ije',
   socialShareText:
-    'Help the four nonprofits on this giveli.st address the challenges of global poverty. Backed by matched funding, your donation is amplified and directed to those most in need.',
+    'Help the four nonprofits on this list address the challenges of global poverty. Backed by matched funding, your donation is amplified and directed to those most in need.',
   previewImage: 'profile_pics/tt8w3ikpmtiau7xv5ije',
   about:
-    'Help the four nonprofits on this giveli.st address the challenges of global poverty. Backed by matched funding, your donation is amplified and directed to those most in need.',
+    'Help the four nonprofits on this list address the challenges of global poverty. Backed by matched funding, your donation is amplified and directed to those most in need.',
   cause: 'HUMAN_SERVICES',
   fundingGoal: 50000,
   nonprofits: [

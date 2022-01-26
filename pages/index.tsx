@@ -13,7 +13,7 @@ export const Tagline =
   'Discover, donate, and share recommended lists of nonprofits.'
 
 const Homepage = ({ nonProfits }: { nonProfits: CampaignInfo[] }) => {
-  const title = `giveli.st • ${Tagline}`
+  const title = Tagline
 
   const description =
     'A trusted place where you can champion worthy causes. Created by a nonprofit. Forever free.'
