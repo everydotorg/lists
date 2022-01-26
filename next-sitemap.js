@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://www.every.org/lists',
+  siteUrl: 'https://list.every.org',
   generateRobotsTxt: false,
   exclude: ['/*/donate', '/*/thank-you']
 }
