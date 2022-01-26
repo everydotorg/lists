@@ -25,9 +25,6 @@ export const Brand = ({ sx = {}, withBorderTop }: BrandProps) => {
           >
             <Icon.Every />
           </Link>
-          <Text variant="caption" sx={styles.logoSpace}>
-            &nbsp;Lists
-          </Text>
         </Flex>
       </Flex>
     </Flex>

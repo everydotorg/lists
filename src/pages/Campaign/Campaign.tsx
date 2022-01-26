@@ -74,7 +74,7 @@ export const Campaign = (): JSX.Element => {
             variant="primarySmallInverted"
             onClick={() => aboutModal.setOpen(true)}
           >
-            <span>About Every.org Lists</span>
+            <span>About</span>
           </Button>
         </Box>
 

@@ -22,11 +22,6 @@ export const styles: Style = {
     fontWeight: 'bold',
     textDecoration: 'none'
   },
-  logoSpace: {
-    label: 'brand-logoSpace',
-    mr: 2,
-    fontWeight: 'bold'
-  },
   poweredBy: {
     alignItems: 'center',
     justifyContent: 'flex-end',
