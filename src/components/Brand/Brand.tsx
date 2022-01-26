@@ -1,5 +1,5 @@
 import React from 'react'
-import { Flex, Link, Text, ThemeUIStyleObject } from 'theme-ui'
+import { Flex, Link, ThemeUIStyleObject } from 'theme-ui'
 import { Icon } from '../Icon'
 import { styles } from './brandStyles'
 
