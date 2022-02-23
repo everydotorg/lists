@@ -2,8 +2,8 @@ import { LocalCampaignInfo } from '../../types/CampaignInfo'
 
 export const veteranssof: LocalCampaignInfo = {
   slug: 'veteranssof',
-  showOnHomepage: true,
   everySlug: 'veteran-special-operation-forces',
+  showOnHomepage: true,
   name: 'Veteran Special Operation Forces',
   primaryColor: '#00A37F',
   mobileBannerUrl: 'v1644968017/specialops_j7uid7',
