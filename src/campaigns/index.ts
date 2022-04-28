@@ -21,6 +21,7 @@ import { mads } from './mads'
 import { brenda } from './brendas-list'
 import { climate } from './tacklingclimatechange'
 import { veteranssof } from './veteranssof'
+import { mauleBerg } from './maule-berg'
 
 export const campaigns: Record<string, LocalCampaignInfo> = {
   ...demoCampaigns,
@@ -44,5 +45,6 @@ export const campaigns: Record<string, LocalCampaignInfo> = {
   nativeamerican,
   afghanistan,
   gerc,
-  veteranssof
+  veteranssof,
+  mauleBerg
 }
