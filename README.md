@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Every.org Lists
+
+This website features lists of US-based 501(c)(3) nonprofits based on cause area. It also showcases usage of the [Every.org API](https://docs.every.org).
+
+![Screenshot of website](https://res.cloudinary.com/everydotorg/image/upload/v1654199452/docs/everydotorglistwebsite_npe6wf.png)
+
+----
 
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
